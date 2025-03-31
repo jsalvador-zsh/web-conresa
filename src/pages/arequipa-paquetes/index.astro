@@ -1,0 +1,98 @@
+---
+// src/pages/arequipa-paquetes.astro
+import Layout from "../../layouts/Layout.astro";
+import arequipaPaquetesData from "../../data/paquetes_aqp.json";
+import type { PackageTour } from "../../types/arequipa";
+import Time from "../../icons/Time.astro";
+
+// Tipar correctamente los datos (asumiendo que el JSON tiene la estructura correcta)
+interface PaquetesData {
+    paquetes_turisticos: PackageTour[];
+}
+
+// Hacer el casting al tipo correcto
+const { paquetes_turisticos: paquetes } = arequipaPaquetesData as PaquetesData;
+
+// Mapeo de imágenes (mejor implementación)
+const obtenerImagenPaquete = (codigo: string): string => {
+    const imagenes: Record<string, string> = {
+        "CT.8425-001": "/images/paquetes/imagen-default.svg",
+        "CT.8425-002": "/images/paquetes/imagen-default.svg",
+        "CT.8425-003": "/images/paquetes/imagen-default.svg",
+        "CT.8425-004": "/images/paquetes/imagen-default.svg",
+        "CT.8425-005": "/images/paquetes/imagen-default.svg",
+        "CT.8425-006": "/images/paquetes/imagen-default.svg",
+        "CT 8425-E001": "/images/paquetes/imagen-default.svg",
+    };
+
+    return imagenes[codigo] || imagenes.default;
+};
+
+// Función para generar slugs de URL
+const generarSlug = (codigo: string): string => {
+    return codigo
+        .toLowerCase()
+        .replace(/\./g, "-")
+        .replace(/\s/g, "-")
+        .replace(/[^a-z0-9-]/g, "");
+};
+---
+
+<Layout title="Paquetes Arequipa" description="">
+    <div class="min-h-screen py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    Paquetes Turísticos en
+                    <span class="font-bold text-pink-950">Arequipa</span>
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {
+                    paquetes.map((paquete, index) => {
+                        const slug = generarSlug(paquete.codigo);
+                        const imagen = obtenerImagenPaquete(paquete.codigo);
+
+                        return (
+                            <a
+                                href={`/arequipa-paquetes/${slug}`}
+                                class="group relative bg-white shadow-md overflow-hidden transform transition-all duration-500 hover:shadow-lg hover:-translate-y-2"
+                                style={`animation-delay: ${index * 100}ms`}
+                            >
+                                <div class="relative h-56 overflow-hidden">
+                                    <img
+                                        src={imagen}
+                                        alt={paquete.nombre}
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        width="400"
+                                        height="200"
+                                        loading="lazy"
+                                        transition:name={`image-${paquete.codigo}`}
+                                    />
+                                    <div class="" />
+                                    <span class="absolute top-4 right-4 bg-pink-950 text-pink-100 text-xs italic font-medium me-2 px-2.5 py-0.5">
+                                        {paquete.codigo}
+                                    </span>
+                                </div>
+
+                                <div class="p-6">
+                                    <h3
+                                        class="text-xl font-bold text-gray-800 mb-2"                                    >
+                                        {paquete.nombre}
+                                    </h3>
+                                    <div class="flex items-center justify-between mb-4">
+                                        <span class="flex items-center text-[#8AB2A6] font-medium">
+                                            <Time />
+                                            {paquete.duracion}
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        );
+                    })
+                }
+            </div>
+        </div>
+    </div>
+</Layout>

@@ -1,0 +1,363 @@
+[
+    {
+        "id": 1,
+        "title": "Arequipa: City Tour y Monasterio (Peatonal)",
+        "schedule": "9.00 am. Y 2.00 pm.",
+        "duration": "03 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "La guía recogerá a los pasajeros del hotel comenzando por el centro histórico de la ciudad para apreciar la arquitectura de sus casonas coloniales, la idiosincrasia de su pueblo, recorriendo sus calles formando un museo al aire libre",
+            "Plaza de Armas",
+            "Casona Tristán del Pozo donde se encuentra hoy el BBVA continuando nuestro recorrido con la  Iglesia de la compañía y Sixtina, perteneciendo a la orden de los Jesuitas en la actualidad. Visita a los  Claustros de la Compañía sus patios que albergaron a los seminaristas Jesuitas y hoy centro comercial",
+            "Tambo de Bronce y la Cabezona Lugares donde se desarrolló diversas actividades comerciales, el famoso trueque de los productos venidos de la costa, de la sierra para ser ofrecidos en la ciudad, se ubicaron también los artesanos, sastres. Los Tambos con el tiempo se convirtieron en viviendas, surgiendo un nuevo episodio histórico; visitar los tambos será encontrarse con experiencias, sensaciones y un modo particular de vida de la historia de Arequipa. Los príncipes de Asturias en su estadía por Arequipa, visitaron este tradicional lugar.",
+            "Convento de Santa Catalina, las celdas, Las pequeñas calles y claustros llenos de flores coloridas y las paredes pintadas en tintes frescos. Los callejones estrechos llevan a las diversas partes del convento que atraviesan por sitios pintorescos. Los visitantes conocerán el camino del tiempo."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Arequipa: City Tour y Monasterio (Con movilidad)",
+        "schedule": "09.00 am. Y 2.00 pm.",
+        "duration": "03 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Carmen Alto. - Entre Cayma y Yanahuara, se halla Carmen Alto, pueblecito humilde y tranquilo, pero rodeado de paisajes maravillosos. Desde aquí se divisa a distancia la Ciudad Blanca y la verde campiña en torno.",
+            "Mirador de Yanahuara. - Yanahuara (Vocablo Quechua, al Castellano 'calzón negro'). En la plaza principal del distrito destaca la deslumbrante estructura de la iglesia parroquial. Contiguo a la iglesia se halla El 'Mirador', moderna danza de arcos que invita a contemplar el espectáculo de la ciudad, su campiña y sus volcanes. Lo cual inspiró versos de notables alcaldes. Varias callejas aledañas a la plaza destacan por su encanto especial, como el Callejón de la Casa Encantada, llamado así por una casona llena de misterios de ultratumba. Más abajo, entre las Calles Misti y Angamos, el Callejón Toledo, deleite de acuarelistas y fotógrafos.",
+            "Catedral de la Ciudad de Arequipa, (visita panorámica).- Se le considera como uno de los primeros centros religiosos del siglo XVII en la ciudad. Se construye en sillar (piedra de origen volcánico) con bóvedas de ladrillo.",
+            "Plaza de Armas de la Ciudad de Arequipa. - Centro de la ciudad, Rodeada por la Iglesia Catedral y diversos portales, la Plaza de Armas presenta una hermosa fuente de bronce en la parte superior la figura de un soldado del siglo XVI.",
+            "Monasterio de Santa Catalina.- Construido para albergar a las hijas de las familias más distinguidas de la ciudad, el monasterio fue inaugurado el 2 de octubre de 1580 bajo la advocación de Santa Catalina de Siena como un centro de clausura absoluta y así se mantuvo hasta el 15 de agosto de 1970.",
+            "Iglesia de la Compañía de Jesús.- Obra de arte de arquitectura, constituye un complejo de edificios construidos por la orden Jesuita con fines religiosos y de vivienda. Hecho básicamente de piedra sillar, en el interior de la iglesia se encuentra una capilla Sixtina, que en el techo de arquitectura bóveda se encuentra la obra de arte pintada por arequipeños, demostrando la palabra de Dios en los cuatro evangelistas.",
+            "Claustros de la Compañía de Jesús Claustros de los Jesuitas.- Se terminaron de construir en 1738, fecha que figura sobre el arco de la entrada. Fue la Residencia y Colegio de los jesuitas, Recientemente restaurados, sus ambientes están ocupados por una serie de establecimientos afines a la actividad turística, como restaurantes, tiendas de artesanía, etc."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Arequipa: Campiña+ Molino+ Mansión tradicional (Servicio compartido)",
+        "schedule": "09.00 am. Y 2.00 pm.",
+        "duration": "03 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Mirador de Carmen Alto, ahí se podrá apreciar la andenería del distrito y además los tres volcanes que tenemos en Arequipa; el Misti, Chachani y Pichu Pichu. Luego nos dirigimos al segundo punto que será:",
+            "Distrito de Yanahuara donde podremos tomarnos fotos en los famosos Portales de Yanahuara con el fondo del volcán Misti, también veremos la Iglesia de este Legendario distrito. En este lugar venden el tradicional queso helado, que es un postre típico de Arequipa, su sabor único, degustación obligatoria.",
+            "Tercer punto que será el Minizoológico de Incalpaca, el ingreso es gratuito y podremos apreciar los cuatro camélidos sudamericanos (Llama, Alpaca, Vicuña y Guanaco).",
+            "Pasaremos por el Palacio de Goyeneche; que es una casona colonial que ahora es administrada por una entidad privada",
+            "Continuando A la Mansión La Mansión de fundador Casona donde Vivió el fundador de Arequipa, podemos observar lindas Llamas y alpacas al aire libre comiendo el pasto, Su Iglesia, y los recintos que albergo a los chilenos en la Guerra del Pacífico.",
+            "Y finalmente Molino de Sabandía, conoceremos el molino hidráulico, los instrumentos de trabajo del campo, lindo balcón de madera para una foto romántica con la cascada natural del lugar, también, podremos alquilar Caballos. Disfrutar del aire puro y fresco del Campo.",
+            "Retorno al Centro histórico de Arequipa",
+            "Retorno al hotel seleccionado."
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Arequipa: Campiña+ Molino+ Mansión tradicional (Servicio privado)",
+        "schedule": "09.00 am. Y 2.00 pm.",
+        "duration": "03.30 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Chilina. - Es una quebrada honda, abierta por el trabajo erosivo del Chili. Es tal vez, la más bella zona de la campiña arequipeña, donde el paisaje natural adquiere proporciones de magnificencia, punto de vista para tomar bellas fotografías paisajistas o para componer un tema pictórico.",
+            "Paucarpata. - (Vocablo Quechua, al castellano significa) 'extensión de andenes'. Estas terrazas son tan antiguas que ya los Incas las encontraron cuando conquistaron la comarca; la habitaban indios Puquinas que han dejado gran cantidad de cerámica tricolor, estilo Juli, en las numerosas 'huacas' o tumbas esparcidas en las cumbres e los cerros. Paucarpata cuenta con un hermoso templo colonial. Data del siglo XVII.",
+            "Molino de Sabandía. - Es un valle propiamente serrano, situado entre Paucarpata y Characato. Dista 8.7 Km de la ciudad. Por su agradable clima, su bello paisaje y la abundancia de manantiales Las familias adineradas de la ciudad construyeron aquí hermosas casas de campo. Muy cerca del pueblo se halla el antiguo y señorial molino, rodeado de un sugestivo ambiente campestre. Fue construido en 1785.",
+            "Huasacache y La Mansión del Fundador o Palacio de Goyeneche. - Es un bello rincón a la margen del río Postrero o Socabaya. La construcción de la llamada 'carretera paisajista', es Interesante destacar la presencia en este sector de una añeja construcción, conocida como 'Palacio de Goyeneche'. Fue propiedad de Garci Manuel de Carbajal, fundador de Arequipa, razón por la que tiene este nombre; también estuvieron los Jesuitas ocuparon la casa para Noviciado de su congregación. Durante la ocupación chilena, este fue el cuartel general del invasor (1883). En la actualidad esta antigua casona, recientemente restaurada por un consorcio particular, se ha convertido en un bello atractivo turístico de usos múltiples. Ubicación: 9 km del centro de la ciudad de Arequipa. Cuenta con una Iglesia dentro de la Casa.",
+            "Tingo. - Es un popular balneario, situado a 3 Km de la ciudad; en otra época, lugar obligado de veraneo de las familias pudientes. Ubicado muy cerca de un río, abunda el agua del subsuelo. Por lo cual la vegetación es abundante y fresca. Cuenta con tres piscinas de natación, muy concurridas, y una pequeña laguna artificial, con sus botecitos a remo. Mucha gente viene a saborear los clásicos buñuelos o los anticuchos que típicas vivanderas expenden.",
+            "Sachaca. - Cerca de Tingo ya al otro lado del río, se levanta Sachaca, destaca la iglesia, con su blanco campanario. Esta iglesia, ubicada en la Plaza Principal, fue concluida en 1807, y su estilo es de transición, con tendencia al 'republicano'. Subiendo unas escalinatas podemos gozar de la vista panorámica de toda la Ciudad Blanca de Arequipa. También sobresale en Sachaca El Palacio – Quinta Goyeneche, señorial mansión de valiosa arquitectura netamente arequipeña; era la casa de campo del Obispo Goyeneche entre los años 1818 y 1858. A lado de Sachaca se levanta otra colina conocida como el 'Cerro de la Aparecida', por la leyenda de una misteriosa mujer que deambulaba por esos andurriales a altas horas de la noche.",
+            "Puente de Fierro (Bolívar).- Este puente fue diseñado por el Ingeniero francés Gustavo Eiffel, famoso por su torre de París, con el objeto de trazar un viaducto para el ferrocarril al Cuzco. Se construyó en 1882. Tiene 488 metros de luz, y cuando se hizo fue el más largo del mundo. Esta primacía duró hasta 1889, año en que se construyó en Escocia un puente de 518 metros. Desde este puente se aprecia una de las vistas panorámicas más hermosas de la ciudad, su campiña y sus tres volcanes nevados."
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Arequipa: Tour Combinado: Ciudad & Campiña",
+        "schedule": "09.00 am.",
+        "duration": "04.30 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Mirador de Yanahuara. - Yanahuara (Vocablo Quechua, al Castellano 'calzón negro'). En la plaza principal del distrito destaca la deslumbrante estructura de la iglesia parroquial. Contiguo a la iglesia se halla El 'Mirador', moderna danza de arcos que invita a contemplar el espectáculo de la ciudad, su campiña y sus volcanes. Lo cual inspiró versos de notables alcaldes. Varias callejas aledañas a la plaza destacan por su encanto especial, como el Callejón de la Casa Encantada, llamado así por una casona llena de misterios de ultratumba. Más abajo, entre las Calles Misti y Angamos, el Callejón Toledo, deleite de acuarelistas y fotógrafos.",
+            "Paucarpata. - (Vocablo Quechua, al castellano significa) 'extensión de andenes'. Estas terrazas son tan antiguas que ya los Incas las encontraron cuando conquistaron la comarca; la habitaban indios Puquinas que han dejado gran cantidad de cerámica tricolor, estilo Juli, en las numerosas 'huacas' o tumbas esparcidas en las cumbres e los cerros. Paucarpata cuenta con un hermoso templo colonial. Data del siglo XVII.",
+            "Molino de Sabandía. - Es un valle propiamente serrano, situado entre Paucarpata y Characato. Dista 8.7 Km de la ciudad. Por su agradable clima, su bello paisaje y la abundancia de manantiales Las familias adineradas de la ciudad construyeron aquí hermosas casas de campo. Muy cerca del pueblo se halla un viejo y señorial molino, rodeado de un sugestivo ambiente campestre. Fue construido en 1785.",
+            "Huasacache y La Mansión del Fundador o Palacio de Goyeneche. - Es un bello rincón a la margen del río Postrero o Socabaya. La construcción de la llamada 'carretera paisajista', es Interesante destacar la presencia en este sector de una añeja construcción, conocida como 'Palacio de Goyeneche'. Fue propiedad de Garci Manuel de Carbajal, fundador de Arequipa, razón por la que tiene este nombre; también estuvieron los Jesuitas ocuparon la casa para Noviciado de su congregación. Durante la ocupación chilena, este fue el cuartel general del invasor (1883). En la actualidad esta antigua casona, recientemente restaurada por un consorcio particular, se ha convertido en un bello atractivo turístico de usos múltiples. Ubicación: 9 km del centro de la ciudad de Arequipa. Cuenta con una Iglesia dentro de la Casa.",
+            "Monasterio de Santa Catalina. - Construido para albergar a las hijas de las familias más distinguidas de la ciudad, el monasterio fue inaugurado el 2 de octubre de 1580 bajo la advocación de Santa Catalina de Siena como un centro de clausura absoluta y así se mantuvo hasta el 15 de agosto de 1970."
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Arequipa: Tour de Museos",
+        "schedule": "09.00 am. Ó 14.00 hrs",
+        "duration": "03 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Monasterio de Santa Teresa. - Se conoce también como Monasterio del Carmen. Se colocó la primera piedra en 1700, pero solo fue concluido en 1710. El Monasterio mantiene casi intacta su arquitectura colonial. En el interior del templo destaca una hermosa Pila Bautismal de piedra, y debajo del coro hay un relieve de follaje, representado hojas, frutas y un ángel que sostiene el escudo del Carmelo. El altar mayor es de plata repujada, de estilo plateresco. El púlpito, maravilla de talla en madera, es del siglo XVIII. En la sacristía hay hermosas pinturas, entre las que destacan 'La Piedad' y 'Santa Teresa de Jesús', la fundadora de los Carmelitas Descalzos.",
+            "Momia Juanita. - Juanita, la bella niña del Volcán Ampato fue descubierta el 8 de Setiembre de 1995 por el antropólogo Dr. Johan Reinhard. El Volcán Ampato con una altitud aprox. De 6380 msnm. Albergó en su seno por cerca de 500 años o más a una bella niña Inca que al momento de su muerte debió tener 13 ó 14 años de edad ofrendada al Apu Ampato por los sacerdotes incas de aquel entonces, y puesta al descubierto por la erupción del Volcán",
+            "La Recoleta. - A pocos años de fundada Arequipa, se edificó en la Chimba (al otro lado del río) una ermita dedicada a San Genaro, a quien se tomaba por patrón de los volcanes. En el lugar se fundó la Recoleta Franciscana en 1648. Debemos destacar, el Museo Amazónico, donde se muestran obras artesanales de las tribus de la selva y bellos ejemplares de la fauna selvática. Hay un molde fósil de cráneo humano, con una antigüedad probable de Medio millón de años, destaca la joya más preciada de la pintura de la Recoleta: un cuadro auténtico de Van Dyck que representa el 'Descendimiento de la Cruz'. En este Claustro se halla la Pinacoteca, donde se puede admirar viejos libros corales de pergamino, con salmodias gregorianas. También en los altos esta la Biblioteca, con 20.000 volúmenes valiosos."
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Arequipa: Tour Sabandia a caballo",
+        "schedule": "09.00 am.",
+        "duration": "03 horas",
+        "modality": "Medio Suave",
+        "client": "Jóvenes, Adultos",
+        "included_visits": [
+            "Cabalgando por el Valle de Chilina o el Valle de Sabandía a 2400 metros sobre el nivel del mar, con traslado desde el hotel en Arequipa. Los participantes disfrutarán de un emocionante paseo a caballo por terrazas pre-inca, recibiendo cursos de conducción y aprendiendo sobre el contacto con los caballos de paso. Con vistas espectaculares de la campiña arequipeña y de los volcanes Misti y Chachani, la opción de galopar a lo largo del río, disfrutando con una conexión única con la naturaleza y la cultura local."
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Ruta del Loncco & Museo Mártires de Quequeña (privado) con almuerzo típico",
+        "schedule": "08.00 am.",
+        "duration": "04.30 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Excelentes lugares para despejar la mente, lindas vistas para conectar con la naturaleza y pasar un rato agradable en familia o con amigos. Te hará crecer y desarrollar tu persona y espíritu.",
+            "El circuito Ruta del Loncco Arequipeño abarca los distritos de Sabandía, Characato, Mollebaya, Yarabamba, Sogay y Quequeña. Esta es una nueva alternativa turística en la región Arequipa por contar con parajes naturales y variadas arquitecturas de sus iglesias. Nos conectamos con la Naturaleza Singular."
+        ],
+        "itinerario": [
+            "Los recogemos en movilidad de turismo PRIVADA desde su hotel, iniciamos la visita a",
+            "Sabandía: En este primer pueblo de la ruta hay lugares que te encantarán, como el área con casonas de sillar blanco construidas a inicios del siglo XVIII y XIX, y el gran campo con manantiales en donde se refleja el impresionante color azul del cielo arequipeño.",
+            "Otro atractivo de Sabandía es su molino de piedra construido en 1621, que tiene a su alrededor árboles centenarios, una cascada y balcones rústicos que embellecen todo el lugar. Se recomienda ir temprano.",
+            "Characato: Al llegar a este pueblo vas a encontrar la plaza central, donde hay varias palmeras y una glorieta que se ubica allí desde la Colonia. También verás viejas casonas como la Casa Cural y la iglesia de San Juan Bautista que fue construida hace más de 220 años.",
+            "Las tierras de este destino arequipeño son regadas por aguas de manantiales naturales, que además sirven para abastecer piscinas muy concurridas durante los fines de semana.",
+            "Yarabamba: Este pueblo de la Ruta del Loncco posee amplios pastizales y está rodeado por colinas. Que en sus cimas tienen curiosas esculturas de dinosaurios y una cruz decorada con un hermoso manto.",
+            "Sogay: Un lugar con casas coloridas, caminos empedrados y calles estrechas. Cuna de tradición e historia arequipeña, donde tendremos otra perspectiva de un pueblo muy pintoresco.",
+            "Quequeña: Es un pueblo donde puedes visitar la iglesia San José, construida en honor de la Virgen de la Purísima Concepción. También hay atractivos como la alameda de los Sauces, el museo Casa de los Mártires, el cerro Sonccomarca y los petroglifos de Gayalopo y Huanaqueros.",
+            "Si visitas este destino el 24 de noviembre vas a poder participar de las celebraciones por el aniversario de los Héroes de Quequeña, quienes lucharon y dieron su vida al enfrentarse a los invasores chilenos en 1883. Terminando la visita, un almuerzo típico, y Retorno al hotel."
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Canteras del Sillar: Canteras de Añashuayco y Culebrillas",
+        "schedule": "09.00 am. Y 2.00 pm.",
+        "duration": "03 horas",
+        "modality": "Medio Suave",
+        "client": "Niños, Adultos, Tercera Edad / Jóvenes, Adultos",
+        "included_visits": [
+            "Es una quebrada que se inicia en las estribaciones del Chachani y que cruza la carretera a Yura y la vía férrea al interior, en un punto próximo al aeropuerto, a unos 17 Km de Arequipa. Esta quebrada ha sido excavada por la erosión de las aguas, dejando al descubierto una gran veta de blanca piedra volcánica, científicamente llamada La ignimbrita. Las canteras de Añashuayco proveen el sillar que actualmente se utiliza en la industria de la construcción y souvenirs.",
+            "La visita guiada nos hará conocer el trabajo de los canteros, un oficio que se mantiene activo desde la antigüedad.",
+            "Las piedras de esta zona tienen la peculiaridad de que solo pueden trabajarse a mano, ya que de lo contrario se romperían. La labor de los canteros es tallar la piedra hasta formar el sillar que después se utilizará en las construcciones tan típicas de esta zona de Perú.",
+            "Después, caminaremos durante media hora hasta nuestro siguiente destino, el cañón de Culebrillas, una quebrada formada por la propia naturaleza y el paso del agua. Aquí realizaremos una ruta de senderismo entre sus paredes rocosas de entre 15 y 20 metros de altura y podréis hacer unas fotos estupendas. Además, podremos ver los milenarios petroglifos, símbolos rupestres grabados en la roca cuyo significado es todo un misterio."
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Arequipa – Santuario de la Virgen de Chapi (Visita religiosa)",
+        "schedule": "desde las 8.00 am hasta las 10.30 hrs",
+        "duration": "03.30 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Santuario que presenta las siguientes características:",
+            "En un desolado paraje de los Andes, a 2.420 metros de altitud y a 60 km. al sur de Arequipa, en el distrito de Polobaya por el antaño camino que conduce a Moquegua, se venera una imagen de Nuestra Señora de la Purificación o Candelaria, más conocida como la Virgen de Chapi, cuyo culto en este lugar se remonta al siglo XVIII y crece día a día.",
+            "Es difícil precisar con exactitud el origen de esta entrañable devoción del pueblo arequipeño a la Santísima Virgen, asociada a los primeros evangelizadores de la región. Cuenta una vieja tradición, que la imagen fue hallada en un cerro aledaño a Churajón. El párroco de Pocsi, jurisdicción a la cual pertenecía Chapi, a fin de que los indios 'pudieran cumplir mejor sus deberes de cristianos', ordenó el traslado de la imagen hacia Sogay, pueblo próximo a Quequeña. Argüía el citado eclesiástico, por otra parte, que 'la quebrada de Chapi estaba poco poblada, pues la escasez de agua no permitía la siembra, y por este motivo la ermita allí construida estaba casi abandonada'. Acatando la orden, se procedió a trasladar la imagen. Ya se había avanzado un buen trecho, cuando la comitiva hizo un alto para descansar y recuperar fuerzas. Fue a la sazón que el viento comenzó a arreciar, produciéndose una gran tempestad de arena. Al reiniciar la jornada, por más esfuerzos de los cargadores no lograron levantar la imagen. Lo intentan una y otra vez, sin conseguir el objetivo. El hecho fue dado por milagroso, interpretándose el suceso, como la voluntad de la Virgen para que su imagen fuese venerada, en adelante, en el sitio en que inamovible se quedó. Fue entonces allí erigida una pequeña ermita para su culto."
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Arequipa: Laguna de Salinas & Volcán y baños termales de Lojen",
+        "schedule": "06.30 am.",
+        "duration": "08 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Laguna que presenta las siguientes características:",
+            "Salida por la zona del pueblo de Chiguata.",
+            "Altura Máxima. - Alto Simbral 4,300 m. Se encuentra al este de la ciudad de Arequipa, detrás del Nevado Pichu Pichu, es una de las 3 montañas que se ven frente a la ciudad de Arequipa.",
+            "Límite de la Reserva Nacional de Salinas y Aguada Blanca.",
+            "Esta laguna encerrada por los volcanes, es salada, cuando esta seca es de color blanco como la nieve, cuando esta con agua es parada obligada de grupos de pariguanas (flamencos), se pueden observar hasta 3 variedades, y otras aves. También podemos visitar criaderos de alpacas y llamas.",
+            "Durante la travesía veremos un bosque andino formado por pequeños árboles y arbustos. ¡En esta zona los llaman queñuales, Yareta, Tola, etc.",
+            " Laguna de Salinas para observar flamencos, parihuanas, espejos de agua",
+            " Avistamiento de vicuñas, llamas y alpacas (todo el año)",
+            " Centros de extracción de sal donde la imaginación es indispensable para tomarse fotografías espectaculares",
+            " Mini volcán Lojen y Aguas Termales de Lojen, Ideal para un refrescante baño"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Arequipa: Balneario Mejía y El Santuario Nacional Lagunas de Mejía",
+        "schedule": "06.30 am.",
+        "duration": "08 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Santuario que presenta las siguientes características:",
+            "Mejía es un bonito lugar de veraneo; hasta no hace mucho, podía considerarse como un balneario exclusivo de las familias acomodadas de Arequipa. Cuenta con magníficas residencias, generalmente ocupadas sólo durante la estación veraniega. Hay también un Club en la misma playa. Dista de Mollendo 14 km., y de Arequipa, 140 km.",
+            "Cerca de Mejía, hacia el Sur, hay una gran laguna que se ha formado de las filtraciones de agua de la Irrigación Mollendo - Mejía - Ensenada. Esta laguna está poblada de aves, tales como patos, chocas, gallinetas, etc. Es pues un lugar propicio para la cacería. Además, también en Mejía se puede practicar la pesca deportiva; desde la playa o desde las rocas de Tiro Alto.",
+            "En el Santuario Nacional Lagunas de Mejía es posible encontrar 141 especies de aves, de las cuales 84 son residentes de la costa peruana y 57, migratorias, o sea que se las encuentra en esta zona sólo en una determinada época del año, en su afán de escapar del crudo invierno de otras latitudes. De las migratorias, 17 llegan a Mejía de otras partes del Perú, 4 de otros países de Sudamérica y 34 desde América del Norte.",
+            "Mejía tiene también gran potencial educativo y turístico. Se encuentra a escasos kilómetros del puerto de Mollendo y Matarani."
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Arequipa: Puerto Inca",
+        "schedule": "06.30 am.",
+        "duration": "02 dias mínimo",
+        "modality": "Suave",
+        "client": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+            "Ubicada a 417 km al noroeste de la ciudad de Arequipa (6 horas 30 minutos en auto), se llega hasta la caleta de Chala, a la altura del desvío en el km 615 de la Carretera Panamericana Sur, y desde allí se recorren 7 km al norte.",
+            "Complejo arqueológico que destaca por su larga ocupación, pues presenta restos que datan del precerámico hasta los siglos XIV y XV, indicando la presencia inca. Ideal para pasar un fin de Semana de Playa."
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Arequipa: Petroglifos de Toro Muerto",
+        "schedule": "06.00 am.",
+        "duration": "08 horas",
+        "modality": "Medio Suave",
+        "client": "Jóvenes, Adultos",
+        "included_visits": [
+            "Consta de un fabuloso conjunto de Petro grabados, ubicado en el distrito de Uraca, a unos 7 Km. de Corire, en Majes, se hallan esparcidos alrededor de 5,000 grandes bloques de roca volcánica, cuyo origen, según el petrólogo francés Piacet, se debe a violentas erupciones explosivas del Coropuna o del Chachani, ocurridas durante la Era Terciaria.",
+            "Muchos de estos bloques, ubicados en una extensión de 3,876 m. de largo por 251 m. de ancho, Pueden apreciarse figuras s, como mamíferos, aves, batracios, peces y reptiles, muchos de ellos antropomorfos; danzarines y personajes míticos; figuras Fito morfas, como árboles, flores, etc., geométricas, como puntos, líneas rectas, zigzags, grecas, círculos, etc., y un sin fin de otras figuras variadas."
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Ruta del pisco 01 día",
+        "schedule": "8.00 am.",
+        "duration": "08 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos. Tercera edad",
+        "included_visits": [
+            "Iniciamos un divertido recorrido por los lugares más interesantes de la Ruta del Pisco",
+            "Llegamos a Uchumayo para degustar el famoso y afrodisiaco Chimbango vocablo quechua, que significa cruzar el río a pie desafiando la corriente.",
+            "Esta es una bebida dulce, resultado de la fermentación de higos secos con agua.",
+            "El 14 de julio de cada año se realiza El festival del Chimbango, en un ambiente festivo de música y baile.",
+            "Conoceremos también la historia del General Salaverry El presidente más joven del Perú. Fue escenario de la batalla entre los generales Salaverry y Santa Cruz de Bolivia, que culminó con la victoria del Valiente Peruano Salaverry.",
+            "Visita a la bodega Hacienda del Abuelo, visita a las huertas de Sandias y Melones para luego realizar la degustación de los famosos vinos y Piscos, no sin antes apreciar las enormes tinajas que los alfareros fabricaron desde los años 1600 hasta los 1700 para depositar ahí el vino y pisco de uva.",
+            "Aquí se podrá ver los alambiques, unos antiguos aparatos utilizados para la destilación de líquidos mediante un proceso de evaporación por calentamiento y posterior condensación por enfriamiento, que aún se usan en la elaboración del pisco.",
+            "Visita al pueblo de la Joya, apreciaremos los cultivos de Cochinilla, Frutales de Granadas de exportación, Viñedos de uvas de mesa, Uvas para la fabricación de vinos y piscos y su historia de Astrología",
+            "Visita a la bodega El Socavón. Es la bodega más antigua de la que se tiene conocimiento y que hasta hoy, produce aguardiente y vino.",
+            "Las tinajas, son muestra de la historia que se encuentra íntimamente ligada al valle de Vitor. La decoración en las tinajas, nos recuerda la iconografía geométrica de los pueblos prehispánicos asentados en Vitor.",
+            "El Socavón es historia pura y sus paredes son la muestra más de 400 años de producción de pisco y vino.",
+            "Almuerzo en la bodega, Cata de Pisco, Vino y Macerados.",
+            "Retorno a la Blanca Ciudad."
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Ruta del pisco 02 días",
+        "schedule": "08.00 am. (retorno 5.00 pm del día siguiente)",
+        "duration": "02 dias",
+        "modality": "Suave",
+        "client": "Niños, Adultos. Tercera edad",
+        "included_visits": [
+            "Día 01",
+            "Iniciamos un divertido recorrido por los lugares más interesantes de la Ruta del Pisco",
+            "Llegamos a Uchumayo para degustar el famoso y afrodisiaco Chimbango vocablo quechua, que significa cruzar el río a pie desafiando la corriente.",
+            "Esta es una bebida dulce, resultado de la fermentación de higos secos con agua.",
+            "El 14 de julio de cada año se realiza El festival del Chimbango, en un ambiente festivo de música y baile.",
+            "Conoceremos también la historia del General Salaverry El presidente más joven del Perú.",
+            "Visita a la bodega El Socavón. Es la bodega más antigua de la que se tiene conocimiento y que hasta hoy, produce aguardiente y vino.",
+            "Visita a la bodega Hacienda del Abuelo, visita a las huertas de Sandias y Melones para luego realizar la degustación de los famosos vinos y Piscos.",
+            "Visita al pueblo de la Joya, apreciaremos los cultivos de Cochinilla, Frutales de Granadas de exportación, Viñedos de uvas de mesa.",
+            "Continuando nuestro paseo llegaremos a Majes para saborear unos ricos Camarones típicos de la zona.",
+            "Por la tarde visitaremos el pueblo de majes y saborear sus ricos dulces tradicionales del pueblo. Como son las Rosquillas crocantes.",
+            "Pernocte en el hotel.",
+            "Dia 02:",
+            "Desayuno en el hotel",
+            "Visita a los Petroglifos de Toro Muerto, Patrimonio Cultural de la Nación.",
+            "Visita al pueblo tradicional de Corire, veremos también las huellas petrificadas de dinosaurios, conservadas por el Parque de Querulpa.",
+            "Visita al Balneario de Chancharay a tomar un refrescante chapuzón en las aguas fértiles de manantiales.",
+            "Visita al puente colgante de Quiskay y formación geológica conocida como el perfil de Cristo.",
+            "Visita a una de las bodegas y viñedo de Valle de Majes para degustación de pisco y vino.",
+            "Retorno a Arequipa"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Arequipa: Pampa Cañahuas",
+        "schedule": "07.00 am.",
+        "duration": "08 horas",
+        "modality": "Suave",
+        "client": "Niños, Adultos. Tercera edad",
+        "included_visits": [
+            "Saliendo de Arequipa por la Panamericana Norte a espalda de los volcanes Chachani y Misti.",
+            "Abarca una extensión de 314,447 hectáreas, con una altitud proMedio de 4,000m.",
+            "El clima es frío, con un proMedio anual que no sobrepasa los 4 °C; Las lluvias son escasas, con un proMedio de 400 mm anuales de precipitación.",
+            "El paisaje, en general es impresionante por su grandiosidad; hay formaciones rocosas de gran espectacularidad, así como una flora y una fauna muy importantes.",
+            "FLORA: destacan el Ichu (Stipa s.p.), la Tola (Lepidophyllum s.p.), la Yareta (Azorella Yareta), Polylepis, y en forma especial, las plantas cactáceas.",
+            "FAUNA: de Cañahuas es sumamente valiosa. (LamaVicugna), ese camélido peruano tan frágil y bello, productor de la fibra más fina del mundo.",
+            "Guanacos (Lama Huanicus), Taruca o Venado Andino (Hipocamelus antisensi).",
+            "Hay zorros (Dusicyon Culpaeus) y vizcachas (Lagidium Peruviana).",
+            "Aves, más de 100 especies diferentes. Abundan en las proximidades de las lagunas, ríos, arroyos y bofedales."
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Arequipa: Bosque de Piedras de Imata & Cataratas de Pillones",
+        "schedule": "07.00 am. (retorno: 16.00 horas)",
+        "duration": "09 horas",
+        "modality": "Medio Suave",
+        "client": "Jóvenes, Adultos",
+        "included_visits": [
+            "Iniciamos un divertido recorrido hacia el Bosque de Piedras de Imata & Cataratas de Pillones pasando por Zamacola, Pampa de Arrieros y Pampa Cañahuas.",
+            "Parada en la Reserva Nacional de Salinas y Aguada Blanca, impresionante por su grandiosidad y formaciones rocosas de gran espectacularidad.",
+            "Llegamos al Bosque de Piedra que es una formación rocosa muy original, constituida por un conjunto numeroso de columnas pétreas naturales, que toman la apariencia de un misterioso bosque encantado y petrificado.",
+            "Visita a La Cataratas de Pillones, lugar donde podremos ver y fotografiar algunas cataratas y diferentes formaciones rocosas erosionadas por el agua.",
+            "Veremos vizcachas (roedor andino) saltando entre las rocas.",
+            "Retorno a Arequipa."
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Arequipa: Cuevas de Sumbay o Mollopunko",
+        "schedule": "07.00 am. (retorno: 13.00 horas)",
+        "duration": "06 horas",
+        "modality": "Medio Suave",
+        "client": "Jóvenes, Adultos",
+        "included_visits": [
+            "Disfrute de una experiencia inigualable que dista de Arequipa 88 Km.",
+            "La altitud proMedio es de 4,127 metros. El paisaje es el típico de la puna.",
+            "La caverna tiene una abertura de 15 m. de ancho y más de 6 m. de altura; su profundidad es de 11 metros.",
+            "Sólo en esta caverna se han localizado 488 figuras pintadas con una habilidad artística extraordinaria, de los primitivos cazadores de Sumbay.",
+            "Los colores empleados son generalmente el blanco, el ocre y el rajo.",
+            "La datación radiocarbónica de los restos orgánicos determina una antigüedad de 8,000 a 6,000 años al presente.",
+            "Retorno a Arequipa."
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Arequipa: Yura & Turismo de Salud",
+        "schedule": "07.00 am. (retorno: 13.00 horas)",
+        "duration": "06 horas",
+        "modality": "Suave",
+        "client": "Niños, Jóvenes, Adultos, Tercera edad",
+        "included_visits": [
+            "Disfrute de una experiencia inigualable",
+            "Yura. - Es un estrecho valle, oculto entre cerros de conglomerado traquítico, ubicado al Noroeste de Arequipa y distante de ésta 30 Km., a 2,575 m. sobre el nivel del mar.",
+            "Yura es famoso por sus canteras, que antaño proveían de material para las construcciones coloniales.",
+            "Yura es famoso también por sus rincones amenos y su delicioso clima de montaña. Pero sobre todo, Yura es famosos por sus baños termo-medicinales.",
+            "1) El balneario sulfuro-alcalino, comprende cinco pozos: el 'Tigre' (34 °C), 'Sepultura' (27 °C), 'Végeto' (29 °C), 'Tigrillo' (30 °C) y 'Desagüe' (26 °C).",
+            "2) El balneario ferruginoso-alcalino, que tiene dos pozos: Pozo Viejo del Fierro Nº 1, con 34 °C, y Nº 2, con 32 °C.",
+            "3) El balneario mixto, representado por el pozo de Zamacola, que es una pequeña piscina de natación, bajo techo.",
+            "BENEFICIOS DE LAS AGUAS TERMALES DE YURA:",
+            "Estas aguas se utilizan en la anemia y clorosis, debilidad nerviosa, esterilidad debida a catarro uterino y la debilidad de los adolescentes causada por el desarrollo.",
+            "Hay en Yura un magnífico hotel de Turistas, con piscina y espléndidos jardines."
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Arequipa: Yura & Turismo Esotérico",
+        "schedule": "07.00 am. (retorno: 13.00 horas)",
+        "duration": "06 horas",
+        "modality": "Suave",
+        "client": "Niños, Jóvenes, Adultos, Tercera edad",
+        "included_visits": [
+            "Nuestro Medio Ambiente siempre esta rodeado de misterios ancestrales, y muchos de nosotros queremos renovar nuestro ambiente, experimentar el bañado de Flores, la lectura de los naipes y rituales esotéricos.",
+            "Programa: Full Day.",
+            "El esotérico se puede insertar a cualquier programa que elija su pasajero.",
+            "Incluye:",
+            "Traslados de Arequipa/Yura/Arequipa.",
+            "Baño de Hierbas.",
+            "Lectura de naipes para cada participante.",
+            "Itinerario:",
+            "Full Day a horas 7.00 a.m. Traslado a los pasajeros al balneario de Yura, donde habrá una sesión esotérica: las piscinas se arreglan con flores y aromas naturales, para la buena suerte y el porvenir, así como la nueva energía.",
+            "Luego habrá un ritual y entrega de amuletos y posteriormente en privado con cada uno de los participantes la lectura de naipes a hora oportunas retorno a Arequipa.",
+            "Si desean los participantes podrán quedar se a pernoctar una noche en el hotel de Yura."
+        ]
+    }
+]

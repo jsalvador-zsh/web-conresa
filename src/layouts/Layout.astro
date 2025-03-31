@@ -1,0 +1,67 @@
+---
+// Archivo css
+import "../styles/global.css";
+
+import "@fontsource/nothing-you-could-do";
+import "@fontsource-variable/merienda";
+import "@fontsource/gowun-dodum";
+import Nabvar from "../components/Nabvar.astro";
+import { ClientRouter } from "astro:transitions";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+	title: string;
+	description: string;
+}
+const { title, description } = Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<ClientRouter />
+		<Nabvar />
+		<slot />
+		<Footer />
+		<script
+			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+			defer></script>
+		<script
+			<script
+			is:inline
+			src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+		></script>
+	</body>
+</html>
+
+<style is:global>
+	body {
+		font-family: "Gowun Dodum", sans-serif;
+		/* font-size: 18px; */
+	}
+	h1 {
+		font-family: "Merienda Variable", cursive;
+		text-align: center;
+	}
+	h2 {
+		/* text-align: center; */
+	}
+	.cursive-font {
+		font-family: "Nothing You Could Do", cursive;
+	}
+</style>
+<script>
+	import { initFlowbite } from "../scripts/flowbite-init.ts";
+
+	document.addEventListener("astro:after-swap", () => {
+		initFlowbite();
+	});
+</script>

@@ -1,0 +1,292 @@
+---
+// src/pages/tours/[id].astro
+import toursData from "../../data/tours_arequipa.json";
+import Layout from "../../layouts/Layout.astro";
+
+// Exporta getStaticPaths para generar las rutas estáticas
+export async function getStaticPaths() {
+    return toursData.map((tour) => ({
+        params: { id: tour.id.toString() },
+        props: { tour }, // Pasamos el tour completo como prop
+    }));
+}
+
+// Ahora recibimos el tour como prop en lugar de buscarlo
+const { tour } = Astro.props;
+
+// Función para obtener 3 tours aleatorios excluyendo el actual
+const obtenerToursRelacionados = (idActual: string): typeof tour[] => {
+  const toursFiltrados = toursData.filter(t => t.id.toString() !== idActual);
+  return [...toursFiltrados]
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
+};
+
+const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
+---
+
+<Layout title={tour.title} description="">
+    <div class="container">
+        <a href="/arequipa-tours" class="back-link" transition:animate="slide"
+            >← Volver a todos los tours</a
+        >
+
+        <div class="tour-header">
+            <h1 class="title" transition:name={`title-${tour.id}`}>
+                {tour.title}
+            </h1>
+            <div class="tour-subtitle">
+                <span
+                    class="flex items-center gap-x-2 text-pink-950"
+                    transition:name={`duration-${tour.id}`}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 inline mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                    </svg>
+                    <span>Duración: {tour.duration}</span>
+                </span>
+                <span
+                    class="modality-badge italic capitalize"
+                    transition:name={`modality-${tour.id}`}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 inline mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                        ></path>
+                    </svg>
+                    Modalidad: {tour.modality}
+                </span>
+            </div>
+            <img
+                src="/images/paquetes/imagen-default.svg"
+                alt={tour.title}
+                class="tour-image"
+                width="800"
+                height="400"
+                transition:name={`image-${tour.id}`}
+                <div
+                class="tour-details"
+            />
+            <h2 class="section-title text-pink-950 text-lg md:text-xl uppercase" transition:animate="fade">
+                Visitas Incluidas:
+            </h2>
+            <ul>
+                {
+                    tour.included_visits.map((visit, index) => (
+                        <li
+                            class="list-item"
+                            set:html={visit}
+                            transition:animate="fade"
+                        />
+                    ))
+                }
+            </ul>
+
+            {
+                tour.itinerario && (
+                    <>
+                        <h2 class="section-title" transition:animate="fade">
+                            Itinerario Detallado:
+                        </h2>
+                        {tour.itinerario.map((item, index) => (
+                            <div transition:animate="fade">
+                                <p class="itinerario-item" set:html={item} />
+                            </div>
+                        ))}
+                    </>
+                )
+            }
+        </div>
+        <!-- Tours Relacionados -->    
+<div class="my-12">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Tours similares</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {toursRelacionados.map((tourRel) => (
+            <a
+                href={`/arequipa-tours/${tourRel.id}`}
+                class="group bg-white shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            >
+                <div class="relative h-48 overflow-hidden">
+                    <img
+                        src="/images/paquetes/imagen-default.svg"
+                        alt={tourRel.title}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        width="400"
+                        height="200"
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    <span class="absolute top-3 right-3 bg-pink-950 text-pink-100 text-xs italic font-medium px-2 py-1">
+                        {tourRel.modality}
+                    </span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">
+                        {tourRel.title}
+                    </h3>
+                    <div class="flex items-center text-[#8AB2A6] font-medium text-sm">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 mr-1"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                        </svg>
+                        {tourRel.duration}
+                    </div>
+                </div>
+            </a>
+        ))}
+    </div>
+</div>
+    </div>
+
+</Layout>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #2d3748;
+    }
+    .tour-header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .tour-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+        box-shadow:
+            0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .tour-subtitle {
+        display: flex;
+        justify-content: space-between;
+        color: #4a5568;
+        margin-bottom: 1.5rem;
+        align-items: center;
+    }
+    .modality-badge {
+        background-color: #8ab2a6;
+        color: white;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        display: inline-flex;
+        align-items: center;
+    }
+    .section-title {
+        position: relative;
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        color: #510424;
+        font-size: 1.25rem;
+    }
+    .section-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 2px; /* Ajusta según el tamaño de tu imagen */
+        width: 95%;
+        height: 1px;
+        background-color: #510424;
+    }
+    .section-title::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -15px; /* Posiciona la imagen debajo del borde */
+        width: 40px;
+        height: 40px;
+        background-image: url('/seashell.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+    .list-item {
+        margin-left: 1.5rem;
+        list-style-type: disc;
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+    .itinerario-item {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+    .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: #8ab2a6;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s ease;
+    }
+    .back-link:hover {
+        color: #6a8d82;
+        text-decoration: underline;
+    }
+
+    /* View Transitions animations */
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation-duration: 0.5s;
+    }
+
+    @keyframes slide {
+        from {
+            transform: translateX(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>

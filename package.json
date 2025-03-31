@@ -1,0 +1,23 @@
+{
+  "name": "web-conresa",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource-variable/merienda": "^5.2.5",
+    "@fontsource/gowun-dodum": "^5.2.5",
+    "@fontsource/nothing-you-could-do": "^5.2.5",
+    "@iconify-json/mdi": "^1.2.3",
+    "@tailwindcss/vite": "^4.0.17",
+    "alpinejs": "^3.14.9",
+    "astro": "^5.5.5",
+    "astro-icon": "^1.1.5",
+    "flowbite": "^3.1.2",
+    "tailwindcss": "^4.0.17"
+  }
+}

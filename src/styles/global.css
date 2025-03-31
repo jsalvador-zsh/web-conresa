@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+
+body {
+    font-family: "Gowun Dodum", sans-serif;
+    /* font-size: 18px; */
+    @apply md:text-lg
+}

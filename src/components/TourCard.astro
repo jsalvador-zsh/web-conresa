@@ -1,0 +1,78 @@
+---
+// src/components/TourCard.astro
+type Tour = {
+  id: string;
+  title: string;
+  duration: string;
+  modality: string;
+  client: string;
+  included_visits: string[];
+};
+
+interface Props {
+  tour: Tour;
+}
+
+const { tour } = Astro.props;
+---
+
+<a 
+  href={`/arequipa-tours/${tour.id}`} 
+  class="flex flex-col bg-white shadow-sm max-w-96 p-6 border border-slate-200 hover:shadow-md transition-shadow duration-300"
+  transition:name={`card-${tour.id}`}
+>
+  <div class="pb-6 text-center text-slate-800 border-b border-slate-200">
+    <p class="text-sm uppercase font-semibold text-slate-500">
+      {tour.modality}
+    </p>
+    <h2 class="mt-4 font-bold text-slate-800 text-2xl">
+      {tour.title}
+    </h2>
+  </div>
+  
+  <div class="p-0 mt-6">
+    <ul class="flex items-center flex-col gap-3">
+      {tour.included_visits.slice(0, 4).map((visit, index) => (
+        <li class="flex items-center gap-3">
+          <span class="p-1 border rounded-full border-slate-200 bg-slate-50">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-slate-600">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+            </svg>
+          </span>
+          <p class="text-slate-500 text-sm" set:html={visit}></p>
+        </li>
+      ))}
+    </ul>
+  </div>
+  
+  <div class="p-0 mt-8">
+    <div class="min-w-32 w-full bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white">
+      Ver Detalles
+    </div>
+  </div>
+</a>
+
+<style>
+  /* Animaciones para View Transitions */
+  :global(.view-transitions-enabled) a {
+    view-transition-name: none;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  a {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+  a:nth-child(1) { animation-delay: 0.1s; }
+  a:nth-child(2) { animation-delay: 0.2s; }
+  a:nth-child(3) { animation-delay: 0.3s; }
+  a:nth-child(4) { animation-delay: 0.4s; }
+  a:nth-child(5) { animation-delay: 0.5s; }
+  /* Añade más según sea necesario */
+</style>

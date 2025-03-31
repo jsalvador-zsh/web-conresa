@@ -1,0 +1,332 @@
+---
+// src/pages/nosotros.astro
+import Layout from "../layouts/Layout.astro";
+import { ClientRouter } from "astro:transitions";
+---
+
+<Layout
+    title="Nosotros - CONRESA TOURS"
+    description="Agencia de Viajes Turismo & Tour Operador registrada en MINCETUR con más de 39 años de experiencia en el sector turístico"
+>
+    <ClientRouter />
+
+    <div class="min-h-screen py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Hero Section -->
+            <div class="text-center mb-4 md:mb-16" data-aos="fade-up">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    Agencia de viajes y turismo
+                    <span class="text-pink-950 relative inline-block"
+                        >Conresa Tours</span
+                    >
+                </h1>
+                <p class="text-xl text-[#8AB2A6] font-semibold">
+                    Agencia de Viajes Turismo & Tour Operador
+                </p>
+                <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                    Prestigiosa, confiable, registrada y respaldada por MINCETUR <br
+                    />
+                    (Ministerio de Comercio Exterior y Turismo)
+                </p>
+            </div>
+
+            <!-- Historia Section -->
+            <div class="bg-white shadow-lg p-8 mb-12" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/3">
+                        <div
+                            class="bg-[#8AB2A6] p-6 text-center h-full flex flex-col justify-center"
+                        >
+                            <span class="text-5xl font-bold text-white"
+                                >1984</span
+                            >
+                            <p class="text-gray-700 mt-2">
+                                Inicio de operaciones
+                            </p>
+                            <p class="text-white">25 de febrero</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                            Nuestra Historia
+                        </h2>
+                        <div class="space-y-4 text-gray-700">
+                            <p>
+                                <span class="font-semibold text-[#8AB2A6]"
+                                    >Objetivo:</span
+                                > Compromiso de Servir, atender, resolver inquietudes
+                                en forma impecable a todos los visitantes nacionales
+                                y extranjeros que visiten el Perú y el Mundo.
+                            </p>
+                            <p>
+                                <span class="font-semibold text-[#8AB2A6]"
+                                    >Disciplina:</span
+                                > Pionera descubriendo rutas nuevas que nos brinda
+                                la naturaleza y presentarlas a nuestros usuarios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Misión y Visión Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Misión -->
+                <div class="bg-white shadow-lg p-8" data-aos="fade-right">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#8AB2A6] p-3 rounded-full mr-4">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Misión</h2>
+                    </div>
+                    <ul class="space-y-3 text-gray-700 pl-4">
+                        <li class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Satisfacer al turista en su estadía por el Perú y el
+                            mundo, sin contratiempo e inconvenientes.
+                        </li>
+                        <li class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Con nuestra buena organización e integración de equipo
+                            de trabajo.
+                        </li>
+                        <li class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Mantener una buena Receptividad con el Sector Turismo.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Visión -->
+                <div class="bg-white shadow-lg p-8" data-aos="fade-left">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#8AB2A6] p-3 rounded-full mr-4">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Visión</h2>
+                    </div>
+                    <ul class="space-y-3 text-gray-700 pl-4">
+                        <li class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Crecer día a día en la excelencia del servicio.
+                        </li>
+                        <li class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Ser líder en innovar servicios turísticos de Calidad.
+                        </li>
+                        <li class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Mantener en nuestra familia empresarial, el valor ética
+                            y moral.
+                        </li>
+                        <li class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Logrando así un turismo sostenible.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desarrollo Empresarial -->
+            <div class="bg-white shadow-lg p-8" data-aos="fade-up">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                    Desarrollo Empresarial
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4 text-gray-700">
+                        <p class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Hemos logrado posesionarnos en forma sólida en el ámbito
+                            del sector, por nuestro conocimiento en el mercado, planificación,
+                            precio, distribución y comunicación.
+                        </p>
+                        <p class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Manteniendo nuestra buena receptividad con el sector
+                            turismo.
+                        </p>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <p class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Cumpliendo con la legalidad en todo sentido.
+                        </p>
+                        <p class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Contamos con tecnología avanzada para conectarnos rápidamente
+                            con usted en sus consultas, cotizaciones y reservas.
+                        </p>
+                        <p class="flex items-start">
+                            <svg
+                                class="h-5 w-5 text-[#8AB2A6] mr-2 mt-1 flex-shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Creando y desarrollando productos de alta calidad para
+                            el Turismo Receptivo, Emisivo, MICE.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>

@@ -1,0 +1,357 @@
+{
+    "paquetes_turisticos": [
+        {
+            "codigo": "CT.8425-001",
+            "nombre": "Arequipa Fascinante",
+            "duracion": "2 Días / 1 Noche",
+            "incluye": [
+                "Traslado de entrada y salida",
+                "City Tour + Monasterio de Santa Catalina",
+                "1 noche de alojamiento",
+                "1 desayuno",
+                "Guiado en español/inglés (servicio compartido)",
+                "Entradas a lugares turísticos",
+                "Atención personalizada durante excursiones"
+            ],
+            "no_incluye": [
+                "Alimentación",
+                "Servicios no especificados"
+            ],
+            "itinerario": [
+                {
+                    "dia": 1,
+                    "actividades": [
+                        "Recepción y traslado al hotel",
+                        "City Tour + Monasterio Santa Catalina",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 2,
+                    "actividades": [
+                        "Desayuno en hotel",
+                        "Traslado de salida"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CT.8425-002",
+            "nombre": "Arequipa & Colca Espectacular",
+            "duracion": "3 Días / 2 Noches",
+            "incluye": [
+                "Traslados entrada/salida",
+                "City Tour + Monasterio Santa Catalina",
+                "2 noches de alojamiento (1 en Arequipa + 1 en Colca)",
+                "2 desayunos",
+                "2 días de excursión al Cañón del Colca",
+                "Guiado en español/inglés (servicio compartido)",
+                "Entradas a lugares turísticos",
+                "Servicios en Colca: movilidad, guía, alojamiento y desayuno",
+                "Botiquín y oxígeno"
+            ],
+            "no_incluye": [
+                "Entrada a la calera",
+                "Alimentación",
+                "Servicios no especificados"
+            ],
+            "itinerario": [
+                {
+                    "dia": 1,
+                    "actividades": [
+                        "Recepción y traslado al hotel",
+                        "City Tour + Monasterio",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 2,
+                    "actividades": [
+                        "Desayuno",
+                        "Excursión al Colca",
+                        "Pernocte en Colca"
+                    ]
+                },
+                {
+                    "dia": 3,
+                    "actividades": [
+                        "Chivay/Cruz del Cóndor/Arequipa",
+                        "Traslado de salida"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CT.8425-003",
+            "nombre": "Arequipa Canteras del Sillar + Colca",
+            "duracion": "3 Días / 2 Noches",
+            "incluye": [
+                "Traslados entrada/salida",
+                "HD Ruta del Sillar (Añashuayco y Culebrillas)",
+                "2 noches de alojamiento",
+                "2 desayunos",
+                "2 días de excursión al Colca",
+                "Guiado en español/inglés (servicio compartido)",
+                "Entradas a lugares turísticos",
+                "Servicios en Colca: movilidad, guía, alojamiento y desayuno",
+                "Botiquín y oxígeno"
+            ],
+            "no_incluye": [
+                "Entrada a la calera",
+                "Alimentación",
+                "Servicios no especificados"
+            ],
+            "itinerario": [
+                {
+                    "dia": 1,
+                    "actividades": [
+                        "Recepción y traslado al hotel",
+                        "Ruta del Sillar",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 2,
+                    "actividades": [
+                        "Desayuno",
+                        "Visita al Valle del Colca/Chivay",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 3,
+                    "actividades": [
+                        "Desayuno",
+                        "Cruz del Cóndor/Arequipa",
+                        "Traslado al aeropuerto"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CT.8425-004",
+            "nombre": "Arequipa City + Sta. Catalina + Colca Maravilloso",
+            "duracion": "4 Días / 3 Noches",
+            "incluye": [
+                "Traslados aeropuerto-hotel-aeropuerto",
+                "3 noches de alojamiento",
+                "3 desayunos",
+                "City Tour + Monasterio Santa Catalina",
+                "2 días en Valle del Colca",
+                "Guiado en español/inglés (servicio compartido)",
+                "Entradas a lugares turísticos",
+                "Servicios en Colca: movilidad, guía, alojamiento y desayuno",
+                "Botiquín y oxígeno"
+            ],
+            "no_incluye": [
+                "Entrada a la calera",
+                "Alimentación",
+                "Servicios no especificados"
+            ],
+            "itinerario": [
+                {
+                    "dia": 1,
+                    "actividades": [
+                        "Recepción y traslado al hotel",
+                        "City Tour + Monasterio",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 2,
+                    "actividades": [
+                        "Desayuno",
+                        "Visita al Valle del Colca/Chivay",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 3,
+                    "actividades": [
+                        "Desayuno",
+                        "Cruz del Cóndor/Arequipa",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 4,
+                    "actividades": [
+                        "Desayuno",
+                        "Tiempo libre/tours opcionales",
+                        "Traslado al aeropuerto"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CT.8425-005",
+            "nombre": "Arequipa/Colca & Puno Andino",
+            "duracion": "3 Días / 2 Noches",
+            "incluye": [
+                "Traslados entrada/salida",
+                "City Tour + Monasterio Santa Catalina",
+                "2 noches de alojamiento",
+                "2 desayunos",
+                "2 días de excursión al Colca",
+                "Extensión a Puno",
+                "Guiado en español/inglés (servicio compartido)",
+                "Entradas a lugares turísticos",
+                "Servicios en Colca: movilidad, guía, alojamiento y desayuno",
+                "Botiquín y oxígeno"
+            ],
+            "no_incluye": [
+                "Entrada a la calera",
+                "Alimentación",
+                "Servicios no especificados"
+            ],
+            "itinerario": [
+                {
+                    "dia": 1,
+                    "actividades": [
+                        "Recepción y traslado al hotel",
+                        "City Tour + Monasterio",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 2,
+                    "actividades": [
+                        "Desayuno",
+                        "Visita al Valle del Colca",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 3,
+                    "actividades": [
+                        "Desayuno",
+                        "Cruz del Cóndor/Puno",
+                        "Traslado a hotel en Puno"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CT.8425-006",
+            "nombre": "Arequipa/Colca & Puno Majestuoso",
+            "duracion": "4 Días / 3 Noches",
+            "incluye": [
+                "Traslados entrada/salida",
+                "City Tour + Monasterio Santa Catalina",
+                "3 noches de alojamiento",
+                "3 desayunos",
+                "2 días de excursión al Colca",
+                "Traslado privado a Puno con parada en Sillustani",
+                "Guiado en español/inglés",
+                "Entradas a lugares turísticos",
+                "Servicios en Colca: movilidad privada, 2 noches alojamiento, 2 desayunos",
+                "Botiquín y oxígeno"
+            ],
+            "no_incluye": [
+                "Entrada a la calera",
+                "Alimentación",
+                "Servicios no especificados"
+            ],
+            "itinerario": [
+                {
+                    "dia": 1,
+                    "actividades": [
+                        "Recepción y traslado al hotel",
+                        "City Tour + Monasterio",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 2,
+                    "actividades": [
+                        "Desayuno",
+                        "Visita al Valle del Colca",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 3,
+                    "actividades": [
+                        "Desayuno",
+                        "Cruz del Cóndor/Chivay",
+                        "Pernocte en hotel"
+                    ]
+                },
+                {
+                    "dia": 4,
+                    "actividades": [
+                        "Desayuno",
+                        "Traslado a Puno vía Sillustani",
+                        "Llegada a hotel en Puno"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CT 8425-E001",
+            "nombre": "Arequipa Viaje Cultural Estudiantes",
+            "duracion": "4 Días / 3 Noches",
+            "incluye": [
+                "Traslados aeropuerto/terminal-hotel",
+                "Tour Campiña + Monasterio Santa Catalina",
+                "Ruta del Sillar y Culebrillas",
+                "Excursión al Colca (2 días)",
+                "Pensión completa (3 desayunos, 3 almuerzos, 3 cenas)",
+                "2 noches de entretenimiento (música andina y peña folklórica)",
+                "3 noches de alojamiento",
+                "Guiado privado en español/inglés",
+                "Servicios en Colca: movilidad privada, alojamiento, alimentación completa",
+                "Entrada a Calera",
+                "Botiquín y oxígeno"
+            ],
+            "no_incluye": [
+                "Souvenirs",
+                "Seguro de viaje",
+                "Asistencia médica",
+                "Lavandería",
+                "Servicios no especificados"
+            ],
+            "itinerario": [
+                {
+                    "dia": 1,
+                    "actividades": [
+                        "Recepción y traslado al hotel",
+                        "Tour Campiña: Yanahuara, Paucarpata, Molino de Sabandía",
+                        "Almuerzo",
+                        "Visita Monasterio Santa Catalina",
+                        "Pernocte"
+                    ]
+                },
+                {
+                    "dia": 2,
+                    "actividades": [
+                        "Desayuno",
+                        "Visita al Colca",
+                        "Almuerzo",
+                        "Cena",
+                        "Peña Folklórica",
+                        "Pernocte"
+                    ]
+                },
+                {
+                    "dia": 3,
+                    "actividades": [
+                        "Visita Cruz del Cóndor",
+                        "Almuerzo",
+                        "Retorno a Arequipa",
+                        "Cena con música andina",
+                        "Pernocte"
+                    ]
+                },
+                {
+                    "dia": 4,
+                    "actividades": [
+                        "Desayuno",
+                        "Ruta del Sillar y Culebrillas",
+                        "Traslado de salida"
+                    ]
+                }
+            ]
+        }
+    ]
+}

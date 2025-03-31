@@ -1,0 +1,259 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Beneficio {
+    icono: string;
+    titulo: string;
+    descripcion: string;
+}
+
+const timeLineData = [
+    {   id: 1,
+        icono: "mdi:calendar-check",
+        titulo: "Salidas Garantizadas",
+        descripcion:
+            "Todos nuestros circuitos turísticos tienen garantizada la salida. Así no se cubra el mínimo de pasajeros la salida es 100% segura.",
+    },
+    {
+        id: 2,
+        icono: "mdi:clock-fast",
+        titulo: "Confirmación On Line",
+        descripcion:
+            "Todos nuestros circuitos turísticos solicitados serán confirmados inmediatamente una vez recibido el pedido, evitando así esperas innecesarias.",
+    },
+    {
+        id: 3,
+        icono: "mdi:account-cog",
+        titulo: "Programas a su medida",
+        descripcion:
+            "A pesar de brindarle programas e itinerarios establecidos, estamos ampliamente dispuestos a armar programas especiales para ustedes de acuerdo a su requerimiento.",
+    },
+    {
+        id: 4,
+        icono: "mdi:calendar-edit",
+        titulo: "Flexibilidad en sus viajes",
+        descripcion:
+            "Conresa Tour Operador está dispuesto a ser flexible en la salida de sus excursiones en privado si así lo desea de acuerdo al ritmo personal de cada uno.",
+    },
+    {
+        id: 5,
+        icono: "mdi:headset",
+        titulo: "24 horas de comunicación",
+        descripcion:
+            "Nuestro departamento de Operaciones está comunicado las 24 horas con ustedes y con los turistas a través de líneas telefónicas móviles.",
+    },
+    {
+      id: 6,
+        icono: "mdi:account-child",
+        titulo: "Descuento de niño 50% y Gratis",
+        descripcion:
+            "Todos nuestros circuitos turísticos en servicio Privado tienen un descuento del 50% para niños menores de 9 años. Y GRATIS para niños de 2 años.",
+    },
+    {
+        id: 7,
+        icono: "mdi:bus",
+        titulo: "Flota moderna de transporte",
+        descripcion:
+            "Trabajamos con una moderna flota de autos, camionetas 4×4, minivan, minibuses y buses del año, con todas las comodidades y medidas de seguridad.",
+    },
+    {
+        id: 8,
+        icono: "mdi:account-tie",
+        titulo: "Elegancia en el Vestir",
+        descripcion:
+            "Todo nuestro personal, debidamente uniformado mostrando pulcritud y seriedad en el trabajo.",
+    },
+    {
+        id: 9,
+        icono: "mdi:handshake",
+        titulo: "Recepción Profesional",
+        descripcion:
+            '"La primera impresión es la que cuenta" - Recibimos a los pasajeros con el nombre de su Agencia.',
+    },
+    {
+        id: 10,
+        icono: "mdi:translate",
+        titulo: "Guías Políglotas",
+        descripcion:
+            "Nuestro Staff de guías altamente calificado en idiomas (español, inglés, francés, alemán, italiano) listos para servirle.",
+    },
+    {
+        id: 11,
+        icono: "mdi:arrow-up-bold",
+        titulo: "Up Grade",
+        descripcion:
+            "En todos nuestros tours privados, el transporte incluye aire acondicionado, calefacción, equipo de audio, micrófono y comodidades adicionales.",
+    },
+    {
+        id: 12,
+        icono: "mdi:eye-check",
+        titulo: "Supervisión de Servicios",
+        descripcion:
+            "Conresa Tours Operador está constantemente supervisando los servicios en alojamiento, restaurantes y actividades.",
+    },
+    {
+        id: 13,
+        icono: "mdi:clock-outline",
+        titulo: "Puntualidad",
+        descripcion:
+            "Una virtud que nos caracteriza es la puntualidad en nuestros servicios. La movilidad y el guía están siempre 15 minutos antes de lo indicado.",
+    },
+    {
+        id: 14,
+        icono: "mdi:chart-line",
+        titulo: "Seguimiento constante",
+        descripcion:
+            "Nuestro Staff de Operaciones está constantemente informando sobre la estadía del pasajero y envía reportes al finalizar las excursiones.",
+    },
+];
+---
+<div class="container mx-auto px-4 py-12 max-w-5xl">
+  <h1 class="text-4xl font-bold text-gray-800 mb-4 md:mb-16">
+    ¿Por qué viajar con
+    <span class="text-pink-950 relative inline-block">Conresa Tours?</span>
+  </h1>  
+
+  <div class="relative">
+    <!-- SVG curved dotted line -->
+<!-- SVG curved dotted line -->
+<svg 
+  class="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 h-[calc(100%-40px)] w-full max-w-[100px] md:max-w-[150px] z-0 hidden md:block my-5" 
+  viewBox="0 0 100 1400" 
+  preserveAspectRatio="none"
+>
+  <path
+    d="M50,20 C70,120 30,220 50,320 C70,420 30,520 50,620 C70,720 30,820 50,920 C70,1020 30,1120 50,1220 C70,1320 30,1380 50,1380"
+    fill="none"
+    stroke="#510424"
+    stroke-width="2"
+    stroke-dasharray="6 6"
+  />
+</svg>
+    
+    <!-- Mobile dotted line (straight) -->
+    <div class="absolute left-[22px] top-0 bottom-0 border-l-2 border-dashed border-pink-950 md:hidden"></div>
+    
+    <!-- Timeline points and cards -->
+    <div class="relative z-10">
+      {timeLineData.map((item, index) => (
+        <div 
+          class={`flex flex-col md:flex-row items-start mb-16 md:mb-4 relative ${
+            index % 2 === 1 ? "md:flex-row-reverse" : ""
+          }`}
+          data-timeline-item={item.id}
+        >
+          <!-- Mobile point with icon -->
+          <div class="absolute left-0 top-0 md:hidden">
+            <button
+              class="timeline-toggle size-12 rounded-full border-2 flex items-center justify-center transition-colors bg-white border-[#8AB2A6] text-[#8AB2A6]"
+              aria-label={`Toggle ${item.titulo} information`}
+              data-id={item.id}
+            >
+              <Icon name={item.icono} class="h-5 w-5" />
+            </button>
+          </div>
+          
+          <div class="pl-16 md:pl-0 md:w-[calc(50%-25px)] md:px-4">            
+            <div class="mobile-card md:hidden transition-all duration-300 overflow-hidden max-h-0 opacity-0" data-id={item.id}>
+              <div class="card mt-2 bg-white border border-gray-200 p-4 shadow-sm">
+                <p class="text-gray-600">{item.descripcion}</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Desktop point with icon -->
+          <div class="hidden md:flex items-center justify-center w-[50px]">
+            <button
+              class="timeline-toggle size-12 rounded-full border-2 flex items-center justify-center transition-colors bg-white border-[#8AB2A6] text-[#8AB2A6]"
+              aria-label={`Toggle ${item.titulo} information`}
+              data-id={item.id}
+            >
+              <Icon name={item.icono} class="size-6" />
+            </button>
+          </div>
+          
+          <div class="desktop-card hidden md:block md:w-[calc(50%-25px)] transition-all duration-300 opacity-0 pointer-events-none" data-id={item.id}>
+            <div class="card bg-white border border-gray-200 shadow-sm">
+              <div class="p-4 border-b border-gray-200">
+                <h4 class="text-lg font-semibold flex items-center gap-2">
+                  <Icon name={item.icono} class="h-5 w-5 text-[#8AB2A6]" />
+                  {item.titulo}
+                </h4>
+              </div>
+              <div class="p-4">
+                <p class="text-gray-600">{item.descripcion}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .timeline-toggle.active {
+    background-color: #510424;
+    border-color: white;
+    color: white;
+  }
+  
+  .card {
+    transition: all 0.3s ease;
+  }
+</style>
+
+<script is:inline>
+  // Usar delegación de eventos en el documento
+  document.addEventListener('click', (event) => {
+    const toggleButton = event.target.closest('.timeline-toggle');
+    if (toggleButton) {
+      const id = toggleButton.getAttribute('data-id');
+      const activeCardId = document.querySelector('.timeline-toggle.active')?.getAttribute('data-id');
+      
+      if (activeCardId === id) {
+        closeCard(id);
+      } else {
+        if (activeCardId) closeCard(activeCardId);
+        openCard(id);
+      }
+    }
+  });
+  
+  // Las funciones openCard y closeCard permanecen igual
+  function openCard(id) {
+    document.querySelectorAll(`.timeline-toggle[data-id="${id}"]`).forEach(btn => {
+      btn.classList.add('active');
+    });
+    
+    const mobileCard = document.querySelector(`.mobile-card[data-id="${id}"]`);
+    if (mobileCard) {
+      mobileCard.classList.remove('max-h-0', 'opacity-0');
+      mobileCard.classList.add('max-h-96', 'opacity-100');
+    }
+    
+    const desktopCard = document.querySelector(`.desktop-card[data-id="${id}"]`);
+    if (desktopCard) {
+      desktopCard.classList.remove('opacity-0', 'pointer-events-none');
+      desktopCard.classList.add('opacity-100');
+    }
+  }
+  
+  function closeCard(id) {
+    document.querySelectorAll(`.timeline-toggle[data-id="${id}"]`).forEach(btn => {
+      btn.classList.remove('active');
+    });
+    
+    const mobileCard = document.querySelector(`.mobile-card[data-id="${id}"]`);
+    if (mobileCard) {
+      mobileCard.classList.remove('max-h-96', 'opacity-100');
+      mobileCard.classList.add('max-h-0', 'opacity-0');
+    }
+    
+    const desktopCard = document.querySelector(`.desktop-card[data-id="${id}"]`);
+    if (desktopCard) {
+      desktopCard.classList.remove('opacity-100');
+      desktopCard.classList.add('opacity-0', 'pointer-events-none');
+    }
+  }
+  </script>

@@ -1,0 +1,273 @@
+---
+// src/pages/arequipa-paquetes/[codigo].astro
+import Layout from "../../layouts/Layout.astro";
+import paquetesData from '../../data/paquetes_aqp.json';
+import Time from "../../icons/Time.astro";
+import Calendar from "../../icons/Calendar.astro";
+
+
+// Exportar getStaticPaths para generar las rutas estáticas
+export async function getStaticPaths() {
+  const { paquetes_turisticos: paquetes } = paquetesData;
+  
+  return paquetes.map(paquete => ({
+    params: {
+      codigo: paquete.codigo.toLowerCase().replace(/\./g, '-').replace(/\s/g, '-')
+    },
+    props: {
+      paquete // Pasamos el paquete completo como prop
+    }
+  }));
+}
+
+// Recibir el paquete como prop desde getStaticPaths
+const { paquete } = Astro.props;
+
+// Mapeo de imágenes por código de paquete
+const imagenesPaquetes = {
+  "CT.8425-001": "/images/paquetes/imagen-default.svg",
+  "CT.8425-002": "/images/paquetes/imagen-default.svg",
+  "CT.8425-003": "/images/paquetes/imagen-default.svg",
+  "CT.8425-004": "/images/paquetes/imagen-default.svg",
+  "CT.8425-005": "/images/paquetes/imagen-default.svg",
+  "CT.8425-006": "/images/paquetes/imagen-default.svg",
+  "CT 8425-E001": "/images/paquetes/imagen-default.svg"
+};
+
+// Obtener todos los paquetes
+const { paquetes_turisticos: todosPaquetes } = paquetesData;
+
+// Función para obtener 3 paquetes aleatorios excluyendo el actual
+// Define the Paquete type
+interface Paquete {
+  codigo: string;
+  nombre: string;
+  duracion: string;
+  incluye: string[];
+  no_incluye: string[];
+  itinerario: { dia: number; actividades: string[] }[];
+}
+
+const obtenerPaquetesRelacionados = (codigoActual: string): Paquete[] => {
+  const paquetesFiltrados = todosPaquetes.filter(p => p.codigo !== codigoActual);
+  return [...paquetesFiltrados]
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
+};
+
+// Generar slug para URLs
+const generarSlug = (codigo: string): string => {
+  return codigo.toLowerCase()
+    .replace(/\./g, '-')
+    .replace(/\s/g, '-')
+    .replace(/[^a-z0-9-]/g, '');
+};
+
+const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
+---
+
+<Layout title={paquete.nombre} description="">
+    <div class="min-h-screen py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a href="/arequipa-paquetes" class="back-link">← Volver a todos los paquetes</a>
+        
+        <div class="paquete-header">
+            <h1 class="title">{paquete.nombre}</h1>
+            <div class="paquete-subtitle">
+                <span class="flex gap-x-2 items-center"> <Time class="size-6" /> {paquete.duracion}</span>
+                <span class="bg-pink-950 text-pink-100 text-xs md:text-xs italic font-medium px-4 py-2">{paquete.codigo}</span>
+            </div>
+            <img 
+                src={imagenesPaquetes[paquete.codigo] || '/images/paquetes/imagen-default.svg'} 
+                alt={paquete.nombre} 
+                class="paquete-image"
+                width="800"
+                height="400"
+                transition:name={`image-${paquete.codigo}`}
+
+            />
+        </div>
+
+        <div class="paquete-details">
+            <h2 class="section-title text-pink-950 text-lg md:text-xl uppercase">Incluye:</h2>
+            <ul>
+                {paquete.incluye.map(item => (
+                    <li class="list-item">{item}</li>
+                ))}
+            </ul>
+
+            <h2 class="section-title text-pink-950 text-lg md:text-xl uppercase">No incluye:</h2>
+            <ul>
+                {paquete.no_incluye.map(item => (
+                    <li class="list-item">{item}</li>
+                ))}
+            </ul>
+
+            <h2 class="section-title text-pink-950 text-lg md:text-xl uppercase">Itinerario:</h2>
+            {paquete.itinerario.map(dia => (
+                <div data-key={`${paquete.codigo}-dia-${dia.dia}`}>
+                    <p class="flex gap-x-2 items-center itinerario-day mb-4"><Calendar /> Día {dia.dia}:</p>
+                    <ul>
+                        {dia.actividades.map((actividad, index) => (
+                            <li class="list-item">
+                                {actividad}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+        <!-- Paquetes Relacionados -->    
+        <div class="my-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Paquetes similares</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {paquetesRelacionados.map((paqueteRel) => {
+                    const slug = generarSlug(paqueteRel.codigo);
+                    const imagen = imagenesPaquetes[paqueteRel.codigo] || '/images/paquetes/imagen-default.svg';
+                    
+                    return (
+                        <a
+                            href={`/arequipa-paquetes/${slug}`}
+                            class="group bg-white shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                        >
+                            <div class="relative h-48 overflow-hidden">
+                                <img
+                                    src={imagen}
+                                    alt={paqueteRel.nombre}
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    width="400"
+                                    height="200"
+                                    loading="lazy"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                                <span class="absolute top-3 right-3 bg-pink-950 text-pink-100 text-xs italic font-medium px-2 py-1">
+                                    {paqueteRel.codigo}
+                                </span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">
+                                    {paqueteRel.nombre}
+                                </h3>
+                                <div class="flex items-center text-[#8AB2A6] font-medium text-sm">
+                                    <Time class="w-4 h-4 mr-1" />
+                                    {paqueteRel.duracion}
+                                </div>
+                            </div>
+                        </a>
+                    );
+                })}
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+</div>
+</div>
+</BaseLayout>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #2d3748;
+    }
+    .paquete-header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .paquete-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+    }
+    .paquete-subtitle {
+        display: flex;
+        justify-content: space-between;
+        color: #4a5568;
+        margin-bottom: 1rem;
+        align-items: center;
+    }
+    .section-title {
+        position: relative;
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        color: #510424;
+        font-size: 1.25rem;
+    }
+    .section-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 2px; /* Ajusta según el tamaño de tu imagen */
+        width: 95%;
+        height: 1px;
+        background-color: #510424;
+    }
+    .section-title::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -15px; /* Posiciona la imagen debajo del borde */
+        width: 40px;
+        height: 40px;
+        background-image: url('/seashell.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+    .list-item {
+        margin-left: 1.5rem;
+        list-style-type: disc;
+        margin-bottom: 0.5rem;
+        color: #4a5568;
+    }
+    .itinerario-day {
+        font-weight: bold;
+        margin-top: 1rem;
+        color: #2d3748;
+    }
+    .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: #8AB2A6;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s;
+    }
+    .back-link:hover {
+        color: #6a8d7a;
+        text-decoration: underline;
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+        .container {
+            padding: 1rem;
+        }
+        .title {
+            font-size: 1.5rem;
+        }
+        .paquete-image {
+            height: 250px;
+        }
+        .section-title::before {
+            width: 30px;
+            height: 30px;
+            bottom: -15px;
+        }
+        .section-title::after {
+        width: 90%;
+    }
+</style>
