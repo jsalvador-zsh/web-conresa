@@ -6,12 +6,3 @@ body {
     /* font-size: 18px; */
     @apply md:text-lg
 }
-.text-[#3D7872]{
-    color: #3D7872;
-}
-.bg-[#3D7872] {
-    background-color: #3D7872;
-}
-.border-[#3D7872] {
-    border: #3D7872;
-}
