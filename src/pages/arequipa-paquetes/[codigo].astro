@@ -72,10 +72,10 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
         <a href="/arequipa-paquetes" class="back-link">← Volver a todos los paquetes</a>
         
         <div class="paquete-header">
-            <h1 class="title">{paquete.nombre}</h1>
+            <h1 class="title text-pink-900">{paquete.nombre}</h1>
             <div class="paquete-subtitle">
                 <span class="flex gap-x-2 items-center"> <Time class="size-6" /> {paquete.duracion}</span>
-                <span class="bg-pink-950 text-pink-100 text-xs md:text-xs italic font-medium px-4 py-2">{paquete.codigo}</span>
+                <span class="bg-pink-900 text-pink-100 text-xs md:text-xs italic font-medium px-4 py-2">{paquete.codigo}</span>
             </div>
             <img 
                 src={imagenesPaquetes[paquete.codigo] || '/images/paquetes/imagen-default.svg'} 
@@ -89,21 +89,21 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
         </div>
 
         <div class="paquete-details">
-            <h2 class="section-title text-pink-950 text-lg md:text-xl uppercase">Incluye:</h2>
+            <h2 class="section-title text-pink-900 text-lg md:text-xl uppercase">Incluye:</h2>
             <ul>
                 {paquete.incluye.map(item => (
                     <li class="list-item">{item}</li>
                 ))}
             </ul>
 
-            <h2 class="section-title text-pink-950 text-lg md:text-xl uppercase">No incluye:</h2>
+            <h2 class="section-title text-pink-900 text-lg md:text-xl uppercase">No incluye:</h2>
             <ul>
                 {paquete.no_incluye.map(item => (
                     <li class="list-item">{item}</li>
                 ))}
             </ul>
 
-            <h2 class="section-title text-pink-950 text-lg md:text-xl uppercase">Itinerario:</h2>
+            <h2 class="section-title text-pink-900 text-lg md:text-xl uppercase">Itinerario:</h2>
             {paquete.itinerario.map(dia => (
                 <div data-key={`${paquete.codigo}-dia-${dia.dia}`}>
                     <p class="flex gap-x-2 items-center itinerario-day mb-4"><Calendar /> Día {dia.dia}:</p>
@@ -139,8 +139,7 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
                                     height="200"
                                     loading="lazy"
                                 />
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                                <span class="absolute top-3 right-3 bg-pink-950 text-pink-100 text-xs italic font-medium px-2 py-1">
+                                <span class="absolute top-3 right-3 bg-pink-900 text-pink-100 text-xs italic font-medium px-2 py-1">
                                     {paqueteRel.codigo}
                                 </span>
                             </div>
@@ -174,11 +173,9 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
         padding: 2rem;
     }
     .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: bold;
-        margin-bottom: 1rem;
-        color: #2d3748;
-    }
+        margin-bottom: 1rem;    }
     .paquete-header {
         display: flex;
         flex-direction: column;
@@ -241,13 +238,13 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
     .back-link {
         display: inline-block;
         margin-bottom: 2rem;
-        color: #8AB2A6;
+        color: #3D7872;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.2s;
     }
     .back-link:hover {
-        color: #6a8d7a;
+        color: #3D7872;
         text-decoration: underline;
     }
 

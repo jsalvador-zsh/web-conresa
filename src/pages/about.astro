@@ -1,5 +1,6 @@
 ---
 // src/pages/nosotros.astro
+import CarouselCert from "../components/CarouselCert.astro";
 import Layout from "../layouts/Layout.astro";
 import { ClientRouter } from "astro:transitions";
 ---
@@ -16,7 +17,7 @@ import { ClientRouter } from "astro:transitions";
             <div class="text-center mb-4 md:mb-16" data-aos="fade-up">
                 <h1 class="text-4xl font-bold text-gray-800 mb-4">
                     Agencia de viajes y turismo
-                    <span class="text-pink-950 relative inline-block"
+                    <span class="text-pink-900 relative inline-block"
                         >Conresa Tours</span
                     >
                 </h1>
@@ -40,9 +41,7 @@ import { ClientRouter } from "astro:transitions";
                             <span class="text-5xl font-bold text-white"
                                 >1984</span
                             >
-                            <p class="text-gray-700 mt-2">
-                                Inicio de operaciones
-                            </p>
+                            <p class="text-white mt-2">Inicio de operaciones</p>
                             <p class="text-white">25 de febrero</p>
                         </div>
                     </div>
@@ -68,7 +67,18 @@ import { ClientRouter } from "astro:transitions";
                     </div>
                 </div>
             </div>
-
+            <div class="relative mb-12" style="padding-top: 56.25%">
+                <iframe
+                    class="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/9zZReDX5g0c"
+                    title="Premio Turístico Arequipa 2016"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                >
+                </iframe>
+            </div>
             <!-- Misión y Visión Section -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                 <!-- Misión -->
@@ -327,6 +337,7 @@ import { ClientRouter } from "astro:transitions";
                     </div>
                 </div>
             </div>
+            <CarouselCert />
         </div>
     </div>
 </Layout>
