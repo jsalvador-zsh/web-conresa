@@ -1,0 +1,304 @@
+{
+    "tours": [
+        {
+            "id": "colca-1d",
+            "title": "Tour Cañón del Colca Un día",
+            "schedule": {
+                "departure": "03:00 am",
+                "return": "17:00 horas"
+            },
+            "duration": "FULL DAY",
+            "modality": "SUAVE",
+            "clients": [
+                "Niños",
+                "Jóvenes",
+                "Adultos",
+                "Tercera edad"
+            ],
+            "itinerary": [
+                {
+                    "time": "03:00 - 06:00",
+                    "description": "Salida desde Arequipa por Yura. Viaje de 3 horas hacia Chivay, la capital del Cañón del Colca, pasando por las faldas del nevado Chachani"
+                },
+                {
+                    "time": "06:00",
+                    "description": "Llegada a Chivay para desayuno"
+                },
+                {
+                    "time": "07:00 - 09:00",
+                    "description": "Visita al Mirador de la Cruz del Cóndor para apreciar el cañón y el santuario del cóndor"
+                },
+                {
+                    "time": "09:00 - 12:00",
+                    "description": "Recorrido por los pueblos de Pinchollo, Maca y Yanque con sus iglesias coloniales. Visita a los miradores de Wayrapunku y Antahulque para apreciar las terrazas preincas"
+                },
+                {
+                    "time": "12:00 - 13:00",
+                    "description": "Visita a las Aguas Termales de Chacapi o Calera"
+                },
+                {
+                    "time": "13:00 - 14:00",
+                    "description": "Almuerzo y visita al mercado artesanal de Chivay"
+                },
+                {
+                    "time": "14:00 - 16:00",
+                    "description": "Retorno a Arequipa, parando en Patapampa (4,800 msnm) para vista de volcanes y en la Reserva Nacional Pampa Cañahuas para ver vicuñas y aves andinas"
+                },
+                {
+                    "time": "17:00",
+                    "description": "Llegada aproximada a Arequipa"
+                }
+            ],
+            "highlights": [
+                "Vistas del cañón más profundo del mundo",
+                "Avistamiento de cóndores",
+                "Termas naturales",
+                "Cultura viva en pueblos tradicionales",
+                "Paisajes andinos espectaculares"
+            ]
+        },
+        {
+            "id": "colca-2d",
+            "title": "Tour Cañón del Colca Dos días",
+            "schedule": {
+                "departure": "07:00 am",
+                "return": "17:00 horas (día siguiente)"
+            },
+            "duration": "2 días",
+            "modality": "SUAVE",
+            "clients": [
+                "Niños",
+                "Adultos",
+                "Tercera Edad"
+            ],
+            "itinerary": [
+                {
+                    "day": 1,
+                    "activities": [
+                        {
+                            "time": "07:00",
+                            "description": "Salida desde Arequipa hacia Chivay por la ruta de Yura"
+                        },
+                        {
+                            "time": "08:00 - 10:00",
+                            "description": "Visita a la Reserva Nacional de Pampa Cañahuas para observar vicuñas y llamas"
+                        },
+                        {
+                            "time": "10:00",
+                            "description": "Parada en Patahuasi para mate de coca (por cuenta del pasajero)"
+                        },
+                        {
+                            "time": "11:00",
+                            "description": "Visita a Pampa de Tocra para observación de aves"
+                        },
+                        {
+                            "time": "12:00",
+                            "description": "Llegada a Patapampa (4,800 msnm), Mirador de los Andes con vista a volcanes"
+                        },
+                        {
+                            "time": "13:30",
+                            "description": "Llegada a Chivay y almuerzo"
+                        },
+                        {
+                            "time": "16:00",
+                            "description": "Visita a las aguas termales La Calera y museo de los Collaguas"
+                        },
+                        {
+                            "time": "18:00",
+                            "description": "Visita al mercado artesanal de Chivay"
+                        },
+                        {
+                            "time": "Noche",
+                            "description": "Pernocte en hotel seleccionado"
+                        }
+                    ]
+                },
+                {
+                    "day": 2,
+                    "activities": [
+                        {
+                            "time": "06:15",
+                            "description": "Salida hacia el Mirador de la Cruz del Cóndor"
+                        },
+                        {
+                            "time": "07:00",
+                            "description": "Parada en Yanque para visitar su plaza e iglesia"
+                        },
+                        {
+                            "time": "08:00 - 09:30",
+                            "description": "Avistamiento de cóndores en la Cruz del Cóndor (caminata opcional de 20 minutos)"
+                        },
+                        {
+                            "time": "10:00 - 12:00",
+                            "description": "Visita a Pinchollo, miradores de Wayrapunko y Antahuilque, lagunas misteriosas y tumbas colgantes"
+                        },
+                        {
+                            "time": "12:00",
+                            "description": "Visita al pueblo de Maca y su iglesia singular"
+                        },
+                        {
+                            "time": "13:00",
+                            "description": "Almuerzo en Chivay"
+                        },
+                        {
+                            "time": "14:00 - 17:00",
+                            "description": "Retorno a Arequipa"
+                        }
+                    ]
+                }
+            ],
+            "highlights": [
+                "Baño en aguas termales",
+                "Visita cultural a pueblos tradicionales",
+                "Observación detallada de cóndores",
+                "Experiencia con comunidades locales",
+                "Paisajes volcánicos"
+            ]
+        },
+        {
+            "id": "colca-3d",
+            "title": "Tour Cañón del Colca Tres días",
+            "schedule": {
+                "departure": "07:00 am",
+                "return": "16:00 horas (tercer día)"
+            },
+            "duration": "3 días",
+            "modality": "SUAVE",
+            "clients": [
+                "Niños",
+                "Adultos",
+                "Tercera Edad"
+            ],
+            "itinerary": [
+                {
+                    "day": 1,
+                    "activities": [
+                        {
+                            "time": "07:00",
+                            "description": "Salida desde Arequipa hacia Chivay"
+                        },
+                        {
+                            "time": "08:00 - 10:00",
+                            "description": "Recorrido por la Reserva Nacional de Pampa Cañahuas"
+                        },
+                        {
+                            "time": "10:00",
+                            "description": "Parada en Patahuasi para mate de coca"
+                        },
+                        {
+                            "time": "11:00",
+                            "description": "Visita a Pampa de Tocra para observación de aves"
+                        },
+                        {
+                            "time": "12:00",
+                            "description": "Llegada a Patapampa (4,800 msnm), Mirador de los Andes"
+                        },
+                        {
+                            "time": "13:30",
+                            "description": "Llegada a Chivay y almuerzo"
+                        },
+                        {
+                            "time": "16:00",
+                            "description": "Visita a las aguas termales La Calera y museo de los Collaguas"
+                        },
+                        {
+                            "time": "18:00",
+                            "description": "Recorrido por el mercado artesanal de Chivay"
+                        },
+                        {
+                            "time": "Noche",
+                            "description": "Pernocte en hotel"
+                        }
+                    ]
+                },
+                {
+                    "day": 2,
+                    "activities": [
+                        {
+                            "time": "06:15",
+                            "description": "Salida hacia la Cruz del Cóndor"
+                        },
+                        {
+                            "time": "07:00",
+                            "description": "Visita a Yanque (plaza e iglesia)"
+                        },
+                        {
+                            "time": "08:00 - 09:30",
+                            "description": "Avistamiento de cóndores y caminata por el cañón"
+                        },
+                        {
+                            "time": "10:00 - 12:00",
+                            "description": "Recorrido por Pinchollo, miradores de Wayrapunko y Antahuilque"
+                        },
+                        {
+                            "time": "12:00",
+                            "description": "Visita a Maca y su iglesia"
+                        },
+                        {
+                            "time": "Noche",
+                            "description": "Pernocte en hotel"
+                        }
+                    ]
+                },
+                {
+                    "day": 3,
+                    "activities": [
+                        {
+                            "time": "07:00",
+                            "description": "Visita al distrito de Coporaque (monumento histórico)"
+                        },
+                        {
+                            "time": "08:00",
+                            "description": "Exploración de las Ruinas de Uyo Uyo (sectores urbano, cementerio y agrícola)"
+                        },
+                        {
+                            "time": "09:00",
+                            "description": "Visita al reloj solar y miradores"
+                        },
+                        {
+                            "time": "10:00",
+                            "description": "Turismo vivencial en casa local (fotos con vestidos típicos)"
+                        },
+                        {
+                            "time": "12:00",
+                            "description": "Almuerzo"
+                        },
+                        {
+                            "time": "13:00 - 16:00",
+                            "description": "Retorno a Arequipa"
+                        }
+                    ]
+                }
+            ],
+            "highlights": [
+                "Experiencia arqueológica en Uyo Uyo",
+                "Turismo vivencial auténtico",
+                "Tres días de inmersión cultural",
+                "Visita a sitios históricos menos turísticos",
+                "Exploración completa del valle"
+            ]
+        }
+    ],
+    "generalInfo": {
+        "recommendations": [
+            "Llevar ropa abrigada para las mañanas",
+            "Usar bloqueador solar y gorro",
+            "Llevar cámara fotográfica",
+            "Tener efectivo para compras artesanales",
+            "Aclimatarse 1 día en Arequipa antes del tour"
+        ],
+        "includes": [
+            "Transporte turístico",
+            "Guía profesional bilingüe",
+            "Desayunos y almuerzos según itinerario",
+            "Entradas a los atractivos mencionados",
+            "Alojamiento en hoteles seleccionados (para tours de 2 y 3 días)"
+        ],
+        "notIncludes": [
+            "Cena (día 1 en tours de 2 y 3 días)",
+            "Bebidas alcohólicas",
+            "Gastos personales",
+            "Propinas"
+        ]
+    }
+}

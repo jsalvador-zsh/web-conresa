@@ -1,0 +1,77 @@
+---
+import toursData from "../../data/tours_colca.json";
+import Layout from "../../layouts/Layout.astro";
+
+type ColcaTour = {
+  id: string;
+  title: string;
+  duration: string;
+  modality: string;
+  schedule: {
+    departure: string;
+    return: string;
+  };
+};
+
+const tours = (toursData.tours as ColcaTour[]).filter(tour => tour.id.includes("colca"));
+---
+
+<Layout title="Tours al Cañón del Colca" description="Descubre nuestras mejores opciones de tours al Cañón del Colca. Vive la experiencia de uno de los cañones más profundos del mundo, avistamiento de cóndores y cultura andina.">
+  <div class="min-h-screen py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate-fade-in">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Tours al 
+          <span class="relative inline-block">
+            <span class="text-pink-900">Cañón del Colca</span>
+          </span>
+        </h1>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {tours.map((tour, index) => (
+          <a
+            href={`/colca-tours/${tour.id}`}
+            class="group relative bg-white shadow-lg overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+            style={`animation-delay: ${index * 100}ms`}
+          >
+            <div class="relative h-56 overflow-hidden">
+              <img
+                src="/images/paquetes/imagen-default.svg"
+                alt={tour.title}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                width="400"
+                height="200"
+                loading="lazy"
+                transition:name={`image-${tour.id}`}
+              />
+              <span class="absolute top-4 right-4 bg-pink-900 text-pink-100 text-xs italic font-medium me-2 px-2.5 py-0.5">
+                Tour {tour.id}
+              </span>
+            </div>
+            
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                {tour.title}
+              </h3>
+              <div class="flex items-center justify-between mb-4">
+                <span class="flex items-center text-pink-900 font-medium">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {tour.duration}
+                </span>
+                <span class="flex items-center text-white font-medium px-2 py-1 bg-[#3D7872]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <span class="italic text-xs">{tour.modality}</span>
+                </span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>
