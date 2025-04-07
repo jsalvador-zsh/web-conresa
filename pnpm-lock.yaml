@@ -14,6 +14,9 @@ importers:
       '@fontsource/gowun-dodum':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource/montserrat-alternates':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource/nothing-you-could-do':
         specifier: ^5.2.5
         version: 5.2.5
@@ -243,6 +246,9 @@ packages:
 
   '@fontsource/gowun-dodum@5.2.5':
     resolution: {integrity: sha512-w+8BR2jg3mCBF9LtQUpW7T4SW/1HdNqIhJH7sVdtEEVKkJkwjRKsQzrIHQ9pDTsoG9GacdZSiomj+jQM0xj3fg==}
+
+  '@fontsource/montserrat-alternates@5.2.5':
+    resolution: {integrity: sha512-0RVcZHRGclRCiDXKTVdwKay3SsARswGaaW3bdiAuyWChndGM+s/DpPEUPg3WaMKdeEeqzKKw31JvWeAQZsHa5Q==}
 
   '@fontsource/nothing-you-could-do@5.2.5':
     resolution: {integrity: sha512-pBnxadEmOBM3BgTDBnTYoFDmjOxJbBlUgpxiC3oe1Du51FhjWahrwI8e70HVI/FUSywCXsuJWhdr9oJfwFXqwA==}
@@ -2110,6 +2116,8 @@ snapshots:
   '@fontsource-variable/merienda@5.2.5': {}
 
   '@fontsource/gowun-dodum@5.2.5': {}
+
+  '@fontsource/montserrat-alternates@5.2.5': {}
 
   '@fontsource/nothing-you-could-do@5.2.5': {}
 
