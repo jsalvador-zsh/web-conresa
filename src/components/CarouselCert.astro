@@ -29,7 +29,7 @@ const logos = [
                 <img 
                   src={logo.src} 
                   alt={i === 0 ? logo.alt : ''} 
-                  class="h-20 md:h-28 w-auto max-w-[180px] md:max-w-[220px] object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  class="h-20 md:h-28 w-auto max-w-[180px] md:max-w-[220px] transition-all duration-300"
                   loading={i === 0 ? "lazy" : "eager"}
                 />
               </div>
@@ -64,7 +64,6 @@ const logos = [
   
   .logos-slide img {
     object-fit: contain;
-    filter: grayscale(100%);
     opacity: 0.8;
     transition: all 0.3s ease;
   }
