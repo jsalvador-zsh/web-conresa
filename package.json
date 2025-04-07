@@ -18,7 +18,8 @@
     "alpinejs": "^3.14.9",
     "astro": "^5.5.5",
     "astro-icon": "^1.1.5",
-    "flowbite": "^3.1.2"
+    "flowbite": "^3.1.2",
+    "sharp": "^0.34.1"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
