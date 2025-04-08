@@ -22,7 +22,7 @@ const slides = [
   {
     image: colca,
     title: "Descubre el Perú con nosotros",
-    subtitle: "Colca",
+    subtitle: "Valle del Colca",
     description:
       "Viaja a los destinos más increíbles, vive experiencias únicas y memorables.",
   },
@@ -30,7 +30,7 @@ const slides = [
 ---
 
 <section
-  class="relative h-[calc(100vh-80px)] overflow-hidden z-0"
+  class="relative h-[calc(100vh-80px)] overflow-hidden z-0 mb-8"
   id="hero-slider"
 >
   <!-- Wrapper del slide -->
@@ -49,11 +49,11 @@ const slides = [
           />
           <div class="absolute inset-0 bg-black/30 z-10" />
           <div class="relative z-20 h-full flex items-center px-4 container mx-auto">
-            <div class="max-w-2xl bg-black/50 p-8 text-white rounded-lg">
+            <div class="max-w-2xl bg-black/50 p-8 text-white rounded-md">
               <span class="text-amber-400 font-medium text-sm">
                 {slide.subtitle}
               </span>
-              <h2 class="text-4xl md:text-6xl font-bold mb-4">{slide.title}</h2>
+              <p class="text-4xl md:text-6xl font-bold mb-4">{slide.title}</h>
               <p class="text-lg md:text-xl mb-6">{slide.description}</p>
             </div>
           </div>

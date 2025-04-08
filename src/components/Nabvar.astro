@@ -11,16 +11,16 @@ import Menu from '../icons/Menu.astro';
     
     <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <!-- Language Dropdown -->
-        <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm md:text-lg text-gray-800 cursor-pointer hover:bg-gray-100">
+        <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center rounded-md font-medium justify-center px-4 py-2 text-sm md:text-lg text-gray-800 cursor-pointer hover:bg-gray-100">
             <FlagUS class="w-5 h-5 rounded-full me-3" />
             English
         </button>
       
         <!-- Language Dropdown Menu --> 
-        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 shadow-sm" id="language-dropdown-menu">
+        <div class="z-50 hidden my-4 text-base list-none rounded-md bg-white divide-y divide-gray-100 shadow-sm" id="language-dropdown-menu">
             <ul class="py-2 font-medium" role="none">
             <li>
-                <a href="#" class="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-gray-100" role="menuitem">
+                <a href="#" class="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-[#3A7474] hover:text-white" role="menuitem">
                 <div class="inline-flex items-center">
                     <FlagES class="h-3.5 w-3.5 rounded-full me-2" />
                     Español
@@ -28,7 +28,7 @@ import Menu from '../icons/Menu.astro';
                 </a>
             </li>
             <li>
-                <a href="#" class="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-gray-100" role="menuitem">
+                <a href="#" class="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-[#3A7474] hover:text-white" role="menuitem">
                 <div class="inline-flex items-center">
                     <img class="h-3.5 w-3.5 rounded-full me-2" src="/icons/FlagPO.svg" alt="bandera-portugal">
                     Português
@@ -49,57 +49,57 @@ import Menu from '../icons/Menu.astro';
         <div class="hidden w-full md:block md:w-auto md:order-1" id="navbar-multi-level">
         <ul class="flex flex-col text-sm md:text-lg font-medium p-4 md:p-0 mt-4 border border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
             <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbarAbout" class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3D7872] md:p-0 md:w-auto">
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbarAbout" class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0 md:w-auto">
                     Sobre Nosotros
                     <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                 </button>
                 <!-- Dropdown menu -->
-                <div id="dropdownNavbarAbout" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow-sm w-44">
+                <div id="dropdownNavbarAbout" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44">
                     <ul class="py-2 text-sm md:text-lg text-gray-700" aria-labelledby="dropdownLargeButton">
                         <li>
-                            <a href="/about" class="block px-4 py-2 hover:bg-gray-100">¿Quiénes somos?</a>
+                            <a href="/about" class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white">¿Quiénes somos?</a>
                         </li>
                         <li>
-                            <a href="/service" class="block px-4 py-2 hover:bg-gray-100">¿Por qué viajar con nosotros?</a>
+                            <a href="/service" class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white">¿Por qué viajar con nosotros?</a>
                         </li>
                     </ul>
                 </div>
             </li>
             <li>
-                <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3D7872] md:p-0">Perú Excursiones</a>
+                <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-[#3A7474] hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Perú Excursiones</a>
             </li>
             <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3D7872] md:p-0 md:w-auto">
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0 md:w-auto">
                     Arequipa 
                     <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                 </button>
                 <!-- Dropdown menu -->
-                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow-sm w-44">
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44">
                     <ul class="py-2 text-sm md:text-lg text-gray-700" aria-labelledby="dropdownLargeButton">
                         <li>
-                            <a href="/arequipa-paquetes" class="block px-4 py-2 hover:bg-gray-100">Paquetes</a>
+                            <a href="/arequipa-paquetes" class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white">Paquetes</a>
                         </li>
                         <li>
-                            <a href="/arequipa-tours" class="block px-4 py-2 hover:bg-gray-100">Tours</a>
+                            <a href="/arequipa-tours" class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white">Tours</a>
                         </li>
                     </ul>
                 </div>
             </li>
             <li>
-                <a href="/colca-tours" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3D7872] md:p-0">Colca</a>
+                <a href="/colca-tours" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Colca</a>
             </li>
             <li>
-                <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3D7872] md:p-0">Alpacas</a>
+                <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Alpacas</a>
             </li>
             <li>
-            <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3D7872] md:p-0">Mice</a>
+            <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Mice</a>
             </li>
             <!-- <li>
-            <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3D7872] md:p-0">Contáctanos</a>
+            <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Contáctanos</a>
             </li> -->
         </ul>
         </div>
