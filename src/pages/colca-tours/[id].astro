@@ -43,9 +43,9 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
     <a href="/colca-tours" class="back-link">← Volver a todos los tours</a>
 
     <div class="tour-header">
-      <h1 class="title text-pink-900">{tour.title}</h1>
+      <h1 class="title text-[#3A7474]">{tour.title}</h1>
       <div class="tour-subtitle">
-        <span class="flex items-center gap-x-2 text-pink-900">
+        <span class="flex items-center gap-x-2 text-[#3A7474]">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
@@ -104,13 +104,13 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
                 loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-              <span class="absolute top-3 right-3 bg-pink-900 text-pink-100 text-xs italic font-medium px-2 py-1">
+              <span class="absolute top-3 right-3 bg-[#3A7474] text-pink-100 text-xs italic font-medium px-2 py-1">
                 {tourRel.modality}
               </span>
             </div>
             <div class="p-4">
               <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">{tourRel.title}</h3>
-              <div class="flex items-center text-[#3D7872] font-medium text-sm">
+              <div class="flex items-center text-[#3A7474] font-medium text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
@@ -160,7 +160,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
   }
 
   .modality-badge {
-    background-color: #3D7872;
+    background-color: #3A7474;
     color: white;
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
