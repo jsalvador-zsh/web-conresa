@@ -4,5 +4,5 @@
 body {
     font-family: "Gowun Dodum", sans-serif;
     /* font-size: 18px; */
-    @apply text-xs md:text-lg
+    @apply text-base md:text-lg
 }

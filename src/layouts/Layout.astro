@@ -53,14 +53,37 @@ const { title, description } = Astro.props as Props;
 <style is:global>
 	body {
 		font-family: "Gowun Dodum", sans-serif;
-		/* font-size: 18px; */
 	}
 	h1 {
 		font-family: "Merienda Variable", cursive;
 		text-align: center;
+		font-size: 3rem;
+		font-weight: bold;
+		color: #1f2937;
+		margin-bottom: 1.5rem;
 	}
 	h2 {
-		/* text-align: center; */
+		font-family: "Merienda Variable", cursive;
+		font-size: 2.25rem;
+		font-weight: bold;
+		color: #3a7474;
+		margin-bottom: 1rem;
+	}
+	h3 {
+		font-family: "Gowun Dodum", sans-serif;
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2.25rem;
+			margin-bottom: 1.5rem;
+		}
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		h3 {
+		}
 	}
 	.cursive-font {
 		font-family: "Nothing You Could Do", cursive;
