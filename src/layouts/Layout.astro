@@ -8,6 +8,7 @@ import "@fontsource/gowun-dodum";
 import Nabvar from "../components/Nabvar.astro";
 import { ClientRouter, slide } from "astro:transitions";
 import Footer from "../components/Footer.astro";
+import SocialMedia from "../components/SocialMedia.astro";
 
 interface Props {
 	title: string;
@@ -39,6 +40,7 @@ const { title, description } = Astro.props as Props;
 		<Nabvar />
 		<slot />
 		<Footer />
+		<SocialMedia />
 		<script
 			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
 			defer></script>
