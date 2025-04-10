@@ -1,40 +1,72 @@
 ---
-// src/components/TrustedBy.astro
+import img1 from "../images/logos/logo-1.webp";
+import img2 from "../images/logos/logo-2.webp";
+import img3 from "../images/logos/logo-3.webp";
+import img4 from "../images/logos/logo-4.webp";
+import img5 from "../images/logos/logo-5.webp";
+import img6 from "../images/logos/logo-6.webp";
+import img7 from "../images/logos/logo-7.webp";
+
+import { Image } from "astro:assets";
+
 const logos = [
-  { src: '/logos/logo-1.png', alt: 'Logo Empresa 1' },
-  { src: '/logos/logo-2.png', alt: 'Logo Empresa 2' },
-  { src: '/logos/logo-3.png', alt: 'Logo Empresa 3' },
-  { src: '/logos/logo-4.png', alt: 'Logo Empresa 4' },
-  { src: '/logos/logo-5.png', alt: 'Logo Empresa 5' },
-  { src: '/logos/logo-6.png', alt: 'Logo Empresa 6' },
-  { src: '/logos/logo-7.png', alt: 'Logo Empresa 7' }
+  {
+    image: img1,
+    alt: "Logo de empresa certificadora",
+  },
+  {
+    image: img2,
+    alt: "Logo de empresa certificadora",
+  },
+  {
+    image: img3,
+    alt: "Logo de empresa certificadora",
+  },
+  {
+    image: img4,
+    alt: "Logo de empresa certificadora",
+  },
+  {
+    image: img5,
+    alt: "Logo de empresa certificadora",
+  },
+  {
+    image: img6,
+    alt: "Logo de empresa certificadora",
+  },
+  {
+    image: img7,
+    alt: "Logo de empresa certificadora",
+  },
 ];
 ---
 
 <div class="py-8">
   <div class="max-w-7xl mx-auto px-4">
     <h2 class="text-center">Nuestras Acreditaciones</h2>
-    
+
     <div class="logos-container overflow-hidden relative">
       <div class="py-4 logos-track flex">
-
-        {[...Array(3)].map((_, i) => (
-          <div 
-            class={`logos-slide flex items-center ${i > 0 ? 'pl-8' : ''}`}
-            aria-hidden={i > 0}
-          >
-            {logos.map((logo) => (
-              <div class="px-6 md:px-8">
-                <img 
-                  src={logo.src} 
-                  alt={i === 0 ? logo.alt : ''} 
-                  class="h-20 md:h-28 w-auto max-w-[180px] md:max-w-[220px] transition-all duration-300"
-                  loading={i === 0 ? "lazy" : "eager"}
-                />
-              </div>
-            ))}
-          </div>
-        ))}
+        {
+          [...Array(3)].map((_, i) => (
+            <div
+              class={`logos-slide flex items-center ${i > 0 ? "pl-8" : ""}`}
+              aria-hidden={i > 0}
+            >
+              {logos.map((logo) => (
+                <div class="px-6 md:px-8">
+                  <Image
+                    src={logo.image}
+                    quality="low"
+                    alt={i === 0 ? logo.alt : ""}
+                    class="h-20 md:h-28 w-auto max-w-[180px] md:max-w-[220px] transition-all duration-300"
+                    loading={i === 0 ? "lazy" : "eager"}
+                  />
+                </div>
+              ))}
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
@@ -45,44 +77,48 @@ const logos = [
     width: 100%;
     margin: 0 auto;
   }
-  
+
   .logos-track {
     animation: scroll 30s linear infinite;
     width: max-content;
   }
-  
+
   @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-100% / 3)); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% / 3));
+    }
   }
-  
+
   .logos-slide {
     display: flex;
     align-items: center;
   }
-  
+
   .logos-slide img {
     object-fit: contain;
     opacity: 0.8;
     transition: all 0.3s ease;
   }
-  
+
   .logos-slide img:hover {
     filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.05);
   }
-  
+
   @media (max-width: 768px) {
     .logos-track {
       animation: scroll 20s linear infinite;
     }
-    
+
     .logos-slide > div {
       /* padding-left: 1.5rem;
       padding-right: 1.5rem; */
     }
-    
+
     .logos-slide img {
       height: 5rem; /* 80px */
       max-width: 140px;
