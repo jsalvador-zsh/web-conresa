@@ -5,6 +5,8 @@ import arequipaPaquetesData from "../../data/paquetes_aqp.json";
 import type { PackageTour } from "../../types/arequipa";
 import Time from "../../icons/Time.astro";
 
+import { Image } from "astro:assets";
+
 // Tipar correctamente los datos (asumiendo que el JSON tiene la estructura correcta)
 interface PaquetesData {
     paquetes_turisticos: PackageTour[];
@@ -13,20 +15,32 @@ interface PaquetesData {
 // Hacer el casting al tipo correcto
 const { paquetes_turisticos: paquetes } = arequipaPaquetesData as PaquetesData;
 
-// Mapeo de imágenes (mejor implementación)
-const obtenerImagenPaquete = (codigo: string): string => {
-    const imagenes: Record<string, string> = {
-        "CT.8425-001": "/images/paquetes/imagen-default.svg",
-        "CT.8425-002": "/images/paquetes/imagen-default.svg",
-        "CT.8425-003": "/images/paquetes/imagen-default.svg",
-        "CT.8425-004": "/images/paquetes/imagen-default.svg",
-        "CT.8425-005": "/images/paquetes/imagen-default.svg",
-        "CT.8425-006": "/images/paquetes/imagen-default.svg",
-        "CT 8425-E001": "/images/paquetes/imagen-default.svg",
+import monasterio1 from "../../images/paquetes-arequipa/monasterio-santa-catalina.jpg";
+import monasterio2 from "../../images/paquetes-arequipa/monasterio-santa-catalina-2.jpg";
+import monasterio3 from "../../images/paquetes-arequipa/monasterio-santa-catalina-3.jpg";
+import valle1 from "../../images/paquetes-arequipa/valle-colca.jpg";
+import valle2 from "../../images/paquetes-arequipa/valle-colca-2.jpg";
+import valle3 from "../../images/paquetes-arequipa/valle-colca-3.jpg";
+import cantera1 from "../../images/paquetes-arequipa/cantera-sillar.jpg";
+import cantera2 from "../../images/paquetes-arequipa/cantera-sillar-2.jpg";
+import cruzCondor from "../../images/paquetes-arequipa/cruz-condor.jpg";
+import sillustani from "../../images/paquetes-arequipa/sillustani.jpg";
+import titicaca1 from "../../images/paquetes-arequipa/titicaca.jpg"; // en caso se use luego
+
+const obtenerImagenesPaquete = (codigo: string) => {
+    const imagenes: Record<string, any[]> = {
+        "CT.8425-001": [monasterio1],
+        "CT.8425-002": [valle1],
+        "CT.8425-003": [cantera1, valle2],
+        "CT.8425-004": [monasterio2, valle3],
+        "CT.8425-005": [cruzCondor, monasterio3, valle1],
+        "CT.8425-006": [sillustani, monasterio1, valle2, cruzCondor],
+        "CT 8425-E001": [monasterio3, valle3, cruzCondor, cantera2],
     };
 
-    return imagenes[codigo] || imagenes.default;
+    return imagenes[codigo] || [];
 };
+
 
 // Función para generar slugs de URL
 const generarSlug = (codigo: string): string => {
@@ -49,49 +63,44 @@ const generarSlug = (codigo: string): string => {
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {
-                    paquetes.map((paquete, index) => {
-                        const slug = generarSlug(paquete.codigo);
-                        const imagen = obtenerImagenPaquete(paquete.codigo);
-
-                        return (
-                            <a
-                                href={`/arequipa-paquetes/${slug}`}
-                                class="group relative bg-white shadow-md overflow-hidden transform transition-all duration-500 hover:shadow-lg hover:-translate-y-2"
-                                style={`animation-delay: ${index * 100}ms`}
-                            >
-                                <div class="relative h-56 overflow-hidden">
-                                    <img
-                                        src={imagen}
-                                        alt={paquete.nombre}
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                        width="400"
-                                        height="200"
-                                        loading="lazy"
-                                        transition:name={`image-${paquete.codigo}`}
-                                    />
-                                    <div class="" />
-                                    <span class="absolute top-4 right-4 bg-[#3A7474] text-pink-100 text-xs italic font-medium me-2 px-2.5 py-0.5">
-                                        {paquete.codigo}
+                {paquetes.map((paquete, index) => {
+                    const slug = generarSlug(paquete.codigo);
+                    const imagenes = obtenerImagenesPaquete(paquete.codigo);
+                    const imagen = imagenes[0];
+                
+                    return (
+                        <a
+                            href={`/arequipa-paquetes/${slug}`}
+                            class="group relative bg-white shadow-md overflow-hidden transform transition-all duration-500 hover:shadow-lg hover:-translate-y-2"
+                            style={`animation-delay: ${index * 100}ms`}
+                        >
+                            <div class="relative h-56 overflow-hidden">
+                                <Image
+                                    src={imagen}
+                                    alt={paquete.nombre}
+                                    transition:name={`image-${paquete.codigo}`}
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    width={400}
+                                    height={200}
+                                />
+                                <span class="absolute top-4 right-4 bg-[#3A7474] text-pink-100 text-xs italic font-medium me-2 px-2.5 py-0.5">
+                                    {paquete.codigo}
+                                </span>
+                            </div>
+                
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">{paquete.nombre}</h3>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="flex items-center text-[#3A7474] font-medium">
+                                        <Time />
+                                        {paquete.duracion}
                                     </span>
                                 </div>
-
-                                <div class="p-6">
-                                    <h3
-                                        class="text-xl font-bold text-gray-800 mb-2"                                    >
-                                        {paquete.nombre}
-                                    </h3>
-                                    <div class="flex items-center justify-between mb-4">
-                                        <span class="flex items-center text-[#3A7474] font-medium">
-                                            <Time />
-                                            {paquete.duracion}
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                        );
-                    })
-                }
+                            </div>
+                        </a>
+                    );
+                })}
+                
             </div>
         </div>
     </div>
