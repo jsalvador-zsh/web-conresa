@@ -1,28 +1,45 @@
 ---
-import arequipa from "../images/slide/arequipa.jpg";
-import cusco from "../images/slide/cusco.jpg";
-import colca from "../images/slide/colca.jpg";
+import img1 from "../images/slide/imagen-1.webp";
+import img2 from "../images/slide/imagen-2.webp";
+import img3 from "../images/slide/imagen-3.webp";
+import img4 from "../images/slide/imagen-4.webp";
+import img5 from "../images/slide/imagen-5.webp";
+
 import { Image } from "astro:assets";
 
 const slides = [
   {
-    image: arequipa,
+    image: img1,
+    title: "Descubre el Perú con nosotros",
+    subtitle: "Amazonas",
+    description:
+      "Viaja a los destinos más increíbles, vive experiencias únicas y memorables.",
+  },
+  {
+    image:img2,
+    title: "Descubre el Perú con nosotros",
+    subtitle: "Cañón del Colca",
+    description:
+      "Viaja a los destinos más increíbles, vive experiencias únicas y memorables.",
+  },
+  {
+    image: img3,
     title: "Descubre el Perú con nosotros",
     subtitle: "Arequipa",
     description:
       "Viaja a los destinos más increíbles, vive experiencias únicas y memorables.",
   },
   {
-    image: cusco,
+    image: img4,
     title: "Descubre el Perú con nosotros",
-    subtitle: "Cusco",
+    subtitle: "La Huaca Huallamarca",
     description:
       "Viaja a los destinos más increíbles, vive experiencias únicas y memorables.",
   },
   {
-    image: colca,
+    image: img5,
     title: "Descubre el Perú con nosotros",
-    subtitle: "Valle del Colca",
+    subtitle: "Islas de los Uros",
     description:
       "Viaja a los destinos más increíbles, vive experiencias únicas y memorables.",
   },
@@ -44,6 +61,7 @@ const slides = [
           <Image
             src={slide.image}
             alt={slide.subtitle}
+            quality="low"
             class="absolute inset-0 w-full h-full object-cover z-0"
             loading="lazy"
           />
