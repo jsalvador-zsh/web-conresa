@@ -82,7 +82,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
           {tour.itinerary.map((item, index) => (
             <div key={index} class="itinerary-item">
                 
-              <p>{item.time} - {item.description}</p>
+              <p class="font-bold">{item.time} <span class="font-normal"> - {item.description}</span></p>
             </div>
           ))}
         </>
@@ -174,7 +174,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
         margin-top: 2rem;
         margin-bottom: 1.5rem;
         padding-bottom: 0.5rem;
-        color: #510424;
+        color: #3A7474;
         font-size: 1.25rem;
     }
     .section-title::after {
@@ -184,7 +184,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
         bottom: 2px; /* Ajusta según el tamaño de tu imagen */
         width: 95%;
         height: 1px;
-        background-color: #510424;
+        background-color: #3A7474;
     }
     .section-title::before {
         content: "";

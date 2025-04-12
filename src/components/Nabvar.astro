@@ -1,107 +1,257 @@
 ---
-import FlagES from '../icons/FlagES.astro';
-import FlagUS from '../icons/FlagUS.astro';
-import Menu from '../icons/Menu.astro';
+import FlagES from "../icons/FlagES.astro";
+import FlagUS from "../icons/FlagUS.astro";
+import Menu from "../icons/Menu.astro";
 ---
+
 <nav class="z-50 w-full bg-white shadow">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    >
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/logo-conresa.png" class="h-8 md:h-12 lg:h-16" alt="Conresa Tours Logo" />
+            <img
+                src="/logo-conresa.png"
+                class="h-8 md:h-12 lg:h-16"
+                alt="Conresa Tours Logo"
+            />
         </a>
-    
-    <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <!-- Language Dropdown -->
-        <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center rounded-md font-medium justify-center px-4 py-2 text-sm md:text-lg text-gray-800 cursor-pointer hover:bg-gray-100">
-            <FlagUS class="w-5 h-5 rounded-full me-3" />
-            English
-        </button>
-      
-        <!-- Language Dropdown Menu --> 
-        <div class="z-50 hidden my-4 text-base list-none rounded-md bg-white divide-y divide-gray-100 shadow-sm" id="language-dropdown-menu">
-            <ul class="py-2 font-medium" role="none">
-            <li>
-                <a href="#" class="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-[#3A7474] hover:text-white" role="menuitem">
-                <div class="inline-flex items-center">
-                    <FlagES class="h-3.5 w-3.5 rounded-full me-2" />
-                    Español
-                </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-[#3A7474] hover:text-white" role="menuitem">
-                <div class="inline-flex items-center">
-                    <img class="h-3.5 w-3.5 rounded-full me-2" src="/icons/FlagPO.svg" alt="bandera-portugal">
-                    Português
-                </div>
-                </a>
-            </li>
-            </ul>
+
+        <div
+            class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+        >
+            <!-- Language Dropdown -->
+            <button
+                type="button"
+                data-dropdown-toggle="language-dropdown-menu"
+                class="inline-flex items-center rounded-md font-medium justify-center px-4 py-2 text-sm md:text-lg text-gray-800 cursor-pointer hover:bg-gray-100"
+            >
+                <FlagUS class="w-5 h-5 rounded-full me-3" />
+                English
+            </button>
+
+            <!-- Language Dropdown Menu -->
+            <div
+                class="z-50 hidden my-4 text-base list-none rounded-md bg-white divide-y divide-gray-100 shadow-sm"
+                id="language-dropdown-menu"
+            >
+                <ul class="py-2 font-medium" role="none">
+                    <li>
+                        <a
+                            href="#"
+                            class="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-[#3A7474] hover:text-white"
+                            role="menuitem"
+                        >
+                            <div class="inline-flex items-center">
+                                <FlagES class="h-3.5 w-3.5 rounded-full me-2" />
+                                Español
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-[#3A7474] hover:text-white"
+                            role="menuitem"
+                        >
+                            <div class="inline-flex items-center">
+                                <img
+                                    class="h-3.5 w-3.5 rounded-full me-2"
+                                    src="/icons/FlagPO.svg"
+                                    alt="bandera-portugal"
+                                />
+                                Português
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button
+                data-collapse-toggle="navbar-multi-level"
+                type="button"
+                class="inline-flex items-center justify-center text-sm md:text-lg text-gray-500 md:hidden hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-multi-level"
+                aria-expanded="false"
+            >
+                <span class="sr-only">Open main menu</span>
+                <Menu class="size-6" />
+            </button>
         </div>
-      
-        <!-- Hamburger Button -->
-        <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center justify-center text-sm md:text-lg text-gray-500 md:hidden hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-multi-level" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <Menu class="size-6" />
-        </button>
-        </div>
-    
+
         <!-- Main Navigation -->
-        <div class="hidden w-full md:block md:w-auto md:order-1" id="navbar-multi-level">
-        <ul class="flex flex-col text-sm md:text-lg font-medium p-4 md:p-0 mt-4 border border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
-            <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbarAbout" class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0 md:w-auto">
-                    Sobre Nosotros
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div id="dropdownNavbarAbout" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44">
-                    <ul class="py-2 text-sm md:text-lg text-gray-700" aria-labelledby="dropdownLargeButton">
-                        <li>
-                            <a href="/about" class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white">¿Quiénes somos?</a>
-                        </li>
-                        <li>
-                            <a href="/service" class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white">¿Por qué viajar con nosotros?</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-[#3A7474] hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Perú Excursiones</a>
-            </li>
-            <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0 md:w-auto">
-                    Arequipa 
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44">
-                    <ul class="py-2 text-sm md:text-lg text-gray-700" aria-labelledby="dropdownLargeButton">
-                        <li>
-                            <a href="/arequipa-paquetes" class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white">Paquetes</a>
-                        </li>
-                        <li>
-                            <a href="/arequipa-tours" class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white">Tours</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="/colca-tours" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Colca</a>
-            </li>
-            <li>
-                <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Alpacas</a>
-            </li>
-            <li>
-            <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Mice</a>
-            </li>
-            <!-- <li>
-            <a href="#" class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0">Contáctanos</a>
-            </li> -->
-        </ul>
+        <div
+            class="hidden w-full md:block md:w-auto md:order-1"
+            id="navbar-multi-level"
+        >
+            <ul
+                class="flex flex-col text-sm md:text-lg font-medium p-4 md:p-0 mt-4 border border-gray-100 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+            >
+                <li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbarAbout"
+                        class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0 md:w-auto"
+                    >
+                        Sobre Nosotros
+                        <svg
+                            class="w-2.5 h-2.5 ms-2.5"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 10 6"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 1 4 4 4-4"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div
+                        id="dropdownNavbarAbout"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
+                    >
+                        <ul
+                            class="py-2 text-sm md:text-lg text-gray-700"
+                            aria-labelledby="dropdownLargeButton"
+                        >
+                            <li>
+                                <a
+                                    href="/about"
+                                    class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white"
+                                    >¿Quiénes somos?</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/service"
+                                    class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white"
+                                    >¿Por qué viajar con nosotros?</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-3 text-gray-800 hover:bg-[#3A7474] hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0"
+                        >Perú Excursiones</a
+                    >
+                </li>
+                <li class="relative group">
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbarArequipa"
+                        class="flex items-center justify-between w-full py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0 md:w-auto"
+                    >
+                        Arequipa
+                        <svg
+                            class="w-2.5 h-2.5 ms-2.5"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 10 6"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 1 4 4 4-4"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu principal -->
+                    <div
+                        id="dropdownNavbarArequipa"
+                        class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
+                    >
+                        <ul
+                            class="py-2 text-sm md:text-lg text-gray-700"
+                            aria-labelledby="dropdownLargeButton"
+                        >
+                            <li class="relative submenu-parent">
+                                <button
+                                    id="dropdownSubmenuButton"
+                                    data-dropdown-toggle="dropdownSubmenu"
+                                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#3A7474] hover:text-white"
+                                >
+                                    Arequipa
+                                    <svg
+                                        class="w-2.5 h-2.5 ms-2"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                    >
+                                        <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="m1 1 4 4 4-4"></path>
+                                    </svg>
+                                </button>
+                                <!-- Submenu -->
+                                <div
+                                    id="dropdownSubmenu"
+                                    class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44 submenu-parent:hover:block"
+                                >
+                                    <ul
+                                        class="py-2 text-sm md:text-lg text-gray-700"
+                                    >
+                                        <li>
+                                            <a
+                                                href="/arequipa-paquetes"
+                                                class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white"
+                                                >Paquetes</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="/arequipa-tours"
+                                                class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white"
+                                                >Tours</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a
+                                    href="/colca-tours"
+                                    class="block px-4 py-2 hover:bg-[#3A7474] hover:text-white"
+                                    >Colca</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0"
+                        >Alpacas</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0"
+                        >Mice</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#3A7474] md:p-0"
+                        >Bodas en Destino</a
+                    >
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
