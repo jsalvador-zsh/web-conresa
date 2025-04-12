@@ -1,0 +1,393 @@
+---
+// src/pages/colca.astro
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+// Importar imágenes (asegúrate de tener estas imágenes en tu proyecto)
+import colca1 from "../../images/paquetes-arequipa/valle-colca.jpg";
+import colca2 from "../../images/paquetes-arequipa/valle-colca-2.jpg";
+import colca3 from "../../images/paquetes-arequipa/valle-colca-3.jpg";
+import colca4 from "../../images/paquetes-arequipa/valle-colca-4.jpg";
+import colca5 from "../../images/paquetes-arequipa/valle-colca-5.jpeg";
+import colca6 from "../../images/paquetes-arequipa/valle-colca-6.jpeg";
+import condor from "../../images/paquetes-arequipa/condor.jpg";
+---
+
+<Layout
+    title="Valle y Cañón del Colca | CONRESA TOURS"
+    description="Descubre el impresionante Cañón del Colca, uno de los más profundos del mundo, hogar del majestuoso cóndor andino y de ancestrales culturas vivas."
+>
+    <div class="min-h-screen py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Valle y Cañón del Colca
+            </h1>
+            <p class="text-xl text-[#3A7474] font-semibold max-w-3xl mx-auto">
+                Uno de los destinos más impresionantes del Perú
+            </p>
+        </div>
+        <!-- Imagen Principal -->
+        <div class="relative w-full h-[600px] overflow-hidden mb-8">
+            <Image
+                src={colca1}
+                transition:name={`image-2`}
+                alt="Vista panorámica del Cañón del Colca"
+                class="w-full h-full object-cover"
+                width={1200}
+                height={500}
+                format="webp"
+                loading="eager"
+            />
+            <div
+                class="absolute inset-0 bg-black/30 flex items-center justify-center"
+            >
+                <span
+                    class="text-white title-bg text-3xl md:text-4xl font-bold text-center px-4 drop-shadow-lg"
+                >
+                    El hogar del majestuoso cóndor andino
+                </span>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Ubicación y Generalidades -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white shadow-lg p-8 rounded-xl">
+                    <h2 class="text-2xl font-bold text-[#3A7474] mb-6">
+                        Ubicación y características
+                    </h2>
+                    <div class="space-y-4 text-gray-700">
+                        <p>
+                            El Cañón del Colca se localiza en el extremo
+                            nororiental de la Región Arequipa, provincia de
+                            Caylloma, a <strong
+                                >165 kilómetros de Arequipa</strong
+                            >.
+                        </p>
+                        <p>
+                            El punto más elevado del Valle es el volcán inactivo <strong
+                                >Ampato (6,288 msnm)</strong
+                            >, y el más bajo la confluencia de los ríos Colca y
+                            Andamayo <strong>(970 msnm)</strong>.
+                        </p>
+                        <p>
+                            El Valle del Colca tiene una extensión de <strong
+                                >100 km de largo</strong
+                            > y ocupa sólo un sector de la cuenca del río Colca,
+                            comprendido entre los distritos de Callalli y Huambo.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <Image
+                        src={colca2}
+                        alt="Mapa del Valle del Colca"
+                        class="w-full h-full object-cover rounded-xl"
+                        width={600}
+                        height={400}
+                    />
+                </div>
+            </div>
+
+            <!-- Ruta y Naturaleza -->
+            <div class="bg-white shadow-lg p-8 rounded-xl mb-12">
+                <h2 class="text-2xl font-bold text-[#3A7474] mb-6">
+                    Ruta y biodiversidad
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4 text-gray-700">
+                        <p>
+                            La ruta al Colca recorre las faldas del <strong
+                                >Chachani</strong
+                            > y atraviesa planicies llenas de <strong
+                                >ichu</strong
+                            > y <strong>yareta</strong>, muestras de la
+                            vegetación andina.
+                        </p>
+                        <p>
+                            En estos lugares habitan además <strong
+                                >alpacas</strong
+                            > y <strong>vizcachas</strong>, camélidos propios de
+                            la zona. Tiene un gran valor cultural y está formado
+                            por un grupo de pueblos que descienden de las
+                            antiguas comunidades.
+                        </p>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <p>
+                            En una región con gran variedad de flora y fauna,
+                            protege uno de los animales más fascinantes de los
+                            andes: el misterioso <strong>Cóndor Andino</strong>.
+                        </p>
+                        <p>
+                            El mirador de la Cruz del Cóndor es el lugar
+                            perfecto para observar estas majestuosas aves en su
+                            hábitat natural.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <Image
+                        src={colca3}
+                        alt="Vegetación andina"
+                        class="rounded-lg h-48 object-cover"
+                        width={300}
+                        height={200}
+                    />
+                    <Image
+                        src={colca4}
+                        alt="Vizcachas"
+                        class="rounded-lg h-48 object-cover"
+                        width={300}
+                        height={200}
+                    />
+                    <Image
+                        src={condor}
+                        alt="Cóndor volando"
+                        class="rounded-lg h-48 object-cover"
+                        width={300}
+                        height={200}
+                    />
+                </div>
+            </div>
+
+            <!-- Zonas del Valle -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-[#3A7474] mb-6 text-center">
+                    Las tres zonas del Valle del Colca
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    >
+                        <h3 class="font-bold text-lg mb-3 text-[#3A7474]">
+                            Zona Alta
+                        </h3>
+                        <p class="text-gray-700 mb-3">
+                            Distritos: <strong
+                                >Callalli, Sibayo, Tuti y Canocota</strong
+                            >
+                        </p>
+                        <p class="text-gray-700">
+                            Principal actividad: <strong
+                                >Crianza de ganado</strong
+                            >
+                        </p>
+                        <Image
+                            src={colca5}
+                            alt="Zona alta del Colca"
+                            class="mt-4 rounded-lg h-40 object-cover"
+                            width={300}
+                            height={200}
+                        />
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    >
+                        <h3 class="font-bold text-lg mb-3 text-[#3A7474]">
+                            Zona Media
+                        </h3>
+                        <p class="text-gray-700 mb-3">
+                            Distritos: <strong
+                                >Chivay, Yanque, Achoma, Maca, Coporaque,
+                                Ichupampa, Lari y Madrigal</strong
+                            >
+                        </p>
+                        <p class="text-gray-700">
+                            Principal actividad: <strong>Agricultura</strong>
+                        </p>
+                        <Image
+                            src={colca2}
+                            alt="Terrazas agrícolas"
+                            class="mt-4 rounded-lg h-40 object-cover"
+                            width={300}
+                            height={200}
+                        />
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    >
+                        <h3 class="font-bold text-lg mb-3 text-[#3A7474]">
+                            Zona Baja
+                        </h3>
+                        <p class="text-gray-700 mb-3">
+                            Distritos: <strong
+                                >Cabanaconde, Huambo y Tapay</strong
+                            >
+                        </p>
+                        <p class="text-gray-700">
+                            Principal actividad: <strong
+                                >Producción de frutas</strong
+                            >
+                        </p>
+                        <Image
+                            src={colca6}
+                            alt="Zona baja del Colca"
+                            class="mt-4 rounded-lg h-40 object-cover"
+                            width={300}
+                            height={200}
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clima y Gastronomía -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white shadow-lg p-8 rounded-xl">
+                    <h2 class="text-2xl font-bold text-[#3A7474] mb-6">
+                        Clima
+                    </h2>
+                    <div class="space-y-4 text-gray-700">
+                        <p>
+                            El clima del Valle del Colca es característico de
+                            las zonas alto andinas.
+                        </p>
+                        <p>
+                            <strong>Temporada seca (abril-noviembre):</strong
+                            ><br />
+                            Temperaturas bajo cero por la noche y entre 15-20°C durante
+                            el día.
+                        </p>
+                        <p>
+                            <strong
+                                >Temporada de lluvias (noviembre-marzo):</strong
+                            ><br />
+                            Temperaturas menos extremas, entre 5 y 10°C, con cielos
+                            nublados.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg p-8 rounded-xl">
+                    <h2 class="text-2xl font-bold text-[#3A7474] mb-6">
+                        Gastronomía
+                    </h2>
+                    <div class="space-y-4 text-gray-700">
+                        <p>La cocina del Colca es rica en sabores andinos:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>
+                                <strong>Sopa de sarapela:</strong> Maíz molido, chuño
+                                y carne de alpaca
+                            </li>
+                            <li>
+                                <strong>Olluco con charqui:</strong> Papa andina
+                                con carne seca
+                            </li>
+                            <li>
+                                <strong>Olluco picante:</strong> Variante picante
+                                del plato tradicional
+                            </li>
+                            <li>
+                                <strong>Caldo de papaliza:</strong> Sopa de papa
+                                andina
+                            </li>
+                            <li>
+                                <strong>Chicha de maíz:</strong> Bebida tradicional
+                                fermentada
+                            </li>
+                            <li>
+                                <strong>Colca Sour:</strong> Similar al pisco sour
+                                pero con Sancayo
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galería -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-[#3A7474] mb-6 text-center">
+                    Galería del Colca
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <Image
+                        src={colca1}
+                        alt="Vistas del Colca"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={colca2}
+                        alt="Paisajes andinos"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={colca3}
+                        alt="Flora del Colca"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={colca4}
+                        alt="Río Colca"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={colca5}
+                        alt="Pueblos del Colca"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={colca6}
+                        alt="Terrazas agrícolas"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center bg-[#3A7474] text-white p-8 rounded-xl">
+                <p class="mb-6 max-w-2xl mx-auto">
+                    Descubre este impresionante destino con nuestros tours
+                    especializados
+                </p>
+                <a
+                    href="/colca-tours"
+                    class="inline-block bg-white text-[#3A7474] font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                    Ver Tours al Colca
+                </a>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    /* Estilos personalizados */
+    .section-title {
+        position: relative;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80px;
+        height: 3px;
+        background-color: #3a7474;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .relative.w-full.h-\[500px\] {
+            height: 350px;
+        }
+
+        .grid.grid-cols-1.md\:grid-cols-3 {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

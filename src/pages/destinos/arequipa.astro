@@ -1,0 +1,446 @@
+---
+// src/pages/arequipa.astro
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+// Importar imágenes (asegúrate de tener estas imágenes en tu proyecto)
+import monasterio1 from "../../images/paquetes-arequipa/monasterio-santa-catalina.jpg";
+import monasterio2 from "../../images/paquetes-arequipa/monasterio-santa-catalina-2.jpg";
+import monasterio3 from "../../images/paquetes-arequipa/monasterio-santa-catalina-3.jpg";
+import calera from "../../images/paquetes-arequipa/la-calera.jpg";
+import molino from "../../images/paquetes-arequipa/molino-sabandia.jpg";
+
+import plaza from "../../images/paquetes-arequipa/plaza-de-armas-arequipa.jpg";
+import virgen from "../../images/paquetes-arequipa/virgen-chapi.jpg";
+import yanahuara from "../../images/paquetes-arequipa/yanahuara.jpg";
+import yarabamba from "../../images/paquetes-arequipa/yarabamba.jpg";
+import volcanes from "../../images/paquetes-arequipa/volcanes.jpg";
+import atardecer from "../../images/paquetes-arequipa/atardecer-arequipa.jpg";
+import panoramica from "../../images/paquetes-arequipa/arequipa-panoramica.jpg";
+import mapa from "../../images/paquetes-arequipa/mapa-arequipa.jpg";
+import chicharron from "../../images/paquetes-arequipa/chicharron.png";
+import ocopa from "../../images/paquetes-arequipa/ocopa.png";
+import queso from "../../images/paquetes-arequipa/soltero-queso.png";
+import rocoto from "../../images/paquetes-arequipa/rocoto.png";
+---
+
+<Layout
+    title="Arequipa - La Ciudad Blanca | CONRESA TOURS"
+    description="Descubre Arequipa, la hermosa 'Ciudad Blanca' del Perú, conocida por su arquitectura colonial, impresionantes volcanes y exquisita gastronomía."
+>
+    <div class="min-h-screen py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Arequipa - La Ciudad Blanca
+            </h1>
+            <p class="text-xl text-[#3A7474] font-semibold max-w-3xl mx-auto">
+                Joya arquitectónica rodeada de imponentes volcanes
+            </p>
+        </div>
+
+        <!-- Imagen Principal -->
+        <div class="relative w-full h-[600px] overflow-hidden mb-8">
+            <Image
+                src={volcanes}
+                transition:name={`image-1`}
+                alt="Vista panorámica de Arequipa con sus volcanes"
+                class="w-full h-full object-cover"
+                width={1200}
+                height={500}
+                format="webp"
+                loading="eager"
+            />
+            <div
+                class="absolute inset-0 bg-black/30 flex items-center justify-center"
+            >
+                <span
+                    class="text-white title-bg text-3xl md:text-4xl font-bold text-center px-4 drop-shadow-lg"
+                >
+                    Patrimonio Cultural de la Humanidad
+                </span>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Ubicación -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white shadow-lg p-8 rounded-xl">
+                    <h2 class="text-2xl font-bold text-[#3A7474] mb-6">
+                        Ubicación
+                    </h2>
+                    <div class="space-y-4 text-gray-700">
+                        <p>
+                            Arequipa está ubicada a <strong
+                                >1,015 km al sur de Lima</strong
+                            >. Es un enclave interandino distante del litoral
+                            del Pacífico en unos <strong>115 kilómetros</strong
+                            >.
+                        </p>
+                        <p>
+                            La ciudad se encuentra a una altura de <strong
+                                >2,363 m.s.n.m.</strong
+                            >
+                            Situada en el corazón del sur del Perú, cuenta con una
+                            población aproximada que sobrepasa el <strong
+                                >millón de habitantes</strong
+                            >.
+                        </p>
+                        <p>
+                            Rodeada por tres imponentes volcanes: <strong
+                                >Misti (5,825 m), Chachani (6,075 m)</strong
+                            > y <strong>Pichu Pichu (5,664 m)</strong>, que
+                            forman un espectacular telón de fondo.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <Image
+                        src={mapa}
+                        alt="Mapa de ubicación de Arequipa"
+                        class="w-full h-full object-cover rounded-xl"
+                        width={600}
+                        height={400}
+                    />
+                </div>
+            </div>
+
+            <!-- Clima -->
+            <div class="bg-white shadow-lg p-8 rounded-xl mb-12">
+                <h2 class="text-2xl font-bold text-[#3A7474] mb-6">Clima</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4 text-gray-700">
+                        <p>
+                            Arequipa cuenta con <strong
+                                >uno de los mejores climas del Perú</strong
+                            >, destacando su límpido cielo azul durante casi
+                            todo el año.
+                        </p>
+                        <p>
+                            Su <strong>temperatura promedio es de 21°C</strong> y
+                            durante el día el aire es seco y caliente.
+                        </p>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <p>
+                            En las noches de invierno, entre <strong
+                                >junio y julio</strong
+                            >, la temperatura desciende hasta <strong
+                                >8°C y 3°C</strong
+                            >.
+                        </p>
+                        <p>
+                            La temporada de lluvias es de <strong
+                                >enero a marzo</strong
+                            >, aunque las precipitaciones son generalmente
+                            ligeras.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <Image
+                        src={plaza}
+                        alt="Cielo despejado de Arequipa"
+                        class="rounded-lg h-48 object-cover"
+                        width={300}
+                        height={200}
+                    />
+                    <Image
+                        src={volcanes}
+                        alt="Volcán Misti"
+                        class="rounded-lg h-48 object-cover"
+                        width={300}
+                        height={200}
+                    />
+                    <Image
+                        src={atardecer}
+                        alt="Atardecer en Arequipa"
+                        class="rounded-lg h-48 object-cover"
+                        width={300}
+                        height={200}
+                    />
+                    <Image
+                        src={panoramica}
+                        alt="Panorámica de la ciudad"
+                        class="rounded-lg h-48 object-cover"
+                        width={300}
+                        height={200}
+                    />
+                </div>
+            </div>
+
+            <!-- Gastronomía -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-[#3A7474] mb-6 text-center">
+                    Gastronomía Arequipeña
+                </h2>
+
+                <div class="bg-white shadow-lg p-8 rounded-xl mb-8">
+                    <p class="text-gray-700 mb-6">
+                        La rica gastronomía arequipeña se disfruta en las
+                        llamadas
+                        <strong>picanterías</strong> (restaurantes tradicionales
+                        con cocinas a leña).
+                    </p>
+
+                    <h3 class="text-xl font-bold text-[#3A7474] mb-4">
+                        Entradas
+                    </h3>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+                    >
+                        <div
+                            class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                        >
+                            <Image
+                                src={rocoto}
+                                alt="Rocoto relleno"
+                                class="rounded-lg h-40 w-full object-cover mb-3"
+                                width={300}
+                                height={200}
+                            />
+                            <h4 class="font-bold">Rocoto relleno</h4>
+                            <p class="text-sm text-gray-600">
+                                Rocoto horneado con picadillo de carne,
+                                especies, huevos y leche
+                            </p>
+                        </div>
+                        <div
+                            class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                        >
+                            <Image
+                                src={queso}
+                                alt="Soltero de queso"
+                                class="rounded-lg h-40 w-full object-cover mb-3"
+                                width={300}
+                                height={200}
+                            />
+                            <h4 class="font-bold">Soltero de queso</h4>
+                            <p class="text-sm text-gray-600">
+                                Habas sancochadas con choclo, aceitunas, queso y
+                                rocoto picado
+                            </p>
+                        </div>
+                        <div
+                            class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                        >
+                            <Image
+                                src={ocopa}
+                                alt="Acopa"
+                                class="rounded-lg h-40 w-full object-cover mb-3"
+                                width={300}
+                                height={200}
+                            />
+                            <h4 class="font-bold">Ocopa</h4>
+                            <p class="text-sm text-gray-600">
+                                Rodajas de papas con crema de maní, cebollas y
+                                galletas
+                            </p>
+                        </div>
+                        <div
+                            class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                        >
+                            <Image
+                                src={chicharron}
+                                alt="Chicharrones"
+                                class="rounded-lg h-40 w-full object-cover mb-3"
+                                width={300}
+                                height={200}
+                            />
+                            <h4 class="font-bold">Chicharrones</h4>
+                            <p class="text-sm text-gray-600">
+                                Carne de cerdo frita en su propia grasa
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-[#3A7474] mb-4">Sopas</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+                        <li>
+                            <strong>Caldo blanco:</strong> De lomos de cordero, papa,
+                            garbanzo, chuño y especies
+                        </li>
+                        <li>
+                            <strong>Puchero:</strong> Sancochado de res, cordero
+                            con verduras y especies
+                        </li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-[#3A7474] mb-4">
+                        Platos de fondo
+                    </h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+                        <li>
+                            <strong>Adobo:</strong> Caldo de lomo de cerdo, ají,
+                            cebollas y chicha de jora, servido con pan
+                        </li>
+                        <li>
+                            <strong>Picantes:</strong> De cerdo, res, cordero o pato
+                        </li>
+                        <li><strong>Locro:</strong> Guiso de carne de res</li>
+                        <li>
+                            <strong>Chupe de camarones:</strong> Camarones en ají
+                            colorado con habas, leche, arroz, choclo y papas
+                        </li>
+                        <li>
+                            <strong>Malaya frita:</strong> Falda de res sancochada
+                            y dorada
+                        </li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-[#3A7474] mb-4">
+                        Postres y bebidas
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">
+                                Postres:
+                            </h4>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                <li>
+                                    <strong>Buñuelos:</strong> De harina, huevos
+                                    y leche bañados en miel de chancaca
+                                </li>
+                                <li>
+                                    <strong>Queso helado:</strong> Helado a base
+                                    de leche, canela, coco y especies
+                                </li>
+                                <li>Chocolates y toffee</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">
+                                Bebidas:
+                            </h4>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                <li>Cerveza Arequipeña</li>
+                                <li>Bebidas gaseosas regionales</li>
+                                <li>
+                                    <strong>Chicha de jora:</strong> De maíz fermentado
+                                </li>
+                                <li>
+                                    <strong>Té piteado:</strong> Té con anís (digestivo)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galería -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-[#3A7474] mb-6 text-center">
+                    Galería de Arequipa
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <Image
+                        src={plaza}
+                        alt="Plaza de Armas de Arequipa"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={atardecer}
+                        alt="Catedral de Arequipa"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={monasterio2}
+                        alt="Monasterio de Santa Catalina"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={molino}
+                        alt="Molino de Sabandía"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={rocoto}
+                        alt="Comida arequipeña"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={chicharron}
+                        alt="Picantería tradicional"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={yanahuara}
+                        alt="Yanahuara"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={yarabamba}
+                        alt="Yarabamba"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                    <Image
+                        src={calera}
+                        alt="La Calera"
+                        class="rounded-lg h-48 object-cover"
+                        width={400}
+                        height={300}
+                    />
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center bg-[#3A7474] text-white p-8 rounded-xl">
+                <p class="mb-6 max-w-2xl mx-auto">
+                    Descubre los encantos de la Ciudad Blanca con nuestros tours
+                    especializados
+                </p>
+                <a
+                    href="/arequipa-tours"
+                    class="inline-block bg-white text-[#3A7474] font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                    Ver Tours en Arequipa
+                </a>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    /* Estilos personalizados */
+    .section-title {
+        position: relative;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80px;
+        height: 3px;
+        background-color: #3a7474;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .relative.w-full.h-\[500px\] {
+            height: 350px;
+        }
+
+        .grid.grid-cols-1.md\:grid-cols-4 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
