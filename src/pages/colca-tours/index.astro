@@ -1,7 +1,11 @@
 ---
-import toursData from "../../data/tours_colca.json";
+// src/pages/colca-tours/index.astro
 import Layout from "../../layouts/Layout.astro";
+import toursData from "../../data/tours_colca.json";
+import Time from "../../icons/Time.astro";
+import { Image } from "astro:assets";
 
+// Tipos
 type ColcaTour = {
   id: string;
   title: string;
@@ -13,7 +17,40 @@ type ColcaTour = {
   };
 };
 
-const tours = (toursData.tours as ColcaTour[]).filter(tour => tour.id.includes("colca"));
+interface ToursData {
+  tours: ColcaTour[];
+}
+
+// Cargar y filtrar datos
+const { tours } = toursData as ToursData;
+const colcaTours = tours.filter(tour => tour.id.includes("colca"));
+
+// Importar imágenes
+import valle1 from "../../images/paquetes-arequipa/valle-colca.jpg";
+import valle2 from "../../images/paquetes-arequipa/valle-colca-2.jpg";
+import valle3 from "../../images/paquetes-arequipa/valle-colca-3.jpg";
+import condor from "../../images/paquetes-arequipa/cruz-condor.jpg";
+
+// Mapeo de imágenes por tour ID (verifica los IDs exactos de tus tours)
+const obtenerImagenTour = (id: string) => {
+  // Primero imprime los IDs para verificar
+  console.log("Tour ID:", id);
+  
+  const imagenes: Record<string, any> = {
+    "colca-1d": valle1,
+    "colca-2d": valle2,
+    "colca-3d": valle3
+  };
+  
+  const imagen = imagenes[id];
+  console.log(`Imagen para ${id}:`, imagen ? "Encontrada" : "No encontrada");
+  return imagen || null;
+};
+
+// Función para generar slugs
+const generarSlug = (id: string): string => {
+  return id.toLowerCase().replace(/\./g, "-").replace(/\s/g, "-");
+};
 ---
 
 <Layout title="Tours al Cañón del Colca" description="Descubre nuestras mejores opciones de tours al Cañón del Colca. Vive la experiencia de uno de los cañones más profundos del mundo, avistamiento de cóndores y cultura andina.">
@@ -22,56 +59,85 @@ const tours = (toursData.tours as ColcaTour[]).filter(tour => tour.id.includes("
       <div class="text-center mb-16 animate-fade-in">
         <h1 class="text-4xl font-bold text-gray-800 mb-4">
           Tours al 
-          <span class="relative inline-block">
-            <span class="text-[#3A7474]">Cañón del Colca</span>
-          </span>
+          <span class="text-[#3A7474]">Cañón del Colca</span>
         </h1>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {tours.map((tour, index) => (
-          <a
-            href={`/colca-tours/${tour.id}`}
-            class="group relative bg-white shadow-lg overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
-            style={`animation-delay: ${index * 100}ms`}
-          >
-            <div class="relative h-56 overflow-hidden">
-              <img
-                src="/images/paquetes/imagen-default.svg"
-                alt={tour.title}
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                width="400"
-                height="200"
-                loading="lazy"
-                transition:name={`image-${tour.id}`}
-              />
-              <span class="absolute top-4 right-4 bg-[#3A7474] text-pink-100 text-xs italic font-medium me-2 px-2.5 py-0.5">
-                Tour {tour.id}
-              </span>
-            </div>
-            
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                {tour.title}
-              </h3>
-              <div class="flex items-center justify-between mb-4">
-                <span class="flex items-center text-[#3A7474] font-medium">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  {tour.duration}
-                </span>
-                <span class="flex items-center text-white font-medium px-2 py-1 bg-[#3A7474]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                  <span class="italic text-xs">{tour.modality}</span>
+        {colcaTours.map((tour, index) => {
+          const slug = generarSlug(tour.id);
+          const imagen = obtenerImagenTour(tour.id);
+          
+          return (
+            <a
+              href={`/colca-tours/${slug}`}
+              class="group relative bg-white shadow-lg rounded-md overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+              style={`animation-delay: ${index * 100}ms`}
+            >
+              <div class="relative h-56 overflow-hidden">
+                {imagen ? (
+                  <Image
+                    src={imagen}
+                    alt={tour.title}
+                    transition:name={`image-${tour.id}`}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    width={400}
+                    height={200}
+                    format="webp"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <span class="text-gray-500 text-sm">Imagen no disponible</span>
+                  </div>
+                )}
+                <span class="absolute top-4 right-4 bg-[#3A7474] text-pink-100 text-xs italic font-medium me-2 px-2.5 py-0.5">
+                  Tour {tour.id}
                 </span>
               </div>
-            </div>
-          </a>
-        ))}
+              
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  {tour.title}
+                </h3>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="flex items-center text-[#3A7474] font-medium">
+                    <Time class="w-5 h-5 mr-2" />
+                    {tour.duration}
+                  </span>
+                  <span class="flex items-center text-white font-medium px-2 py-1 bg-[#3A7474]">
+                    <span class="italic text-xs">{tour.modality}</span>
+                  </span>
+                </div>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   </div>
 </Layout>
+
+<style>
+  /* Animaciones */
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Efectos hover */
+  .group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .text-4xl {
+      font-size: 2rem;
+    }
+  }
+</style>

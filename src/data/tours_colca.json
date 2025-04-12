@@ -17,36 +17,41 @@
             ],
             "itinerary": [
                 {
-                    "time": "03:00 - 06:00",
-                    "description": "Salida desde Arequipa por Yura. Viaje de 3 horas hacia Chivay, la capital del Cañón del Colca, pasando por las faldas del nevado Chachani"
-                },
-                {
-                    "time": "06:00",
-                    "description": "Llegada a Chivay para desayuno"
-                },
-                {
-                    "time": "07:00 - 09:00",
-                    "description": "Visita al Mirador de la Cruz del Cóndor para apreciar el cañón y el santuario del cóndor"
-                },
-                {
-                    "time": "09:00 - 12:00",
-                    "description": "Recorrido por los pueblos de Pinchollo, Maca y Yanque con sus iglesias coloniales. Visita a los miradores de Wayrapunku y Antahulque para apreciar las terrazas preincas"
-                },
-                {
-                    "time": "12:00 - 13:00",
-                    "description": "Visita a las Aguas Termales de Chacapi o Calera"
-                },
-                {
-                    "time": "13:00 - 14:00",
-                    "description": "Almuerzo y visita al mercado artesanal de Chivay"
-                },
-                {
-                    "time": "14:00 - 16:00",
-                    "description": "Retorno a Arequipa, parando en Patapampa (4,800 msnm) para vista de volcanes y en la Reserva Nacional Pampa Cañahuas para ver vicuñas y aves andinas"
-                },
-                {
-                    "time": "17:00",
-                    "description": "Llegada aproximada a Arequipa"
+                    "day": 1,
+                    "activities": [
+                        {
+                            "time": "03:00 - 06:00",
+                            "description": "Salida desde Arequipa por Yura. Viaje de 3 horas hacia Chivay, la capital del Cañón del Colca, pasando por las faldas del nevado Chachani"
+                        },
+                        {
+                            "time": "06:00",
+                            "description": "Llegada a Chivay para desayuno"
+                        },
+                        {
+                            "time": "07:00 - 09:00",
+                            "description": "Visita al Mirador de la Cruz del Cóndor para apreciar el cañón y el santuario del cóndor"
+                        },
+                        {
+                            "time": "09:00 - 12:00",
+                            "description": "Recorrido por los pueblos de Pinchollo, Maca y Yanque con sus iglesias coloniales. Visita a los miradores de Wayrapunku y Antahulque para apreciar las terrazas preincas"
+                        },
+                        {
+                            "time": "12:00 - 13:00",
+                            "description": "Visita a las Aguas Termales de Chacapi o Calera"
+                        },
+                        {
+                            "time": "13:00 - 14:00",
+                            "description": "Almuerzo y visita al mercado artesanal de Chivay"
+                        },
+                        {
+                            "time": "14:00 - 16:00",
+                            "description": "Retorno a Arequipa, parando en Patapampa (4,800 msnm) para vista de volcanes y en la Reserva Nacional Pampa Cañahuas para ver vicuñas y aves andinas"
+                        },
+                        {
+                            "time": "17:00",
+                            "description": "Llegada aproximada a Arequipa"
+                        }
+                    ]
                 }
             ],
             "highlights": [
