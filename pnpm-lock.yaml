@@ -11,6 +11,15 @@ importers:
       '@fontsource-variable/merienda':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource-variable/nunito-sans':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/onest':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource-variable/roboto':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource/gowun-dodum':
         specifier: ^5.2.5
         version: 5.2.5
@@ -18,6 +27,9 @@ importers:
         specifier: ^5.2.5
         version: 5.2.5
       '@fontsource/nothing-you-could-do':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/oooh-baby':
         specifier: ^5.2.5
         version: 5.2.5
       '@iconify-json/mdi':
@@ -247,6 +259,15 @@ packages:
   '@fontsource-variable/merienda@5.2.5':
     resolution: {integrity: sha512-n2jEmTFwQDcmaigdygW7zuzDczcMJXcWOTPPUMvLbAPnhK5udbK18QsIoUVwlStA77Zhs4bWROlkP2PBq/m0yQ==}
 
+  '@fontsource-variable/nunito-sans@5.2.5':
+    resolution: {integrity: sha512-J8Bi9OBUQvXwDvt9QofXD4joorYy3O9+4AU7cPx/ioa+xlH4HjAJNhA/N+nCu7IOMjFsbEbM2ZZCWQrsmQMsQw==}
+
+  '@fontsource-variable/onest@5.2.7':
+    resolution: {integrity: sha512-iGsSGXwdqvaG5zJ6pmt7TKakYd5ADCzEZ4SPpaeueHrNiK3i6IbKrap4aK5vlak9E275BAHXv8Ac134r/PBREA==}
+
+  '@fontsource-variable/roboto@5.2.5':
+    resolution: {integrity: sha512-csqBSOWXv0h5IbPhEqYJua6/nxl7dSNZbBOMeXSO9aqzgPw3GpfgC9kL5M6ULFLRaoDoBD4U9QctoDLKMaTyMg==}
+
   '@fontsource/gowun-dodum@5.2.5':
     resolution: {integrity: sha512-w+8BR2jg3mCBF9LtQUpW7T4SW/1HdNqIhJH7sVdtEEVKkJkwjRKsQzrIHQ9pDTsoG9GacdZSiomj+jQM0xj3fg==}
 
@@ -255,6 +276,9 @@ packages:
 
   '@fontsource/nothing-you-could-do@5.2.5':
     resolution: {integrity: sha512-pBnxadEmOBM3BgTDBnTYoFDmjOxJbBlUgpxiC3oe1Du51FhjWahrwI8e70HVI/FUSywCXsuJWhdr9oJfwFXqwA==}
+
+  '@fontsource/oooh-baby@5.2.5':
+    resolution: {integrity: sha512-RK8nc32oYfthKZT1VQfEeiSmt7sH2U0LZHGi2jnUlnzV9gLc4QG5e3Yt8BQSIK6LmrARTro4/2QhkFxlsBtBpg==}
 
   '@iconify-json/mdi@1.2.3':
     resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
@@ -2232,11 +2256,19 @@ snapshots:
 
   '@fontsource-variable/merienda@5.2.5': {}
 
+  '@fontsource-variable/nunito-sans@5.2.5': {}
+
+  '@fontsource-variable/onest@5.2.7': {}
+
+  '@fontsource-variable/roboto@5.2.5': {}
+
   '@fontsource/gowun-dodum@5.2.5': {}
 
   '@fontsource/montserrat-alternates@5.2.5': {}
 
   '@fontsource/nothing-you-could-do@5.2.5': {}
+
+  '@fontsource/oooh-baby@5.2.5': {}
 
   '@iconify-json/mdi@1.2.3':
     dependencies:

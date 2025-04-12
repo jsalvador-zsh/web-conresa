@@ -4,7 +4,7 @@ import "../styles/global.css";
 
 import "@fontsource/nothing-you-could-do";
 import "@fontsource-variable/merienda";
-import "@fontsource/gowun-dodum";
+import '@fontsource-variable/onest';
 import Nabvar from "../components/Nabvar.astro";
 import { ClientRouter, slide } from "astro:transitions";
 import Footer from "../components/Footer.astro";
@@ -54,7 +54,8 @@ const { title, description } = Astro.props as Props;
 
 <style is:global>
 	body {
-		font-family: "Gowun Dodum", sans-serif;
+		font-family: 'Onest Variable', sans-serif;
+
 	}
 	h1 {
 		font-family: "Merienda Variable", cursive;
@@ -74,7 +75,15 @@ const { title, description } = Astro.props as Props;
 	h3 {
 		font-family: "Gowun Dodum", sans-serif;
 	}
-
+	.title-bg {
+		font-family: "Nothing You Could Do", cursive;
+		font-size: 5rem;
+	}
+	@media (max-width: 768px) {
+		.title-bg {
+		font-size: 3rem;
+	}
+	}
 	@media (max-width: 768px) {
 		h1 {
 			font-size: 2.25rem;
