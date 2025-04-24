@@ -30,7 +30,7 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
         <!-- Teléfono - Solo visible en desktop -->
         <ul class="hidden md:flex items-center space-x-6">
           {phoneNumbers.map((number) => (
-            <li class="flex items-center gap-x-1 italic text-white">
+            <li class="flex text-xl items-center gap-x-1 italic text-white">
               <Phone class="size-4 text-white" />
               <span>{number}</span>
             </li>
