@@ -20,93 +20,96 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
 <!-- Navbar principal -->
 <header class="sticky top-0 z-50 bg-white shadow">
   <!-- Primera fila - Logo, teléfono y selector de idioma -->
-    <div class="bg-[#468E8E]">
-        <nav class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-            <div class="flex items-center space-x-6 rtl:space-x-reverse">
-              <a href="/" class="bg-[#468E8E] inline-flex p-3 md:p-4">
-                <Image src={LogoConresa} alt={logoAlt} class="h-12 w-auto md:h-12 lg:h-16" />
-              </a>
-              
-              <!-- Teléfono - Solo visible en desktop -->
-              <ul class="hidden md:flex items-center space-x-6">
-                {phoneNumbers.map((number) => (
-                  <li class="flex items-center gap-x-1 italic text-white">
-                    <Phone class="size-4 text-white" />
-                    <span>{number}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+  <div class="bg-[#468E8E]">
+    <nav class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+      <div class="flex items-center space-x-6 rtl:space-x-reverse">
+        <a href="/" class="bg-[#468E8E] inline-flex p-3 md:p-4">
+          <Image src={LogoConresa} alt={logoAlt} class="h-12 w-auto md:h-12 lg:h-16" />
+        </a>
         
-            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-              <!-- Language Dropdown -->
-              <div class="relative">
-                <button
-                  type="button"
-                  data-dropdown-toggle="language-dropdown-menu"
-                  class="inline-flex items-center rounded-md  justify-center px-4 py-2 text-sm md:text-base text-white cursor-pointer"
+        <!-- Teléfono - Solo visible en desktop -->
+        <ul class="hidden md:flex items-center space-x-6">
+          {phoneNumbers.map((number) => (
+            <li class="flex items-center gap-x-1 italic text-white">
+              <Phone class="size-4 text-white" />
+              <span>{number}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+  
+      <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <!-- Language Dropdown -->
+        <div class="relative">
+          <button
+            type="button"
+            id="language-dropdown-button"
+            class="inline-flex items-center rounded-md justify-center px-4 py-2 text-sm md:text-base text-white cursor-pointer"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <FlagUS class="size-5 rounded-full me-3" />
+            English
+          </button>
+  
+          <!-- Language Dropdown Menu -->
+          <div
+            id="language-dropdown-menu"
+            class="z-50 hidden absolute right-0 my-4 text-base list-none rounded-md bg-white divide-y divide-gray-100 shadow-sm"
+          >
+            <ul class="py-2" role="menu">
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm md:text-base hover:bg-[#468E8E] hover:text-white"
+                  role="menuitem"
                 >
-                  <FlagUS class="size-5 rounded-full me-3" />
-                  English
-                </button>
-        
-                <!-- Language Dropdown Menu -->
-                <div
-                  class="z-50 hidden absolute right-0 my-4 text-base list-none rounded-md bg-white divide-y divide-gray-100 shadow-sm"
-                  id="language-dropdown-menu"
+                  <div class="inline-flex items-center">
+                    <FlagES class="size-5 rounded-full me-2" />
+                    Español
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm md:text-base hover:bg-[#468E8E] hover:text-white"
+                  role="menuitem"
                 >
-                  <ul class="py-2 " role="none">
-                    <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 text-sm md:text-base hover:bg-[#468E8E] hover:text-white"
-                        role="menuitem"
-                      >
-                        <div class="inline-flex items-center">
-                          <FlagES class="size-5 rounded-full me-2" />
-                          Español
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 text-sm md:text-base hover:bg-[#468E8E] hover:text-white"
-                        role="menuitem"
-                      >
-                        <div class="inline-flex items-center">
-                          <FlagBR class="size-5 rounded-full me-2" />
-                          Português
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-        
-              <!-- Hamburger Button -->
-              <button
-                id="menu-button"
-                class="md:hidden z-50 p-2 rounded-md focus:outline-none"
-                aria-label="Menú de navegación"
-                aria-expanded="false"
-              >
-                <Menu id="menu-icon" class="size-6 text-white" />
-                <Close id="close-icon" class="size-6 hidden" />
-              </button>
-            </div>
-          </nav>
-    </div>
+                  <div class="inline-flex items-center">
+                    <FlagBR class="size-5 rounded-full me-2" />
+                    Português
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Hamburger Button -->
+        <button
+          id="menu-button"
+          class="md:hidden z-50 p-2 rounded-md focus:outline-none"
+          aria-label="Menú de navegación"
+          aria-expanded="false"
+        >
+          <Menu id="menu-icon" class="size-6 text-white" />
+          <Close id="close-icon" class="size-6 hidden" />
+        </button>
+      </div>
+    </nav>
+  </div>
 
   <!-- Segunda fila - Menú principal con dropdowns -->
   <nav class="max-w-screen-xl mx-auto hidden md:block">
-    <ul class="flex flex-wrap items-center justify-center text-sm md:text-base  py-2">
+    <ul class="flex flex-wrap items-center justify-center text-sm md:text-base py-2">
       <!-- Dropdown Sobre Nosotros -->
       <li class="relative group">
         <button
-          id="dropdownNavbarLink"
-          data-dropdown-toggle="dropdownNavbarAbout"
+          id="about-dropdown-button"
           class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+          aria-haspopup="true"
+          aria-expanded="false"
         >
           Sobre Nosotros
           <svg
@@ -121,8 +124,8 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
         </button>
         <!-- Dropdown menu -->
         <div
-          id="dropdownNavbarAbout"
-          class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44 group-hover:block"
+          id="about-dropdown-menu"
+          class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
         >
           <ul class="py-2 text-sm md:text-base text-gray-700">
             <li>
@@ -134,6 +137,7 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
           </ul>
         </div>
       </li>
+      
       <!-- Enlace simple -->
       <li><a href="#" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]">Internacionales</a></li>
       
@@ -144,9 +148,10 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
       <!-- Dropdown Arequipa -->
       <li class="relative group">
         <button
-          id="dropdownNavbarLink"
-          data-dropdown-toggle="dropdownNavbarArequipa"
+          id="arequipa-dropdown-button"
           class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+          aria-haspopup="true"
+          aria-expanded="false"
         >
           Arequipa
           <svg
@@ -161,15 +166,16 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
         </button>
         <!-- Dropdown menu principal -->
         <div
-          id="dropdownNavbarArequipa"
-          class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44 group-hover:block"
+          id="arequipa-dropdown-menu"
+          class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
         >
           <ul class="py-2 text-sm md:text-base text-gray-700">
-            <li class="relative submenu-parent">
+            <li class="relative">
               <button
-                id="dropdownSubmenuButton"
-                data-dropdown-toggle="dropdownSubmenu"
+                id="arequipa-submenu-button"
                 class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
                 Arequipa
                 <svg
@@ -184,8 +190,8 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
               </button>
               <!-- Submenu -->
               <div
-                id="dropdownSubmenu"
-                class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44 submenu-parent:hover:block"
+                id="arequipa-submenu"
+                class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44"
               >
                 <ul class="py-2 text-sm md:text-base text-gray-700">
                   <li>
@@ -197,11 +203,12 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
                 </ul>
               </div>
             </li>
-            <li class="relative submenu-parent">
+            <li class="relative">
               <button
-                id="dropdownSubmenuButton2"
-                data-dropdown-toggle="dropdownSubmenu"
+                id="colca-submenu-button"
                 class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
                 Colca
                 <svg
@@ -216,8 +223,8 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
               </button>
               <!-- Submenu -->
               <div
-                id="dropdownSubmenu2"
-                class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44 submenu-parent:hover:block"
+                id="colca-submenu"
+                class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44"
               >
                 <ul class="py-2 text-sm md:text-base text-gray-700">
                   <li>
@@ -228,6 +235,9 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
                   </li>
                   <li>
                     <a href="/trekking-colca" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Trekking</a>
+                  </li>
+                  <li>
+                    <a href="/climbing-colca" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Climbing</a>
                   </li>
                 </ul>
               </div>
@@ -255,12 +265,13 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
     <!-- Dropdown Sobre Nosotros - Móvil -->
     <li class="relative w-full">
       <button
-        id="mobile-dropdown-about"
+        id="mobile-about-button"
         class="mobile-menu-item no-arrow text-gray-800 hover:text-[#468E8E] w-full text-right"
+        aria-expanded="false"
       >
         Sobre Nosotros
       </button>
-      <ul id="mobile-submenu-about" class="mobile-submenu hidden mt-2 space-y-2 w-full">
+      <ul id="mobile-about-menu" class="mobile-submenu hidden mt-2 space-y-2 w-full">
         <li><a href="/about" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">¿Quiénes somos?</a></li>
         <li><a href="/service" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">¿Por qué viajar con nosotros?</a></li>
       </ul>
@@ -271,20 +282,22 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
     <!-- Dropdown Arequipa - Móvil -->
     <li class="relative w-full">
       <button
-        id="mobile-dropdown-arequipa"
+        id="mobile-arequipa-button"
         class="mobile-menu-item no-arrow text-gray-800 hover:text-[#468E8E] w-full text-right"
+        aria-expanded="false"
       >
         Arequipa
       </button>
-      <ul id="mobile-submenu-arequipa" class="mobile-submenu hidden mt-2 space-y-2 w-full">
+      <ul id="mobile-arequipa-menu" class="mobile-submenu hidden mt-2 space-y-2 w-full">
         <li class="relative w-full">
           <button
-            id="mobile-submenu-arequipa-inner"
+            id="mobile-arequipa-inner-button"
             class="mobile-menu-item no-arrow hover:text-[#468E8E] w-full text-right"
+            aria-expanded="false"
           >
             Arequipa
           </button>
-          <ul id="mobile-submenu-arequipa-inner-list" class="mobile-submenu hidden mt-2 space-y-2 w-full">
+          <ul id="mobile-arequipa-inner-menu" class="mobile-submenu hidden mt-2 space-y-2 w-full">
             <li><a href="/arequipa-paquetes" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Paquetes</a></li>
             <li><a href="/arequipa-tours" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Tours</a></li>
           </ul>
@@ -312,126 +325,196 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
 </div>
 
 <script is:inline>
-    function setupNavbar() {
-      // Menú móvil principal
-      const menuButton = document.getElementById('menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = document.getElementById('menu-icon');
-      const closeIcon = document.getElementById('close-icon');
-      let isMenuOpen = false;
-  
-      // Limpiar event listeners anteriores para evitar duplicados
-      const newMenuButton = menuButton.cloneNode(true);
-      menuButton.parentNode.replaceChild(newMenuButton, menuButton);
-  
-      newMenuButton.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-        
-        // Actualizar atributos ARIA
-        newMenuButton.setAttribute('aria-expanded', isMenuOpen.toString());
-        mobileMenu.setAttribute('aria-hidden', (!isMenuOpen).toString());
-        
-        // Alternar clases para animación
-        mobileMenu.classList.toggle('translate-x-full');
-        mobileMenu.classList.toggle('translate-x-0');
-        
-        // Alternar iconos
-        menuIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-        
-        // Bloquear/desbloquear scroll
-        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
-      });
-  
-      // Dropdown de idiomas
-      const languageButton = document.querySelector('[data-dropdown-toggle="language-dropdown-menu"]');
-      const languageDropdown = document.getElementById('language-dropdown-menu');
+  function setupNavbar() {
+    // Menú móvil principal
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    let isMenuOpen = false;
+
+    // Limpiar event listeners anteriores para evitar duplicados
+    const newMenuButton = menuButton.cloneNode(true);
+    menuButton.parentNode.replaceChild(newMenuButton, menuButton);
+
+    newMenuButton.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
       
-      if (languageButton && languageDropdown) {
-        languageButton.addEventListener('click', (e) => {
-          e.stopPropagation();
-          languageDropdown.classList.toggle('hidden');
-        });
-  
-        // Cerrar al hacer clic fuera
-        document.addEventListener('click', () => {
+      // Actualizar atributos ARIA
+      newMenuButton.setAttribute('aria-expanded', isMenuOpen.toString());
+      mobileMenu.setAttribute('aria-hidden', (!isMenuOpen).toString());
+      
+      // Alternar clases para animación
+      mobileMenu.classList.toggle('translate-x-full');
+      mobileMenu.classList.toggle('translate-x-0');
+      
+      // Alternar iconos
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      
+      // Bloquear/desbloquear scroll
+      document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    });
+
+    // Dropdown de idiomas
+    const languageButton = document.getElementById('language-dropdown-button');
+    const languageDropdown = document.getElementById('language-dropdown-menu');
+    
+    if (languageButton && languageDropdown) {
+      languageButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = languageButton.getAttribute('aria-expanded') === 'true';
+        languageButton.setAttribute('aria-expanded', !isExpanded);
+        languageDropdown.classList.toggle('hidden');
+      });
+
+      // Cerrar al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        if (!languageButton.contains(e.target) && !languageDropdown.contains(e.target)) {
           languageDropdown.classList.add('hidden');
+          languageButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+  // Configurar dropdowns de escritorio
+const setupDesktopDropdown = (buttonId, menuId) => {
+  const button = document.getElementById(buttonId);
+  const menu = document.getElementById(menuId);
+
+  if (button && menu) {
+    let timeoutId;
+
+    // Mostrar al entrar al botón o al menú
+    const showMenu = () => {
+      clearTimeout(timeoutId);
+      menu.classList.remove('hidden');
+      button.setAttribute('aria-expanded', 'true');
+    };
+
+    // Ocultar con retraso al salir de ambos
+    const hideMenu = () => {
+      timeoutId = setTimeout(() => {
+        if (!menu.matches(':hover') && !button.matches(':hover')) {
+          menu.classList.add('hidden');
+          button.setAttribute('aria-expanded', 'false');
+        }
+      }, 200); // Pequeño retraso para permitir movimiento entre elementos
+    };
+
+    // Eventos para el botón
+    button.addEventListener('mouseenter', showMenu);
+    button.addEventListener('mouseleave', hideMenu);
+
+    // Eventos para el menú
+    menu.addEventListener('mouseenter', showMenu);
+    menu.addEventListener('mouseleave', hideMenu);
+
+    // Click para mobile (si es necesario)
+    button.addEventListener('click', (e) => {
+      if (window.innerWidth < 768) {
+        e.preventDefault();
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('hidden');
+      }
+    });
+  }
+};
+
+    // Configurar cada dropdown de escritorio
+    setupDesktopDropdown('about-dropdown-button', 'about-dropdown-menu');
+    setupDesktopDropdown('arequipa-dropdown-button', 'arequipa-dropdown-menu');
+    setupDesktopDropdown('arequipa-submenu-button', 'arequipa-submenu');
+    setupDesktopDropdown('colca-submenu-button', 'colca-submenu');
+
+    // Configurar dropdowns móviles
+    const setupMobileDropdown = (buttonId, menuId) => {
+      const button = document.getElementById(buttonId);
+      const menu = document.getElementById(menuId);
+
+      if (button && menu) {
+        button.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', !isExpanded);
+          menu.classList.toggle('hidden');
         });
       }
-  
-      // Dropdowns móviles - Función mejorada
-      const setupMobileDropdown = (buttonId, menuId) => {
-        const button = document.getElementById(buttonId);
-        const menu = document.getElementById(menuId);
-  
-        if (button && menu) {
-          button.addEventListener('click', (e) => {
-            e.stopPropagation();
-            // Cerrar todos los demás dropdowns primero
-            document.querySelectorAll('.mobile-submenu').forEach(m => {
-              if (m.id !== menuId) m.classList.add('hidden');
-            });
-            
-            // Alternar el dropdown actual
-            menu.classList.toggle('hidden');
-          });
-        }
-      };
-  
-      setupMobileDropdown('mobile-dropdown-about', 'mobile-submenu-about');
-      setupMobileDropdown('mobile-dropdown-arequipa', 'mobile-submenu-arequipa');
-      setupMobileDropdown('mobile-submenu-arequipa-inner', 'mobile-submenu-arequipa-inner-list');
-  
-      // Cerrar menú al hacer clic en enlaces
-      document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-          isMenuOpen = false;
-          newMenuButton.setAttribute('aria-expanded', 'false');
-          mobileMenu.setAttribute('aria-hidden', 'true');
-          mobileMenu.classList.add('translate-x-full');
-          mobileMenu.classList.remove('translate-x-0');
-          menuIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-          document.body.style.overflow = '';
-          
-          // Cerrar todos los dropdowns
-          document.querySelectorAll('.mobile-submenu').forEach(m => {
-            m.classList.add('hidden');
-          });
+    };
+
+    setupMobileDropdown('mobile-about-button', 'mobile-about-menu');
+    setupMobileDropdown('mobile-arequipa-button', 'mobile-arequipa-menu');
+    setupMobileDropdown('mobile-arequipa-inner-button', 'mobile-arequipa-inner-menu');
+
+    // Cerrar menú al hacer clic en enlaces
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        isMenuOpen = false;
+        newMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        mobileMenu.classList.add('translate-x-full');
+        mobileMenu.classList.remove('translate-x-0');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        document.body.style.overflow = '';
+        
+        // Cerrar todos los dropdowns
+        document.querySelectorAll('.mobile-submenu').forEach(m => {
+          m.classList.add('hidden');
+        });
+        document.querySelectorAll('[id$="-button"]').forEach(btn => {
+          btn.setAttribute('aria-expanded', 'false');
         });
       });
+    });
+
+    // Cerrar dropdowns al hacer clic fuera
+    document.addEventListener('click', (e) => {
+      // Dropdowns móviles
+      if (!e.target.closest('#mobile-menu [aria-expanded]') && !e.target.closest('.mobile-submenu')) {
+        document.querySelectorAll('.mobile-submenu').forEach(m => {
+          m.classList.add('hidden');
+        });
+        document.querySelectorAll('#mobile-menu [aria-expanded]').forEach(btn => {
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+  }
+
+  // Ejecutar al cargar inicialmente
+  document.addEventListener('DOMContentLoaded', setupNavbar);
   
-      // Cerrar dropdowns al hacer clic fuera
-      document.addEventListener('click', (e) => {
-        if (!e.target.closest('#mobile-menu .mobile-submenu') && !e.target.closest('[id^="mobile-dropdown"]')) {
-          document.querySelectorAll('.mobile-submenu').forEach(m => {
-            m.classList.add('hidden');
-          });
-        }
-      });
-    }
-  
-    // Ejecutar al cargar inicialmente
-    document.addEventListener('DOMContentLoaded', setupNavbar);
-    
-    // Ejecutar después de cada transición de página
-    document.addEventListener('astro:after-swap', setupNavbar);
-  </script>
+  // Ejecutar después de cada transición de página
+  document.addEventListener('astro:after-swap', setupNavbar);
+</script>
+
 <style is:inline>
-    .mobile-menu-item {
-      @apply block py-2 px-4 text-right w-full;
-    }
-  
-    .mobile-submenu {
-      @apply pr-4 hidden;
-    }
-  
-    .no-arrow svg {
-      display: none;
-    }
-  
-    /* Estilo para el botón activo */
-    .mobile-menu-item.active {
-      @apply font-semibold text-[#468E8E];
-    }
-  </style>
+  .mobile-menu-item {
+    @apply block py-2 px-4 text-right w-full;
+  }
+
+  .mobile-submenu {
+    @apply pr-4 hidden;
+  }
+
+  .no-arrow svg {
+    display: none;
+  }
+
+  /* Estilo para el botón activo */
+  .mobile-menu-item.active {
+    @apply font-semibold text-[#468E8E];
+  }
+
+  /* Mejorar accesibilidad para focus */
+  [aria-expanded="true"] {
+    @apply text-[#468E8E] font-medium;
+  }
+
+  /* Transición suave para dropdowns */
+  [id$="-dropdown-menu"], [id$="-submenu"] {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+</style>
