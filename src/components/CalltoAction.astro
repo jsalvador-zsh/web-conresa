@@ -1,3 +1,7 @@
+---
+import Button from '../components/Button.astro';
+
+---
 <section class="py-8">
     <div class=" px-4 sm:px-6 lg:px-0">
       <div class="flex flex-col lg:flex-row items-center gap-8">
@@ -16,6 +20,9 @@
           <h2>
             Más de 40 años de experiencia en turismo
           </h2>
+          <p class="text-xl font-medium text-gray-600 mb-4">
+            <span class="text-[#468E8E]">Con</span>cha <span class="text-[#468E8E]">Re</span>cabarren <span class="text-[#468E8E]">S.A.</span> al servicio de Arequipa
+          </p>
           <p class="text-gray-600 mb-6 text-pretty">
             Conresa Tours es una agencia de viajes y turismo registrada en MINCETUR con amplia trayectoria en el sector. 
             Nos especializamos en ofrecer experiencias únicas en Arequipa y todo el Perú.
@@ -23,12 +30,11 @@
           <p class="text-gray-600 mb-8 text-pretty">
             Nuestro compromiso es brindar un servicio personalizado, asegurando que cada viaje sea una experiencia memorable.
           </p>
-          <a 
+          <Button 
             href="/about" 
-            class="inline-block bg-[#3A7474] text-white rounded-md px-6 py-3 font-medium hover:bg-[#3A7474]/90 transition-colors"
-          >
-            Conoce más sobre nosotros
-          </a>
+            text="Conoce más sobre nosotros" 
+            className="inline-flex"
+          />
         </div>
       </div>
     </div>

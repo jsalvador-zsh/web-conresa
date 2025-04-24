@@ -115,7 +115,7 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
             </span>
         </div>
         
-        <span class="absolute top-4 right-4 rounded-md bg-[#3A7474] text-pink-100 text-xs italic font-medium px-4 py-2">
+        <span class="absolute top-4 right-4 rounded-md bg-[#468E8E] text-pink-100 text-xs italic font-medium px-4 py-2">
             {paquete.codigo}
         </span>
     </div>
@@ -150,7 +150,7 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
                     <h2 class="section-title">Itinerario:</h2>
                     {paquete.itinerario.map((dia) => (
                         <div>
-                            <p class="font-bold flex text-[#3A7474] gap-x-2 items-center itinerario-day mb-4">
+                            <p class="font-bold flex text-[#468E8E] gap-x-2 items-center itinerario-day mb-4">
                                 <Calendar /> Día {dia.dia}:
                             </p>
                             <ul>
@@ -219,7 +219,7 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
 
             <!-- Paquetes relacionados -->
             <div class="mt-12">
-                <h1 class="text-2xl font-bold text-[#3A7474] mb-6">
+                <h1 class="text-2xl font-bold text-[#468E8E] mb-6">
                     Paquetes similares
                 </h1>
 
@@ -250,7 +250,7 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
                                             Sin imagen disponible
                                         </div>
                                     )}
-                                    <span class="absolute top-3 right-3 bg-[#3A7474] text-pink-100 text-xs italic font-medium px-2 py-1 rounded">
+                                    <span class="absolute top-3 right-3 bg-[#468E8E] text-pink-100 text-xs italic font-medium px-2 py-1 rounded">
                                         {paqueteRel.codigo}
                                     </span>
                                 </div>
@@ -258,7 +258,7 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
                                     <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">
                                         {paqueteRel.nombre}
                                     </h3>
-                                    <div class="flex items-center text-[#3A7474] font-medium text-sm">
+                                    <div class="flex items-center text-[#468E8E] font-medium text-sm">
                                         <Time class="w-4 h-4 mr-1" />
                                         {paqueteRel.duracion}
                                     </div>
@@ -278,9 +278,9 @@ const paquetesRelacionados = obtenerPaquetesRelacionados(paquete.codigo);
         font-weight: bold;
         margin-top: 2rem;
         margin-bottom: 1rem;
-        color: #3A7474;
+        color: #468E8E;
         font-size: 1.5rem;
-        border-bottom: 1px solid #3A7474;
+        border-bottom: 1px solid #468E8E;
         padding-bottom: 0.25rem;
     }
     

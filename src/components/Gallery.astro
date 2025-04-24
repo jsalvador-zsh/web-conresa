@@ -10,13 +10,14 @@ const images = [
     { src: img2, title: "Arequipa", id: 1 , url:"/destinos/arequipa"},
     { src: img3, title: "Colca", id: 2, url:"/destinos/colca"},
     { src: img4, title: "Alpacas", id: 3, url:"/alpacas"},
+    { src: img1, title: "Perú excursiones", id: 3, url:"/peru-excursiones"}
 ];
 ---
 
 <section class="py-8 max-w-7xl mx-auto px-4">
-    <h2 class="text-center">Algunos de Nuestros Destinos</h2>
+    <h2 class="text-center mb-4">Algunos de Nuestros Destinos</h2>
     <div class="flex items-center justify-center">
-        <div class="w-full max-w-6xl h-[600px] flex flex-col gap-4 group">
+        <div class="w-full max-w-6xl h-[700px] flex flex-col gap-4 group">
             {
                 images.map((img, index) => (
                     <a
@@ -31,7 +32,6 @@ const images = [
                             alt={`Imagen ${index + 1}`}
                             class="w-full h-full object-cover transition-all duration-500"
                         />
-
                         <div class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/60 px-6 py-4 rounded-r-md text-white w-fit max-w-[80%]">
                             <p class="text-xl md:text-2xl font-semibold">
                                 {img.title}

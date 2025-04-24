@@ -4,7 +4,7 @@ import "../styles/global.css";
 
 import "@fontsource/nothing-you-could-do";
 import "@fontsource-variable/merienda";
-import '@fontsource-variable/onest';
+import "@fontsource-variable/inter";
 import Nabvar from "../components/Nabvar.astro";
 import { ClientRouter, slide } from "astro:transitions";
 import Footer from "../components/Footer.astro";
@@ -40,7 +40,7 @@ const { title, description } = Astro.props as Props;
 		<Nabvar />
 		<slot />
 		<Footer />
-		<SocialMedia />
+		<!-- <SocialMedia /> -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
 			defer></script>
@@ -54,22 +54,23 @@ const { title, description } = Astro.props as Props;
 
 <style is:global>
 	body {
-		font-family: 'Onest Variable', sans-serif;
-
+		font-family: "Inter Variable", sans-serif;
+		font-size: 14px;
 	}
 	h1 {
 		font-family: "Merienda Variable", cursive;
 		text-align: center;
-		font-size: 3rem;
+		font-size: 64px;
 		font-weight: bold;
 		color: #1f2937;
 		margin-bottom: 1.5rem;
 	}
 	h2 {
 		font-family: "Merienda Variable", cursive;
-		font-size: 2.25rem;
+		font-size: 2.5rem;
+		line-height: 1.2;
 		font-weight: bold;
-		color: #3a7474;
+		color: #468e8e;
 		margin-bottom: 1rem;
 	}
 	h3 {
@@ -81,8 +82,8 @@ const { title, description } = Astro.props as Props;
 	}
 	@media (max-width: 768px) {
 		.title-bg {
-		font-size: 3rem;
-	}
+			font-size: 3rem;
+		}
 	}
 	@media (max-width: 768px) {
 		h1 {
@@ -94,6 +95,10 @@ const { title, description } = Astro.props as Props;
 			margin-bottom: 1rem;
 		}
 		h3 {
+		}
+
+		.btn-primary {
+			background-color: #468e8e;
 		}
 	}
 	.cursive-font {
