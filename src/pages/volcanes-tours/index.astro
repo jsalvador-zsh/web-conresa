@@ -1,0 +1,137 @@
+---
+// src/pages/tours/index.astro
+import Layout from "../../layouts/Layout.astro";
+import toursData from "../../data/tours_volcanes.json";
+import Time from "../../icons/Time.astro";
+import { Image } from "astro:assets";
+
+// Tipos
+type Tour = {
+  id: string;
+  title: string;
+  duration: string;
+  modality: string;
+  departure: string;
+  return: string;
+};
+
+interface ToursData {
+  tours: Tour[];
+}
+
+// Cargar datos
+const { tours } = toursData as ToursData;
+
+// Importar imágenes (debes tener estas imágenes en tu proyecto)
+import valleVolcanes from "../../images/paquetes-arequipa/valle-volcanes.jpeg";
+import canonColca from "../../images/paquetes-arequipa/canon-colca.jpg";
+import cotahuasi from "../../images/paquetes-arequipa/cotahuasi.jpg";
+
+// Mapeo de imágenes por tour ID
+const obtenerImagenTour = (id: string) => {
+  const imagenes: Record<string, any> = {
+    "valle-de-los-volcanes-majes-colca": canonColca,
+    "canon-de-cotahuasi-andagua": cotahuasi
+  };
+  
+  return imagenes[id] || valleVolcanes;
+};
+
+// Función para generar slugs
+const generarSlug = (id: string): string => {
+  return id.toLowerCase().replace(/\./g, "-").replace(/\s/g, "-");
+};
+---
+
+<Layout title="Nuestros Tours" description="Descubre nuestras mejores opciones de tours en Arequipa y sus alrededores. Vive la experiencia de los volcanes, cañones y cultura andina.">
+  <div class="min-h-screen py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate-fade-in">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Valle de los volcanes
+          <span class="text-[#468E8E]">(Andagua)</span>
+        </h1>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {tours.map((tour, index) => {
+          const slug = generarSlug(tour.id);
+          const imagen = obtenerImagenTour(tour.id);
+          
+          return (
+            <a
+              href={`/volcanes-tours/${slug}`}
+              class="group relative bg-white shadow-lg rounded-md overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+              style={`animation-delay: ${index * 100}ms`}
+            >
+              <div class="relative h-56 overflow-hidden">
+                {imagen ? (
+                  <Image
+                    src={imagen}
+                    alt={tour.title}
+                    transition:name={`image-${tour.id}`}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    width={400}
+                    height={200}
+                    format="webp"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <span class="text-gray-500 text-sm">Imagen no disponible</span>
+                  </div>
+                )}
+                <span class="absolute top-4 right-4 bg-[#468E8E] text-pink-100 text-xs italic font-medium me-2 px-2.5 py-0.5">
+                  {tour.modality}
+                </span>
+              </div>
+              
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  {tour.title}
+                </h3>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="flex items-center text-[#468E8E] font-medium">
+                    <Time class="w-5 h-5 mr-2" />
+                    {tour.duration}
+                  </span>
+                  <span class="flex items-center text-white font-medium px-2 py-1 bg-[#468E8E]">
+                    <span class="italic text-xs">{tour.modality}</span>
+                  </span>
+                </div>
+                <div class="text-sm text-gray-600">
+                  <p>Salida: {tour.departure}</p>
+                  <p>Retorno: {tour.return}</p>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Animaciones */
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Efectos hover */
+  .group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .text-4xl {
+      font-size: 2rem;
+    }
+  }
+</style>

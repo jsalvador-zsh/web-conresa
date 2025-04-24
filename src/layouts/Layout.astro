@@ -8,7 +8,7 @@ import "@fontsource-variable/inter";
 import Nabvar from "../components/Nabvar.astro";
 import { ClientRouter, slide } from "astro:transitions";
 import Footer from "../components/Footer.astro";
-import SocialMedia from "../components/SocialMedia.astro";
+import FloattingButton from '../components/WhatsAppButton.astro';
 
 interface Props {
 	title: string;
@@ -40,6 +40,7 @@ const { title, description } = Astro.props as Props;
 		<Nabvar />
 		<slot />
 		<Footer />
+		<FloattingButton />
 		<!-- <SocialMedia /> -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"

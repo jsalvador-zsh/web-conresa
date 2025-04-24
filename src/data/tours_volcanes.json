@@ -1,0 +1,127 @@
+{
+    "tours": [
+      {
+        "id": "valle-de-los-volcanes-majes-colca",
+        "title": "Valle de los Volcanes (Andagua) - Majes y Cañón del Colca",
+        "departure": "07:00 am",
+        "return": "17:00 hrs del sexto día",
+        "duration": "06 días y 05 noches",
+        "modality": "Media Suave",
+        "audience": "Jóvenes, Adultos",
+        "included_visits": [
+          "Pueblo de Majes",
+          "Toro Muerto",
+          "Querulpa",
+          "Huellas de Dinosaurios",
+          "Bodega Estremadoyro o similar",
+          "Corire pueblo",
+          "Pueblo de Aplao",
+          "Pueblo de Andagua",
+          "Miradores Naturales",
+          "Volcán Los Mellizos",
+          "Volcán Canalla Mauras",
+          "Volcanes Enanos",
+          "Huambo",
+          "Pueblo de Cabanaconde",
+          "Mirador de la Cruz del Cóndor",
+          "Pueblo de Pinchollo, Achoma, Maca, Yanque",
+          "Chivay",
+          "Baños Termales de la calera ó Chacapi",
+          "Ruinas de Uyo Uyo",
+          "Baños Termales de Coporaque",
+          "Visita y un día vivencial en la Casa de la Familia las Flores Chocolate ó similar",
+          "Ruinas de San Antonio",
+          "Reserva Nacional de Salinas",
+          "Mirador de los Andes Peruanos",
+          "Reserva Nacional de Camélidos"
+        ],
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Petroglifos de Toro Muerto y Viñedos",
+            "description": "Salida del hotel de Arequipa con destino a Majes, visita a los Petroglifos de Toro Muerto, Huellas de Dinosaurios de Querullpa y viñedos. Almuerzo en Corire (no incluido). Pernocte en Aplao/Corire."
+          },
+          {
+            "day": 2,
+            "title": "Camino a Andagua - Valle de los Volcanes",
+            "description": "Partida hacia Andagua, caminata para observar flora y fauna. Llegada al Valle de los Volcanes, visita al pueblo de Andagua. Pernocte en Andagua."
+          },
+          {
+            "day": 3,
+            "title": "Volcán Los Mellizos y Catarata de Shanquillay",
+            "description": "Ascenso al Volcán Los Mellizos, visita a la Catarata de Shanquillay y miradores naturales. Visita a la Laguna de Mamacocha. Pernocte en Andagua."
+          },
+          {
+            "day": 4,
+            "title": "Cruz del Cóndor y pueblos del Colca",
+            "description": "Salida hacia Cabanaconde, visita al Mirador de la Cruz del Cóndor, pueblos de Pinchollo, Maca, Yanque. Baños termales de La Calera. Pernocte en Chivay."
+          },
+          {
+            "day": 5,
+            "title": "Día vivencial en Coporaque",
+            "description": "Visita a Coporaque, actividades con la Familia Flores Chocolate, caminatas por andenerías preincas y baños termales. Almuerzo y cena incluidos. Pernocte en casa familiar."
+          },
+          {
+            "day": 6,
+            "title": "Ruinas de Uyo Uyo y regreso a Arequipa",
+            "description": "Visita a las ruinas de Uyo Uyo, paso por la Reserva de Salinas para observar camélidos. Mirador de los Andes Peruanos. Llegada a Arequipa aprox. 16:00 hrs."
+          }
+        ]
+      },
+      {
+        "id": "canon-de-cotahuasi-andagua",
+        "title": "Cañón de Cotahuasi - Andagua (Valle de los Volcanes)",
+        "departure": "07:00 am",
+        "return": "17:00 hrs del cuarto día",
+        "duration": "05 días y 04 noches",
+        "modality": "Media Suave",
+        "audience": "Jóvenes, Adultos",
+        "included_visits": [
+          "El Cañon de Cotahuasi",
+          "Pueblo de Cotahuasi",
+          "Pueblo de Taurisma",
+          "Pueblo de Alca",
+          "Pueblo de Tomepampa",
+          "Pueblo de Velinga",
+          "Pueblo de Andagua",
+          "Pueblo de Chachas",
+          "Catarata de Sipia",
+          "Sitio Arqueologico de Ccalla",
+          "Laguna Chaquicocha",
+          "Baños Termomedicinales Luicho",
+          "Miradores Naturales",
+          "Volcán Los Mellizos",
+          "Catarata de Shanquillay",
+          "Volcan Canalla Mauras",
+          "Volcanes Enanos"
+        ],
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Viaje a Cotahuasi",
+            "description": "Salida de Arequipa hacia Cotahuasi (2683 msnm). Llegada y descanso en el hotel."
+          },
+          {
+            "day": 2,
+            "title": "Explorando pueblos y baños termales",
+            "description": "Visita a Taurisma, Tomepampa, Alca y sitio arqueológico de Ccalla. Baños termales de Luicho. Retorno a Cotahuasi."
+          },
+          {
+            "day": 3,
+            "title": "Catarata de Sipia y atractivos de Cotahuasi",
+            "description": "Visita a la Catarata de Sipia, laguna Chaquicocha y principales atractivos del pueblo de Cotahuasi."
+          },
+          {
+            "day": 4,
+            "title": "Miradores y Valle de los Volcanes",
+            "description": "Visita a miradores de Allhuay y Bañadero del Cóndor. Viaje al Valle de los Volcanes, llegada a Andagua."
+          },
+          {
+            "day": 5,
+            "title": "Volcán Los Mellizos y retorno",
+            "description": "Cabalgata al Volcán Los Mellizos, visita a Catarata de Shanquillay y miradores. Box lunch. Retorno a Arequipa."
+          }
+        ]
+      }
+    ]
+  }

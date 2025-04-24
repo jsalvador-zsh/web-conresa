@@ -197,8 +197,40 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
                 </ul>
               </div>
             </li>
-            <li>
-              <a href="/colca-tours" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Colca</a>
+            <li class="relative submenu-parent">
+              <button
+                id="dropdownSubmenuButton2"
+                data-dropdown-toggle="dropdownSubmenu"
+                class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >
+                Colca
+                <svg
+                  class="w-2.5 h-2.5 ms-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+              </button>
+              <!-- Submenu -->
+              <div
+                id="dropdownSubmenu2"
+                class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44 submenu-parent:hover:block"
+              >
+                <ul class="py-2 text-sm md:text-base text-gray-700">
+                  <li>
+                    <a href="/colca-tours" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Valle del Colca</a>
+                  </li>
+                  <li>
+                    <a href="/volcanes-tours" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Valle de los volcanes</a>
+                  </li>
+                  <li>
+                    <a href="/trekking-colca" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Trekking</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -258,6 +290,7 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
           </ul>
         </li>
         <li><a href="/colca-tours" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Colca</a></li>
+        <li><a href="/volcanes-tours" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Valle de los volcanes</a></li>
       </ul>
     </li>
   

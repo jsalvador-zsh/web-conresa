@@ -1,0 +1,243 @@
+{
+    "tours": [
+      {
+        "id": "trekking-colca-san-miguel-chuccho-sangalle",
+        "title": "Trekking Cañón del Colca: San Miguel, Chuccho, Sangalle (PRIVADO)",
+        "departure": "07:00 am",
+        "return": "17:00 hrs del cuarto día",
+        "duration": "04 días",
+        "modality": "Suave",
+        "audience": "Niños, Adultos, Tercera Edad",
+        "included_visits": [
+          "Reserva Nacional de Pampa Cañahuas",
+          "Mirador de los Andes (Patapampa)",
+          "Aguas termales La Calera",
+          "Museo de los Collahuas y Cabanas",
+          "Mercado artesanal de Chivay",
+          "Cruz del Cóndor",
+          "Pueblo de San Juan de Chuccho",
+          "Pueblo de Tapay",
+          "Oasis de Sangalle",
+          "Pueblo de Cabanaconde"
+        ],
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Arequipa a Chivay",
+            "description": "Salida a Chivay pasando por Yura, Pampas de arrieros y Reserva Nacional de Pampa Cañahuas. Visita al Mirador de los Andes (4800 msnm) y aguas termales La Calera. Pernocte en Chivay."
+          },
+          {
+            "day": 2,
+            "title": "Cruz del Cóndor a San Juan de Chuccho",
+            "description": "Visita al Mirador de la Cruz del Cóndor. Descenso al Cañón hasta San Juan de Chuccho (3 horas de caminata). Campamento."
+          },
+          {
+            "day": 3,
+            "title": "Chuccho a Sangalle",
+            "description": "Visita al pueblo de Tapay y descenso al Oasis de Sangalle (3 horas de caminata). Campamento en el oasis."
+          },
+          {
+            "day": 4,
+            "title": "Ascenso a Cabanaconde y retorno",
+            "description": "Ascenso al pueblo de Cabanaconde (4 horas de caminata). Visita a baños termales y retorno a Arequipa."
+          }
+        ],
+        "equipment": [
+          "Bolsa de dormir",
+          "Ropa cómoda y de abrigo",
+          "Sombrero y lentes para el sol",
+          "Calzado adecuado para caminar",
+          "Cantimplora de agua",
+          "Bastones",
+          "Mochila personal",
+          "Linterna pequeña",
+          "Ropa de baño y útiles de aseo"
+        ],
+        "includes": [
+          "Transporte privado ida y vuelta",
+          "Carpas térmicas y colchones",
+          "Botiquín y equipo de seguridad",
+          "Alimentos (3 desayunos, 4 almuerzos fríos, 3 cenas)",
+          "Carpa comedor y equipo de cocina",
+          "Cocinero y ayudante",
+          "Burros y arriero",
+          "Guía Internacional de Montaña",
+          "1 noche de hotel en Chivay"
+        ]
+      },
+      {
+        "id": "trekking-colca-sangalle-2d",
+        "title": "Trekking Cañón del Colca: Sangalle (PRIVADO - 2 días)",
+        "departure": "03:00 am",
+        "return": "17:00 hrs del segundo día",
+        "duration": "02 días",
+        "modality": "Suave",
+        "audience": "Jóvenes, Adultos",
+        "included_visits": [
+          "Mirador de la Cruz del Cóndor",
+          "Pampa San Miguel",
+          "Oasis de Sangalle",
+          "Pueblo de Cabanaconde",
+          "Baños termales La Calera o Chacapi"
+        ],
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Arequipa a Sangalle",
+            "description": "Salida temprana hacia Chivay. Visita al Mirador de la Cruz del Cóndor. Descenso al Oasis de Sangalle (3 horas de caminata). Campamento."
+          },
+          {
+            "day": 2,
+            "title": "Ascenso y retorno",
+            "description": "Ascenso a Cabanaconde (4 horas de caminata). Visita a baños termales y retorno a Arequipa."
+          }
+        ],
+        "equipment": [
+          "Bolsa de dormir",
+          "Ropa cómoda y de abrigo",
+          "Sombrero y lentes para el sol",
+          "Calzado adecuado para caminar",
+          "Cantimplora de agua",
+          "Bastones",
+          "Mochila personal",
+          "Linterna pequeña",
+          "Ropa de baño y útiles de aseo"
+        ],
+        "includes": [
+          "Transporte privado ida y vuelta",
+          "Carpas térmicas y colchones",
+          "Botiquín y equipo de seguridad",
+          "Alimentos (2 desayunos, 2 almuerzos fríos, 1 cena)",
+          "Burros y arriero",
+          "Guía Internacional de Montaña"
+        ]
+      },
+      {
+        "id": "trekking-colca-chimpa-achachihua",
+        "title": "Trekking Cañón del Colca: Chimpa y Achachihua (PRIVADO)",
+        "departure": "03:00 am",
+        "return": "17:00 hrs del segundo día",
+        "duration": "02 días",
+        "modality": "Suave",
+        "audience": "Jóvenes, Adultos",
+        "included_visits": [
+          "Pueblo de Coporaque",
+          "Iglesia de Lari",
+          "Fortaleza de la Chimpa",
+          "Mirador de Achachihua",
+          "Cruz del Cóndor",
+          "Pueblos de Pinchollo y Maca",
+          "Baños termales La Calera"
+        ],
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Exploración cultural",
+            "description": "Visita a pueblos coloniales y fortaleza de la Chimpa. Caminata al mirador de Achachihua. Pernocte en Cabanaconde."
+          },
+          {
+            "day": 2,
+            "title": "Cruz del Cóndor y retorno",
+            "description": "Visita al Mirador de la Cruz del Cóndor. Recorrido por pueblos del valle y baños termales. Retorno a Arequipa."
+          }
+        ],
+        "equipment": [
+          "Ropa cómoda y de abrigo",
+          "Sombrero y lentes para el sol",
+          "Bloqueador solar",
+          "Ropa de baño y útiles de aseo",
+          "Bastones para caminar",
+          "Mochila personal"
+        ],
+        "includes": [
+          "Transporte privado",
+          "Guía profesional",
+          "Alojamiento en hotel Kuntur Wasi",
+          "Alimentación según programa",
+          "Entradas a sitios turísticos"
+        ]
+      },
+      {
+        "id": "trekking-colca-sangalle-grupal-2d",
+        "title": "Trekking Cañón del Colca: Sangalle (GRUPAL - 2 días)",
+        "departure": "03:00 am",
+        "return": "17:00 hrs del segundo día",
+        "duration": "02 días",
+        "modality": "Suave",
+        "audience": "Jóvenes, Adultos",
+        "included_visits": [
+          "Mirador de la Cruz del Cóndor",
+          "Pueblos de Cosñinhua y Malata",
+          "Oasis de Sangalle",
+          "Pueblo de Cabanaconde",
+          "Baños termales La Calera o Chacapi"
+        ],
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Descenso al Oasis",
+            "description": "Salida temprana hacia Chivay. Visita al Mirador de la Cruz del Cóndor. Descenso al Oasis de Sangalle pasando por pueblos tradicionales. Pernocte en cabañas."
+          },
+          {
+            "day": 2,
+            "title": "Ascenso y retorno",
+            "description": "Ascenso a Cabanaconde (4 horas de caminata). Visita a baños termales y retorno a Arequipa."
+          }
+        ],
+        "equipment": [
+          "Ropa cómoda y de abrigo",
+          "Sombrero y lentes para el sol",
+          "Calzado adecuado para caminar",
+          "Cantimplora de agua",
+          "Bastones",
+          "Mochila personal",
+          "Linterna pequeña",
+          "Ropa de baño y útiles de aseo"
+        ]
+      },
+      {
+        "id": "trekking-colca-sangalle-grupal-3d",
+        "title": "Trekking Cañón del Colca: Sangalle (GRUPAL - 3 días)",
+        "departure": "03:00 am",
+        "return": "17:00 hrs del tercer día",
+        "duration": "03 días",
+        "modality": "Suave",
+        "audience": "Jóvenes, Adultos",
+        "included_visits": [
+          "Mirador de la Cruz del Cóndor",
+          "Pueblo de San Juan de Chuccho",
+          "Pueblos de Cosñinhua y Malata",
+          "Oasis de Sangalle",
+          "Pueblo de Cabanaconde",
+          "Baños termales La Calera o Chacapi"
+        ],
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Descenso a Chuccho",
+            "description": "Salida temprana hacia Chivay. Visita al Mirador de la Cruz del Cóndor. Descenso a San Juan de Chuccho. Campamento."
+          },
+          {
+            "day": 2,
+            "title": "Chuccho a Sangalle",
+            "description": "Caminata por pueblos tradicionales hasta el Oasis de Sangalle. Pernocte en cabañas."
+          },
+          {
+            "day": 3,
+            "title": "Ascenso y retorno",
+            "description": "Ascenso a Cabanaconde (4 horas de caminata). Visita a baños termales y retorno a Arequipa."
+          }
+        ],
+        "equipment": [
+          "Ropa cómoda y de abrigo",
+          "Sombrero y lentes para el sol",
+          "Calzado adecuado para caminar",
+          "Cantimplora de agua",
+          "Bastones",
+          "Mochila personal",
+          "Linterna pequeña",
+          "Ropa de baño y útiles de aseo"
+        ]
+      }
+    ]
+  }

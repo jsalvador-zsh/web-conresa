@@ -1,0 +1,132 @@
+{
+    "tours": [
+      {
+        "id": "climbing-volcan-misti",
+        "title": "CLIMBING: ESCALANDO EL VOLCAN MISTI",
+        "departure": "05:30 am",
+        "return": "17:00 hrs del segundo día",
+        "duration": "02 días",
+        "modality": "Media Suave",
+        "audience": "Jóvenes, Adultos",
+        "included_visits": [
+          "Campo Base Monte Blanco",
+          "Cumbre del Volcán Misti (6,075 m)",
+          "Vista del cráter con actividad fumarólica",
+          "Vista panorámica de Arequipa",
+          "Reserva Nacional de Agua Blanca"
+        ],
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Ascenso al Campo Base",
+            "description": "Salida desde el hotel hacia las faldas del Volcán Misti. Ascenso durante 6 horas hasta Monte Blanco (4,800 m) donde armaremos campamento."
+          },
+          {
+            "day": 2,
+            "title": "Ascenso a la cumbre y retorno",
+            "description": "Salida temprano (4 am) para ascenso a la cumbre (5-6 horas). Vista del cráter y cruz en la cima. Descenso al campo base (1.5 horas) y retorno a Arequipa."
+          }
+        ],
+        "equipment": [
+          "Bolsa de dormir (-10°C recomendado)",
+          "Ropa térmica (primera capa)",
+          "Chaquetón impermeable",
+          "Guantes térmicos y gorro",
+          "Botas de montaña",
+          "Mochila 60L",
+          "Cantimplora/termo (3L)",
+          "Linterna frontal",
+          "Bastones telescópicos",
+          "Protector solar SPF 50+",
+          "Lentes de sol categoría 4"
+        ],
+        "includes": [
+          "Transporte ida y vuelta",
+          "Guía profesional UIAGM",
+          "Equipo técnico (crampones, piolet)",
+          "Carpas térmicas de alta montaña",
+          "Colchonetas aislantes",
+          "Alimentación: 1 desayuno, 1 cena",
+          "Botiquín de primeros auxilios",
+          "Oxígeno de emergencia"
+        ],
+        "recommendations": [
+          "Aclimatación previa recomendada (2 días en altura)",
+          "No recomendado para personas con problemas cardiacos",
+          "Edad mínima: 16 años",
+          "Seguro de viaje obligatorio",
+          "Informar sobre condiciones médicas"
+        ],
+        "difficulty": "Moderada-Alta",
+        "max_altitude": 6075,
+        "min_altitude": 2400,
+        "total_distance": "14 km (ida y vuelta)",
+        "best_season": "Abril - Noviembre"
+      },
+      {
+        "id": "climbing-volcan-chachani",
+        "title": "CLIMBING: ESCALANDO EL VOLCAN CHACHANI",
+        "departure": "05:30 am",
+        "return": "17:00 hrs del segundo día",
+        "duration": "02 días",
+        "modality": "Media Suave",
+        "audience": "Jóvenes, Adultos",
+        "included_visits": [
+          "Reserva Nacional de Salinas y Aguada Blanca",
+          "Base del Chachani (5,050 m)",
+          "Campo Inca (5,170 m)",
+          "Cumbre del Volcán Chachani (6,075 m)",
+          "Vista de cráteres y paisajes andinos"
+        ],
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Ascenso al Campo Inca",
+            "description": "Salida en vehículo 4x4 por Cabrerías hasta la base del Chachani. Caminata de 2 horas hasta Campo Inca (5,170 m) para acampar."
+          },
+          {
+            "day": 2,
+            "title": "Ascenso a la cumbre y retorno",
+            "description": "Ascenso temprano (4 am) a la cumbre (5-6 horas). Vista panorámica desde los 6,075 m. Descenso al campo base (1.5 horas) y retorno a Arequipa."
+          }
+        ],
+        "equipment": [
+          "Bolsa de dormir (-15°C recomendado)",
+          "Ropa térmica multicapa",
+          "Chaquetón de pluma",
+          "Guantes de escalada",
+          "Botas de alta montaña",
+          "Mochila 60-70L",
+          "Termo isotérmico (3L)",
+          "Linterna frontal con repuestos",
+          "Crampones (si viaja en temporada de nieve)",
+          "Protector solar SPF 50+ y protector labial",
+          "Lentes de glaciar"
+        ],
+        "includes": [
+          "Transporte 4x4 compartido (máx. 7 personas)",
+          "Guía profesional UIAGM",
+          "Equipo técnico según temporada",
+          "Carpas de expedición",
+          "Colchonetas térmicas",
+          "Alimentación: 1 desayuno, 1 cena",
+          "Comunicación por radio",
+          "Botiquín de altura",
+          "Oxígeno complementario"
+        ],
+        "recommendations": [
+          "Aclimatación mínima de 3 días en altura",
+          "Experiencia previa en trekking de altura",
+          "Examen médico reciente obligatorio",
+          "Seguro de rescate en montaña",
+          "No fumar ni consumir alcohol durante el ascenso"
+        ],
+        "difficulty": "Alta",
+        "max_altitude": 6075,
+        "min_altitude": 2335,
+        "total_distance": "16 km (ida y vuelta)",
+        "best_season": "Mayo - Octubre",
+        "particular_notes": "En temporada seca (junio-sept) puede requerirse equipo técnico adicional para nieve y hielo."
+      }
+    ]
+  }
