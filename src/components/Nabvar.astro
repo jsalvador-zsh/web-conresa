@@ -140,11 +140,36 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
       
       <!-- Enlace simple -->
       <li><a href="#" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]">Internacionales</a></li>
-      
-      <li>
-        <a href="/peru-excursiones" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]">Perú Excursiones</a>
+      <li class="relative group">
+        <button
+          id="excursiones-dropdown-button"
+          class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Perú Excursiones
+          <svg
+            class="w-2.5 h-2.5 ms-2.5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div
+          id="excursiones-dropdown-menu"
+          class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
+        >
+          <ul class="py-2 text-sm md:text-base text-gray-700">
+            <li>
+              <a href="/peru-excursiones/camino-inca" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Camino Inca</a>
+            </li>
+          </ul>
+        </div>
       </li>
-      
       <!-- Dropdown Arequipa -->
       <li class="relative group">
         <button
@@ -278,7 +303,18 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.p
     </li>
     <li><a href="#" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Internacionales</a></li>
     <li><a href="/peru-excursiones" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Perú Excursiones</a></li>
-  
+    <li class="relative w-full">
+      <button
+        id="mobile-excursiones-button"
+        class="mobile-menu-item no-arrow text-gray-800 hover:text-[#468E8E] w-full text-right"
+        aria-expanded="false"
+      >
+        Perú Excursiones
+      </button>
+      <ul id="mobile-excursiones-menu" class="mobile-submenu hidden mt-2 space-y-2 w-full">
+        <li><a href="/peru-excursiones/camino-inca" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Camino Inca</a></li>
+      </ul>
+    </li>
     <!-- Dropdown Arequipa - Móvil -->
     <li class="relative w-full">
       <button
@@ -424,6 +460,7 @@ const setupDesktopDropdown = (buttonId, menuId) => {
 
     // Configurar cada dropdown de escritorio
     setupDesktopDropdown('about-dropdown-button', 'about-dropdown-menu');
+    setupDesktopDropdown('excursiones-dropdown-button', 'excursiones-dropdown-menu');
     setupDesktopDropdown('arequipa-dropdown-button', 'arequipa-dropdown-menu');
     setupDesktopDropdown('arequipa-submenu-button', 'arequipa-submenu');
     setupDesktopDropdown('colca-submenu-button', 'colca-submenu');
@@ -445,6 +482,7 @@ const setupDesktopDropdown = (buttonId, menuId) => {
 
     setupMobileDropdown('mobile-about-button', 'mobile-about-menu');
     setupMobileDropdown('mobile-arequipa-button', 'mobile-arequipa-menu');
+    setupMobileDropdown('mobile-excursiones-button', 'mobile-excursiones-menu');
     setupMobileDropdown('mobile-arequipa-inner-button', 'mobile-arequipa-inner-menu');
 
     // Cerrar menú al hacer clic en enlaces
