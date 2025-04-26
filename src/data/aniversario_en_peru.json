@@ -1,0 +1,168 @@
+{
+    "tours": [
+      {
+        "id": "CT8425.III.3",
+        "title": "ANIVERSARIO EN PERÚ",
+        "duration": "9 days",
+        "description": "Experiencias inolvidables de mi Aniversario de Bodas, Recomendable para Luna de miel, momentos ideales para compartirlos juntos.",
+        "days": [
+          {
+            "day": 1,
+            "title": "LIMA",
+            "description": "Bienvenidos a PERU. Recepción y traslado al hotel de Lima.",
+            "overnight": "Lima"
+          },
+          {
+            "day": 2,
+            "title": "LIMA – CITY TOUR",
+            "description": "Recorrido turístico por el centro histórico de Lima. Visita a Plaza San Martin, Plaza Mayor, Catedral de Lima, palacio arzobispal, palacio municipal, biblioteca municipal (días lunes, miércoles y viernes), palacio de gobierno, Casa de la Literatura peruana, bar Cordano, Iglesia y convento de San Francisco (claustros, biblioteca y catacumbas).",
+            "overnight": "Lima"
+          },
+          {
+            "day": 3,
+            "title": "LIMA – CUSCO – CITY TOUR CAMINANDO PRIVADO",
+            "description": "Traslado al aeropuerto para vuelo a Cusco. Visita guiada privada por calles empedradas de Cusco, piedra de los 12 ángulos, barrio de San Blas, Plaza de Armas, convento de Santo Domingo (Koricancha), Catedral de Cusco.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 4,
+            "title": "CUSCO – VALLE SAGRADO – URUBAMBA",
+            "description": "Tour por Valle Sagrado: Poblado de Pisaq (mercado artesanal), pueblos de Ccoya, Lamay, Calca y Urubamba. Almuerzo buffet en restaurant Tunupa Valle. Visita a Ollantaytambo (área fortificada inca con templo, andenes y sector urbano).",
+            "includes": ["Almuerzo en Tunupa Valle"],
+            "overnight": "Valle Sagrado"
+          },
+          {
+            "day": 5,
+            "title": "YUCAY – OLLANTA – AGUAS CALIENTES – MACHU PICCHU",
+            "description": "Traslado a estación de tren a Machu Picchu. Visita guiada a ciudadela inca (Templo del Sol, Intiwatana, roca sagrada, templo de las tres ventanas, mausoleo). Retorno en tren a Cusco.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 7,
+            "title": "CUSCO – LIMA – PARACAS",
+            "description": "Traslado al aeropuerto para vuelo a Lima. Traslado a estación de bus para viaje a Paracas (13:30-17:00).",
+            "overnight": "Paracas"
+          },
+          {
+            "day": 8,
+            "title": "ISLAS BALLESTAS – PARACAS – LIMA",
+            "description": "Excursión marítima a Islas Ballestas (08:00-10:00) para observar fauna marina (aves guaneras, pingüinos peruanos, lobos marinos). Traslado a estación de bus para retorno a Lima (14:00-17:40).",
+            "overnight": "Lima"
+          },
+          {
+            "day": 9,
+            "title": "LIMA",
+            "description": "Traslado al aeropuerto para salida.",
+            "overnight": null
+          }
+        ],
+        "hotelCategories": [
+          {
+            "category": "Estándar",
+            "price": 1100,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["El Tambo", "Tierra Viva", "Ibis Larco"],
+              "Cusco": ["San Agustin Internacional", "Casona Real", "Illa Hotel"],
+              "Valle Sagrado": ["Tierra Viva"],
+              "Paracas": ["Paracas Sunset"]
+            }
+          },
+          {
+            "category": "Estándar Confort",
+            "price": 1200,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["Casa Andina Select", "Tierra Viva Centro", "Libre hotel"],
+              "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"],
+              "Valle Sagrado": ["Sonesta Yucay"],
+              "Paracas": ["Casa Andina Select", "San Agustin"]
+            }
+          },
+          {
+            "category": "Superior",
+            "price": 1275,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["Tierra Viva Superior", "Casa Andina Premium", "Jose Antonio"],
+              "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior", "Costa del Sol Estándar"],
+              "Valle Sagrado": ["Taypikala"],
+              "Paracas": ["La Hacienda Paracas", "Casa Andina Select Suite"]
+            }
+          },
+          {
+            "category": "Superior Elegante",
+            "price": 1340,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["Sonesta Olivar", "Casa Andina Premium Superior", "José Antonio Deluxe"],
+              "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"],
+              "Valle Sagrado": ["Taypikala"],
+              "Paracas": ["La Hacienda Paracas", "Casa Andina Select"]
+            }
+          },
+          {
+            "category": "Luxe",
+            "price": 1560,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["Casa Andina Premium", "Doubletree By Hilton", "Sonesta Olivar Ejecutiva"],
+              "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury", "Aranwa Junior Suite"],
+              "Valle Sagrado": ["Aranwa"],
+              "Paracas": ["La Hacienda Paracas", "Casa Andina Select Suite"]
+            }
+          }
+        ],
+        "flightSuggestions": {
+          "routes": [
+            {
+              "from": "Lima",
+              "to": "Arequipa",
+              "departure": "09:15",
+              "arrival": "10:45"
+            },
+            {
+              "from": "Cusco",
+              "to": "Lima",
+              "departure": "11:40",
+              "arrival": "12:50"
+            }
+          ],
+          "prices": [
+            {
+              "description": "Solo Carryon de 10 kilos + Mochila",
+              "price": 170
+            },
+            {
+              "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+              "price": 290
+            }
+          ]
+        },
+        "includes": [
+          "Traslados de Ingreso y Salida en cada Ciudad",
+          "Desayunos en el hotel en toda la estadía",
+          "LIMA: 2 noches de alojamiento + City tour con entradas",
+          "CUSCO: 3 noches de alojamiento + City tour y 4 ruinas Aledañas + Tour a Valle Sagrado",
+          "Almuerzo en Valle Sagrado",
+          "1 noche de alojamiento en Valle Sagrado",
+          "Excursión a Machu Picchu en tren Turista expeditions",
+          "Ticket de tren Ollanta/Machu Picchu/Ollanta-Cusco",
+          "Minibús Aguas Calientes/Ciudadela Machu Picchu/Aguas Calientes",
+          "PARACAS: Boleto de bus Lima/Ica (ECS) + 1 noche en Paracas + Tour Islas Ballestas",
+          "Boleto de retorno en bus compartido de Paracas a Lima"
+        ],
+        "notIncludes": [
+          "Vuelos internacionales",
+          "Vuelos Nacionales ó Internos",
+          "Sobrevuelo a las líneas de Nasca",
+          "Museos en Ica/Paracas",
+          "Seguro de Viaje",
+          "Otros gastos que no se detalle"
+        ],
+        "notes": "Gracias por visitar Perú y darnos la oportunidad de Atenderlos",
+        "serviceType": "Servicios privados y grupales",
+        "guideLanguage": "Guía Bilingüe Español/Inglés"
+      }
+    ]
+  }

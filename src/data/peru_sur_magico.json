@@ -1,0 +1,653 @@
+  {
+    "tours": [
+      {
+        "id": "CT8425.II.1",
+        "title": "Capital, Arequipa, Colca, Puno, Cusco, Machupicchu, Ica, Paracas",
+        "duration": "14 días",
+        "days": [
+          {
+            "day": 1,
+            "title": "LIMA – CITY TOUR",
+            "description": "Recepción en el aeropuerto Internacional Jorge Chávez de Lima y traslado a su hotel elegido; alojamiento en Lima. visita 9 am ó 2:30 pm. *Si su vuelo llega a las 6:00 am podrían tomar este tour. De lo contrario podrían tomarlo al retorno de Cusco al final del itinerario. Recorrido turístico que nos permitirá ir tras el rastro de la historia limeña caminar por las vías donde se encuentra el legado histórico y cultural donde encontraremos la belleza artística y arquitectónica de sus edificios históricos. Iniciaremos la visita por la Plaza San Martín bordeada por hermosas edificaciones históricas. Caminaremos por el jirón de la Unión hasta llegar a la plaza mayor del centro histórico. Ingreso a la Iglesia y convento de San Francisco donde apreciamos los claustros, su biblioteca y las galerías subterráneas o catacumbas del cementerio de la época colonial. Llegaremos hasta el Palacio de Torre Tagle (panorámico) Iglesia de San Pedro. Regresaremos por el barrio de Miraflores donde pasaremos por una vista panorámica a la Huaca Pucllana gran complejo arqueológico construido hace más de 1500 años.",
+            "overnight": "Lima"
+          },
+          {
+            "day": 2,
+            "title": "LIMA – AREQUIPA – CITY TOUR",
+            "description": "Desayuno en el hotel. A hora prevista Traslado al aeropuerto para tomar el vuelo con destino a la ciudad blanca de Arequipa. Recepción y traslado al hotel elegido; realizaremos un recorrido por el centro de la ciudad y parte de sus alrededores. Inicio con la Plaza de Armas, la Catedral la cual alberga en su interior un altar Mayor de mármol, visitamos la Iglesia y Claustros de la Compañía de Jesús uno de los templos más conservados de la ciudad para luego visitar el Convento y Museo de Santa Catalina fundado en 1580 donde recorreremos los claustros y calles que durante la colonia se convirtieron en el refugio y hogar de mujeres nobles consagradas a la oración. Luego visitamos el Mirador de Yanahuara adornado con arquerías de sillar con inscripciones de fragmentos poéticos.",
+            "overnight": "Arequipa"
+          },
+          {
+            "day": 3,
+            "title": "AREQUIPA – COLCA",
+            "description": "Desayuno en el hotel. 7.00 am Recogeremos a los visitantes del hotel para Realizar el tour al Colca, finalizando en Puno; salida de Arequipa hacia el Valle del Colca por ruta de Yura, Pampa Cañahua, Reserva Nacional de Salinas y Aguada Blanca, avistamiento de Vicuñas; parada en Patahuasi para tomar el mate inca, Pampas de Toccra, avistamiento de aves en los bofedales, Viscachani, Mirador de los Volcanes, llegada a Chivay a las 12:00 Hrs. aproximadamente. Traslado a un restaurante para disfrutar de la gastronomía Arequipeña. Almuerzo. Por la tarde visitaremos los baños termales y medicinales la Calera. Alojamiento Chivay o Colca (si se alojan en Colca Lodge cuentan con baños termales en el hotel).",
+            "overnight": "Colca",
+            "includes": ["Almuerzo"]
+          },
+          {
+            "day": 4,
+            "title": "CAÑON DEL COLCA – PUNO",
+            "description": "Desayuno en el hotel. 06:30 Hrs. Salida del hotel hacia el mirador de la Cruz del Cóndor, parando para visitar los pueblos de Yanque a la ida y Maca al retorno, miradores del valle y cañón (Antahulque y Wayra Punku). Parada de aproximadamente 1 hora en el mirador de los Cóndores. Llegada a Chivay alrededor de las 11:30 hrs. Almuerzo en Chivay. 13.30 hrs salida hacia la ciudad de Puno. Llegada aproximada a Puno a las 19:00 hrs. Traslado al Hotel elegido.",
+            "overnight": "Puno",
+            "includes": ["Almuerzo"]
+          },
+          {
+            "day": 5,
+            "title": "PUNO ISLAS DEL TITIKAKA UROS Y TAQUILE",
+            "description": "Desayuno en el hotel. 7.00 am traslado de su hotel para dirigirse hasta la isla flotante de los Uros, las islas son las más famosas del lago Titicaca y está ubicado a 6 kilómetro de la ciudad de Puno, en este lugar nos darán un explicación de la isla flotante de los Uros de cómo realizan sus islas y balsas a base de ichu, así mismo serán partícipes con los pobladores que viven en las islas de los Uros, luego de las explicaciones y sobre la isla abordaran otra vez la lancha para esta vez trasladarse a la isla natural de Taquile donde realizarán una caminata a lo alto de la isla, donde los pobladores tienen una plaza principal y donde también se puede observar desde lo alto una maravillosa vista hacia el lago Titicaca, luego visitaran una casa local donde les proveerán los almuerzos, típico de la Zona Trucha a la plancha, acompañado de arroz y papas con ensalada, sopa de quinua o morón e infusión. Luego podrán tener un momento libre donde podrán visitar la isla y sus alrededores a si mismo podrán observar a los pobladores que en su mayoría se dedica a la artesanía donde los adultos y los niños tejen con lanas de colores. Finalmente abordaremos la lancha rápida y regresaremos a Puno.",
+            "overnight": "Puno",
+            "includes": ["Almuerzo"]
+          },
+          {
+            "day": 6,
+            "title": "PUNO – CUSCO",
+            "description": "Desayuno en el hotel. 07:00 Hrs. Salida en Bus turístico visitando el corredor turístico Manco Cápac que une las ciudades de Puno y Cusco, el bus cuenta con guías profesionales que le permitirán conocer los lugares de Andahuaylillas iglesia llamada la Sixtina de América, se exhiben frescos y murales del arte colonial, además visita al templo de Raqchi o templo al dios Wiracocha, suprema dedicada del imperio incaico. Almorzamos en Sicuani y luego pasaremos por el punto más alto de la ruta La Raya donde apreciaremos nevados, alpacas y vicuñas y por último visitaremos el Pukara conjunto arqueológico formado por una gran estructura piramidal. ADICIONAL: SALIDAS DÍAS LUNES, JUEVES Y SABADOS EN TREN PERU RAIL TITICACA DE LUJO adicional por persona $200. Sale 07:30 am llega 17:50 hrs. Atraviesa en un tren exclusivo los bellos paisajes entre las ciudades de Cusco y Puno en un viaje de 10 horas recorriendo aguas serenas y picos deslumbrantes de la zona altiplánica del Perú envuelta en nuestra cultura mediante artistas andinos y danzas típicas en vivo combinando nuestro pisco sour y un almuerzo gourmet. Llegada a Cusco a las 16:30. Recepción y traslado al hotel.",
+            "overnight": "Cusco",
+            "includes": ["Almuerzo"]
+          },
+          {
+            "day": 7,
+            "title": "CUSCO – CITY TOUR Y RUINAS CERCANAS",
+            "description": "Desayuno en el hotel. 9.00 am El City Tour en la Ciudad del Cusco se inicia visitando las ruinas de Sacsayhuaman, imponentes construcción Inca, ubicada al norte de la ciudad. Sacsayhuaman es uno de los legados arqueológicos más significativos que posee la ciudad del Cusco, debido a su enorme construcción, compuesta por enormes bloques de piedra. Se dice que la construcción de Sacsayhuaman duró más de 50 años que se utilizaron más de 20,000 hombres en la edificación. Más tarde continuaremos con nuestro recorrido y nos dirigiremos a las ruinas de Qenqo, frías cuevas labradas por los Incas en donde se puede apreciar un pequeño altar en donde se cree los Incas momificaban a sus muertos. Otra ruina es el Complejo Arqueológico de Pukapukara (30 minutos en auto) El complejo cuenta con numerosos recintos, plazas interiores, acueductos, atalayas y caminos. Luego visitaremos las ruinas de Tambomachay, un bello lugar de donde emerge agua de un cerro hacia unas fuentes construidas por los Incas, se dice que aquí venía el emperador Inca a tomar sus baños y a realizar cultos religiosos al agua. Luego de haber visitado las ruinas más relevantes que ofrece la ciudad del Cusco, nos dirigimos al gran templo del sol, conocido como el Qoricancha o Recinto de Oro. El Qoricancha se encuentra ubicado en la ciudad del Cusco, a pocos metros de la plaza de Armas. Este maravilloso templo es considerado una de las construcciones más sagradas e impresionantes que tuvieron los señores Incas. Se dice que el templo albergaba a un gran grupo selecto de sacerdotes Incas, encargados de rendirle culto a la luna y al dios sol. Se dice que cuando los conquistadores llegaron al Qoricancha, las paredes estaban cubiertas de oro sólido, el cual fue llevado a España. Finalmente visitaremos la majestuosa Catedral del Cusco, considerada por muchas unas de las más hermosas en todo Sudamérica.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 8,
+            "title": "CUSCO – VALLE SAGRADO – AGUAS CALIENTES",
+            "description": "Desayuno en el hotel. 9.00 am traslado de su hotel; hacia nuestra excursión al Valle Sagrado de los Incas. Este hermoso valle está compuesto por numerosos ríos que descienden por quebradas llenas de verdor y pequeños valles. En su recorrido usted podrá visitar dos de los mejores restos arquitectónicos Incas que el valle alberga. Primero nos dirigiremos a las ruinas de Pisaq, Aquí podremos observar la gran labor lograda por los Incas, a través de un sin fin de terrazas agrícolas que adornan virtualmente todas las montañas a su alrededor. En el centro del templo de Pisaq, podremos observar un intiwatana (reloj solar).Luego de nuestra visita a esta antigua ciudadela Inca, visitaremos el pueblo moderno de Pisaq, la cual está ubicada a la margen derecha del río Urubamba, y está poblada casi en un totalidad por los descendientes de los Incas. Aquí visitaremos un pintoresco mercado artesanal, y podremos ver como hasta hoy la gente des este lugar mantiene la tradición de intercambiar sus cosas o alimentos, tal como lo hacían en el pasado. Ideal para compras, ya que hay mucha variedad de artículos de lana de alpaca, joyas de plata y oro, entre otros. Luego almorzaremos de unos de los típicos restaurantes de este poblado. Más tarde nos dirigiremos al pueblo de Ollantaytambo, en donde visitaremos la hermosa fortaleza que lleva el mismo nombre. La caminata a la cima de Ollantaytambo es un poco empinada ir pausados en la visita. Por la tarde traslado a la estación de Ollanta para tomar el tren que nos llevara a Aguas Calientes (un pequeño poblado cerca al Santuario de Machu Picchu). El viaje en tren dura aproximadamente 2 horas, y ofrece sobre el trayecto espectaculares paisajes que combinan sierra y selva. Sin duda alguna este es uno de los paseos más espectaculares que tenemos en Perú ya que ofrece hermosos paisajes durante todo el trayecto. Salida 16:36 llegando 18:00 Hrs. Arribo en Aguas Calientes y traslado a su hotel.",
+            "overnight": "Aguas Calientes",
+            "includes": ["Almuerzo"]
+          },
+          {
+            "day": 9,
+            "title": "MACHU PICCHU – CUSCO",
+            "description": "Desayuno en el hotel. A hora prevista traslado del hotel hacia la estación de bus para tomar el transporte que nos llevará cuesta arriba hasta las ruinas de Machu Picchu. Este breve viaje en bus dura solo 20 minutos y recorre una pista no asfaltada, muy empinada y zigzagueante a través de una montaña con características selváticas y vistas impresionantes. Finalmente llegaremos al Santuario de Machu Picchu donde nuestro guía local nos hará un recorrido por los sectores más importantes de esta bella ciudadela Incaica. En Machu Picchu haremos un recorrido de 2 horas con nuestro guía y visitaremos la zona agrícola, formada por conjuntos de terrazas de cultivo, la zona urbana donde vivieron sus ocupantes y donde se desarrollaron las principales actividades civiles y religiosas. También visitaremos el Intiwatana de Machu Picchu ubicado en la parte más alta de la ciudadela, el templo del sol, del cóndor y otros sectores importantes. (Los sectores a visitar en Machupicchu, depende de la opción de compra que se realizó al momento de hacer la reserva) (se sugiere comprar con mucha anticipación para tener una buena visita de la Ciudadela). ADICIONAL: INGRESO A WAYNA PICCHU Si desean subir al wayna picchu deberan de adquirir otro boleto de ingreso que lo incluya por persona $60 dolares. No incluye guia, suben por cuenta propia aproximadamente 2 horas de caminata. Por la tarde, estaremos tomando el bus de regreso hacia Aguas Calientes en donde podrán almorzar (No incluye almuerzo). Retorno en tren a Cusco. Recepción y traslado al hotel.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 10,
+            "title": "LAGUNA HUMANTAY o MONTAÑA DE COLORES",
+            "description": "Desayuno en el hotel. En este día podrán elegir cual de ambas excursiones de aventura y naturaleza podrán visitar, en ambas se contempla paisajes imponentes pero deben saber que supone un esfuerzo físico importante a considerar. Salida de Cusco 5 am retorno 5 pm. Caminata de 2 horas aprox. hasta llegar a la Laguna Humantay con una altitud de 4200 m. Caminata de 2 horas 30 m aprox. hasta llegar a la montaña de colores con una altitud de 5000 m. La ruta incluye subidas ligeramente empinadas y llanuras que ascienden de manera progresiva. Para ambas caminatas se pueden alquilar caballos en el mismo lugar que serán jalados por los arrieros locales. (no incluye servicio de Caballos). Incluye desayuno y almuerzo básicos. A hora oportuna traslado a la ciudad de Cusco, hotel seleccionado.",
+            "overnight": "Cusco",
+            "includes": ["Desayuno", "Almuerzo"]
+          },
+          {
+            "day": 11,
+            "title": "CUSCO – LIMA",
+            "description": "Desayuno en el hotel seleccionado. A la hora oportuna traslado al aeropuerto para salir con destino a Lima. Recepción y traslado al hotel elegido en Lima.",
+            "overnight": "Lima"
+          },
+          {
+            "day": 12,
+            "title": "LIMA – ICA – AVENTURA OASIS HUACACHINA – PARACAS",
+            "description": "Desayuno en el hotel seleccionado. A hora oportuna Traslado de su hotel con destino a la estación de bus para salir a Ica, salida en bus regular a las 06:30 llegando 11:00 Hrs. Recepción y traslado al Oasis de la Huacachina, la cual está ubicada a solo 5 Km. del centro de la ciudad. En esta hermosa laguna podrán disfrutar de la tranquilidad del lugar y caminar por los alrededores en busca de buenas fotos. Desde este punto viajaremos en tubulares areneros hacia el oeste, en dirección del desierto, donde se encuentran una gran variedad de dunas. Aquí pasearemos con nuestro buggy o carro arenero atravesando gran parte del desierto subiendo y bajando las dunas. El desierto de Ica en Huacachina ofrece unos de los paisajes desérticos más bellos de Sudamérica, con formaciones caprichosas de arena formadas por el viento, y con una bella vista de nuestros Andes peruanos en la parte este. Vuestro conductor asignado hará diferentes paradas para que puedan apreciar el paisaje, tomando fotografías. Luego conduciremos nuestro vehículo hacia la cima de una gran duna en donde nuestro guía instructor les mostrará como practicar el deporte de sandboarding. A hora prevista por la tarde traslado privado a Paracas (1 hora).",
+            "overnight": "Paracas"
+          },
+          {
+            "day": 13,
+            "title": "BALLESTAS – PARACAS – LIMA",
+            "description": "Desayuno en el hotel. 7.30am traslado de su hotel al puerto de Paracas. 08:00 AM excursión marítima a las Islas Ballestas por dos horas las cuales son formaciones rocosas que albergan una importante fauna marina donde destacan grandes colonias de aves guaneras además de algunos ejemplares de pingüinos peruanos en peligro de extensión. También se concentran gran cantidad de lobos marinos y otras especies de mamíferos. A hora prevista por la tarde traslado en Bus turístico de retorno a Lima (4 horas). Recepción y traslado al hotel. Para visitar las líneas de Nasca, lo pueden hacer desde el Aeródromo de Pisco, por un adicional de usd$285.00 (duración total del tour 1.30 hrs) No incluye impuestos del aeródromo y boleto turistico $20.",
+            "overnight": "Lima"
+          },
+          {
+            "day": 14,
+            "title": "LIMA – SALIDA",
+            "description": "Desayuno en el hotel. A la hora oportuna traslado al aeropuerto para salir rumbo a su próximo recorrido.",
+            "overnight": null
+          }
+        ],
+        "hotelCategories": [
+          {
+            "category": "Estándar",
+            "price": 1890,
+            "hotels": {
+              "Lima": ["El Tambo", "Tierra Viva", "Ibis Larco"],
+              "Arequipa": ["Santa Rosa", "Majestad", "Xima", "Casona Plaza Colonial"],
+              "Valle del Colca": ["Pozo del Cielo", "Colca Llaqta"],
+              "Puno": ["La Hacienda Puno / Plaza", "Casa Andina Estándar", "Tierra Viva Puno", "Casona Plaza Centro"],
+              "Cusco": ["San Agustin Internacional", "Casona Real", "Illa Hotel"],
+              "Aguas Calientes": ["Casa de Luz", "Hatuminti"],
+              "Paracas": ["Paracas Sunset"]
+            }
+          },
+          {
+            "category": "Estándar Confort",
+            "price": 1999,
+            "hotels": {
+              "Lima": ["Casa Andina Select", "Tierra Viva Centro", "Libre hotel"],
+              "Arequipa": ["Casa Andina Estándar", "Tierra Viva", "San Agustin Posada Monasterio", "Casona Plaza Arequipa"],
+              "Valle del Colca": ["Casa Andina Estándar", "Pozo del Cielo Superior"],
+              "Puno": ["Sonesta Sin vista al lago Titikaka", "Taypikala", "José Antonio", "Casona Plaza Puno"],
+              "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"],
+              "Aguas Calientes": ["Casa Andina", "Taypikala", "Hatun Samay", "Casa de Luz", "Tierra Viva"],
+              "Paracas": ["Casa Andina Select", "San Agustin"]
+            }
+          },
+          {
+            "category": "Superior",
+            "price": 2283,
+            "hotels": {
+              "Lima": ["Tierra Viva Superior", "Casa Andina Premiun", "Jose Antonio"],
+              "Arequipa": ["Katari deluxe", "Ariquipay"],
+              "Valle del Colca": ["Colca Lodge", "Aranwa"],
+              "Puno": ["Sonesta Puno con vista al lago", "Casa Andina Premiun sin vista al lago"],
+              "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior", "Costa del Sol Estándar"],
+              "Aguas Calientes": ["El Mapi", "Casa Andina Superior", "Tierra Viva Machupicchu"],
+              "Paracas": ["La Hacienda Parcas", "Casa Andina Select Suite"]
+            }
+          },
+          {
+            "category": "Superior Elegante",
+            "price": 2478,
+            "hotels": {
+              "Lima": ["Sonesta Olivar", "Casa Andina Premiun Superior", "José Antonio Deluxe"],
+              "Arequipa": ["katari Suite (King)", "Hilton", "Costa del sol"],
+              "Valle del Colca": ["Colca Lodge", "Aranwa"],
+              "Puno": ["Casa Andina Premiun con Vista al lago"],
+              "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"],
+              "Aguas Calientes": ["El Mapi", "Hatun Samay"],
+              "Paracas": ["La Hacienda Paracas", "Casa Andina Select"]
+            }
+          },
+          {
+            "category": "Luxe",
+            "price": 2940,
+            "hotels": {
+              "Lima": ["Casa Andina Premiun", "Doubletree By Hilton", "Sonesta Olivar Ejecutiva"],
+              "Arequipa": ["Casa Andina Premiun", "Costa del Sol"],
+              "Valle del Colca": ["Colca Lodge", "Aranwa"],
+              "Puno": ["GHL Lago Titicaca"],
+              "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury", "Aranwa Junior Suite"],
+              "Aguas Calientes": ["Sumaq B&B Garden View", "Hatun Samay"],
+              "Paracas": ["La Hacienda Paracas", "Casa Andina Select Suite"]
+            }
+          }
+        ],
+        "flightSuggestions": {
+          "routes": [
+            {
+              "from": "Lima",
+              "to": "Arequipa",
+              "departure": "09:15",
+              "arrival": "10:45"
+            },
+            {
+              "from": "Cusco",
+              "to": "Lima",
+              "departure": "11:40",
+              "arrival": "12:50"
+            }
+          ],
+          "prices": [
+            {
+              "description": "Solo Carryon de 10 kilos + Mochila",
+              "price": 170
+            },
+            {
+              "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+              "price": 290
+            }
+          ]
+        },
+        "includes": [
+          "Traslados de Ingreso y Salida en cada Ciudad",
+          "LIMA: 03 noches de alojamiento. City tour con entradas",
+          "AREQUIPA: 01 noche de alojamiento. City tour Peatonal con Monasterio Santa Catalina.",
+          "COLCA: 01 noche de alojamiento. 02 almuerzos. Visita a todo el Valle hasta la Cruz del Cóndor. Traslado de Colca a Puno.",
+          "PUNO: 02 noches de alojamiento. Excursión a las Islas de Uros y Taquile. Almuerzo en Taquile. Bus turístico con paradas de Puno a Cusco. Almuerzo en la ruta de Puno a Cusco.",
+          "CUSCO: 04 noches de alojamiento. City tour y 4 ruinas Aledañas. Tour a Valle Sagrado. Almuerzo en Valle Sagrado.",
+          "AGUAS CALIENTES: 01 noche de alojamiento. Excursión a Machu Picchu en tren Turista expeditions. Ticket de tren Ollanta/Machu Picchu/Ollanta-Cusco. Minibús Aguas Calientes/Ciudadela Machu Picchu/Aguas Calientes.",
+          "Montaña de los 7 colores. 01 almuerzo en la Montaña de 7 colores.",
+          "ICA/PARACAS: Boleto de bus Lima/Ica (ECS). Recorrido en buggy por el desierto de Huacachina. Traslado Práctica de sandboard y equipo. Traslado privado Ica/Paracas. 01 noche de alojamiento en hotel de Paracas. Tour Islas Ballestas. Boleto de retorno en bus compartido de Paracas a Lima."
+        ],
+        "notIncludes": [
+          "Vuelos internacionales",
+          "Vuelos Nacionales ó Internos.",
+          "Sobrevuelo a las líneas de Nasca",
+          "Museos en Ica/Paracas",
+          "Seguro de Viaje.",
+          "Otros gastos que no se detalle"
+        ]
+      },
+      {
+        "id": "CT8425.II.2",
+        "title": "Capital del Perú Sur Peruano & Amazónico",
+        "duration": "15 días",
+        "days": [
+          {
+            "day": 1,
+            "title": "LIMA",
+            "description": "Recepción y traslado del aeropuerto al hotel en Lima.",
+            "overnight": "Lima"
+          },
+          {
+            "day": 2,
+            "title": "LIMA – CITY TOUR – AREQUIPA",
+            "description": "Desayuno en el hotel. A hora propicia los recogeremos de su hotel para caminar por las vías donde caminaron los Virreyes del Perú, se encuentra el legado histórico y cultural donde encontraremos la belleza artística y arquitectónica de sus edificios históricos. Iniciaremos la visita por la Plaza San Martín bordeada por hermosas edificaciones históricas. Caminaremos por el jirón de la Unión hasta llegar a la plaza mayor del centro histórico. Ingreso a la Iglesia y convento de San Francisco donde apreciamos los claustros, su biblioteca y las galerías subterráneas o catacumbas del cementerio de la época colonial. Llegaremos hasta el Palacio de Torre Tagle (panorámico) Iglesia de San Pedro. Regresaremos por el barrio de Miraflores donde pasaremos por una vista panorámica a la Huaca Pucllana gran complejo arqueológico construido hace más de 1500 años. Por la tarde traslado al aeropuerto para tomar el vuelo con destino a la ciudad blanca de Arequipa. Recepción y traslado al hotel elegido.",
+            "overnight": "Arequipa"
+          },
+          {
+            "day": 3,
+            "title": "AREQUIPA- CITY TOUR",
+            "description": "Desayuno en el hotel. 9.00 am se le recogerá del hotel para recorrer el centro de la ciudad y parte de sus alrededores. Inicio con la Plaza de Armas, la Catedral la cual alberga en su interior un altar Mayor de mármol, visitamos la Iglesia y Claustros de la Compañía de Jesús uno de los templos más conservados de la ciudad para luego visitar el Convento y Museo de Santa Catalina fundado en 1580 donde recorreremos los claustros y calles que durante la colonia se convirtieron en el refugio y hogar de mujeres nobles consagradas a la oración. Luego visitamos el Mirador de Yanahuara adornado con arquerías de sillar con inscripciones de fragmentos poéticos. Visita al Mirador de Carmen Alto. (duración del Tour 3 horas). Tarde libre.",
+            "overnight": "Arequipa"
+          },
+          {
+            "day": 4,
+            "title": "AREQUIPA – COLCA",
+            "description": "Desayuno en el hotel. 7.00 am lo recogeremos del hotel para Realizar el tour al Colca, finalizando en Puno; salida de Arequipa hacia el Valle del Colca por ruta de Yura, Pampa Cañahua, Reserva Nacional de Salinas y Aguada Blanca, avistamiento de Vicuñas; parada en Patahuasi, observaremos Pampas de Toccra, avistamiento de aves en los bofedales, Viscachani, Mirador de los Volcanes, llegada a Chivay a las 12:00 Hrs. aproximadamente. Traslado a un restaurante para disfrutar de la gastronomía Andina. Por la tarde visitaremos los baños termales y medicinales la Calera. Alojamiento elegido (si se alojan en Colca Lodge ó Refugio cuentan con baños termales propios en el hotel).",
+            "overnight": "Valle del Colca",
+            "includes": ["Almuerzo"]
+          },
+          {
+            "day": 5,
+            "title": "CAÑON DEL COLCA – PUNO",
+            "description": "Desayuno en el hotel. 06:30 Hrs. Los recogeremos de vuestro hotel. para realizar el paseo por el margen izquierdo del Valle hasta el mirador de la Cruz del Cóndor, parando para visitar los pueblos de Yanque a la ida y Maca al retorno, miradores del valle y cañón (Antahulque y Wayra Punku). Parada de aproximadamente 1 hora en el mirador de la Cruz del Condór. Llegada a Chivay alrededor de las 12.00 hrs. para el almuerzo. 1.30 pm salida hacia la ciudad de Puno. Observando los Andes Peruanos y sus Lagunillas Andinas hábitat de Aves Silvestres, Llegada aproximada a Puno a las 19:00 hrs. Traslado al Hotel elegido.",
+            "overnight": "Puno",
+            "includes": ["Almuerzo"]
+          },
+          {
+            "day": 6,
+            "title": "PUNO ISLAS DEL TITIKAKA UROS Y TAQUILE",
+            "description": "Desayuno en el hotel. 6.45 am Recojo desde vuestro hotel hasta el puerto y dirigirse luego en Lancha Rápida hasta la isla flotante de los Uros, las islas son las más famosas del lago Titicaca y está ubicado a 6 kilómetro de la ciudad de Puno, en este lugar nos darán un explicación de la isla flotante de los Uros de cómo realizan sus islas y balsas a base de así mismo serán partícipes con los pobladores que viven en las islas de los Uros, luego de las explicaciones y sobre la isla abordaran otra vez la lancha RÁPIDA para esta vez trasladarse a la isla natural de Taquile donde realizarán una caminata a lo alto de la isla donde los pobladores tienen una plaza principal y donde también se puede observar desde lo alto una maravillosa vista hacia el lago Titicaca luego visitaran a una casa local donde les proveerán los almuerzos, típico de la Zona Trucha a la plancha, acompañado de arroz y papas con ensalada, sopa de quinua o morón e infusión. Luego podrán tener un momento libre donde podrán visitar la isla y sus alrededores a si mismo podrán observar a los pobladores que en su mayoría se dedica a la artesanía donde los adultos y los niños tejen con lanas de colores. Finalmente abordaremos la lancha Rápida y regresaremos a Puno. Traslado del puerto al hotel.",
+            "overnight": "Puno",
+            "includes": ["Almuerzo"]
+          },
+          {
+            "day": 7,
+            "title": "PUNO – CUSCO",
+            "description": "Desayuno en el hotel. 6.00 hrs traslado de su hotel hacia la estación de Bus (Turismo Mer). 07:00 Hrs. Salida en Bus turístico visitando el corredor turístico Manco Capac que une las ciudades de Puno y Cusco, el bus cuenta con guías profesionales que le permitirán conocer los lugares de Andahuaylillas iglesia llamada la Sixtina de América, se exhiben frescos y murales del arte colonial, además visita al templo de Raqchi o templo al dios Wiracocha, suprema dedicada del imperio incaico. Almorzamos en Sicuani y luego pasaremos por el punto más alto de la ruta La Raya donde apreciaremos nevados, alpacas y vicuñas y por último visitaremos el Pukara conjunto arqueológico formado por una gran estructura piramidal. Llegada a Cusco a las 16:30. Un gusto Personal LUXE, es un ADICIONAL: SALIDAS DÍAS LUNES, JUEVES Y SABADOS EN TREN PERU RAIL TITICACA DE LUJO adicional por persona $200. Sale 07:30 am llega 17:50 hrs. Atraviesa en un tren exclusivo los bellos paisajes entre las ciudades de C"
+          },
+          {
+          "day": 8,
+          "title": "CUSCO – CITY TOUR (Koricancha y Catedral)",
+          "description": "Desayuno en el hotel. Mañana Libre para actividades personales. 2:00 PM se visita la ciudad de Cusco, la Catedral sobresalen por su belleza el coro y el púlpito, continuamos el recorrido por la Plaza de Armas, el Koricancha o Templo del Sol era una de las edificaciones más impactantes del Cusco incaico; luego nos dirigimos a 10 minutos en auto de la ciudad a La Fortaleza de Sacsayhuamán. Nos alejamos más de la ciudad 15 minutos aprox. y visitamos las Ruinas Cercanas al Cusco: tales como el Complejo Arqueológico de Qenko o «laberinto» es considerado un lugar sagrado en el que se oficiaban ceremonias en honor al Sol, la Luna y las Estrellas. Otra ruina es el Complejo Arqueológico de Pukapukara (30 minutos en auto) El complejo cuenta con numerosos recintos, plazas interiores, acueductos, atalayas y caminos. Y para terminar visitaremos el Complejo arqueológico de Tambomachay el cual habría cumplido una importante función religiosa vinculada al agua. Retorno a la ciudad.",
+          "overnight": "Cusco"
+        },
+        {
+          "day": 9,
+          "title": "CUSCO – VALLE SAGRADO – AGUAS CALIENTES",
+          "description": "Desayuno en el hotel. 9.00 am traslado de su hotel; hacia nuestra excursión al Valle Sagrado de los Incas. Este hermoso valle está compuesto por numerosos ríos que descienden por quebradas llenas de verdor y pequeños valles. En su recorrido usted podrá visitar dos de los mejores restos arquitectónicos Incas que el valle alberga. Primero nos dirigiremos a las ruinas de Pisaq, Aquí podremos observar la gran labor lograda por los Incas, a través de un sin fin de terrazas agrícolas que adornan virtualmente todas las montañas a su alrededor. En el centro del templo de Pisaq, podremos observar un intiwatana (reloj solar).Luego de nuestra visita a esta antigua ciudadela Inca, visitaremos el pueblo moderno de Pisaq, la cual está ubicada a la margen derecha del río Urubamba, y está poblada casi en un totalidad por los descendientes de los Incas. Aquí visitaremos un pintoresco mercado artesanal, y podremos ver como hasta hoy la gente des este lugar mantiene la tradición de intercambiar sus cosas o alimentos, tal como lo hacían en el pasado. Ideal para compras, ya que hay mucha variedad de artículos de lana de alpaca, joyas de plata y oro, entre otros. Luego almorzaremos de unos de los típicos restaurantes de este poblado. Más tarde nos dirigiremos al pueblo de Ollantaytambo, en donde visitaremos la hermosa fortaleza que lleva el mismo nombre. La caminata a la cima de Ollantaytambo es un poco empinada ir pausados en la visita. Por la tarde traslado a la estación de Ollanta para tomar el tren que nos llevara a Aguas Calientes (un pequeño poblado cerca al Santuario de Machu Picchu). El viaje en tren dura aproximadamente 2 horas, y ofrece sobre el trayecto espectaculares paisajes que combinan sierra y selva. Sin duda alguna este es uno de los paseos más espectaculares que tenemos en Perú ya que ofrece hermosos paisajes durante todo el trayecto. Salida 16:36 llegando 18:00 Hrs. Arribo en Aguas Calientes y traslado a su hotel.",
+          "overnight": "Aguas Calientes",
+          "includes": ["Almuerzo"]
+        },
+        {
+          "day": 10,
+          "title": "MACHU PICCHU – CUSCO",
+          "description": "Desayuno en el hotel. A hora oportuna traslado de su hotel hacia la estación de bus para tomar el transporte que nos llevará hasta las ruinas de Machu Picchu. Este breve viaje en bus dura solo 20 minutos y recorre una pista no asfaltada, muy empinada y zigzagueante a través de una montaña con características selváticas y vistas impresionantes. Finalmente llegaremos al Santuario de Machu Picchu donde nuestro guía local nos hará un recorrido por los sectores más importantes de esta bella ciudadela Incaica. En Machu Picchu haremos un recorrido de 2 horas con nuestro guía y visitaremos la zona agrícola, formada por conjuntos de terrazas de cultivo, la zona urbana donde vivieron sus ocupantes y donde se desarrollaron las principales actividades civiles y religiosas. (Los sectores a visitar en Machupicchu, depende de la opción de compra que se realizó al momento de hacer la reserva) (se sugiere comprar con mucha anticipación para tener una buena visita de la Ciudadela). También visitaremos el Intiwatana de Machu Picchu ubicado en la parte más alta de la ciudadela, el templo del sol, del cóndor y otros sectores importantes. ADICIONAL: INGRESO A WAYNA PICCHU Si desean subir al wayna picchu deberan de adquirir otro boleto de ingreso que lo incluya por persona $60 dolares. No incluye guia, suben por cuenta propia aproximadamente 2 horas de caminata. Por la tarde, estaremos tomando el bus de regreso hacia Aguas Calientes en donde podrán almorzar (No incluye almuerzo). Retorno en tren a Cusco. Recepción y traslado al hotel elegido.",
+          "overnight": "Cusco"
+        },
+        {
+          "day": 11,
+          "title": "LAGUNA HUMANTAY o MONTAÑA DE COLORES",
+          "description": "Desayuno en el hotel. 4.45 am traslado de su hotel hacia el tour de la Montaña de los 7 colores. Lugar impactante, lleno de expectativa natural. Podrán elegir dos opciones, en ambas se contempla paisajes imponentes pero deben saber que supone un esfuerzo físico importante a considerar. Salida de Cusco 5 am retorno 5 pm. Caminata de 2 horas aprox. hasta llegar a la Laguna Humantay con una altitud de 4200 m. Caminata de 2 horas 30 m aprox. hasta llegar a la montaña de colores con una altitud de 5000 m. La ruta incluye subidas ligeramente empinadas y llanuras que ascienden de manera progresiva. Para ambas caminatas se pueden alquilar caballos en el mismo lugar que serán jalados por los arrieros locales. Incluye desayuno y almuerzo básicos. Traslado al hotel.",
+          "overnight": "Cusco",
+          "includes": ["Desayuno", "Almuerzo"]
+        },
+        {
+          "day": 12,
+          "title": "CUSCO – PUERTO MALDONADO",
+          "description": "Desayuno en el hotel. A la hora oportuna traslado al aeropuerto para salir con destino a Puerto Maldonado, salida por la mañana (1 hora de vuelo). Recepción en el aeropuerto por su guía naturalista y traslado en bote para viaje hasta el albergue seleccionado. Llegada y en la tarde caminata introductoria «tierra firme» dominado por los gigantes árboles, insectos, mariposas, plantas medicinales, etc. Cena y luego una caminata nocturna, donde se podrán encontrar animales o insectos nocturnos, aproximadamente el 50% de los animales en la selva son nocturnos.",
+          "overnight": "Puerto Maldonado",
+          "includes": ["Almuerzo", "Cena"]
+        },
+        {
+          "day": 13,
+          "title": "PUERTO MALDONADO",
+          "description": "Desayuno en el hotel. A hora oportuna Abordarán el bote hasta llegar a la trocha donde se inicia la caminata y exploración por la mañana y luego un paseo por el Lago Sandoval en Corto Maltes, Hacienda Concepción y Reserva Amazónica Inkaterra o Lago Tres Chimbadas en Posada Amazonas de Rainforesten canoas a remos, estos lagos son ricos en pájaros y vida acuática. Se volverá al albergue a tiempo para el almuerzo. Durante la tarde se podrá explorar el bosque cerca del albergue. Al anochecer con el guía se buscaran caimanes y otros animales nocturnos en la canoa motorizada por el Río Tambopata.",
+          "overnight": "Puerto Maldonado",
+          "includes": ["Almuerzo", "Cena"]
+        },
+        {
+          "day": 14,
+          "title": "PUERTO MALDONADO – LIMA",
+          "description": "Desayuno en el hotel. Traslado al aeropuerto para retornar a Lima. Recepción, traslado.",
+          "overnight": "Lima"
+        },
+        {
+          "day": 15,
+          "title": "LIMA – SALIDA",
+          "description": "Desayuno en el hotel. A la hora oportuna traslado al aeropuerto para salir rumbo a su próximo recorrido.",
+          "overnight": null
+        }
+      ],
+      "hotelCategories": [
+        {
+          "category": "Estándar",
+          "price": 1958,
+          "hotels": {
+            "Lima": ["El Tambo", "Tierra Viva", "Ibis Larco"],
+            "Arequipa": ["Santa Rosa", "Majestad", "Xima", "Casona Plaza Colonial"],
+            "Valle del Colca": ["Pozo del Cielo", "Colca Llaqta"],
+            "Puno": ["La Hacienda Puno / Plaza", "Casa Andina Estándar", "Tierra Viva Puno", "Casona Plaza Centro"],
+            "Cusco": ["San Agustin Internacional", "Casona Real", "Illa Hotel"],
+            "Aguas Calientes": ["Hatun Samay", "Hatuminti"],
+            "Puerto Maldonado": ["Corto Maltes"]
+          }
+        },
+        {
+          "category": "Estándar Confort",
+          "price": 2195,
+          "hotels": {
+            "Lima": ["Casa Andina Select", "Tierra Viva Centro", "Libre hotel"],
+            "Arequipa": ["Casa Andina Estándar", "Tierra Viva", "San Agustin Posada Monasterio", "Casona Plaza Arequipa"],
+            "Valle del Colca": ["Casa Andina Estándar", "Pozo del Cielo Superior"],
+            "Puno": ["Sonesta Sin vista al lago Titikaka", "Taypikala", "José Antonio", "Casona Plaza Puno"],
+            "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"],
+            "Aguas Calientes": ["Casa Andina", "Taypikala", "Hatun Samay", "Casa de Luz", "Tierra Viva"],
+            "Puerto Maldonado": ["La Hacienda", "Concepcion"]
+          }
+        },
+        {
+          "category": "Superior",
+          "price": 2394,
+          "hotels": {
+            "Lima": ["Tierra Viva Superior", "Casa Andina Premiun", "Jose Antonio"],
+            "Arequipa": ["Katari deluxe", "Ariquipay"],
+            "Valle del Colca": ["Colca Lodge", "Aranwa"],
+            "Puno": ["Sonesta Puno con vista al lago", "Casa Andina Premiun sin vista al lago"],
+            "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior", "Costa del Sol Estándar"],
+            "Aguas Calientes": ["El Mapi", "Casa Andina Superior", "Tierra Viva Machupicchu"],
+            "Puerto Maldonado": ["La Hacienda", "Concepcion"]
+          }
+        },
+        {
+          "category": "Superior Elegante",
+          "price": 2699,
+          "hotels": {
+            "Lima": ["Sonesta Olivar", "Casa Andina Premiun Superior", "José Antonio Deluxe"],
+            "Arequipa": ["katari Suite (King)", "Hilton", "Costa del sol"],
+            "Valle del Colca": ["Colca Lodge", "Aranwa"],
+            "Puno": ["Casa Andina Premiun con Vista al lago"],
+            "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"],
+            "Aguas Calientes": ["El Mapi", "Casa del Sol"],
+            "Puerto Maldonado": ["Reserva Amazónica"]
+          }
+        },
+        {
+          "category": "Luxe",
+          "price": 3270,
+          "hotels": {
+            "Lima": ["Casa Andina Premiun", "Doubletree By Hilton", "Sonesta Olivar Ejecutiva"],
+            "Arequipa": ["Casa Andina Premiun", "Costa del Sol"],
+            "Valle del Colca": ["Colca Lodge", "Aranwa"],
+            "Puno": ["GHL Lago Titicaca"],
+            "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury", "Aranwa Junior Suite"],
+            "Aguas Calientes": ["Sumaq B&B Garden View", "Casa Del Sol"],
+            "Puerto Maldonado": ["Posada Amazónica"]
+          }
+        }
+      ],
+      "flightSuggestions": {
+        "routes": [
+          {
+            "from": "Lima",
+            "to": "Arequipa",
+            "departure": "09:15",
+            "arrival": "10:45"
+          },
+          {
+            "from": "Cusco",
+            "to": "Puerto Maldonado",
+            "departure": "12:45",
+            "arrival": "12:50"
+          },
+          {
+            "from": "Puerto Maldonado",
+            "to": "Lima",
+            "departure": "12:25",
+            "arrival": "14:00"
+          }
+        ],
+        "prices": [
+          {
+            "description": "Solo Carryon de 10 kilos + Mochila",
+            "price": 460
+          },
+          {
+            "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+            "price": 570
+          }
+        ]
+      },
+      "includes": [
+        "Traslados de Ingreso y Salida en cada Ciudad",
+        "LIMA: 03 noches de alojamiento. City tour con entradas",
+        "AREQUIPA: 01 noche de alojamiento. City tour Peatonal con Monasterio Santa Catalina.",
+        "COLCA: 01 noche de alojamiento. 02 almuerzos. Visita a todo el Valle hasta la Cruz del Cóndor. Traslado de Colca a Puno.",
+        "PUNO: 02 noches de alojamiento. Excursión a las Islas de Uros y Taquile. Almuerzo en Taquile. Bus turístico con paradas de Puno a Cusco. Almuerzo en la ruta de Puno a Cusco.",
+        "CUSCO: 04 noches de alojamiento. City tour y 4 ruinas Aledañas. Tour a Valle Sagrado. Almuerzo en Valle Sagrado.",
+        "AGUAS CALIENTES: 01 noche de alojamiento. Excursión a Machu Picchu en tren Turista expeditions. Ticket de tren Ollanta/Machu Picchu/Ollanta-Cusco. Minibús Aguas Calientes/Ciudadela Machu Picchu/Aguas Calientes.",
+        "Montaña de los 7 colores. 01 almuerzo en la Montaña de 7 colores.",
+        "traslado de entrada y salida en Puerto Maldonado. 01 noche de alojamiento en hotel de puerto Maldonado. Excursiones en Puerto Maldonado. Pensión Completa en Puerto Maldonado"
+      ],
+      "notIncludes": [
+        "Vuelos internacionales",
+        "Vuelos Nacionales ó Internos.",
+        "Seguro de Viaje.",
+        "Otros gastos que no se detalle"
+      ]
+    },
+    {
+      "id": "CT8425.II.3",
+      "title": "Capital Sur peruano Selva amazónica",
+      "duration": "15 days",
+      "days": [
+        {
+          "day": 1,
+          "title": "LIMA – CITY TOUR",
+          "description": "Recepción en el aeropuerto Internacional Jorge Chávez de Lima y traslado a su hotel elegido. visita 9 am ó 2:30 pm. *Si su vuelo llega a las 6:00 am podrían tomar este tour. De lo contrario podrían tomarlo al retorno de Cusco al final del itinerario. Recorrido turístico que nos permitirá ir tras el rastro de la historia limeña caminar por las vías donde se encuentra el legado histórico y cultural donde encontraremos la belleza artística y arquitectónica de sus edificios históricos. Iniciaremos la visita por la Plaza San Martín bordeada por hermosas edificaciones históricas. Caminaremos por el jirón de la Unión hasta llegar a la plaza mayor del centro histórico. Ingreso a la Iglesia y convento de San Francisco donde apreciamos los claustros, su biblioteca y las galerías subterráneas o catacumbas del cementerio de la época colonial. Llegaremos hasta el Palacio de Torre Tagle (panorámico) Iglesia de San Pedro. Regresaremos por el barrio de Miraflores donde pasaremos por una vista panorámica a la Huaca Pucllana gran complejo arqueológico construido hace más de 1500 años.",
+          "overnight": "Lima"
+        },
+        {
+          "day": 2,
+          "title": "LIMA – AREQUIPA – CITY TOUR",
+          "description": "Desayuno en el hotel. A hora prevista Traslado al aeropuerto para tomar el vuelo con destino a la ciudad blanca de Arequipa. Recepción y traslado al hotel elegido; realizaremos un recorrido por el centro de la ciudad y parte de sus alrededores. Inicio con la Plaza de Armas, la Catedral la cual alberga en su interior un altar Mayor de mármol, visitamos la Iglesia y Claustros de la Compañía de Jesús uno de los templos más conservados de la ciudad para luego visitar el Convento y Museo de Santa Catalina fundado en 1580 donde recorreremos los claustros y calles que durante la colonia se convirtieron en el refugio y hogar de mujeres nobles consagradas a la oración. Luego visitamos el Mirador de Yanahuara adornado con arquerías de sillar con inscripciones de fragmentos poéticos.",
+          "overnight": "Arequipa"
+        },
+        {
+          "day": 3,
+          "title": "AREQUIPA – COLCA",
+          "description": "Desayuno en el hotel. 7.00 am Recogeremos a los visitantes del hotel para Realizar el tour al Colca, finalizando en Puno; salida de Arequipa hacia el Valle del Colca por ruta de Yura, Pampa Cañahua, Reserva Nacional de Salinas y Aguada Blanca, avistamiento de Vicuñas; parada en Patahuasi para tomar el mate inca, Pampas de Toccra, avistamiento de aves en los bofedales, Viscachani, Mirador de los Volcanes, llegada a Chivay a las 12:00 Hrs. aproximadamente. Traslado a un restaurante para disfrutar de la gastronomía Arequipeña. Almuerzo. Por la tarde visitaremos los baños termales y medicinales la Calera. Alojamiento Chivay o Colca (si se alojan en Colca Lodge cuentan con baños termales en el hotel).",
+          "overnight": "Colca",
+          "includes": ["Almuerzo"]
+        },
+        {
+          "day": 4,
+          "title": "CAÑON DEL COLCA – PUNO",
+          "description": "Desayuno en el hotel. 06:30 Hrs. Los recogeremos de vuestro hotel. para realizar el paseo por el margen izquierdo del Valle hasta el mirador de la Cruz del Cóndor, parando para visitar los pueblos de Yanque a la ida y Maca al retorno, miradores del valle y cañón (Antahulque y Wayra Punku). Parada de aproximadamente 1 hora en el mirador de la Cruz del Condór. Llegada a Chivay alrededor de las 12.00 hrs. para el almuerzo. 1.30 pm salida hacia la ciudad de Puno. Observando los Andes Peruanos y sus Lagunillas Andinas hábitat de Aves Silvestres, Llegada aproximada a Puno a las 19:00 hrs. Traslado al Hotel elegido.",
+          "overnight": "Puno",
+          "includes": ["Almuerzo"]
+        },
+        {
+          "day": 5,
+          "title": "PUNO ISLAS DEL TITIKAKA UROS Y TAQUILE",
+          "description": "Desayuno en el hotel. 6.45 am Recojo desde vuestro hotel hasta el puerto y dirigirse luego en Lancha Rápida hasta la isla flotante de los uros de cómo realizan sus islas y balsas a base de así mismo serán partícipes con los pobladores que viven en las islas de los Uros, luego de las explicaciones y sobre la isla abordaran otra vez la lancha para esta vez trasladarse a la isla natural de Taquile donde realizarán una caminata a lo alto de la isla donde los pobladores tienen una plaza principal y donde también se puede observar desde lo alto una maravillosa vista hacia el lago Titicaca luego visitaran a una casa local donde les proveerán los almuerzos, típico de la Zona Trucha a la plancha, acompañado de arroz y papas con ensalada, sopa de quinua o morón e infusión. Luego podrán tener un momento libre donde podrán visitar la isla y sus alrededores a si mismo podrán observar a los pobladores que en su mayoría se dedica a la artesanía donde los adultos y los niños tejen con lanas de colores. Finalmente abordaremos la lancha Rápida y regresaremos a Puno. Traslado del puerto al hotel.",
+          "overnight": "Puno",
+          "includes": ["Almuerzo"]
+        },
+        {
+          "day": 6,
+          "title": "PUNO – CUSCO",
+          "description": "Desayuno en el hotel. 07:00 Hrs. Salida en Bus turístico visitando el corredor turístico Manco Cápac que une las ciudades de Puno y Cusco, el bus cuenta con guías profesionales que le permitirán conocer los lugares de Andahuaylillas iglesia llamada la Sixtina de América, se exhiben frescos y murales del arte colonial, además visita al templo de Raqchi o templo al dios Wiracocha, suprema dedicada del imperio incaico. Almorzamos en Sicuani y luego pasaremos por el punto más alto de la ruta La Raya donde apreciaremos nevados, alpacas y vicuñas y por último visitaremos el Pukara conjunto arqueológico formado por una gran estructura piramidal. ADICIONAL: SALIDAS DÍAS LUNES, JUEVES Y SABADOS EN TREN PERU RAIL TITICACA DE LUJO adicional por persona $200. Sale 07:30 am llega 17:50 hrs. Atraviesa en un tren exclusivo los bellos paisajes entre las ciudades de Cusco y Puno en un viaje de 10 horas recorriendo aguas serenas y picos deslumbrantes de la zona altiplánica del Perú envuelta en nuestra cultura mediante artistas andinos y danzas típicas en vivo combinando nuestro pisco sour y un almuerzo gourmet. Llegada a Cusco a las 16:30. Recepción y traslado al hotel. Alojamiento en Cusco.",
+          "overnight": "Cusco",
+          "includes": ["Almuerzo"]
+        },
+        {
+          "day": 7,
+          "title": "CUSCO – CITY TOUR Y RUINAS CERCANAS",
+          "description": "Desayuno en el hotel. 9.00 am El City Tour en la Ciudad del Cusco se inicia visitando las ruinas de Sacsayhuaman, imponentes construcción Inca, ubicada al norte de la ciudad. Sacsayhuaman es uno de los legados arqueológicos más significativos que posee la ciudad del Cusco, debido a su enorme construcción, compuesta por enormes bloques de piedra. Se dice que la construcción de Sacsayhuaman duró más de 50 años que se utilizaron más de 20,000 hombres en la edificación. Más tarde continuaremos con nuestro recorrido y nos dirigiremos a las ruinas de Qenqo, frías cuevas labradas por los Incas en donde se puede apreciar un pequeño altar en donde se cree los Incas momificaban a sus muertos. Otra ruina es el Complejo Arqueológico de Pukapukara (30 minutos en auto) El complejo cuenta con numerosos recintos, plazas interiores, acueductos, atalayas y caminos. Luego visitaremos las ruinas de Tambomachay, un bello lugar de donde emerge agua de un cerro hacia unas fuentes construidas por los Incas, se dice que aquí venía el emperador Inca a tomar sus baños y a realizar cultos religiosos al agua. Luego de haber visitado las ruinas más relevantes que ofrece la ciudad del Cusco, nos dirigimos al gran templo del sol, conocido como el Qoricancha o Recinto de Oro. El Qoricancha se encuentra ubicado en la ciudad del Cusco, a pocos metros de la plaza de Armas. Este maravilloso templo es considerado una de las construcciones más sagradas e impresionantes que tuvieron los señores Incas. Se dice que el templo albergaba a un gran grupo selecto de sacerdotes Incas, encargados de rendirle culto a la luna y al dios sol. Se dice que cuando los conquistadores llegaron al Coricancha, las paredes estaban cubiertas de oro sólido, y había tantos adornos y joyas hechas en oro, que les tomó semanas fundir todo el oro para enviarlos a España. Finalmente visitaremos la majestuosa Catedral del Cusco, considerada por muchas unas de las más hermosas en todo Sudamérica. Resto de la tarde libre.",
+          "overnight": "Cusco"
+        },
+        {
+          "day": 8,
+          "title": "CUSCO – VALLE SAGRADO – AGUAS CALIENTES",
+          "description": "Desayuno en el hotel. 9.00 am traslado de su hotel; hacia nuestra excursión al Valle Sagrado de los Incas. Este hermoso valle está compuesto por numerosos ríos que descienden por quebradas llenas de verdor y pequeños valles. En su recorrido usted podrá visitar dos de los mejores restos arquitectónicos Incas que el valle alberga. Primero nos dirigiremos a las ruinas de Pisaq, Aquí podremos observar la gran labor lograda por los Incas, a través de un sin fin de terrazas agrícolas que adornan virtualmente todas las montañas a su alrededor. En el centro del templo de Pisaq, podremos observar un intiwatana (reloj solar).Luego de nuestra visita a esta antigua ciudadela Inca, visitaremos el pueblo moderno de Pisaq, la cual está ubicada a la margen derecha del río Urubamba, y está poblada casi en un totalidad por los descendientes de los Incas. Aquí visitaremos un pintoresco mercado artesanal, y podremos ver como hasta hoy la gente des este lugar mantiene la tradición de intercambiar sus cosas o alimentos, tal como lo hacían en el pasado. Ideal para compras, ya que hay mucha variedad de artículos de lana de alpaca, joyas de plata y oro, entre otros. Luego almorzaremos de unos de los típicos restaurantes de este poblado. Más tarde nos dirigiremos al pueblo de Ollantaytambo, en donde visitaremos la hermosa fortaleza que lleva el mismo nombre. La caminata a la cima de Ollantaytambo es un poco empinada ir pausados en la visita. Por la tarde traslado a la estación de Ollanta para tomar el tren que nos llevara a Aguas Calientes (un pequeño poblado cerca al Santuario de Machu Picchu). El viaje en tren dura aproximadamente 2 horas, y ofrece sobre el trayecto espectaculares paisajes que combinan sierra y selva. Sin duda alguna este es uno de los paseos más espectaculares que tenemos en Perú ya que ofrece hermosos paisajes durante todo el trayecto. Salida 16:36 llegando 18:00 Hrs. Arribo en Aguas Calientes y traslado a su hotel.",
+          "overnight": "Aguas Calientes",
+          "includes": ["Almuerzo"]
+        },
+        {
+          "day": 9,
+          "title": "MACHU PICCHU – CUSCO",
+          "description": "Desayuno en el hotel. A hora oportuna traslado de su hotel hacia la estación de bus para tomar el transporte que nos llevará hasta las ruinas de Machu Picchu. Este breve viaje en bus dura solo 20 minutos y recorre una pista no asfaltada, muy empinada y zigzagueante a través de una montaña con características selváticas y vistas impresionantes. Finalmente llegaremos al Santuario de Machu Picchu donde nuestro guía local nos hará un recorrido por los sectores más importantes de esta bella ciudadela Incaica. En Machu Picchu haremos un recorrido de 2 horas con nuestro guía y visitaremos la zona agrícola, formada por conjuntos de terrazas de cultivo, la zona urbana donde vivieron sus ocupantes y donde se desarrollaron las principales actividades civiles y religiosas. (Los sectores a visitar en Machupicchu, depende de la opción de compra que se realizó al momento de hacer la reserva) (se sugiere comprar con mucha anticipación para tener una buena visita de la Ciudadela). También visitaremos el Intiwatana de Machu Picchu ubicado en la parte más alta de la ciudadela, el templo del sol, del cóndor y otros sectores importantes. ADICIONAL: INGRESO A WAYNA PICCHU Si desean subir al wayna picchu deberan de adquirir otro boleto de ingreso que lo incluya por persona $60 dolares. No incluye guia, suben por cuenta propia aproximadamente 2 horas de caminata. Por la tarde, estaremos tomando el bus de regreso hacia Aguas Calientes en donde podrán almorzar (No incluye almuerzo). Retorno en tren a Cusco. Recepción y traslado al hotel elegido.",
+          "overnight": "Cusco"
+        },
+        {
+          "day": 10,
+          "title": "LAGUNA HUMANTAY o MONTAÑA DE COLORES",
+          "description": "Desayuno en el hotel. 4.45 am traslado de su hotel hacia el tour de la Montaña de los 7 colores. Lugar impactante, lleno de expectativa natural. Podrán elegir dos opciones, en ambas se contempla paisajes imponentes pero deben saber que supone un esfuerzo físico importante a considerar. Salida de Cusco 5 am retorno 5 pm. Caminata de 2 horas aprox. hasta llegar a la Laguna Humantay con una altitud de 4200 m. Caminata de 2 horas 30 m aprox. hasta llegar a la montaña de colores con una altitud de 5000 m. La ruta incluye subidas ligeramente empinadas y llanuras que ascienden de manera progresiva. Para ambas caminatas se pueden alquilar caballos en el mismo lugar que serán jalados por los arrieros locales. Incluye desayuno y almuerzo básicos. Traslado al hotel.",
+          "overnight": "Cusco",
+          "includes": ["Desayuno", "Almuerzo"]
+        },
+        {
+          "day": 11,
+          "title": "CUSCO – LIMA – IQUITOS CIUDAD",
+          "description": "Desayuno en el hotel. A hora oportuna traslado al aeropuerto de Cusco para tomar el vuelo con destino a la ciudad de Lima para conectar con la ciudad de Iquitos. Recepción y traslado al hotel elegido.",
+          "overnight": "Iquitos"
+        },
+        {
+          "day": 12,
+          "title": "IQUITOS – SELVA",
+          "description": "Desayuno en el hotel. A hora oportuna Traslado al albergue elegido ubicados en la amazonia peruana: Heliconia Lodge: es un albergue a 80 km de la ciudad 1 hora 30 m en bote a motor. Habitaciones construidas con techos altos, ventanas panorámicas, baño propio, terraza hamaca y ventiladores de techo. Camino al albergue visita a las isla de monos y por la tarde caminata y paseo nocturno.",
+          "overnight": "Iquitos (Selva)"
+        },
+        {
+          "day": 13,
+          "title": "IQUITOS – SELVA",
+          "description": "Desayuno en el hotel. Heliconia Lodge: observación de aves, inmersión en la comunidad nativas, pesca, observación del delfín rosado, caminata nocturna. Alimentación Completa.",
+          "overnight": "Iquitos (Selva)",
+          "includes": ["Desayuno", "Almuerzo", "Cena"]
+        },
+        {
+            "day": 14,
+            "title": "IQUITOS – LIMA",
+            "description": "Desayuno en el hotel. Heliconia Lodge: excursión de observación del lirio del Rio Victoria regia. Alimentación completa.",
+            "overnight": "Iquitos (Selva)",
+            "includes": ["Desayuno", "Almuerzo", "Cena"]
+          },
+          {
+            "day": 15,
+            "title": "LIMA",
+            "description": "Desayuno en el hotel. A Hora oportuna Traslado al aeropuerto para salir hacia Lima y luego conectar con su próximo recorrido.",
+            "overnight": null
+          }
+        ],
+        "hotelCategories": [
+          {
+            "category": "Estándar",
+            "price": 1958,
+            "hotels": {
+              "Lima": ["El Tambo", "Tierra Viva", "Ibis Larco"],
+              "Arequipa": ["Santa Rosa", "Majestad", "Xima", "Casona Plaza Colonial"],
+              "Valle del Colca": ["Pozo del Cielo", "Colca Llaqta"],
+              "Puno": ["La Hacienda Puno / Plaza", "Casa Andina Estándar", "Tierra Viva Puno", "Casona Plaza Centro"],
+              "Cusco": ["San Agustin Internacional", "Casona Real", "Illa Hotel"],
+              "Aguas Calientes": ["Hatun Samay", "Hatuminti"],
+              "Iquitos": ["Heliconia Lodge"]
+            }
+          },
+          {
+            "category": "Estándar Confort",
+            "price": 2195,
+            "hotels": {
+              "Lima": ["Casa Andina Select", "Tierra Viva Centro", "Libre hotel"],
+              "Arequipa": ["Casa Andina Estándar", "Tierra Viva", "San Agustin Posada Monasterio", "Casona Plaza Arequipa"],
+              "Valle del Colca": ["Casa Andina Estándar", "Pozo del Cielo Superior"],
+              "Puno": ["Sonesta Sin vista al lago Titikaka", "Taypikala", "José Antonio", "Casona Plaza Puno"],
+              "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"],
+              "Aguas Calientes": ["Casa Andina", "Taypikala", "Hatun Samay", "Casa de Luz", "Tierra Viva"],
+              "Iquitos": ["Heliconia Lodge"]
+            }
+          },
+          {
+            "category": "Superior",
+            "price": 2394,
+            "hotels": {
+              "Lima": ["Tierra Viva Superior", "Casa Andina Premiun", "Jose Antonio"],
+              "Arequipa": ["Katari deluxe", "Ariquipay"],
+              "Valle del Colca": ["Colca Lodge", "Aranwa"],
+              "Puno": ["Sonesta Puno con vista al lago", "Casa Andina Premiun sin vista al lago"],
+              "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior", "Costa del Sol Estándar"],
+              "Aguas Calientes": ["El Mapi", "Casa Andina Superior", "Tierra Viva Machupicchu"],
+              "Iquitos": ["Heliconia Lodge"]
+            }
+          },
+          {
+            "category": "Superior Elegante",
+            "price": 2699,
+            "hotels": {
+              "Lima": ["Sonesta Olivar", "Casa Andina Premiun Superior", "José Antonio Deluxe"],
+              "Arequipa": ["katari Suite (King)", "Hilton", "Costa del sol"],
+              "Valle del Colca": ["Colca Lodge", "Aranwa"],
+              "Puno": ["Casa Andina Premiun con Vista al lago"],
+              "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"],
+              "Aguas Calientes": ["El Mapi", "Casa del Sol"],
+              "Iquitos": ["Heliconia Lodge"]
+            }
+          },
+          {
+            "category": "Luxe",
+            "price": 3270,
+            "hotels": {
+              "Lima": ["Casa Andina Premiun", "Doubletree By Hilton", "Sonesta Olivar Ejecutiva"],
+              "Arequipa": ["Casa Andina Premiun", "Costa del Sol"],
+              "Valle del Colca": ["Colca Lodge", "Aranwa"],
+              "Puno": ["GHL Lago Titicaca"],
+              "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury", "Aranwa Junior Suite"],
+              "Aguas Calientes": ["Sumaq B&B Garden View", "Casa Del Sol"],
+              "Iquitos": ["Heliconia Lodge"]
+            }
+          }
+        ],
+        "flightSuggestions": {
+          "routes": [
+            {
+              "from": "Lima",
+              "to": "Arequipa",
+              "departure": "09:15",
+              "arrival": "10:45"
+            },
+            {
+              "from": "Cusco",
+              "to": "Puerto Maldonado",
+              "departure": "12:45",
+              "arrival": "12:50"
+            },
+            {
+              "from": "Iquitos",
+              "to": "Lima",
+              "departure": "20:05",
+              "arrival": "21:50"
+            }
+          ],
+          "prices": [
+            {
+              "description": "Solo Carryon de 10 kilos + Mochila",
+              "price": 285
+            },
+            {
+              "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+              "price": 355
+            }
+          ]
+        },
+        "includes": [
+          "Traslados de Ingreso y Salida en cada Ciudad",
+          "LIMA: 01 noches de alojamiento. City tour con entradas",
+          "AREQUIPA: 01 noche de alojamiento. City tour Peatonal con Monasterio Santa Catalina.",
+          "COLCA: 01 noche de alojamiento. 02 almuerzos. Visita a todo el Valle hasta la Cruz del Cóndor. Traslado de Colca a Puno.",
+          "PUNO: 02 noches de alojamiento. Excursión a las Islas de Uros y Taquile. Almuerzo en Taquile. Bus turístico con paradas de Puno a Cusco. Almuerzo en la ruta de Puno a Cusco.",
+          "CUSCO: 04 noches de alojamiento. City tour y 4 ruinas Aledañas. Tour a Valle Sagrado. Almuerzo en Valle Sagrado.",
+          "AGUAS CALIENTES: 01 noche de alojamiento. Excursión a Machu Picchu en tren Turista expeditions. Ticket de tren Ollanta/Machu Picchu/Ollanta-Cusco. Minibús Aguas Calientes/Ciudadela Machu Picchu/Aguas Calientes.",
+          "Montaña de los 7 colores. 01 almuerzo en la Montaña de 7 colores.",
+          "IQUITOS: 3 noches de alojamiento en la selva, excursiones y alimentación completa diaria. 1 Noche de alojamiento en Iquitos-Ciudad."
+        ],
+        "notIncludes": [
+          "Vuelos internacionales",
+          "Vuelos Nacionales ó Internos.",
+          "Seguro de Viaje.",
+          "Otros gastos que no se detalle"
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,130 @@
+{
+    "tours": [
+      {
+        "id": "CT8425.III.2",
+        "title": "ANIVERSARIO EN MACHU PICCHU",
+        "duration": "4 days",
+        "description": "Un aniversario se tiene que recordar por siempre, qué mejor celebrarlo en una de las Maravillas del Mundo 'Machu Picchu'",
+        "days": [
+          {
+            "day": 1,
+            "title": "CUSCO – CITY TOUR CAMINANDO PRIVADO",
+            "description": "Bienvenida, Recepción y traslado al hotel. A hora prevista City Tour Privado en Cusco ciudad, se conocerá las calles empedradas de Cusco conociendo la piedra de los 12 ángulos, barrio de San Blas, escuchando historias sobre la cultura Inca, recorriendo la Plaza de Armas, convento de Santo Domingo construido sobre el templo del Koricancha templo del Sol a la llegada de los españoles a Cusco, es toda una reliquia histórica a los pies del Perú. Ingreso a la Catedral de Cusco.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 2,
+            "title": "CUSCO – VALLE SAGRADO (grupal)",
+            "description": "Desayuno en el hotel. 9:00 am Inicio del tour a Valle Sagrado de Los Incas, el recorrido nos lleva por: Poblado de Pisaq (32 km al noreste de la ciudad del Cusco). Pisaq es muy conocido por su mercado artesanal. Pueblos de Ccoya, Lamay, Calca y Urubamba con hermosas campiñas y clima saludable. Almuerzo buffet en restaurant Tunupa Valle en Urubamba. Ollantaytambo fue edificado durante la época Inca como un área fortificada, que incluye un templo, andenes y un sector urbano.",
+            "includes": ["Almuerzo en Tunupa Valle"],
+            "overnight": "Valle Sagrado"
+          },
+          {
+            "day": 3,
+            "title": "Valle Sagrado – AGUAS CALIENTES – MACHU PICCHU (grupal)",
+            "description": "Desayuno en el hotel. Traslado a la estación de tren para salir con destino al pueblo de Machu Picchu. Visita guiada al conjunto arqueológico de Machu Picchu incluye el paso por el sector urbano el cual alberga los mayores elementos arquitectónicos de la ciudad Inca, siendo sus principales recintos el Templo del Sol, el Intiwatana, grupo de la roca sagrada, templo de las tres ventanas, el mausoleo, etc. (Los sectores a visitar en Machupicchu dependen de la opción de compra). Retorno en tren a Cusco.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 4,
+            "title": "CUSCO – SALIDA",
+            "description": "Desayuno en el hotel. A la hora oportuna traslado al aeropuerto para salir rumbo a su próximo recorrido.",
+            "overnight": null
+          }
+        ],
+        "hotelCategories": [
+          {
+            "category": "Estándar",
+            "price": 615,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Cusco": ["San Agustin Internacional", "Casona Real", "Tierra Viva"],
+              "Valle Sagrado": ["Tierra Viva"]
+            }
+          },
+          {
+            "category": "Estándar Confort",
+            "price": 645,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"],
+              "Valle Sagrado": ["Sonesta Yucay", "Taypìkala"]
+            }
+          },
+          {
+            "category": "Superior",
+            "price": 665,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior", "Costa del Sol Estándar"],
+              "Valle Sagrado": ["Sonesta Yucay", "Taypikala"]
+            }
+          },
+          {
+            "category": "Superior Elegante",
+            "price": 690,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"],
+              "Valle Sagrado": ["Sonesta Yucay", "Taypikala"]
+            }
+          },
+          {
+            "category": "Luxe",
+            "price": 790,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury", "Aranwa Junior Suite"],
+              "Valle Sagrado": ["Aranwa"]
+            }
+          }
+        ],
+        "flightSuggestions": {
+          "routes": [
+            {
+              "from": "Lima",
+              "to": "Cusco",
+              "departure": "08:00",
+              "arrival": "09:20"
+            },
+            {
+              "from": "Cusco",
+              "to": "Lima",
+              "departure": "11:40",
+              "arrival": "12:50"
+            }
+          ],
+          "prices": [
+            {
+              "description": "Solo Carryon de 10 kilos + Mochila",
+              "price": 170
+            },
+            {
+              "description": "Con equipaje en Bodega 23K",
+              "price": 220
+            }
+          ]
+        },
+        "includes": [
+          "Traslados al aeropuerto/hotel/aeropuerto u estación de bus/hotel/estación de bus en cada ciudad",
+          "Todos los desayunos de su estadía",
+          "En Cusco: 2 noches de alojamiento en Cusco",
+          "City tour y ruinas cercanas",
+          "Excursión al Valle Sagrado con almuerzo",
+          "1 noche de alojamiento en Valle Sagrado",
+          "Tickets de tren Vistadome Ollanta/Machu Picchu/Cusco",
+          "Excursión a Machu Picchu"
+        ],
+        "notIncludes": [
+          "Vuelos internacionales",
+          "Vuelos Nacionales ó Internos",
+          "Seguro de Viaje",
+          "Otros gastos que no se detalle"
+        ],
+        "notes": "Gracias por visitar Perú y darnos la oportunidad de Atenderlos",
+        "serviceType": "Servicios grupales y privados",
+        "guideLanguage": "Guía Bilingüe Español/Inglés",
+        "departureDays": "Diario"
+      }
+    ]
+  }

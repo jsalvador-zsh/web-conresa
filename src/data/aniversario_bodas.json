@@ -1,0 +1,155 @@
+{
+    "tours": [
+      {
+        "id": "CT8425.III.1",
+        "title": "LUNA DE MIEL / PERU LUXE",
+        "duration": "11 days",
+        "description": "Luna de miel en Perú, Suave, natural como nuestros antiguos ancestros. Energía y prosperidad.",
+        "days": [
+          {
+            "day": 1,
+            "title": "LIMA",
+            "description": "Recepción en el aeropuerto Internacional Jorge Chávez de Lima y traslado a su hotel elegido.",
+            "overnight": "Lima"
+          },
+          {
+            "day": 2,
+            "title": "LIMA – CITY TOUR – MUSEO LARCO (Privado)",
+            "description": "Visita al centro histórico de Lima incluyendo Plaza San Martín, Iglesia y convento de San Francisco, Palacio de Torre Tagle y Huaca Pucllana. Visita al Museo Larco con su colección de oro, plata y cerámica erótica. Almuerzo turístico con comida peruana.",
+            "includes": ["Almuerzo Turístico"],
+            "overnight": "Lima"
+          },
+          {
+            "day": 3,
+            "title": "LIMA – AREQUIPA – CITY TOUR & CONVENTO SANTA CATALINA (Privado)",
+            "description": "Vuelo a Arequipa. Recorrido por el centro de la ciudad incluyendo Plaza de Armas, Catedral, Iglesia de la Compañía de Jesús, Convento de Santa Catalina y Mirador de Yanahuara.",
+            "overnight": "Arequipa"
+          },
+          {
+            "day": 4,
+            "title": "AREQUIPA – RUTA DEL SILLAR (privado)",
+            "description": "Visita a la cantera Añashuayco para conocer el proceso de extracción del sillar, quebrada de Culebrillas y petroglifos.",
+            "overnight": "Arequipa"
+          },
+          {
+            "day": 5,
+            "title": "AREQUIPA – CUSCO – CITY TOUR (Privado)",
+            "description": "Vuelo a Cusco. Visita a la Catedral, Plaza de Armas, Koricancha, Sacsayhuamán, Qenko, Pukapukara y Tambomachay.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 6,
+            "title": "CUSCO – VALLE SAGRADO (Privado)",
+            "description": "Excursión al Valle Sagrado visitando las ruinas de Pisaq y su mercado artesanal, y la fortaleza de Ollantaytambo.",
+            "includes": ["Almuerzo"],
+            "overnight": "Valle Sagrado"
+          },
+          {
+            "day": 7,
+            "title": "OLLANTA – MACHU PICCHU – CUSCO (guia Privado)",
+            "description": "Tren a Aguas Calientes y visita guiada a Machu Picchu. Retorno en tren a Cusco.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 8,
+            "title": "DIA LIBRE EN CUSCO",
+            "description": "Día libre con opción de tour a Montaña de 7 Colores (incluye desayuno y almuerzo básico).",
+            "optionalTour": {
+              "title": "MONTAÑA DE 7 COLORES",
+              "description": "Excursión a la Montaña de Colores (5,000msnm) con paisajes espectaculares.",
+              "includes": ["Desayuno", "Almuerzo básico"]
+            },
+            "overnight": "Cusco"
+          },
+          {
+            "day": 9,
+            "title": "CUSCO – PUNO en tren de lujo",
+            "description": "Viaje en tren Peru Rail Titicaca de Lujo (10 horas) con paisajes andinos, artistas en vivo y almuerzo gourmet.",
+            "includes": ["Almuerzo"],
+            "overnight": "Puno"
+          },
+          {
+            "day": 10,
+            "title": "PUNO – LAGO TITICACA UROS & TAQUILE (lancha Rápida en grupo)",
+            "description": "Visita a las islas flotantes de los Uros y a la isla natural de Taquile con almuerzo local.",
+            "includes": ["Almuerzo"],
+            "overnight": "Puno"
+          },
+          {
+            "day": 11,
+            "title": "PUNO – JULIACA – LIMA",
+            "description": "Traslado al aeropuerto de Juliaca para vuelo a Lima.",
+            "overnight": null
+          }
+        ],
+        "hotelCategories": [
+          {
+            "category": "Luxe",
+            "price": 2595,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["Casa Andina Premiun"],
+              "Arequipa": ["Casa Andina Premium Suite"],
+              "Cusco": ["Palacio del Inka"],
+              "Valle Sagrado": ["Aranwa Valle Sagrado"],
+              "Puno": ["GHL Lago Titicaca"]
+            }
+          }
+        ],
+        "flightSuggestions": {
+          "routes": [
+            {
+              "from": "Lima",
+              "to": "Arequipa",
+              "departure": "09:15",
+              "arrival": "10:45"
+            },
+            {
+              "from": "Arequipa",
+              "to": "Cusco",
+              "departure": "07:55",
+              "arrival": "09:00"
+            },
+            {
+              "from": "Puno",
+              "to": "Lima",
+              "departure": "10:25",
+              "arrival": "12:00"
+            }
+          ],
+          "prices": [
+            {
+              "description": "Solo Carryon de 10 kilos + Mochila",
+              "price": 460
+            },
+            {
+              "description": "Con equipaje en Bodega 23K",
+              "price": 560
+            }
+          ]
+        },
+        "includes": [
+          "Traslados al aeropuerto/hotel/aeropuerto u estación de bus/hotel/estación de bus en cada ciudad",
+          "En Lima: 3 noches de alojamiento, city tour con visita al Museo Larco, Almuerzo turístico",
+          "En Arequipa: 2 noches de alojamiento, city tour, excursion Ruta del Sillar con Almuerzo",
+          "En Cusco: 3 noches de alojamiento en Cusco, City tour y ruinas cercanas, excursión al Valle Sagrado con almuerzo",
+          "1 noche de alojamiento en Valle Sagrado, Tickets de tren Vistadome Ollanta/Machu Picchu/Cusco",
+          "Excursión a Machu Picchu. Ticket de Tren Titicaca de Lujo Cusco-Puno con almuerzo",
+          "En Puno: 2 noches de alojamiento, Excursion a las Islas de Uros y Taquile con almuerzo",
+          "La mayoría de los tours son en servicio privado"
+        ],
+        "notIncludes": [
+          "Vuelos internacionales",
+          "Vuelos Nacionales ó Internos.",
+          "Seguro de Viaje.",
+          "Otros gastos que no se detalle"
+        ],
+        "notes": "Gracias por visitar Perú y darnos la oportunidad de Atenderlos",
+        "serviceType": "Servicios privados y algunos grupales",
+        "guideLanguage": "Guía Bilingüe Español/Inglés",
+        "departureDays": {
+          "trenTiticaca": "Miércoles, Viernes y Domingos"
+        }
+      }
+    ]
+  }
