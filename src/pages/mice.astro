@@ -1,0 +1,268 @@
+---
+// src/pages/mice.astro
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Calendar from "../icons/Calendar.astro";
+import Group from "../icons/Group.astro";
+
+// Importar imágenes (asegúrate de tener estas imágenes en tu proyecto)
+import miceHero from "../images/paquetes-arequipa/arequipa-panoramica.jpg";
+import mice1 from "../images/paquetes-arequipa/monasterio-santa-catalina-2.jpg";
+import mice2 from "../images/paquetes-arequipa/yanahuara.jpg";
+import mice3 from "../images/paquetes-arequipa/plaza-de-armas-arequipa.jpg";
+import mice4 from "../images/paquetes-arequipa/callejon.jpg";
+---
+
+<Layout
+    title="Turismo MICE con Propósito | CONRESA TOURS"
+    description="Transformamos eventos corporativos en experiencias estratégicas que inspiran equipos, facilitan negocios y crean conexiones duraderas en destinos excepcionales."
+>
+    <div class="min-h-screen py-12 bg-gray-50">
+        <!-- Hero Section -->
+        <div class="relative w-full h-[600px] overflow-hidden mb-8">
+            <Image
+                src={miceHero}
+                alt="Evento corporativo en Arequipa"
+                class="w-full h-full object-cover"
+                width={1200}
+                height={600}
+                format="webp"
+                loading="eager"
+                fetchpriority="high"
+            />
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div class="text-center px-4">
+                    <span class="text-white title-bg text-4xl md:text-5xl font-bold text-center px-4 drop-shadow-lg">
+                        Turismo MICE con Propósito
+                    </span>
+                    <p class="text-xl md:text-2xl text-white font-medium mt-16 mb-8 drop-shadow-md">
+                        Un buen evento no solo reúne personas, las impulsa.
+                    </p>
+                    <a href="/#contacto" class="bg-[#468E8E] hover:bg-[#3a7777] text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                        Cotizar Evento
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Introducción -->
+            <div class="bg-white shadow-xl p-8 mb-12 rounded-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-[#468E8E] mb-6">
+                            Eventos que trascienden
+                        </h2>
+                        <p class="text-gray-700 text-lg mb-6">
+                            En el mundo del turismo MICE, cada viaje es una inversión estratégica. No organizamos simples reuniones o convenciones: creamos espacios donde nacen ideas, se fortalecen equipos y se cierran grandes negocios.
+                        </p>
+                        <div class="space-y-4">
+                            <p class="flex items-start">
+                                <svg class="w-6 h-6 text-[#468E8E] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700"><strong>Motivación de equipos:</strong> Destinos que despiertan la inspiración</span>
+                            </p>
+                            <p class="flex items-start">
+                                <svg class="w-6 h-6 text-[#468E8E] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700"><strong>Congresos memorables:</strong> Sedes con logística impecable para tu marca</span>
+                            </p>
+                            <p class="flex items-start">
+                                <svg class="w-6 h-6 text-[#468E8E] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700"><strong>Recompensas de alto impacto:</strong> Experiencias que aumentan la fidelidad</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                            src={mice1}
+                            alt="Sala de conferencias en Arequipa"
+                            class="w-full h-80 object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-[#468E8E] mb-8 text-center">
+                    Arequipa: Destino MICE de Excelencia
+                </h2>
+                <div class="bg-black rounded-2xl overflow-hidden shadow-2xl mt-8">
+                    <div class="aspect-w-16 aspect-h-9 w-full">
+                        <!-- Reemplaza con tu video embed -->
+                        <video 
+                            class="w-full h-[500px] object-cover" 
+                            src="/mice.mp4" 
+                            title="Arequipa como destino MICE" 
+                            controls
+                            playsinline
+                            >
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">¿Por qué elegir Arequipa?</h3>
+                        <p class="text-gray-700">
+                            La Ciudad Blanca combina infraestructura de primer nivel con un patrimonio cultural incomparable. Hoteles de cadena, centros de convenciones modernos y experiencias únicas en un entorno seguro y con conectividad aérea directa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicios MICE -->
+            <div class="mb-16">
+                <!-- <h2 class="text-3xl font-bold text-[#468E8E] mb-8 text-center">
+                    Nuestros Servicios para Eventos Corporativos
+                </h2> -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <Image
+                                src={mice2}
+                                alt="Reuniones de incentivo"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                width={400}
+                                height={300}
+                            />
+                        </div>
+                        <div class="p-6">
+                            <div class="text-[#468E8E] text-3xl mb-3">
+                                <Group />
+                            </div>
+                            <h3 class="font-bold text-xl mb-2">Viajes de Incentivo</h3>
+                            <p class="text-gray-700">
+                                Programas personalizados que premian el desempeño y fortalecen la cultura organizacional.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <Image
+                                src={mice3}
+                                alt="Congresos y convenciones"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                width={400}
+                                height={300}
+                            />
+                        </div>
+                        <div class="p-6">
+                            <div class="text-[#468E8E] text-3xl mb-3">
+                                <Calendar />
+                            </div>
+                            <h3 class="font-bold text-xl mb-2">Congresos & Convenciones</h3>
+                            <p class="text-gray-700">
+                                Planificación integral desde la sede hasta actividades post-evento.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <Image
+                                src={mice4}
+                                alt="Team building"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                width={400}
+                                height={300}
+                            />
+                        </div>
+                        <div class="p-6">
+                            <div class="text-[#468E8E] text-3xl mb-3">
+                                👥
+                            </div>
+                            <h3 class="font-bold text-xl mb-2">Team Building</h3>
+                            <p class="text-gray-700">
+                                Actividades diseñadas para mejorar la comunicación, colaboración y confianza entre equipos.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                        <div class="h-48 overflow-hidden">
+                            <Image
+                                src={mice1}
+                                alt="Eventos personalizados"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                width={400}
+                                height={300}
+                            />
+                        </div>
+                        <div class="p-6">
+                            <div class="text-[#468E8E] text-3xl mb-3">
+                                ✨
+                            </div>
+                            <h3 class="font-bold text-xl mb-2">Eventos Personalizados</h3>
+                            <p class="text-gray-700">
+                                Desde lanzamientos de producto hasta galas ejecutivas, con un enfoque creativo y atención al detalle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Propuesta de Valor -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div class="order-1 lg:order-none">
+                    <Image
+                        src={mice3}
+                        alt="Experiencia MICE en Arequipa"
+                        class="w-full h-auto rounded-2xl shadow-xl"
+                        width={600}
+                        height={400}
+                    />
+                </div>
+                <div class="bg-[#468E8E] text-white p-8 rounded-2xl shadow-xl">
+                    <h2 class="text-3xl font-bold mb-6">Nuestra Diferencia</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-white text-[#468E8E] rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold">1</div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2">Enfoque Estratégico</h3>
+                                <p>Alineamos cada evento con los objetivos de negocio de tu organización.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-white text-[#468E8E] rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold">2</div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2">Red Local Premium</h3>
+                                <p>Acceso exclusivo a los mejores proveedores y locales de Arequipa y el sur del Perú.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-white text-[#468E8E] rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold">3</div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2">Experiencias Auténticas</h3>
+                                <p>Integramos la riqueza cultural de nuestros destinos en programas corporativos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-white text-[#468E8E] rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold">4</div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2">Logística Impecable</h3>
+                                <p>Coordinación minuciosa para que te enfoques en el contenido, nosotros en la ejecución.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div id="contacto" class="bg-gradient-to-r from-[#468E8E] to-[#2a5e5e] text-white p-12 rounded-2xl shadow-2xl text-center mb-16">
+                <span class="cursive-subtitle text-3xl md:text-4xl font-bold mb-8 text-white">¿Listo para transformar tu próximo evento?</span>
+                <p class="text-xl mt-8 max-w-3xl mx-auto">
+                    Cuéntanos sobre tus necesidades y crearemos una propuesta personalizada que supere tus expectativas.
+                </p>
+            </div>
+        </div>
+    </div>
+</Layout>
