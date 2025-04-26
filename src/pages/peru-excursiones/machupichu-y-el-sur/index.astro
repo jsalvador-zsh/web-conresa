@@ -1,65 +1,81 @@
 ---
-// src/pages/peru-excursiones/peru-a-tu-alcance/index.astro
+// src/pages/peru-excursiones/peru-turistico-del-sur/index.astro
 import Layout from '../../../layouts/Layout.astro';
-import peruAlcanceData from '../../../data/peru_alcance.json';
+import tourData from '../../../data/peru_turistico_del_sur.json';
 import { Image } from 'astro:assets';
 
-// Importar imágenes
+// Importar imágenes (asegúrate de tener estas imágenes en tu proyecto)
 import lima from '../../../images/cusco/lima.jpg';
+import arequipa from '../../../images/paquetes-arequipa/arequipa-panoramica.jpg';
+import colca from '../../../images/paquetes-arequipa/valle-colca.jpg';
+import puno from '../../../images/puno/puno.jpg';
 import cusco from '../../../images/cusco/cusco-5.jpg';
-import machupicchu from '../../../images/cusco/cusco-6.jpg';
-import humantay from '../../../images/cusco/laguna-humantay.jpg';
-import montanaColores from '../../../images/cusco/cusco-2.jpg';
-
+import machupicchu from '../../../images/cusco/cusco.jpg';
 // Tipos
-type Tour = {
-  id: string;
-  title: string;
-  duration: string;
-  description: string;
-  days: Array<{
-    day: number;
-    title: string;
+type Day = {
+  day: number;
+  city: string;
+  activities: string[];
+  optional?: {
     description: string;
-    overnight: string | null;
-    includes?: string[];
-  }>;
-  hotelCategories: Array<{
-    category: string;
+    times: string[];
     price: number;
-    includes: string;
-    hotels: Record<string, string[]>;
-  }>;
-  flightSuggestions?: {
-    routes: Array<{
-      from: string;
-      to: string;
+  };
+  transport?: {
+    default: string;
+    optional?: {
+      description: string;
+      days: string[];
       departure: string;
       arrival: string;
-    }>;
-    prices: Array<{
-      description: string;
       price: number;
-    }>;
+    };
   };
+  options?: Array<{
+    name: string;
+    details: string;
+  }>;
+  includes?: string[];
+  overnight?: string;
+};
+
+type HotelCategory = {
+  name: string;
+  price: number;
   includes: string[];
-  notIncludes: string[];
-  notes: string;
-  serviceType: string;
-  guideLanguage: string;
+  hotels: Record<string, string[]>;
+};
+
+type FlightRoute = {
+  route: string;
+  departure: string;
+  arrival: string;
+};
+
+type FlightPrice = {
+  description: string;
+  price: number;
+};
+
+type Inclusions = {
+  general: string[];
+  exclusions: string[];
 };
 
 // Obtener datos
-const { tours } = peruAlcanceData as { tours: Tour[] };
-const tour = tours[0];
+const { itinerary, pricing, inclusions } = tourData;
+const { title, days } = itinerary;
+const { categories: hotelCategories, flight_suggestions } = pricing;
+const { general: includes, exclusions: notIncludes } = inclusions;
 
 // Mapeo de imágenes
 const destinationImages = {
   "Lima": lima,
+  "Arequipa": arequipa,
+  "Colca": colca,
+  "Puno": puno,
   "Cusco": cusco,
-  "Machu Picchu": machupicchu,
-  "Laguna Humantay": humantay,
-  "Montaña de Colores": montanaColores
+  "Machu Picchu": machupicchu
 };
 
 // Función para formatear precios
@@ -71,17 +87,17 @@ const formatPrice = (price: number) => {
   }).format(price);
 };
 
-// Destinos principales
-const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
+// Duración del tour
+const duration = `${days.length} días / ${days.length - 1} noches`;
 ---
 
-<Layout title={tour.title} description={tour.description}>
+<Layout title={title} description={`Tour por el sur de Perú visitando ${Object.keys(destinationImages).join(', ')}`}>
   <main class="bg-gray-50">
     <!-- Hero Section -->
     <section class="relative h-[70vh] max-h-[800px] min-h-[500px] overflow-hidden">
       <Image
         src={machupicchu}
-        alt={tour.title}
+        alt={title}
         class="w-full h-full object-cover"
         width={1920}
         height={1080}
@@ -90,8 +106,8 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent flex items-center justify-center">
         <div class="text-center px-4">
-          <span class="text-4xl md:text-6xl cursive-font font-bold text-white mb-4">{tour.title}</span>
-          <p class="text-xl text-white max-w-3xl mx-auto mt-8">{tour.duration} • {tour.description}</p>
+          <span class="text-4xl md:text-6xl cursive-font font-bold text-white mb-4">{title}</span>
+          <p class="text-xl text-white max-w-3xl mx-auto mt-8">{duration}</p>
         </div>
       </div>
     </section>
@@ -126,13 +142,13 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
           <section class="bg-white rounded-xl shadow-md p-6 md:p-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Sobre este tour</h2>
             <div class="prose max-w-none text-gray-700">
-              <p>Este completo circuito de 6 días te permitirá descubrir lo mejor de Perú, combinando cultura, historia y aventura en los destinos más impresionantes del país.</p>
-              
+              <p>Este completo circuito de {days.length} días te permitirá descubrir lo mejor del sur de Perú, combinando cultura, historia y aventura en los destinos más impresionantes de la región.</p>
+
               <h3 class="text-xl font-semibold text-gray-900 mt-8">Itinerario resumido</h3>
               <ul class="space-y-2">
-                {tour.days.filter((_, index) => index % 2 === 0).map(day => (
+                {days.filter((_, index) => index % 2 === 0).map(day => (
                   <li class="pl-4 border-l-2 border-[#2C5E5E]">
-                    <strong class="text-gray-900">Día {day.day}:</strong> {day.title}
+                    <strong class="text-gray-900">Día {day.day}:</strong> {day.city} - {day.activities[0]}
                   </li>
                 ))}
               </ul>
@@ -142,17 +158,17 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
           <!-- Detailed Itinerary -->
           <section class="bg-white rounded-xl shadow-md overflow-hidden">
             <div class="bg-[#2C5E5E] p-6 md:p-8">
-              <span class="cursive-subtitle text-3xl font-bold text-white">Itinerario Detallado</s>
+              <span class="cursive-subtitle text-3xl font-bold text-white">Itinerario Detallado</span>
             </div>
             <div class="p-6 md:p-8 space-y-8">
-              {tour.days.map(day => (
+              {days.map(day => (
                 <div class="border-l-4 border-[#2C5E5E] pl-6">
                   <div class="flex items-start gap-4">
                     <div class="bg-[#2C5E5E] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
                       {day.day}
                     </div>
                     <div>
-                      <h3 class="text-xl font-bold text-gray-900">{day.title}</h3>
+                      <h3 class="text-xl font-bold text-gray-900">{day.city}</h3>
                       {day.overnight && (
                         <p class="text-sm text-gray-500 mt-1">
                           <span class="font-medium">Pernocte:</span> {day.overnight}
@@ -161,11 +177,49 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
                     </div>
                   </div>
                   <div class="prose max-w-none text-gray-700 mt-4 pl-14">
-                    <p>{day.description}</p>
+                    <h4 class="font-medium text-gray-900">Actividades:</h4>
+                    <ul class="list-disc list-inside space-y-1">
+                      {day.activities?.map(activity => (
+                        <li>{activity}</li>
+                      ))}
+                    </ul>
+
+                    {day.options && (
+                      <div class="mt-4">
+                        <h4 class="font-medium text-gray-900">Opciones:</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                          {day.options.map(option => (
+                            <li><strong>{option.name}:</strong> {option.details}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {day.optional && (
+                      <div class="mt-4">
+                        <h4 class="font-medium text-gray-900">Opcional:</h4>
+                        <p>{day.optional.description} - {formatPrice(day.optional.price)}</p>
+                        <p class="text-sm text-gray-500">Horarios: {day.optional.times.join(' o ')}</p>
+                      </div>
+                    )}
+
+                    {day.transport && (
+                      <div class="mt-4">
+                        <h4 class="font-medium text-gray-900">Transporte:</h4>
+                        <p>{day.transport.default}</p>
+                        {day.transport.optional && (
+                          <div class="mt-2">
+                            <p><strong>Opcional:</strong> {day.transport.optional.description} - {formatPrice(day.transport.optional.price)}</p>
+                            <p class="text-sm text-gray-500">Días: {day.transport.optional.days.join(', ')}</p>
+                            <p class="text-sm text-gray-500">Salida: {day.transport.optional.departure}, Llegada: {day.transport.optional.arrival}</p>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                   {day.includes && day.includes.length > 0 && (
                     <div class="mt-4 pt-4 border-t border-gray-200 pl-14">
-                      <h4 class="font-medium text-gray-900 mb-2">Incluye:</h4>
+                      <h4 class="font-medium text-gray-900">Incluye:</h4>
                       <ul class="list-disc list-inside text-gray-600 space-y-1">
                         {day.includes.map(item => (
                           <li>{item}</li>
@@ -184,13 +238,19 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
               <span class="cursive-subtitle text-3xl font-bold text-white">Opciones de Alojamiento</span>
             </div>
             <div class="p-6 md:p-8 space-y-8">
-              {tour.hotelCategories.map(category => (
+              {hotelCategories.map(category => (
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
                   <div class="bg-gray-50 p-6 flex justify-between items-center">
-                    <h3 class="text-xl font-bold text-gray-900">{category.category}</h3>
+                    <h3 class="text-xl font-bold text-gray-900">{category.name}</h3>
                     <span class="text-2xl font-bold text-[#2C5E5E]">{formatPrice(category.price)}</span>
                   </div>
                   <div class="p-6">
+                    <div class="mb-4">
+                      <h4 class="font-bold text-gray-900 mb-2">Incluye:</h4>
+                      <ul class="list-disc list-inside text-gray-600">
+                        {category.includes.map(item => <li>{item}</li>)}
+                      </ul>
+                    </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {Object.entries(category.hotels).map(([ciudad, hoteles]) => (
                         <div>
@@ -215,7 +275,7 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
           </section>
 
           <!-- Flight Suggestions -->
-          {tour.flightSuggestions && (
+          {flight_suggestions && (
             <section class="bg-white rounded-xl shadow-md overflow-hidden">
               <div class="bg-[#2C5E5E] p-6 md:p-8">
                 <span class="cursive-subtitle text-3xl font-bold text-white">Vuelos Sugeridos</span>
@@ -226,17 +286,15 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
                   <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                       <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Origen</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Destino</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ruta</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Salida</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Llegada</th>
                       </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                      {tour.flightSuggestions.routes.map((route, index) => (
+                      {flight_suggestions.routes.map((route, index) => (
                         <tr class={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{route.from}</td>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{route.to}</td>
+                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{route.route}</td>
                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{route.departure}</td>
                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{route.arrival}</td>
                         </tr>
@@ -244,10 +302,10 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
                     </tbody>
                   </table>
                 </div>
-                
+
                 <h3 class="text-xl font-bold text-gray-900 mt-12 mb-6">Opciones de equipaje</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {tour.flightSuggestions.prices.map(option => (
+                  {flight_suggestions.prices.map(option => (
                     <div class="border border-gray-200 rounded-lg p-4 hover:border-[#2C5E5E] transition-colors">
                       <div class="flex justify-between items-center">
                         <span class="font-medium text-gray-900">{option.description}</span>
@@ -268,7 +326,7 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
               </div>
               <div class="p-6">
                 <ul class="space-y-3">
-                  {tour.includes.map(item => (
+                  {includes.map(item => (
                     <li class="flex items-start">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -286,7 +344,7 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
               </div>
               <div class="p-6">
                 <ul class="space-y-3">
-                  {tour.notIncludes.map(item => (
+                  {notIncludes.map(item => (
                     <li class="flex items-start">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -298,26 +356,6 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
               </div>
             </div>
           </section>
-
-          <!-- Additional Info -->
-          <section class="bg-white rounded-xl shadow-md p-6 md:p-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">Información adicional</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Tipo de servicio</h3>
-                <p class="text-gray-700">{tour.serviceType}</p>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Idioma del guía</h3>
-                <p class="text-gray-700">{tour.guideLanguage}</p>
-              </div>
-            </div>
-            {tour.notes && (
-              <div class="mt-6 pt-6 border-t border-gray-200">
-                <p class="text-gray-700 italic">{tour.notes}</p>
-              </div>
-            )}
-          </section>
         </div>
 
         <!-- Right Column (Sidebar) -->
@@ -325,23 +363,23 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
           <!-- Booking Card -->
           <div class="bg-white rounded-xl shadow-md p-6 top-6">
             <h3 class="text-xl font-bold text-gray-900 mb-4">Precios desde</h3>
-            
+
             <div class="space-y-4 mb-6">
-              {tour.hotelCategories.map(category => (
+              {hotelCategories.map(category => (
                 <div class="border border-gray-200 rounded-lg p-4 hover:border-[#2C5E5E] transition-colors">
                   <div class="flex justify-between items-center">
-                    <span class="text-gray-600">{category.category}</span>
+                    <span class="text-gray-600">{category.name}</span>
                     <span class="font-bold text-[#2C5E5E]">{formatPrice(category.price)}</span>
                   </div>
                 </div>
               ))}
             </div>
-            
+
             <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span>{tour.duration}</span>
+              <span>{duration}</span>
             </div>
           </div>
 
@@ -349,11 +387,11 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
           <div class="bg-white rounded-xl shadow-md p-6">
             <h3 class="text-xl font-bold text-gray-900 mb-4">Destinos principales</h3>
             <div class="space-y-4">
-              {mainDestinations.map(destino => (
+              {Object.entries(destinationImages).map(([destino, imagen]) => (
                 <div class="flex items-start space-x-4">
                   <div class="flex-shrink-0 w-16 h-16 rounded-md overflow-hidden">
                     <Image
-                      src={destinationImages[destino as keyof typeof destinationImages]}
+                      src={imagen}
                       alt={destino}
                       width={64}
                       height={64}
@@ -382,7 +420,7 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
                   <p class="text-sm text-gray-600">Más de 40 años creando experiencias inolvidables</p>
                 </div>
               </div>
-              
+
               <div class="flex items-start space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#2C5E5E] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -392,7 +430,7 @@ const mainDestinations = ["Lima", "Cusco", "Machu Picchu"];
                   <p class="text-sm text-gray-600">Las mejores tarifas sin sacrificar calidad</p>
                 </div>
               </div>
-              
+
               <div class="flex items-start space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#2C5E5E] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />

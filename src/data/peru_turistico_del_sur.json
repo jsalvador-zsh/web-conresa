@@ -1,0 +1,264 @@
+{
+    "itinerary": {
+      "title": "PERÚ - PAÍS DIVERSO DE NATURALEZA/PAISAJE CONÓCELO EN 12 DÍAS",
+      "days": [
+        {
+          "day": 1,
+          "city": "Lima",
+          "activities": [
+            "Recepción en el aeropuerto Internacional Jorge Chávez",
+            "Traslado al hotel seleccionado"
+          ],
+          "optional": {
+            "description": "City tour por Lima",
+            "times": ["9 am", "2 pm"],
+            "price": 45
+          },
+          "overnight": "Lima"
+        },
+        {
+          "day": 2,
+          "city": "Lima - Arequipa",
+          "activities": [
+            "Desayuno en el hotel",
+            "Vuelo a Arequipa",
+            "City tour: Plaza de Armas, Catedral, Iglesia y Claustros de la Compañía de Jesús",
+            "Visita al Convento y Museo de Santa Catalina",
+            "Miradores de Yanahuara y Carmen Alto"
+          ],
+          "overnight": "Arequipa"
+        },
+        {
+          "day": 3,
+          "city": "Arequipa - Colca",
+          "activities": [
+            "Tour al Valle del Colca",
+            "Ruta de Yura, Pampa Cañahua, Reserva Nacional de Salinas y Aguada Blanca",
+            "Visita a baños termales la Calera"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Colca"
+        },
+        {
+          "day": 4,
+          "city": "Cañón del Colca - Puno",
+          "activities": [
+            "Visita al mirador de la Cruz del Cóndor",
+            "Recorrido por pueblos de Yanque y Maca",
+            "Traslado a Puno"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Puno"
+        },
+        {
+          "day": 5,
+          "city": "Puno",
+          "activities": [
+            "Tour a las Islas flotantes de los Uros",
+            "Visita a la isla natural de Taquile",
+            "Almuerzo con familia local"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Puno"
+        },
+        {
+          "day": 6,
+          "city": "Puno - Cusco",
+          "transport": {
+            "default": "Bus turístico con visitas",
+            "optional": {
+              "description": "Tren Peru Rail Titicaca de Lujo",
+              "days": ["Lunes", "Jueves", "Sábados"],
+              "departure": "07:30 am",
+              "arrival": "17:50 hrs",
+              "price": 200
+            }
+          },
+          "activities": [
+            "Visita a Andahuaylillas (la Sixtina de América)",
+            "Templo de Raqchi",
+            "Punto más alto La Raya",
+            "Complejo arqueológico de Pukara"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 7,
+          "city": "Cusco",
+          "activities": [
+            "City tour: Catedral, Plaza de Armas, Koricancha",
+            "Visita a Sacsayhuamán",
+            "Complejos arqueológicos de Qenko, Pukapukara y Tambomachay"
+          ],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 8,
+          "city": "Valle Sagrado - Aguas Calientes",
+          "activities": [
+            "Excursión al Valle Sagrado",
+            "Visita a ruinas de Pisaq",
+            "Mercado artesanal de Pisaq",
+            "Visita a Ollantaytambo",
+            "Tren a Aguas Calientes"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Aguas Calientes"
+        },
+        {
+          "day": 9,
+          "city": "Machu Picchu - Cusco",
+          "activities": [
+            "Visita al Santuario de Machu Picchu",
+            "Recorrido por zona agrícola y urbana",
+            "Visita a Intiwatana, Templo del Sol y del Cóndor"
+          ],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 10,
+          "city": "Cusco",
+          "options": [
+            {
+              "name": "Laguna Humantay",
+              "details": "Caminata de 2 horas (4200 m.s.n.m)"
+            },
+            {
+              "name": "Montaña de Colores",
+              "details": "Caminata de 2 horas 30 min (5000 m.s.n.m)"
+            }
+          ],
+          "includes": ["Desayuno", "Almuerzo"],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 11,
+          "city": "Cusco - Lima",
+          "activities": [
+            "Vuelo a Lima",
+            "Traslado al hotel"
+          ],
+          "overnight": "Lima"
+        },
+        {
+          "day": 12,
+          "city": "Lima",
+          "activities": [
+            "Traslado al aeropuerto"
+          ]
+        }
+      ]
+    },
+    "pricing": {
+      "categories": [
+        {
+          "name": "Estándar",
+          "price": 1400,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["El Tambo", "Ibis Larco", "Tierra Viva"],
+            "Arequipa": ["Santa Rosa", "Majestad", "Xima", "Casona Plaza Colonial"],
+            "Colca": ["Pozo del Cielo", "Colca Llaqta"],
+            "Puno": ["La Hacienda Puno / Plaza", "Casa Andina Estándar", "Tierra Viva Puno", "Casona Plaza Centro"],
+            "Cusco": ["San Agustin Internacional", "Casona Real", "Illa Hotel"],
+            "Aguas Calientes": ["Hatun Samay", "Hatuminti"]
+          }
+        },
+        {
+          "name": "Estándar Confort",
+          "price": 1515,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Casa andina select", "Hotel libre"],
+            "Arequipa": ["Casa Andina Estándar", "Tierra Viva", "San Agustin Posada Monasterio", "Casona Plaza Arequipa"],
+            "Colca": ["Casa Andina Estándar", "Pozo del Cielo Superior"],
+            "Puno": ["Sonesta (sin vista al lago)", "Taypikala", "José Antonio", "Casona Plaza Puno"],
+            "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"],
+            "Aguas Calientes": ["Casa Andina", "Taypikala", "Hatun Samay", "Casa de Luz", "Tierra Viva"]
+          }
+        },
+        {
+          "name": "Superior",
+          "price": 1680,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Casa Andina Premium", "José Antonio"],
+            "Arequipa": ["Katari deluxe", "Ariquipay"],
+            "Colca": ["Colca Lodge", "Aranwa"],
+            "Puno": ["Sonesta Puno (con vista al lago)", "Casa Andina Premium (sin vista al lago)"],
+            "Cusco": ["Casa Andina Koricancha", "Xima (Hab. Superior)", "Tierra Viva (Hab. Superior)", "Costa del Sol Estándar"],
+            "Aguas Calientes": ["El Mapi", "Casa Andina Superior", "Tierra Viva Machupicchu"]
+          }
+        },
+        {
+          "name": "Superior Elegante",
+          "price": 1845,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Sonesta El Olivar", "Casa Andina Premium"],
+            "Arequipa": ["Katari Suite (King)", "Hilton", "Costa del Sol"],
+            "Colca": ["Colca Lodge", "Aranwa"],
+            "Puno": ["Casa Andina Premium (con vista al lago)"],
+            "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"],
+            "Aguas Calientes": ["El Mapi", "Casa del Sol"]
+          }
+        },
+        {
+          "name": "Luxe",
+          "price": 2270,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Sonesta El Olivar", "Iberostar Miraflores", "Double Tree Hilton"],
+            "Arequipa": ["Casa Andina Premium", "Costa del Sol"],
+            "Colca": ["Colca Lodge", "Aranwa"],
+            "Puno": ["GHL Lago Titicaca"],
+            "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury", "Aranwa Junior Suite"],
+            "Aguas Calientes": ["Sumaq B&B Garden View", "Casa Del Sol"]
+          }
+        }
+      ],
+      "flight_suggestions": {
+        "routes": [
+          {
+            "route": "Lima-Arequipa",
+            "departure": "09:15",
+            "arrival": "10:45"
+          },
+          {
+            "route": "Cusco-Lima",
+            "departure": "11:25",
+            "arrival": "12:45"
+          }
+        ],
+        "prices": [
+          {
+            "description": "Solo Carryon de 10 kilos + Mochila",
+            "price": 180
+          },
+          {
+            "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+            "price": 230
+          }
+        ]
+      }
+    },
+    "inclusions": {
+      "general": [
+        "Traslados de ingreso y salida en cada ciudad",
+        "2 noches en Lima + city tour medio día",
+        "1 noche en Arequipa + city tour peatonal con Monasterio Santa Catalina",
+        "1 noche en Colca + 2 almuerzos + visita al Valle hasta Cruz del Cóndor + traslado a Puno",
+        "2 noches en Puno + excursión a Uros y Taquile + almuerzo + bus turístico Puno-Cusco con paradas",
+        "4 noches en Cusco + city tour + 4 ruinas aledañas + tour a Valle Sagrado + almuerzo",
+        "1 noche en Aguas Calientes + excursión a Machu Picchu + ticket de tren + minibús Aguas Calientes/Machu Picchu",
+        "Montaña de los 7 colores + 1 almuerzo"
+      ],
+      "exclusions": [
+        "Vuelos internacionales",
+        "Vuelos nacionales/internos",
+        "Seguro de viaje",
+        "Gastos no especificados"
+      ]
+    }
+  }

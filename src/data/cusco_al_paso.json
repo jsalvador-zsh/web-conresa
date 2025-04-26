@@ -1,0 +1,122 @@
+{
+    "tour": {
+      "code": "CT8425.V1",
+      "title": "Cusco al Paso",
+      "duration": "3 days",
+      "description": "LA ESENCIA EXPRESS ES DISFRUTE EN EL VIAJE",
+      "days": [
+        {
+          "day": 1,
+          "title": "CUSCO – CITY TOUR (Koricancha y Catedral)",
+          "activities": [
+            "Recepción en el aeropuerto del Cusco",
+            "Traslado al hotel",
+            "Visita a la Catedral (destacan el coro y el púlpito)",
+            "Recorrido por la Plaza de Armas",
+            "Visita al Koricancha (Templo del Sol)",
+            "Tour a la Fortaleza de Sacsayhuamán",
+            "Visita al Complejo Arqueológico de Qenko",
+            "Visita al Complejo Arqueológico de Pukapukara",
+            "Visita al Complejo Arqueológico de Tambomachay"
+          ],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 2,
+          "title": "CUSCO – MACHU PICCHU",
+          "activities": [
+            "Traslado a la estación de Poroy",
+            "Viaje en tren a Aguas Calientes (3 horas 40 minutos)",
+            "Trayecto en bus a Machu Picchu (20 minutos)",
+            "Recorrido guiado por Machu Picchu (2 horas)",
+            "Visita a la zona agrícola y urbana",
+            "Visita al Intiwatana, Templo del Sol y del Cóndor",
+            "Retorno en tren a Cusco"
+          ],
+          "notes": "Almuerzo no incluido",
+          "overnight": "Cusco"
+        },
+        {
+          "day": 3,
+          "title": "CUSCO – SALIDA",
+          "activities": [
+            "Traslado al aeropuerto"
+          ]
+        }
+      ],
+      "pricing": {
+        "categories": [
+          {
+            "name": "Estándar",
+            "price": 525,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["San Agustin Internacional", "Casona Real"]
+            }
+          },
+          {
+            "name": "Estándar Confort",
+            "price": 545,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"]
+            }
+          },
+          {
+            "name": "Superior",
+            "price": 560,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior"]
+            }
+          },
+          {
+            "name": "Superior Elegante",
+            "price": 580,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol"]
+            }
+          },
+          {
+            "name": "Luxe",
+            "price": 665,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury"]
+            }
+          }
+        ]
+      },
+      "flight_suggestions": {
+        "routes": [
+          {
+            "route": "Lima-Cusco",
+            "departure": "08:25",
+            "arrival": "09:57"
+          },
+          {
+            "route": "Cusco-Lima",
+            "departure": "11:40",
+            "arrival": "12:50"
+          }
+        ]
+      },
+      "inclusions": {
+        "included": [
+          "Desayunos en todas las ciudades",
+          "Traslados aeropuerto/hotel/aeropuerto",
+          "Traslados estación de bus/hotel/estación de bus",
+          "2 noches en Cusco con desayunos",
+          "City tour en Cusco",
+          "Excursión a Machu Picchu en tren Turista con ingreso"
+        ],
+        "not_included": [
+          "Vuelos internacionales y domésticos",
+          "Seguro de viaje",
+          "Gastos personales no especificados"
+        ]
+      },
+      "farewell": "Gracias por visitar Perú y darnos la oportunidad de Atenderlos"
+    }
+  }
