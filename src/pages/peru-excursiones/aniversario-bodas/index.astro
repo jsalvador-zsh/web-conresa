@@ -100,13 +100,13 @@ const mainDestinations = Array.from(new Set(
         format="webp"
         quality={80}
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent flex items-end pb-16">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-end pb-32 md:pb-64">
         <div class="container mx-auto px-6">
-          <div class="max-w-6xl text-center mx-auto">
-            <span class="cursive-font text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+          <div class="text-center mx-auto max-w-6xl">
+            <span class="cursive-font text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 font-serif">
               {tour.title}
             </span>
-            <p class="text-xl text-gray-100">
+            <p class="text-xl text-rose-100">
               {tour.description}
             </p>
           </div>
@@ -384,7 +384,7 @@ const mainDestinations = Array.from(new Set(
         <!-- Right Column (Sidebar) -->
         <div class="lg:col-span-4 space-y-6">
           <!-- Booking Card -->
-          <div class="bg-white rounded-xl shadow-sm p-6 sticky top-6">
+          <div class="bg-white rounded-xl shadow-sm p-6 top-6">
             <h3 class="text-xl font-bold text-gray-900 mb-4">Reserva tu luna de miel</h3>
             
             <div class="space-y-4 mb-6">

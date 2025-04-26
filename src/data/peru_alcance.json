@@ -1,0 +1,141 @@
+{
+    "tours": [
+      {
+        "id": "CT8425.IV.1",
+        "title": "PERÚ A TU ALCANCE",
+        "duration": "6 days",
+        "description": "PERÚ Cultura milenaria / exótica / amigable",
+        "days": [
+          {
+            "day": 1,
+            "title": "LIMA",
+            "description": "Bienvenidos a PERU. Recepción y traslado del aeropuerto al hotel en Lima.",
+            "overnight": "Lima"
+          },
+          {
+            "day": 2,
+            "title": "LIMA – CITY TOUR – CUSCO",
+            "description": "Visita al centro histórico de Lima: Plaza San Martín, jirón de la Unión, plaza mayor, Iglesia y convento de San Francisco (claustros, biblioteca y catacumbas), Palacio de Torre Tagle (panorámico), Iglesia de San Pedro, barrio de Miraflores y vista panorámica a la Huaca Pucllana. Traslado al aeropuerto para vuelo a Cusco.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 3,
+            "title": "CUSCO – CITY TOUR (Koricancha y Catedral)",
+            "description": "Visita a la Catedral (coro y púlpito), Plaza de Armas, Koricancha o Templo del Sol, Fortaleza de Sacsayhuamán, Complejo Arqueológico de Qenko ('laberinto'), Complejo Arqueológico de Pukapukara y Complejo arqueológico de Tambomachay.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 4,
+            "title": "MACHU PICCHU",
+            "description": "Traslado a estación de Poroy para tren a Aguas Calientes (3 horas). Transporte a Machu Picchu (20 min). Recorrido guiado por la zona agrícola, zona urbana, Intiwatana, templo del sol, del cóndor y otros sectores importantes. Retorno en tren a Cusco.",
+            "overnight": "Cusco"
+          },
+          {
+            "day": 5,
+            "title": "LAGUNA HUMANTAY o MONTAÑA DE COLORES",
+            "description": "Opción entre dos excursiones: 1) Caminata de 2 horas hasta Laguna Humantay (4200 m) o 2) Caminata de 2 horas 30 min hasta Montaña de Colores (5000 m). Posibilidad de alquilar caballos. Incluye desayuno y almuerzo básicos.",
+            "includes": ["Desayuno", "Almuerzo básico"],
+            "overnight": "Cusco"
+          },
+          {
+            "day": 6,
+            "title": "CUSCO – LIMA",
+            "description": "Traslado al aeropuerto para salida.",
+            "overnight": null
+          }
+        ],
+        "hotelCategories": [
+          {
+            "category": "Estándar",
+            "price": 880,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["El Tambo", "Tierra Viva", "Ibis Larco"],
+              "Cusco": ["San Agustin Internacional", "Casona Real", "Illa Hotel"]
+            }
+          },
+          {
+            "category": "Estándar Confort",
+            "price": 940,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["Casa Andina Select", "Tierra Viva Centro", "Libre hotel"],
+              "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"]
+            }
+          },
+          {
+            "category": "Superior",
+            "price": 990,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["Tierra Viva Superior", "Casa Andina Premium", "Jose Antonio"],
+              "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior", "Costa del Sol Estándar"]
+            }
+          },
+          {
+            "category": "Superior Elegante",
+            "price": 1100,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["Sonesta Olivar", "Casa Andina Premium Superior", "José Antonio Deluxe"],
+              "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"]
+            }
+          },
+          {
+            "category": "Luxe",
+            "price": 1420,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "Lima": ["Casa Andina Premium", "Doubletree By Hilton", "Sonesta Olivar Ejecutiva"],
+              "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury", "Aranwa Junior Suite"]
+            }
+          }
+        ],
+        "flightSuggestions": {
+          "routes": [
+            {
+              "from": "Lima",
+              "to": "Arequipa",
+              "departure": "09:15",
+              "arrival": "10:45"
+            },
+            {
+              "from": "Cusco",
+              "to": "Lima",
+              "departure": "11:40",
+              "arrival": "12:50"
+            }
+          ],
+          "prices": [
+            {
+              "description": "Solo Carryon de 10 kilos + Mochila",
+              "price": 170
+            },
+            {
+              "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+              "price": 290
+            }
+          ]
+        },
+        "includes": [
+          "Traslados de Ingreso y Salida en cada Ciudad",
+          "Desayunos en el hotel en toda la estadía",
+          "LIMA: 1 noche de alojamiento + City tour con entradas",
+          "CUSCO: 4 noches de alojamiento + City tour y 4 ruinas Aledañas",
+          "Excursión a Machu Picchu en tren Turista expeditions",
+          "Ticket de tren Ollanta/Machu Picchu/Ollanta-Cusco",
+          "Minibús Aguas Calientes/Ciudadela Machu Picchu/Aguas Calientes",
+          "01 almuerzo en la Montaña de 7 colores"
+        ],
+        "notIncludes": [
+          "Vuelos internacionales",
+          "Vuelos Nacionales ó Internos",
+          "Seguro de Viaje",
+          "Otros gastos que no se detalle"
+        ],
+        "notes": "Gracias por visitar Perú y darnos la oportunidad de Atenderlos",
+        "serviceType": "Servicios grupales y privados",
+        "guideLanguage": "Guía Bilingüe Español/Inglés"
+      }
+    ]
+  }

@@ -387,7 +387,7 @@ const destinosPrincipales = getMainDestinations(tour.days);
         <!-- Right Column (Sidebar) -->
         <div class="lg:col-span-4 space-y-6">
           <!-- Booking Card -->
-          <div class="bg-white rounded-xl shadow-sm p-6 sticky top-6">
+          <div class="bg-white rounded-xl shadow-sm p-6 top-6">
             <h3 class="text-xl font-bold text-gray-900 mb-4">Reserva este tour</h3>
             
             <div class="space-y-4 mb-6">
@@ -413,30 +413,6 @@ const destinosPrincipales = getMainDestinations(tour.days);
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>{tour.duration}</span>
-            </div>
-          </div>
-
-          <!-- Highlights Card -->
-          <div class="bg-white rounded-xl shadow-sm p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Destinos principales</h3>
-            <div class="space-y-4">
-              {destinosPrincipales.map(destino => (
-                <div class="flex items-start space-x-4">
-                  <div class="flex-shrink-0 w-16 h-16 rounded-md overflow-hidden">
-                    <Image
-                      src={highlightImages[destino as keyof typeof highlightImages]}
-                      alt={destino}
-                      width={64}
-                      height={64}
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-gray-900">{destino}</h4>
-                    <p class="text-sm text-gray-500">Experiencias únicas</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 
