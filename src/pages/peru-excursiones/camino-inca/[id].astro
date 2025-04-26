@@ -1,0 +1,284 @@
+---
+// src/pages/peru-excursiones/camino-inca/[id].astro
+import Layout from '../../../layouts/Layout.astro';
+import incaToursData from '../../../data/camino_inca.json';
+import { Image } from 'astro:assets';
+
+// Tipos
+type HotelCategory = {
+  name: string;
+  price: number;
+  includes: string;
+  hotels: Record<string, string[]>;
+};
+
+type IncaTour = {
+  id: string;
+  code: string;
+  title: string;
+  duration: string;
+  description: string;
+  itinerary: Array<{
+    day: number;
+    title: string;
+    description: string;
+  }>;
+  hotel_categories: HotelCategory[];
+  flight_suggestions: {
+    [key: string]: string;
+    prices: Array<{
+      description: string;
+      price: number;
+    }>;
+  };
+  includes: string[];
+  excludes: string[];
+};
+
+// Obtener tour específico
+export async function getStaticPaths() {
+  return incaToursData.tours.map((tour: IncaTour) => ({
+    params: { id: tour.id },
+    props: { tour },
+  }));
+}
+
+const { id } = Astro.params;
+const tour = incaToursData.tours.find((t: IncaTour) => t.id === id);
+
+if (!tour) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Tour no encontrado'
+  });
+}
+
+// Importar imágenes
+import incaTrailHero from '../../../images/cusco/cusco.jpg';
+import machuPicchuHero from '../../../images/cusco/cusco-3.jpg';
+import rainbowMountainHero from '../../../images/cusco/cusco-2.jpg';
+import campamento from '../../../images/cusco/cusco-5.jpg';
+import ruinas from '../../../images/cusco/cusco-6.jpg';
+import tren from '../../../images/cusco/cusco-4.jpg';
+
+// Mapeo de imágenes para galería
+const obtenerImagenesTour = (id: string) => {
+  const galerias: Record<string, any[]> = {
+    "CT8425.I.1": [incaTrailHero, campamento, tren, ruinas],
+    "CT8425.I.2": [machuPicchuHero, campamento, tren, ruinas],
+    "CT8425.I.3": [rainbowMountainHero, campamento, tren, ruinas]
+  };
+  return galerias[id] || [incaTrailHero];
+};
+
+const imagenes = obtenerImagenesTour(tour.id);
+
+// Función para formatear precios
+const formatPrice = (price: number) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  }).format(price);
+};
+---
+
+<Layout title={`${tour.title} - ${tour.code}`} description={tour.description || ''}>
+  <div class="bg-white">
+    <!-- Hero Section -->
+    <div class="relative h-64 md:h-96 overflow-hidden">
+      <Image
+        src={imagenes[0]}
+        alt={`Imagen principal de ${tour.title}`}
+        class="w-full h-full object-cover"
+        width={1600}
+        height={900}
+        format="webp"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+        <div class="container mx-auto px-6 pb-8 text-white">
+          <!-- <span class="inline-block bg-[#468E8E] text-white px-3 py-1 rounded-full text-sm mb-2">
+            {tour.code}
+          </span> -->
+          <span class="text-white title-bg text-4xl md:text-5xl font-bold text-center px-4 drop-shadow-lg">
+            {tour.title}</span>
+          <!-- <p class="text-lg">{tour.duration}</p> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Columna izquierda - Información del tour -->
+        <div class="lg:col-span-2">
+          <!-- Descripción -->
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-[#468E8E] mb-4">Descripción del Tour</h2>
+            <p class="text-gray-700">{tour.description}</p>
+          </div>
+
+          <!-- Itinerario -->
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-[#468E8E] mb-6">Itinerario Detallado</h2>
+            <div class="space-y-8">
+              {tour.itinerary.map((dia) => (
+                <div key={dia.day} class="relative pl-8 pb-8 border-l-4 border-[#468E8E]">
+                  <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-[#468E8E] flex items-center justify-center text-white font-bold">
+                    {dia.day}
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-2">{dia.title}</h3>
+                  <p class="text-gray-700">{dia.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Incluye/No incluye -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-[#468E8E] mb-4">El Tour Incluye</h3>
+              <ul class="space-y-2">
+                {tour.includes.map((item, index) => (
+                  <li key={index} class="flex items-start">
+                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#468E8E] mb-4">No Incluye</h3>
+              <ul class="space-y-2">
+                {tour.excludes.map((item, index) => (
+                  <li key={index} class="flex items-start">
+                    <svg class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <span class="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna derecha - Sidebar -->
+        <div class="space-y-8">
+          <!-- Categorías de hoteles -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-[#468E8E] mb-4">Opciones de Alojamiento</h3>
+            <div class="space-y-6">
+              {tour.hotel_categories.map((categoria) => (
+                <div key={categoria.name} class="border-b border-gray-200 pb-4 last:border-0 last:pb-0">
+                  <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-gray-800">{categoria.name}</h4>
+                    <span class="font-bold text-[#468E8E]">{formatPrice(categoria.price)}</span>
+                  </div>
+                  <p class="text-xs text-gray-500 mb-3">{categoria.includes}</p>
+                  
+                  <div class="space-y-2">
+                    {Object.entries(categoria.hotels).map(([ciudad, hoteles]) => (
+                      <div key={ciudad}>
+                        <p class="text-sm font-medium text-gray-700">{ciudad}:</p>
+                        <ul class="text-sm text-gray-600 pl-4">
+                          {hoteles.map((hotel, i) => (
+                            <li key={i} class="list-disc">{hotel}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Vuelos sugeridos -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-[#468E8E] mb-4">Vuelos Sugeridos</h3>
+            <div class="space-y-4">
+              <div>
+                <p class="font-medium text-gray-800">Lima-Cusco:</p>
+                <p class="text-gray-600">{tour.flight_suggestions['Lima-Cusco']}</p>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Cusco-Lima:</p>
+                <p class="text-gray-600">{tour.flight_suggestions['Cusco-Lima']}</p>
+              </div>
+              <div class="pt-4 border-t border-gray-200">
+                <h4 class="font-medium text-gray-800 mb-2">Opciones de equipaje:</h4>
+                <ul class="space-y-2">
+                  {tour.flight_suggestions.prices.map((item, index) => (
+                    <li key={index} class="flex justify-between">
+                      <span class="text-gray-600">{item.description}</span>
+                      <span class="font-medium">{formatPrice(item.price)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Galería -->
+          {imagenes.length > 1 && (
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-[#468E8E] mb-4">Galería</h3>
+              <div class="grid grid-cols-2 gap-4">
+                {imagenes.slice(1, 5).map((img, index) => (
+                  <a href={img.src} target="_blank" rel="noopener noreferrer" class="group">
+                    <Image
+                      src={img}
+                      alt={`Galería ${tour.title} ${index + 1}`}
+                      class="w-full h-32 object-cover rounded-lg group-hover:opacity-80 transition-opacity"
+                      width={200}
+                      height={200}
+                      format="webp"
+                      loading="lazy"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- CTA Reserva -->
+          <div class="bg-[#468E8E] rounded-xl p-6 text-center text-white">
+            <h3 class="text-xl font-bold mb-2">¿Interesado en este tour?</h3>
+            <p class="mb-4">Reserva ahora y asegura tu cupo</p>
+            <a 
+              href="/#contacto" 
+              class="inline-block bg-white text-[#468E8E] font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Solicitar Reserva
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Estilos para el itinerario con línea de tiempo */
+  .border-l-4 {
+    position: relative;
+  }
+
+  /* Efectos hover para imágenes */
+  .group-hover\:opacity-80:hover {
+    opacity: 0.8;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .h-64 {
+      height: 16rem;
+    }
+    .h-96 {
+      height: 24rem;
+    }
+  }
+</style>

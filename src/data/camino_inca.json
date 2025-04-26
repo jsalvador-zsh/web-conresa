@@ -1,0 +1,337 @@
+{
+    "tours": [
+      {
+        "id": "CT8425.I.1",
+        "code": "CT8425.I.1",
+        "title": "Privado: Cusco y Camino Inca Rapid",
+        "duration": "5 Días",
+        "description": "Tocar el cielo con nuestras manos, gozar con el ecosistema, paraíso natural que nos envuelve en su magia singular y el aire ancestral de Machupicchu.",
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "CUSCO – CITY TOUR",
+            "description": "Recepción y traslado del aeropuerto de Cusco al hotel. Visita la ciudad, la Catedral, Plaza de Armas, Koricancha o Templo del Sol, Fortaleza de Sacsayhuamán, Complejo Arqueológico de Qenko, Pukapukara y Tambomachay. \nA las 14.00 hrs visita la ciudad, la Catedral sobresalen por su belleza el coro y el púlpito, continuamos el recorrido por la Plaza de Armas, el Koricancha o Templo del Sol era una de las edificaciones más impactantes del Cusco incaico; luego nos dirigimos a 10 minutos en auto de la ciudad a La Fortaleza de Sacsayhuamán. \nNos alejamos más de la ciudad 15 minutos aprox. y visitamos las Ruinas Cercanas al Cusco: tales como el Complejo Arqueológico de Qenko o «laberinto» es considerado un lugar sagrado en el que se oficiaban ceremonias en honor al Sol, la Luna y las Estrellas. \nOtra ruina es el Complejo Arqueológico de Pukapukara (30 minutos en auto) El complejo cuenta con numerosos recintos, plazas interiores, acueductos, atalayas y caminos. Y para terminar visitaremos el Complejo arqueológico de Tambomachay el cual habría cumplido una importante función religiosa vinculada al agua. Retorno a la ciudad. Pernocte  en el hotel."
+          },
+          {
+            "day": 2,
+            "title": "CUSCO – CAMINO INCA A MACHUPICCHU",
+            "description": "Desayuno en el hotel.  4.00 am  Salida desde Cusco hasta Ollantaytambo, abordaremos el tren turístico hasta el KM 104. Iniciaremos la caminata desde Chachabamba, visitaremos el centro arqueológico de Wiñaywayna y pasaremos por el exuberante bosque nuboso que cubre la montaña y podremos ver una variedad de flora, aves, entre otros. Una vez lleguemos al “Inti Punku” seremos uno de los primeros en visitar Machupicchu, continuaremos por el sendero hasta el pueblo de Aguas Calientes. \nTraslado al hotel elegido en Aguas Calientes. \nPernocte en el hotel. \nIncluye : box lunch."
+          },
+          {
+            "day": 3,
+            "title": "MACHUPICCHU – OLLANTAYTAMBO – CUSCO",
+            "description": "Desayuno en el hotel. \n8.00 am visita guiada por dos horas en el Santuario de Machupicchu (Los sectores a visitar en Machupicchu, depende de la opción de compra que se realizó al momento de hacer la reserva) (se sugiere comprar con mucha anticipación para tener una buena visita de la Ciudadela). \nIngreso a Huayna Picchu es opcional, costo ingreso adicional $60 dolares  por persona). \nReparador almuerzo  para luego abordar al tren turístico. (horario de tren sujeto a la disponibilidad del asiento en el tren). Arribo a Ollantaytambo y traslado al hotel de Cusco. \nPernocte en el hotel elegido."
+          },
+          {
+            "day": 4,
+            "title": "MONTAÑA DE COLORES",
+            "description": "04:00 am . la movilidad  lo recogerá  de su hotel para luego dirigirnos hacia la zona sur de Cusco por un tiempo aprox. De 2 horas hasta el pueblo de Pitumarca donde tendremos un desayuno, posteriormente continuaremos por 1 hora más hasta Hanchipachi zona de Parqueo 4,530msnm aprox. Desde donde iniciaremos nuestra caminata por un sendero de fácil acceso por un tiempo estimado de 1:30 a 2:00 horas y llegaremos a la Montaña de Colores, donde podremos apreciar paisajes mágicos ubicados a 5.000msnm. Aprox. \nDespués de disfrutar de la maravilla que nos presenta nuestra madre naturaleza, regresaremos por la misma ruta, donde nos espera nuestro transporte que nos  llevará al lugar del almuerzo.Retorno a Cusco.16:00 Hrs. \nTraslado a su hotel elegido. \nPernocte en  el hotel de Cusco. \n(Incluye: Desayuno y almuerzo básico.)"
+          },
+          {
+            "day": 5,
+            "title": "CUSCO – SALIDA",
+            "description": "Dulce despertar. \nDesayuno en el hotel. \nA hora oportuna traslado de su  hotel al Aeropuerto."
+          }
+        ],
+        "hotel_categories": [
+          {
+            "name": "ESTÁNDAR",
+            "price": 939,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casona Real", "Illa Hotel"],
+              "AGUAS CALIENTES": ["Casa de Luz", "Hatun Samay"]
+            }
+          },
+          {
+            "name": "ESTÁNDAR CONFORT",
+            "price": 982,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["TAYPIKALA", "LOS APUS", "ANAHUARQUE"],
+              "AGUAS CALIENTES": ["Casa de Luz", "Hatun Samay"]
+            }
+          },
+          {
+            "name": "SUPERIOR",
+            "price": 999,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casa Andina Koricancha", "Tierra Viva", "Xima"],
+              "AGUAS CALIENTES": ["Casa Andina", "Tierra Viva"]
+            }
+          },
+          {
+            "name": "SUPERIOR ELEGANTE",
+            "price": 1086,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casa Andina Catedral", "Sonesta Cusco", "Tierra Viva Superior", "Xima Superior"],
+              "AGUAS CALIENTES": ["El Mapi"]
+            }
+          },
+          {
+            "name": "LUXE",
+            "price": 1160,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casa Andina Premium", "Costa del Sol", "Palacio Manco Capac"],
+              "AGUAS CALIENTES": ["Casa del Sol"]
+            }
+          }
+        ],
+        "flight_suggestions": {
+          "Lima-Cusco": "Sale 08:00 Llega 09:20",
+          "Cusco-Lima": "Sale 11:40 Llega 12:50",
+          "prices": [
+            {
+              "description": "Solo Carryon de 10 kilos + Mochila",
+              "price": 170
+            },
+            {
+              "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+              "price": 220
+            }
+          ]
+        },
+        "includes": [
+          "Traslados de Ingreso y Salida en Cusco",
+          "3 Noches de alojamiento en Cusco",
+          "Tour CAMINO INCA RUTA CORTA 02 Dias/01 Noche",
+          "Traslados en bus y tren",
+          "Ingresos para el Camino Inca y Machupicchu",
+          "1 Noche en Aguas Calientes",
+          "Guía Profesional bilingüe",
+          "Bus de bajada de Machupicchu",
+          "Visita Montaña de 7 colores con alimentación básica"
+        ],
+        "excludes": [
+          "Vuelos internacionales",
+          "Vuelos Nacionales ó Internos",
+          "Seguro de Viaje",
+          "Otros gastos no detallados"
+        ]
+      },
+      {
+        "id": "CT8425.I.2",
+        "code": "CT8425.I.2",
+        "title": "En Grupo: Camino Inca Tradicional",
+        "duration": "6 Días",
+        "description": "La tradición de la cultura inca singular, llena de arqueología, fauna y flora enmarcan la naturaleza.",
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "CUSCO",
+            "description": "Recepción y traslado del aeropuerto de Cusco  al hotel Seleccionado de la Ciudad Imperial Cusco. (se sugiere vuelo temprano para tener  tiempo de visitar la Ciudad  y las cuatro ruinas aledañas, opcional)."
+          },
+          {
+            "day": 2,
+            "title": "CUSCO – KM. 82 – HUAYLLABAMBA Caminata de 6 horas (12 Km)",
+            "description": "Desayuno en el hotel. 5:30 a.m., lo recogemos del hotel para dirigirnos al kilómetro 82 en bus. Después de pasar el control, comenzamos la caminata, a orillas del río Urubamba, hasta llegar al grupo arqueológico importante Llactapata. \n13.00 hrs  almuerzo frio, box Lunch. \nLa caminata completa nos llevara aproximadamente 6 horas hasta llegar al primer campamento en Huayllabamba. \nDistancia Total: 12 Km. (7,47 miles). \nTiempo aproximado de Caminata: 5-6 horas. Altitud del Campamento: 3,000 m (9,840 ft). \nCena en el campamento"
+          },
+          {
+            "day": 3,
+            "title": "HUAYLLABAMBA – PACAYMAYU",
+            "description": "Desayuno en el campamento.Maravilloso,  atravesar 2 pasos muy altos, incluyendo Warmiwañusca, con 4,200 m.s.n.m. Ese es el punto mas alto de la caminata, que lo cruzaremos respirando con dificultad y sorprendiéndonos por las impresionantes vistas panorámicas de dos montañas y nevados, y el hermoso valle semi tropical. Vista al conjunto arqueológico de Runkurakay y Sayacmarca. Acamparemos en Pacaymayu. \nDistancia Total: 11 Km. (6,84 miles) \nTiempo Aproximado de Caminata: 6-7 horas \nAltitud Máxima: 4,200 m (13,776 ft) \nAltitud del Campamento: 3,500 m (11,480 ft). \nAlmuerzo, cena  en el campamento."
+          },
+          {
+            "day": 4,
+            "title": "PACAYMAYU – WIÑAYWAYNA",
+            "description": "Desayuno en el campamento. \nCaminata de  10 kilómetros y la mayor parte de la ruta es plana y con muchos pendientes de bajada. \nObservamos como la geografía va cambiando, de seco y montañoso, a verde y semi tropical (ceja de selva) visita los sitios arqueológicos de Phuyupatamarca, Intipata hasta finalmente llegar a Wiñaywayna donde instalaremos nuestro campamento de la caminata. \nDistancia Total: 16 Km. (9,94 miles). \nTiempo Aproximado de Caminata: 8 horas—Altitud del Campamento: 2,650 m (8,692 ft) Almuerzo y cena en el campamento."
+          },
+          {
+            "day": 5,
+            "title": "WIÑAYWAYNA – MACHUPICCHU – CUSCO",
+            "description": "Desayuno en el campamento. \nExperiencia Inolvidable salida 5.30 am  de  Inti Punku (La puerta del Sol), la entrada a la antigua ciudad Inca de Machupicchu, (Los sectores a visitar en Machupicchu, depende de la  opción de compra que se realizó al momento de hacer la reserva) ( se sugiere comprar con mucha anticipación para tener una  buena visita  de la Ciudadela). \nLas Montañas a nuestros pies, luego de descender recorreremos este mágico lugar y tendremos un tour guiado aproximadamente 2 horas. Por la tarde tomaran el bus para bajar al pueblo de Aguas Calientes y retornar a Cuzco en tren expedition. \nDistancia Total: 4 Km. (2,49 miles). \nTiempo Aproximado de Caminata: 2 horas \nAltitud del Campamento: 2,400 m (7,872 ft) \nAlmuerzo en el pueblo de Aguas Calientes. \nTraslado de la estación de Tren de Cusco hacia el hotel Seleccionado. \nPernocte en el hotel"
+          },
+          {
+            "day": 6,
+            "title": "CUSCO – SALIDA",
+            "description": "Desayuno en el hotel. \nA hora oportuna traslado del hotel al aeropuerto ."
+          }
+        ],
+        "hotel_categories": [
+          {
+            "name": "ESTÁNDAR",
+            "price": 876,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casona Real", "Illa Hotel"]
+            }
+          },
+          {
+            "name": "ESTÁNDAR CONFORT",
+            "price": 893,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["TAYPIKALA", "LOS APUS", "ANAHUARQUE"]
+            }
+          },
+          {
+            "name": "SUPERIOR",
+            "price": 899,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casa Andina Koricancha", "Tierra Viva", "Xima"]
+            }
+          },
+          {
+            "name": "SUPERIOR ELEGANTE",
+            "price": 930,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casa Andina Catedral", "Sonesta Cusco", "Tierra Viva Superior", "Xima Superior"]
+            }
+          },
+          {
+            "name": "LUXE",
+            "price": 950,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casa Andina Premium", "Costa del Sol", "Palacio Manco Capac"]
+            }
+          }
+        ],
+        "flight_suggestions": {
+          "Lima-Cusco": "Sale 08:00 Llega 09:20",
+          "Cusco-Lima": "Sale 11:40 Llega 12:50",
+          "prices": [
+            {
+              "description": "Solo Carryon de 10 kilos + Mochila",
+              "price": 170
+            },
+            {
+              "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+              "price": 220
+            }
+          ]
+        },
+        "includes": [
+          "Traslados de Ingreso y Salida en Cusco",
+          "02 Noches de alojamiento en Cusco",
+          "Excursión CAMINO INCA 04 DIAS/03 NOCHES",
+          "Ingresos para el Camino Inca y Machupicchu",
+          "Equipo de campamento completo",
+          "Alimentación durante el camino (3 desayunos, 3 almuerzos, 3 cenas)",
+          "Guía profesional bilingüe",
+          "Porteadores y cocinero",
+          "Botiquín de primeros auxilios y oxígeno"
+        ],
+        "excludes": [
+          "Vuelos internacionales",
+          "Vuelos Nacionales ó Internos",
+          "Seguro de Viaje",
+          "Otros gastos no detallados"
+        ]
+      },
+      {
+        "id": "CT8425.I.3",
+        "code": "CT8425.I.3",
+        "title": "5 días esenciales Ciudad imperial/Maravilla del Mundo & Montaña 7 Colores",
+        "duration": "5 Días",
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "CUSCO – CITY TOUR Y RUINAS CERCANAS",
+            "description": "Recepción en el aeropuerto de la ciudad Imperial del Cusco y traslado al hotel. Por la tarde visitaremos la ciudad en ella la Catedral sobresalen por su belleza el coro y el púlpito, continuamos el recorrido por la Plaza de Armas, el Koricancha o Templo del Sol era una de las edificaciones más impactantes del Cusco incaico; luego nos dirigimos a 10 minutos en auto de la ciudad a La Fortaleza de Sacsayhuamán. \nNos alejamos más de la ciudad 15 minutos aprox. y visitamos las Ruinas Cercanas al Cusco: tales como el Complejo Arqueológico de Qenko o «laberinto» es considerado un lugar sagrado en el que se oficiaban ceremonias en honor al Sol, la Luna y las Estrellas. Otra ruina es el Complejo Arqueológico de Pukapukara (30 minutos en auto). \nEl complejo cuenta con numerosos recintos, plazas interiores, acueductos, atalayas y caminos. Y para terminar visitaremos el Complejo arqueológico de Tambomachay el cual habría cumplido una importante función religiosa vinculada al agua. Retorno a la ciudad. \nPernocte en el hotel seleccionado de Cusco."
+          },
+          {
+            "day": 2,
+            "title": "VALLE SAGRADO DE URUBAMBA – AGUAS CALIENTES",
+            "description": "Dulce despertar. Desayuno en  el hotel. Recojo desde su hotel; luego iniciaremos nuestra excursión: Valle Sagrado de los Incas. Este hermoso valle está compuesto por numerosos ríos que descienden por quebradas llenas de verdor y pequeños valles. \nPrimero nos dirigiremos a las Ruinas de Pisaq, impresionante construcción edificada en el periodo del auge del imperio Incaico. Aquí podremos observar la gran labor lograda por los Incas, a través de un sin fin de terrazas agrícolas que adornan virtualmente todas las montañas a su alrededor. \nEn el centro del templo de Pisaq, podremos observar un intiwatana (reloj solar) y finas edificaciones habitadas por la nobleza Inca hace 500 años. Luego de nuestra visita a esta antigua ciudadela Inca, visitaremos el pueblo moderno de Pisaq, la cual está ubicada a la margen derecha del río Urubamba, y está poblada casi en un totalidad por los descendientes de los Incas. \nAquí visitaremos un pintoresco mercado artesanal, y podremos ver como hasta hoy la gente de este lugar mantiene la tradición de intercambiar sus cosas o alimentos, tal como lo hacían en el pasado. Almuerzo  en unos de los típicos restaurantes de este poblado. Ollantaytambo, visitaremos la hermosa fortaleza que lleva el mismo nombre. Aquí recorremos los sectores más importantes, y nuestro guía nos dará una explicación sobre este lugar. Traslado a la estación de Ollanta para tomar el tren que nos llevara a Aguas Calientes (un pequeño poblado cerca al Santuario de Machu Picchu). \nEl viaje en tren dura aproximadamente 2 horas, y ofrece sobre el trayecto espectaculares paisajes que combinan sierra y selva. Sin duda alguna este es uno de los paseos más espectaculares que tenemos en Perú ya que ofrece hermosos paisajes durante todo el trayecto. Salida 16:36 llegando 18:00 Hrs. \nArribo en Aguas Calientes y traslado a su hotel; alojamiento en Aguas Calientes. Incluye: Almuerzo. \nPernocte en el hotel seleccionado de Aguas Calientes "
+          },
+          {
+            "day": 3,
+            "title": "MACHUPICCHU – CUSCO",
+            "description": "Desayuno en el hotel. \nSalida de la estación de bus para tomar el transporte que nos llevara hacia las ruinas de Machu Picchu. Este breve viaje en bus dura solo 20 minutos y recorre una pista no asfaltada, muy empinada y zigzagueante a través de una montaña con características selváticas y vistas impresionantes. \nFinalmente llegaremos al Santuario de Machu Picchu donde nuestro guía local nos hará un recorrido por los sectores más importantes de esta bella ciudadela Incaica. En Machu Picchu haremos un recorrido de 2 horas con nuestro guía y visitaremos la zona agrícola, formada por conjuntos de terrazas de cultivo, la zona urbana donde vivieron sus ocupantes y donde se desarrollaron las principales actividades civiles y religiosas. (Los sectores a visitar en Machupicchu, depende de la  opción de compra que se realizó al momento de  hacer la reserva) ( se sugiere comprar con mucha anticipación para tener una  buena visita  de la Ciudadela). \nTambién visitaremos el Intiwatana de Machu Picchu ubicado en la parte más alta de la ciudadela, el templo del sol, del cóndor y otros sectores importantes. Más tarde ustedes tendrán tiempo libre para poder explorar la ciudad por vuestra cuenta. Por la tarde, estaremos tomando el bus de regreso hacia Aguas Calientes en donde podrán almorzar (No incluye almuerzo). \nRetorno en tren Expedition  a Cusco . Recepción y traslado al hotel elegido. \nPernocte en el hotel seleccionado de Cusco."
+          },
+          {
+            "day": 4,
+            "title": "CUSCO – MONTAÑA DE 7 COLORES",
+            "description": "Dulce despertar. \nRecojo de su Hotel 04:00 Hrs. para luego dirigirnos hacia la zona sur de Cusco por un tiempo aprox. de 2 horas hasta el poblado de Kusipata. Allí disfrutaremos de un desayuno que nos dará la energía necesaria para afrontar la ruta de trekking por la Montaña Arcoíris. Transcurrido este tiempo, llegarmos a una comunidad campesina, desde donde comenzamos la caminata a 4600 metros sobre el nivel del mar. \nSiguiendo las indicaciones del guía, ascenderemos entre misteriosas cumbres mientras nos topamos con animales andinos como alpacas, ovejas y vicuñas. Tras una hora y 45 minutos de subida, llegaremos a la espectacular Montaña Arcoíris, también conocida como Vinicunca o la Montaña de los Siete Colores. Nada más verla, descubrirá por qué su majestuosidad la ha hecho merecedora de un puesto en la lista de los 100 lugares que se deben visitar antes de morir, según la revista National Geographic. \nSeguidamente emprenderemos el descenso hacia el autobús siguiendo el mismo recorrido por el que llegamos. Por suerte, ¡bajar es más fácil que subir! Regresaremos a Kusipata para disfrutar de una comida tipo buffet. \nAl concluir el almuerzo, regresaremos al centro de Cusco aprox. 16:00 Hrs. \nTraslado a su hotel elegido. \nPernocte en el hotel seleccionado de Cusco."
+          },
+          {
+            "day": 5,
+            "title": "CUSCO – SALIDA",
+            "description": "Dulce despertar. \nDesayuno en el hotel. \nA hora oportuna traslado del hotel al aeropuerto."
+          }
+        ],
+        "hotel_categories": [
+          {
+            "name": "ESTÁNDAR",
+            "price": 730,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casona Real", "Illa Hotel"],
+              "AGUAS CALIENTES": ["Casa de Luz", "Hatun Samay"]
+            }
+          },
+          {
+            "name": "ESTÁNDAR CONFORT",
+            "price": 788,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["TAYPIKALA", "LOS APUS", "ANAHUARQUE"],
+              "AGUAS CALIENTES": ["Casa de Luz", "Hatun Samay"]
+            }
+          },
+          {
+            "name": "SUPERIOR",
+            "price": 835,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casa Andina Koricancha", "Tierra Viva", "Xima"],
+              "AGUAS CALIENTES": ["Casa Andina", "Tierra Viva"]
+            }
+          },
+          {
+            "name": "SUPERIOR ELEGANTE",
+            "price": 955,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casa Andina Catedral", "Sonesta Cusco", "Tierra Viva Superior", "Xima Superior"],
+              "AGUAS CALIENTES": ["El Mapi"]
+            }
+          },
+          {
+            "name": "LUXE",
+            "price": 1291,
+            "includes": "Impuestos y cargo por transferencia",
+            "hotels": {
+              "CUSCO": ["Casa Andina Premium", "Costa del Sol", "Palacio Manco Capac"],
+              "AGUAS CALIENTES": ["Casa del Sol"]
+            }
+          }
+        ],
+        "flight_suggestions": {
+          "Lima-Cusco": "Sale 08:00 Llega 09:20",
+          "Cusco-Lima": "Sale 11:40 Llega 12:50",
+          "prices": [
+            {
+              "description": "Solo Carryon de 10 kilos + Mochila",
+              "price": 170
+            },
+            {
+              "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+              "price": 220
+            }
+          ]
+        },
+        "includes": [
+          "Traslados de Ingreso y Salida en Cusco",
+          "03 Noches en Cusco",
+          "01 noche en Aguas Calientes",
+          "Excursión al Valle Sagrado con almuerzo",
+          "Excursión a Machu Picchu en tren Expedition",
+          "Minibús Aguas Calientes/Machu Picchu/Aguas Calientes",
+          "Excursión a la Montaña Arcoíris con almuerzo"
+        ],
+        "excludes": [
+          "Vuelos internacionales",
+          "Vuelos Nacionales ó Internos",
+          "Seguro de Viaje",
+          "Otros gastos no detallados"
+        ]
+      }
+    ]
+  }
