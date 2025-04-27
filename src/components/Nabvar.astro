@@ -8,6 +8,7 @@ import FlagBR from "../icons/FlagBR.astro";
 import Phone from "../icons/Phone.astro";
 import Menu from "../icons/Hamburger.astro";
 import Close from "../icons/Close.astro";
+import FlagPE from "../icons/FlagPE.astro";
 
 // Props
 export interface Props {
@@ -15,479 +16,757 @@ export interface Props {
   phoneNumbers?: string[];
 }
 
-const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } = Astro.props;
+const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } =
+  Astro.props;
 ---
+
 <!-- Navbar principal -->
 <header class="sticky top-0 z-50 bg-white shadow">
   <!-- Primera fila - Logo, teléfono y selector de idioma -->
   <div class="bg-[#468E8E]">
-    <nav class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+    <nav
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto"
+    >
       <div class="flex items-center space-x-6 rtl:space-x-reverse">
         <a href="/" class="bg-[#468E8E] inline-flex p-3 md:p-4">
-          <Image src={LogoConresa} alt={logoAlt} class="h-12 w-auto md:h-12 lg:h-16" />
+          <Image
+            src={LogoConresa}
+            alt={logoAlt}
+            class="h-12 w-auto md:h-12 lg:h-16"
+          />
         </a>
-        
+
         <!-- Teléfono - Solo visible en desktop -->
         <ul class="hidden md:flex items-center space-x-6">
-          {phoneNumbers.map((number) => (
-            <li class="flex text-xl items-center gap-x-1 italic text-white">
-              <Phone class="size-4 text-white" />
-              <span>{number}</span>
-            </li>
-          ))}
+          {
+            phoneNumbers.map((number) => (
+              <li class="flex text-xl items-center gap-x-1 italic text-white">
+                <FlagPE class="h-7 w-8 me-4" />
+                <Phone class="size-4 text-white" />
+                <span>{number}</span>
+              </li>
+            ))
+          }
         </ul>
       </div>
-  
-      <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <!-- Language Dropdown -->
-        <div class="relative">
-          <button
-            type="button"
-            id="language-dropdown-button"
-            class="inline-flex items-center rounded-md justify-center px-4 py-2 text-sm md:text-base text-white cursor-pointer"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <FlagUS class="size-5 rounded-full me-3" />
-            English
-          </button>
-  
-          <!-- Language Dropdown Menu -->
-          <div
-            id="language-dropdown-menu"
-            class="z-50 hidden absolute right-0 my-4 text-base list-none rounded-md bg-white divide-y divide-gray-100 shadow-sm"
-          >
-            <ul class="py-2" role="menu">
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm md:text-base hover:bg-[#468E8E] hover:text-white"
-                  role="menuitem"
-                >
-                  <div class="inline-flex items-center">
-                    <FlagES class="size-5 rounded-full me-2" />
-                    Español
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm md:text-base hover:bg-[#468E8E] hover:text-white"
-                  role="menuitem"
-                >
-                  <div class="inline-flex items-center">
-                    <FlagBR class="size-5 rounded-full me-2" />
-                    Português
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-  
-        <!-- Hamburger Button -->
-        <button
-          id="menu-button"
-          class="md:hidden z-50 p-2 rounded-md focus:outline-none"
-          aria-label="Menú de navegación"
-          aria-expanded="false"
-        >
-          <Menu id="menu-icon" class="size-6 text-white" />
-          <Close id="close-icon" class="size-6 hidden" />
-        </button>
+
+      <div class="md:flex hidden items-center space-x-3 md:space-x-0">
+        <a href="#"><FlagUS class="h-6 w-7 me-4" /></a>
+        <a href="#"><FlagES class="h-6 w-7 me-4" /></a>
+        <a href="#"><FlagBR class="h-6 w-7 me-4" /></a>
       </div>
+      <!-- Hamburger Button -->
+      <button
+        id="menu-button"
+        class="md:hidden z-50 p-2 rounded-md focus:outline-none"
+        aria-label="Menú de navegación"
+        aria-expanded="false"
+      >
+        <Menu id="menu-icon" class="size-6 text-white" />
+        <Close id="close-icon" class="size-6 hidden" />
+      </button>
     </nav>
   </div>
-
-  <!-- Segunda fila - Menú principal con dropdowns -->
-  <nav class="max-w-screen-xl mx-auto hidden md:block">
-    <ul class="flex flex-wrap items-center justify-center text-sm md:text-base py-2">
-      <!-- Dropdown Sobre Nosotros -->
-      <li class="relative group">
-        <button
-          id="about-dropdown-button"
-          class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#468E8E]"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Sobre Nosotros
-          <svg
-            class="w-2.5 h-2.5 ms-2.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 10 6"
-          >
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-          </svg>
-        </button>
-        <!-- Dropdown menu -->
-        <div
-          id="about-dropdown-menu"
-          class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
-        >
-          <ul class="py-2 text-sm md:text-base text-gray-700">
-            <li>
-              <a href="/about" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">¿Quiénes somos?</a>
-            </li>
-            <li>
-              <a href="/service" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">¿Por qué viajar con nosotros?</a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      
-      <!-- Enlace simple -->
-      <li><a href="#" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]">Internacionales</a></li>
-      <li class="relative group">
-        <button
-          id="excursiones-dropdown-button"
-          class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#468E8E]"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Perú Excursiones
-          <svg
-            class="w-2.5 h-2.5 ms-2.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 10 6"
-          >
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-          </svg>
-        </button>
-        <!-- Dropdown menu -->
-        <div
-          id="excursiones-dropdown-menu"
-          class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
-        >
-          <ul class="py-2 text-sm md:text-base text-gray-700">
-            <li>
-              <a href="/peru-excursiones/camino-inca" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Camino Inca</a>
-            </li>
-            <li>
-              <a href="/peru-excursiones/peru-sur-magico" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Perú sur mágico</a>
-            </li>
-            <li>
-              <a href="/peru-excursiones/aniversario-bodas" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Luna de miel / Perú Luxe</a>
-            </li>
-            <li>
-              <a href="/peru-excursiones/inolvidable-aniversario" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Inolvidable aniversario</a>
-            </li>
-            <li>
-              <a href="/peru-excursiones/aniversario-en-peru" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Aniversario en Perú</a>
-            </li>
-            <li>
-              <a href="/peru-excursiones/peru-a-tu-alcance" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Perú a tu alcance</a>
-            </li>
-            <li>
-              <a href="/peru-excursiones/machupichu-y-el-sur" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Machupicchu y el sur</a>
-            </li>
-            <li>
-              <a href="/peru-excursiones/peru-turistico-del-sur" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Perú turístico del sur</a>
-            </li>
-            <li>
-              <a href="/peru-excursiones/cusco-al-paso" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Cusco al paso</a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <!-- Dropdown Arequipa -->
-      <li class="relative group">
-        <button
-          id="arequipa-dropdown-button"
-          class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#468E8E]"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Arequipa
-          <svg
-            class="w-2.5 h-2.5 ms-2.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 10 6"
-          >
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-          </svg>
-        </button>
-        <!-- Dropdown menu principal -->
-        <div
-          id="arequipa-dropdown-menu"
-          class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
-        >
-          <ul class="py-2 text-sm md:text-base text-gray-700">
-            <li class="relative">
-              <button
-                id="arequipa-submenu-button"
-                class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#468E8E] hover:text-white"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Arequipa
-                <svg
-                  class="w-2.5 h-2.5 ms-2"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                </svg>
-              </button>
-              <!-- Submenu -->
-              <div
-                id="arequipa-submenu"
-                class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44"
-              >
-                <ul class="py-2 text-sm md:text-base text-gray-700">
-                  <li>
-                    <a href="/arequipa-paquetes" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Paquetes</a>
-                  </li>
-                  <li>
-                    <a href="/arequipa-tours" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Tours</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="relative">
-              <button
-                id="colca-submenu-button"
-                class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#468E8E] hover:text-white"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Colca
-                <svg
-                  class="w-2.5 h-2.5 ms-2"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                </svg>
-              </button>
-              <!-- Submenu -->
-              <div
-                id="colca-submenu"
-                class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44"
-              >
-                <ul class="py-2 text-sm md:text-base text-gray-700">
-                  <li>
-                    <a href="/colca-tours" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Valle del Colca</a>
-                  </li>
-                  <li>
-                    <a href="/volcanes-tours" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Valle de los volcanes</a>
-                  </li>
-                  <li>
-                    <a href="/trekking-colca" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Trekking</a>
-                  </li>
-                  <li>
-                    <a href="/climbing-colca" class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white">Climbing</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-      
-      <!-- Enlaces simples -->
-      <li><a href="/alpacas" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]">Alpacas</a></li>
-      <li><a href="/mice" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]">Mice</a></li>
-      <li><a href="/bodas" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]">Bodas en Destino</a></li>
-      <li><a href="/blog" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]">Blog</a></li>
-    </ul>
-  </nav>
 </header>
 
-<!-- Menú móvil -->
-<div
-  id="mobile-menu"
-  class="fixed inset-0 bg-white/90 backdrop-blur-md z-40 flex flex-col items-end justify-center transition-all duration-300 ease-in-out transform translate-x-full pr-4"
-  aria-hidden="true"
->
-  <ul class="space-y-4 text-base w-full text-right">
-    <!-- Dropdown Sobre Nosotros - Móvil -->
-    <li class="relative w-full">
+<!-- Segunda fila - Menú principal con dropdowns -->
+<nav class="max-w-screen-xl mx-auto hidden md:block">
+  <ul
+    class="flex flex-wrap items-center justify-center text-sm md:text-base py-2"
+  >
+    <!-- Dropdown Sobre Nosotros -->
+    <li class="relative group">
       <button
-        id="mobile-about-button"
-        class="mobile-menu-item no-arrow text-gray-800 hover:text-[#468E8E] w-full text-right"
+        id="about-dropdown-button"
+        class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+        aria-haspopup="true"
         aria-expanded="false"
       >
         Sobre Nosotros
+        <svg
+          class="w-2.5 h-2.5 ms-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"></path>
+        </svg>
       </button>
-      <ul id="mobile-about-menu" class="mobile-submenu hidden mt-2 space-y-2 w-full">
-        <li><a href="/about" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">¿Quiénes somos?</a></li>
-        <li><a href="/service" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">¿Por qué viajar con nosotros?</a></li>
-      </ul>
+      <!-- Dropdown menu -->
+      <div
+        id="about-dropdown-menu"
+        class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
+      >
+        <ul class="py-2 text-sm md:text-base text-gray-700">
+          <li>
+            <a
+              href="/about"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >¿Quiénes somos?</a
+            >
+          </li>
+          <li>
+            <a
+              href="/service"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >¿Por qué viajar con nosotros?</a
+            >
+          </li>
+        </ul>
+      </div>
     </li>
-    <li><a href="#" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Internacionales</a></li>
-    <li><a href="/peru-excursiones" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Perú Excursiones</a></li>
-    <li class="relative w-full">
+
+    <!-- Enlace simple -->
+    <li>
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+        >Internacionales</a>
+    </li>
+    <li class="relative group">
       <button
-        id="mobile-excursiones-button"
-        class="mobile-menu-item no-arrow text-gray-800 hover:text-[#468E8E] w-full text-right"
+        id="excursiones-dropdown-button"
+        class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+        aria-haspopup="true"
         aria-expanded="false"
       >
         Perú Excursiones
+        <svg
+          class="w-2.5 h-2.5 ms-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"></path>
+        </svg>
       </button>
-      <ul id="mobile-excursiones-menu" class="mobile-submenu hidden mt-2 space-y-2 w-full">
-        <li><a href="/peru-excursiones/camino-inca" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Camino Inca</a></li>
-      </ul>
+      <!-- Dropdown menu -->
+      <div
+        id="excursiones-dropdown-menu"
+        class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
+      >
+        <ul class="py-2 text-sm md:text-base text-gray-700">
+          <li>
+            <a
+              href="/peru-excursiones/camino-inca"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >Camino Inca</a
+            >
+          </li>
+          <li>
+            <a
+              href="/peru-excursiones/peru-sur-magico"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >Perú sur mágico</a
+            >
+          </li>
+          <li>
+            <a
+              href="/peru-excursiones/aniversario-bodas"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >Luna de miel / Perú Luxe</a
+            >
+          </li>
+          <li>
+            <a
+              href="/peru-excursiones/inolvidable-aniversario"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >Inolvidable aniversario</a
+            >
+          </li>
+          <li>
+            <a
+              href="/peru-excursiones/aniversario-en-peru"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >Aniversario en Perú</a
+            >
+          </li>
+          <li>
+            <a
+              href="/peru-excursiones/peru-a-tu-alcance"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >Perú a tu alcance</a
+            >
+          </li>
+          <li>
+            <a
+              href="/peru-excursiones/machupichu-y-el-sur"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >Machupicchu y el sur</a
+            >
+          </li>
+          <li>
+            <a
+              href="/peru-excursiones/peru-turistico-del-sur"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >Perú turístico del sur</a
+            >
+          </li>
+          <li>
+            <a
+              href="/peru-excursiones/cusco-al-paso"
+              class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              >Cusco al paso</a
+            >
+          </li>
+        </ul>
+      </div>
     </li>
-    <!-- Dropdown Arequipa - Móvil -->
-    <li class="relative w-full">
+    <!-- Dropdown Arequipa -->
+    <li class="relative group">
       <button
-        id="mobile-arequipa-button"
-        class="mobile-menu-item no-arrow text-gray-800 hover:text-[#468E8E] w-full text-right"
+        id="arequipa-dropdown-button"
+        class="flex items-center justify-between px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+        aria-haspopup="true"
         aria-expanded="false"
       >
         Arequipa
+        <svg
+          class="w-2.5 h-2.5 ms-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"></path>
+        </svg>
       </button>
-      <ul id="mobile-arequipa-menu" class="mobile-submenu hidden mt-2 space-y-2 w-full">
-        <li class="relative w-full">
+      <!-- Dropdown menu principal -->
+      <div
+        id="arequipa-dropdown-menu"
+        class="z-10 hidden absolute left-0 font-normal bg-white divide-y divide-gray-100 rounded-md shadow-sm w-44"
+      >
+        <ul class="py-2 text-sm md:text-base text-gray-700">
+          <li class="relative">
+            <button
+              id="arequipa-submenu-button"
+              class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Arequipa
+              <svg
+                class="w-2.5 h-2.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+            <!-- Submenu -->
+            <div
+              id="arequipa-submenu"
+              class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44"
+            >
+              <ul class="py-2 text-sm md:text-base text-gray-700">
+                <li>
+                  <a
+                    href="/arequipa-paquetes"
+                    class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+                    >Paquetes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/arequipa-tours"
+                    class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+                    >Tours</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="relative">
+            <button
+              id="colca-submenu-button"
+              class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Colca
+              <svg
+                class="w-2.5 h-2.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+            <!-- Submenu -->
+            <div
+              id="colca-submenu"
+              class="z-20 hidden absolute left-full top-0 ml-1 font-normal bg-white rounded-md shadow-sm w-44"
+            >
+              <ul class="py-2 text-sm md:text-base text-gray-700">
+                <li>
+                  <a
+                    href="/colca-tours"
+                    class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+                    >Valle del Colca</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/volcanes-tours"
+                    class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+                    >Valle de los volcanes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/trekking-colca"
+                    class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+                    >Trekking</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/climbing-colca"
+                    class="block px-4 py-2 hover:bg-[#468E8E] hover:text-white"
+                    >Climbing</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Enlaces simples -->
+    <li>
+      <a
+        href="/alpacas"
+        class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]">Alpacas</a>
+    </li>
+    <li>
+      <a href="/mice" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+        >Mice</a>
+    </li>
+    <li>
+      <a
+        href="/bodas"
+        class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+        >Bodas en Destino</a>
+    </li>
+    <li>
+      <a href="/blog" class="block px-4 py-2 text-gray-800 hover:text-[#468E8E]"
+        >Blog</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Mobile Menu (se añade después del header) -->
+<div
+  id="mobile-menu"
+  class="md:hidden fixed inset-0 z-40 bg-white transform translate-x-full transition-transform duration-300 ease-in-out"
+  aria-hidden="true"
+>
+  <div class="h-full overflow-y-auto">
+    <!-- Encabezado móvil -->
+    <div class="bg-[#468E8E] p-4 flex justify-between items-center">
+      <a href="/" class="inline-flex">
+        <Image src={LogoConresa} alt={logoAlt} class="h-10 w-auto" />
+      </a>
+
+      <!-- Teléfono en móvil -->
+      <div class="flex items-center gap-x-2">
+        {
+          phoneNumbers.map((number) => (
+            <a
+              href={`tel:${number.replace(/\s/g, "")}`}
+              class="flex items-center gap-x-1 text-white"
+            >
+              <Phone class="size-4 text-white" />
+              <span class="text-sm">{number}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Menú principal móvil -->
+    <nav class="py-4">
+      <ul class="space-y-4 p-4">
+        <!-- Dropdown Sobre Nosotros -->
+        <li>
           <button
-            id="mobile-arequipa-inner-button"
-            class="mobile-menu-item no-arrow hover:text-[#468E8E] w-full text-right"
+            id="mobile-about-button"
+            class="mobile-menu-item flex justify-between items-center w-full"
             aria-expanded="false"
+            aria-controls="mobile-about-menu"
           >
-            Arequipa
+            <span>Sobre Nosotros</span>
+            <svg
+              class="w-2.5 h-2.5 ms-2"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"></path>
+            </svg>
           </button>
-          <ul id="mobile-arequipa-inner-menu" class="mobile-submenu hidden mt-2 space-y-2 w-full">
-            <li><a href="/arequipa-paquetes" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Paquetes</a></li>
-            <li><a href="/arequipa-tours" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Tours</a></li>
+          <ul id="mobile-about-menu" class="mobile-submenu">
+            <li>
+              <a href="/about" class="mobile-menu-item">¿Quiénes somos?</a>
+            </li>
+            <li>
+              <a href="/service" class="mobile-menu-item"
+                >¿Por qué viajar con nosotros?</a>
+            </li>
           </ul>
         </li>
-        <li><a href="/colca-tours" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Colca</a></li>
-        <li><a href="/volcanes-tours" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Valle de los volcanes</a></li>
-      </ul>
-    </li>
-  
-    <li><a href="/alpacas" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Alpacas</a></li>
-    <li><a href="/mice" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Mice</a></li>
-    <li><a href="/bodas" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Bodas en Destino</a></li>
-    <li><a href="/blog" class="mobile-menu-item hover:text-[#468E8E] block w-full text-right">Blog</a></li>
-  </ul>
-  
-  <!-- Teléfono - Solo visible en móvil -->
-  <ul class="mt-8 space-y-4 w-full text-right pr-4">
-    {phoneNumbers.map((number) => (
-      <li class="flex items-center justify-end gap-x-2 italic text-gray-600">
-        <span>{number}</span>
-        <Phone class="size-5" />
-      </li>
-    ))}
-  </ul>
-</div>
 
+        <!-- Enlace simple -->
+        <li><a href="#" class="mobile-menu-item">Internacionales</a></li>
+
+        <!-- Dropdown Perú Excursiones -->
+        <li>
+          <button
+            id="mobile-excursiones-button"
+            class="mobile-menu-item flex justify-between items-center w-full"
+            aria-expanded="false"
+            aria-controls="mobile-excursiones-menu"
+          >
+            <span>Perú Excursiones</span>
+            <svg
+              class="w-2.5 h-2.5 ms-2"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"></path>
+            </svg>
+          </button>
+          <ul id="mobile-excursiones-menu" class="space-y-4 mobile-submenu">
+            <li class="mt-4">
+              <a href="/peru-excursiones/camino-inca" class="mobile-menu-item"
+                >Camino Inca</a>
+            </li>
+            <li>
+              <a
+                href="/peru-excursiones/peru-sur-magico"
+                class="mobile-menu-item">Perú sur mágico</a>
+            </li>
+            <li>
+              <a
+                href="/peru-excursiones/aniversario-bodas"
+                class="mobile-menu-item">Luna de miel / Perú Luxe</a>
+            </li>
+            <li>
+              <a
+                href="/peru-excursiones/inolvidable-aniversario"
+                class="mobile-menu-item">Inolvidable aniversario</a>
+            </li>
+            <li>
+              <a
+                href="/peru-excursiones/aniversario-en-peru"
+                class="mobile-menu-item">Aniversario en Perú</a>
+            </li>
+            <li>
+              <a
+                href="/peru-excursiones/peru-a-tu-alcance"
+                class="mobile-menu-item">Perú a tu alcance</a>
+            </li>
+            <li>
+              <a
+                href="/peru-excursiones/machupichu-y-el-sur"
+                class="mobile-menu-item">Machupicchu y el sur</a>
+            </li>
+            <li>
+              <a
+                href="/peru-excursiones/peru-turistico-del-sur"
+                class="mobile-menu-item">Perú turístico del sur</a>
+            </li>
+            <li>
+              <a href="/peru-excursiones/cusco-al-paso" class="mobile-menu-item"
+                >Cusco al paso</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Dropdown Arequipa con submenús -->
+        <li>
+          <button
+            id="mobile-arequipa-button"
+            class="mobile-menu-item flex justify-between items-center w-full"
+            aria-expanded="false"
+            aria-controls="mobile-arequipa-menu"
+          >
+            <span>Arequipa</span>
+            <svg
+              class="w-2.5 h-2.5 ms-2"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"></path>
+            </svg>
+          </button>
+          <ul id="mobile-arequipa-menu" class="space-y-4 mobile-submenu">
+            <!-- Submenú Arequipa -->
+            <li class="mt-4">
+              <button
+                id="mobile-arequipa-inner-button"
+                class="mobile-menu-item flex justify-between items-center w-full"
+                aria-expanded="false"
+                aria-controls="mobile-arequipa-inner-menu"
+              >
+                <span>Arequipa</span>
+                <svg
+                  class="w-2.5 h-2.5 ms-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"></path>
+                </svg>
+              </button>
+              <ul id="mobile-arequipa-inner-menu" class="space-y-4 mobile-submenu">
+                <li class="mt-4">
+                  <a href="/arequipa-paquetes" class="mobile-menu-item"
+                    >Paquetes</a>
+                </li>
+                <li>
+                  <a href="/arequipa-tours" class="mobile-menu-item">Tours</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Submenú Colca -->
+            <li>
+              <button
+                id="mobile-colca-inner-button"
+                class="mobile-menu-item flex justify-between items-center w-full"
+                aria-expanded="false"
+                aria-controls="mobile-colca-inner-menu"
+              >
+                <span>Colca</span>
+                <svg
+                  class="w-2.5 h-2.5 ms-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"></path>
+                </svg>
+              </button>
+              <ul id="mobile-colca-inner-menu" class="mobile-submenu">
+                <li>
+                  <a href="/colca-tours" class="mobile-menu-item"
+                    >Valle del Colca</a>
+                </li>
+                <li>
+                  <a href="/volcanes-tours" class="mobile-menu-item"
+                    >Valle de los volcanes</a>
+                </li>
+                <li>
+                  <a href="/trekking-colca" class="mobile-menu-item"
+                    >Trekking</a>
+                </li>
+                <li>
+                  <a href="/climbing-colca" class="mobile-menu-item"
+                    >Climbing</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Enlaces simples -->
+        <li><a href="/alpacas" class="mobile-menu-item">Alpacas</a></li>
+        <li><a href="/mice" class="mobile-menu-item">Mice</a></li>
+        <li><a href="/bodas" class="mobile-menu-item">Bodas en Destino</a></li>
+        <li><a href="/blog" class="mobile-menu-item">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- Selector de idioma en móvil -->
+    <div class="p-4 border-t border-gray-200">
+      <div class="flex items-center justify-center space-x-4">
+        <a href="#" class="flex items-center">
+          <FlagUS class="h-6 w-7" />
+        </a>
+        <a href="#" class="flex items-center">
+          <FlagES class="h-6 w-7" />
+        </a>
+        <a href="#" class="flex items-center">
+          <FlagBR class="h-6 w-7" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 <script is:inline>
   function setupNavbar() {
     // Menú móvil principal
-    const menuButton = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.getElementById('close-icon');
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
     let isMenuOpen = false;
 
     // Limpiar event listeners anteriores para evitar duplicados
     const newMenuButton = menuButton.cloneNode(true);
     menuButton.parentNode.replaceChild(newMenuButton, menuButton);
 
-    newMenuButton.addEventListener('click', () => {
+    newMenuButton.addEventListener("click", () => {
       isMenuOpen = !isMenuOpen;
-      
+
       // Actualizar atributos ARIA
-      newMenuButton.setAttribute('aria-expanded', isMenuOpen.toString());
-      mobileMenu.setAttribute('aria-hidden', (!isMenuOpen).toString());
-      
+      newMenuButton.setAttribute("aria-expanded", isMenuOpen.toString());
+      mobileMenu.setAttribute("aria-hidden", (!isMenuOpen).toString());
+
       // Alternar clases para animación
-      mobileMenu.classList.toggle('translate-x-full');
-      mobileMenu.classList.toggle('translate-x-0');
-      
+      mobileMenu.classList.toggle("translate-x-full");
+      mobileMenu.classList.toggle("translate-x-0");
+
       // Alternar iconos
-      menuIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-      
+      menuIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+
       // Bloquear/desbloquear scroll
-      document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+      document.body.style.overflow = isMenuOpen ? "hidden" : "";
     });
 
     // Dropdown de idiomas
-    const languageButton = document.getElementById('language-dropdown-button');
-    const languageDropdown = document.getElementById('language-dropdown-menu');
-    
+    const languageButton = document.getElementById("language-dropdown-button");
+    const languageDropdown = document.getElementById("language-dropdown-menu");
+
     if (languageButton && languageDropdown) {
-      languageButton.addEventListener('click', (e) => {
+      languageButton.addEventListener("click", (e) => {
         e.stopPropagation();
-        const isExpanded = languageButton.getAttribute('aria-expanded') === 'true';
-        languageButton.setAttribute('aria-expanded', !isExpanded);
-        languageDropdown.classList.toggle('hidden');
+        const isExpanded =
+          languageButton.getAttribute("aria-expanded") === "true";
+        languageButton.setAttribute("aria-expanded", !isExpanded);
+        languageDropdown.classList.toggle("hidden");
       });
 
       // Cerrar al hacer clic fuera
-      document.addEventListener('click', (e) => {
-        if (!languageButton.contains(e.target) && !languageDropdown.contains(e.target)) {
-          languageDropdown.classList.add('hidden');
-          languageButton.setAttribute('aria-expanded', 'false');
+      document.addEventListener("click", (e) => {
+        if (
+          !languageButton.contains(e.target) &&
+          !languageDropdown.contains(e.target)
+        ) {
+          languageDropdown.classList.add("hidden");
+          languageButton.setAttribute("aria-expanded", "false");
         }
       });
     }
 
-  // Configurar dropdowns de escritorio
-const setupDesktopDropdown = (buttonId, menuId) => {
-  const button = document.getElementById(buttonId);
-  const menu = document.getElementById(menuId);
+    // Configurar dropdowns de escritorio
+    const setupDesktopDropdown = (buttonId, menuId) => {
+      const button = document.getElementById(buttonId);
+      const menu = document.getElementById(menuId);
 
-  if (button && menu) {
-    let timeoutId;
+      if (button && menu) {
+        let timeoutId;
 
-    // Mostrar al entrar al botón o al menú
-    const showMenu = () => {
-      clearTimeout(timeoutId);
-      menu.classList.remove('hidden');
-      button.setAttribute('aria-expanded', 'true');
-    };
+        // Mostrar al entrar al botón o al menú
+        const showMenu = () => {
+          clearTimeout(timeoutId);
+          menu.classList.remove("hidden");
+          button.setAttribute("aria-expanded", "true");
+        };
 
-    // Ocultar con retraso al salir de ambos
-    const hideMenu = () => {
-      timeoutId = setTimeout(() => {
-        if (!menu.matches(':hover') && !button.matches(':hover')) {
-          menu.classList.add('hidden');
-          button.setAttribute('aria-expanded', 'false');
-        }
-      }, 200); // Pequeño retraso para permitir movimiento entre elementos
-    };
+        // Ocultar con retraso al salir de ambos
+        const hideMenu = () => {
+          timeoutId = setTimeout(() => {
+            if (!menu.matches(":hover") && !button.matches(":hover")) {
+              menu.classList.add("hidden");
+              button.setAttribute("aria-expanded", "false");
+            }
+          }, 200); // Pequeño retraso para permitir movimiento entre elementos
+        };
 
-    // Eventos para el botón
-    button.addEventListener('mouseenter', showMenu);
-    button.addEventListener('mouseleave', hideMenu);
+        // Eventos para el botón
+        button.addEventListener("mouseenter", showMenu);
+        button.addEventListener("mouseleave", hideMenu);
 
-    // Eventos para el menú
-    menu.addEventListener('mouseenter', showMenu);
-    menu.addEventListener('mouseleave', hideMenu);
+        // Eventos para el menú
+        menu.addEventListener("mouseenter", showMenu);
+        menu.addEventListener("mouseleave", hideMenu);
 
-    // Click para mobile (si es necesario)
-    button.addEventListener('click', (e) => {
-      if (window.innerWidth < 768) {
-        e.preventDefault();
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !isExpanded);
-        menu.classList.toggle('hidden');
+        // Click para mobile (si es necesario)
+        button.addEventListener("click", (e) => {
+          if (window.innerWidth < 768) {
+            e.preventDefault();
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", !isExpanded);
+            menu.classList.toggle("hidden");
+          }
+        });
       }
-    });
-  }
-};
+    };
 
     // Configurar cada dropdown de escritorio
-    setupDesktopDropdown('about-dropdown-button', 'about-dropdown-menu');
-    setupDesktopDropdown('excursiones-dropdown-button', 'excursiones-dropdown-menu');
-    setupDesktopDropdown('arequipa-dropdown-button', 'arequipa-dropdown-menu');
-    setupDesktopDropdown('arequipa-submenu-button', 'arequipa-submenu');
-    setupDesktopDropdown('colca-submenu-button', 'colca-submenu');
+    setupDesktopDropdown("about-dropdown-button", "about-dropdown-menu");
+    setupDesktopDropdown(
+      "excursiones-dropdown-button",
+      "excursiones-dropdown-menu",
+    );
+    setupDesktopDropdown("arequipa-dropdown-button", "arequipa-dropdown-menu");
+    setupDesktopDropdown("arequipa-submenu-button", "arequipa-submenu");
+    setupDesktopDropdown("colca-submenu-button", "colca-submenu");
 
     // Configurar dropdowns móviles
     const setupMobileDropdown = (buttonId, menuId) => {
@@ -495,61 +774,69 @@ const setupDesktopDropdown = (buttonId, menuId) => {
       const menu = document.getElementById(menuId);
 
       if (button && menu) {
-        button.addEventListener('click', (e) => {
+        button.addEventListener("click", (e) => {
           e.stopPropagation();
-          const isExpanded = button.getAttribute('aria-expanded') === 'true';
-          button.setAttribute('aria-expanded', !isExpanded);
-          menu.classList.toggle('hidden');
+          const isExpanded = button.getAttribute("aria-expanded") === "true";
+          button.setAttribute("aria-expanded", !isExpanded);
+          menu.classList.toggle("hidden");
         });
       }
     };
 
-    setupMobileDropdown('mobile-about-button', 'mobile-about-menu');
-    setupMobileDropdown('mobile-arequipa-button', 'mobile-arequipa-menu');
-    setupMobileDropdown('mobile-excursiones-button', 'mobile-excursiones-menu');
-    setupMobileDropdown('mobile-arequipa-inner-button', 'mobile-arequipa-inner-menu');
+    setupMobileDropdown("mobile-about-button", "mobile-about-menu");
+    setupMobileDropdown("mobile-arequipa-button", "mobile-arequipa-menu");
+    setupMobileDropdown("mobile-excursiones-button", "mobile-excursiones-menu");
+    setupMobileDropdown(
+      "mobile-arequipa-inner-button",
+      "mobile-arequipa-inner-menu",
+    );
 
     // Cerrar menú al hacer clic en enlaces
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
+    document.querySelectorAll("#mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
         isMenuOpen = false;
-        newMenuButton.setAttribute('aria-expanded', 'false');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-        mobileMenu.classList.add('translate-x-full');
-        mobileMenu.classList.remove('translate-x-0');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-        document.body.style.overflow = '';
-        
+        newMenuButton.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        mobileMenu.classList.add("translate-x-full");
+        mobileMenu.classList.remove("translate-x-0");
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+        document.body.style.overflow = "";
+
         // Cerrar todos los dropdowns
-        document.querySelectorAll('.mobile-submenu').forEach(m => {
-          m.classList.add('hidden');
+        document.querySelectorAll(".mobile-submenu").forEach((m) => {
+          m.classList.add("hidden");
         });
-        document.querySelectorAll('[id$="-button"]').forEach(btn => {
-          btn.setAttribute('aria-expanded', 'false');
+        document.querySelectorAll('[id$="-button"]').forEach((btn) => {
+          btn.setAttribute("aria-expanded", "false");
         });
       });
     });
 
     // Cerrar dropdowns al hacer clic fuera
-    document.addEventListener('click', (e) => {
+    document.addEventListener("click", (e) => {
       // Dropdowns móviles
-      if (!e.target.closest('#mobile-menu [aria-expanded]') && !e.target.closest('.mobile-submenu')) {
-        document.querySelectorAll('.mobile-submenu').forEach(m => {
-          m.classList.add('hidden');
+      if (
+        !e.target.closest("#mobile-menu [aria-expanded]") &&
+        !e.target.closest(".mobile-submenu")
+      ) {
+        document.querySelectorAll(".mobile-submenu").forEach((m) => {
+          m.classList.add("hidden");
         });
-        document.querySelectorAll('#mobile-menu [aria-expanded]').forEach(btn => {
-          btn.setAttribute('aria-expanded', 'false');
-        });
+        document
+          .querySelectorAll("#mobile-menu [aria-expanded]")
+          .forEach((btn) => {
+            btn.setAttribute("aria-expanded", "false");
+          });
       }
     });
   }
 
   // Ejecutar al cargar inicialmente
-  document.addEventListener('DOMContentLoaded', setupNavbar);
-  
+  document.addEventListener("DOMContentLoaded", setupNavbar);
+
   // Ejecutar después de cada transición de página
-  document.addEventListener('astro:after-swap', setupNavbar);
+  document.addEventListener("astro:after-swap", setupNavbar);
 </script>
 
 <style is:inline>
@@ -576,7 +863,10 @@ const setupDesktopDropdown = (buttonId, menuId) => {
   }
 
   /* Transición suave para dropdowns */
-  [id$="-dropdown-menu"], [id$="-submenu"] {
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  [id$="-dropdown-menu"],
+  [id$="-submenu"] {
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
   }
 </style>
