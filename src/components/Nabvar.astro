@@ -445,8 +445,8 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } =
                 d="m1 1 4 4 4-4"></path>
             </svg>
           </button>
-          <ul id="mobile-about-menu" class="mobile-submenu">
-            <li>
+          <ul id="mobile-about-menu" class="space-y-4 mobile-submenu text-right">
+            <li class="mt-4">
               <a href="/about" class="mobile-menu-item">¿Quiénes somos?</a>
             </li>
             <li>
@@ -483,7 +483,7 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } =
                 d="m1 1 4 4 4-4"></path>
             </svg>
           </button>
-          <ul id="mobile-excursiones-menu" class="space-y-4 mobile-submenu">
+          <ul id="mobile-excursiones-menu" class="space-y-4 mobile-submenu text-right">
             <li class="mt-4">
               <a href="/peru-excursiones/camino-inca" class="mobile-menu-item"
                 >Camino Inca</a>
@@ -579,7 +579,7 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } =
                     d="m1 1 4 4 4-4"></path>
                 </svg>
               </button>
-              <ul id="mobile-arequipa-inner-menu" class="space-y-4 mobile-submenu">
+              <ul id="mobile-arequipa-inner-menu" class="space-y-4 mobile-submenu text-right">
                 <li class="mt-4">
                   <a href="/arequipa-paquetes" class="mobile-menu-item"
                     >Paquetes</a>
@@ -614,8 +614,8 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } =
                     d="m1 1 4 4 4-4"></path>
                 </svg>
               </button>
-              <ul id="mobile-colca-inner-menu" class="mobile-submenu">
-                <li>
+              <ul id="mobile-colca-inner-menu" class="space-y-4 mobile-submenu text-right">
+                <li class="mt-4">
                   <a href="/colca-tours" class="mobile-menu-item"
                     >Valle del Colca</a>
                 </li>
@@ -793,6 +793,10 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } =
     setupMobileDropdown(
       "mobile-arequipa-inner-button",
       "mobile-arequipa-inner-menu",
+    );
+    setupMobileDropdown(
+      "mobile-colca-inner-button",
+      "mobile-colca-inner-menu",
     );
 
     // Cerrar menú al hacer clic en enlaces
