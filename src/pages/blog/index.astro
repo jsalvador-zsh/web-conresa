@@ -13,7 +13,7 @@ const sortedPosts = posts.sort((a, b) =>
 
 <Layout title="Blog" description="Artículos y tutoriales sobre desarrollo web">
   <main class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold text-center mb-12">Blog</h1>
+    <h1 class="text-4xl font-bold text-center mb-12">Nuestro Blog</h1>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {sortedPosts.map(post => (
@@ -22,20 +22,20 @@ const sortedPosts = posts.sort((a, b) =>
             <img 
               src={post.data.image.url} 
               alt={post.data.image.alt} 
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-cover object-right-top"
               width="400"
               height="225"
               loading="lazy"
             />
-            <div class="p-6">
+            <div class="p-6 flex flex-col">
               <time class="text-gray-500 text-sm">
-                {new Date(post.data.pubDate).toLocaleDateString('es-ES', {
+                {new Date(post.data.pubDate).toLocaleDateString('es-PE', {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric'
                 })}
               </time>
-              <h2 class="text-xl font-bold mt-2 mb-4">{post.data.title}</h2>
+              <span class="text-[#468E8E] text-xl font-bold my-2">{post.data.title}</span>
               <p class="text-gray-600">{post.data.description}</p>
               <div class="mt-4 flex flex-wrap gap-2">
                 {post.data.tags.map(tag => (
