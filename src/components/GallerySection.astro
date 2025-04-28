@@ -1,0 +1,220 @@
+---
+// GalleryBento.astro
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  images: Array<{
+    src: ImageMetadata;
+    alt: string;
+    category?: string;
+  }>;
+}
+
+const { images } = Astro.props;
+
+// Función para determinar tamaños de bento (ahora en el frontmatter)
+const getBentoSize = (index: number) => {
+  const sizes = [
+    'md:row-span-2 md:col-span-2',   // Grande
+    'md:col-span-1',                 // Pequeño vertical
+    'md:row-span-1',                 // Pequeño horizontal
+    'md:row-span-2',                 // Alto
+    'md:col-span-2'                  // Ancho
+  ];
+  return sizes[index % sizes.length];
+}
+---
+
+<div class="gallery-container relative w-full min-h-screen bg-gray-100 p-4 md:p-8">
+  <!-- Grid Bento -->
+  <div class="bento-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
+    {images.map((image, index) => (
+      <div 
+        class={`bento-item group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 ${getBentoSize(index)}`}
+        data-index={index}
+      >
+        <Image
+          src={image.src}
+          alt={image.alt}
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+          decoding="async"
+        />
+        {image.category && (
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+            <span class="text-white font-medium">{image.category}</span>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4">
+    <button id="close-lightbox" class="absolute top-4 right-4 text-white text-4xl z-50">&times;</button>
+    
+    <div class="relative w-full max-w-6xl h-full max-h-[90vh] flex flex-col">
+      <div class="flex-grow relative overflow-hidden">
+        <img id="lightbox-image" src="" alt="" class="w-full h-full object-contain" />
+      </div>
+      
+      <div class="lightbox-nav py-4 flex items-center justify-center gap-4">
+        <button id="prev-btn" class="text-white bg-black/50 hover:bg-black/70 rounded-full p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        
+        <div id="thumbnails" class="flex gap-2 overflow-x-auto py-2 max-w-full">
+          {images.map((image, index) => (
+            <img
+              src={image.src.src}
+              alt={`Thumbnail ${index + 1}`}
+              class="h-16 w-16 object-cover rounded cursor-pointer opacity-70 hover:opacity-100 transition-opacity"
+              data-index={index}
+            />
+          ))}
+        </div>
+        
+        <button id="next-btn" class="text-white bg-black/50 hover:bg-black/70 rounded-full p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bento-grid {
+    grid-auto-rows: 200px;
+  }
+  
+  @media (min-width: 768px) {
+    .bento-grid {
+      grid-auto-rows: 250px;
+    }
+  }
+  
+  .bento-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .lightbox-nav {
+    scrollbar-width: thin;
+    scrollbar-color: #555 transparent;
+  }
+  
+  .lightbox-nav::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .lightbox-nav::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 3px;
+  }
+  
+  .lightbox-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+</style>
+
+<script is:inline>
+  // Lightbox functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-image');
+    const closeBtn = document.getElementById('close-lightbox');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const thumbnails = document.querySelectorAll('#thumbnails img');
+    const galleryItems = document.querySelectorAll('.bento-item');
+    
+    let currentIndex = 0;
+    const images = Array.from(galleryItems).map(item => {
+      const img = item.querySelector('img');
+      return {
+        src: img.src,
+        alt: img.alt
+      };
+    });
+    
+    // Abrir lightbox al hacer click en una imagen
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        currentIndex = index;
+        updateLightbox();
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    
+    // Navegación con thumbnails
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener('click', () => {
+        currentIndex = index;
+        updateLightbox();
+      });
+    });
+    
+    // Botones de navegación
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateLightbox();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateLightbox();
+    });
+    
+    // Cerrar lightbox
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.style.overflow = '';
+    });
+    
+    // Cerrar al hacer click fuera de la imagen
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Navegación con teclado
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('hidden')) {
+        if (e.key === 'Escape') {
+          lightbox.classList.add('hidden');
+          lightbox.classList.remove('flex');
+          document.body.style.overflow = '';
+        } else if (e.key === 'ArrowLeft') {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          updateLightbox();
+        } else if (e.key === 'ArrowRight') {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateLightbox();
+        }
+      }
+    });
+    
+    function updateLightbox() {
+      lightboxImg.src = images[currentIndex].src;
+      lightboxImg.alt = images[currentIndex].alt;
+      
+      // Actualizar thumbnails activos
+      thumbnails.forEach((thumb, index) => {
+        thumb.classList.toggle('opacity-100', index === currentIndex);
+        thumb.classList.toggle('ring-2', index === currentIndex);
+        thumb.classList.toggle('ring-white', index === currentIndex);
+      });
+    }
+  });
+</script>

@@ -1,0 +1,32 @@
+---
+import GallerySection from "../components/GallerySection.astro";
+import Layout from "../layouts/Layout.astro";
+import { ClientRouter } from "astro:transitions";
+import Img1 from '../images/paquetes-arequipa/plaza-de-armas-arequipa.jpg';
+import Img2 from '../images/paquetes-arequipa/andagua-volcanes.jpeg';
+import Img3 from '../images/paquetes-arequipa/canon-colca.jpg';
+import Img4 from '../images/paquetes-arequipa/cotahuasi.jpg';
+import Img5 from '../images/paquetes-arequipa/chivay-2.jpg';
+import Img6 from '../images/paquetes-arequipa/misti.jpg';
+import Img7 from '../images/paquetes-arequipa/monasterio-santa-catalina.jpg';
+import Img8 from '../images/paquetes-arequipa/cantera-sillar-2.jpg';
+import Img9 from '../images/paquetes-arequipa/yarabamba.jpg';
+---
+
+<Layout
+    title="Galería - CONRESA TOURS"
+    description="Agencia de Viajes Turismo & Tour Operador registrada en MINCETUR con más de 39 años de experiencia en el sector turístico"
+>
+    <ClientRouter />
+    <GallerySection images={[
+        {src: Img1, alt: "Arequipa", category: "Plaza de Armas", },
+        {src: Img2, alt: "Arequipa", category: "Valle de los volcanes", }, 
+        {src: Img3, alt: "Arequipa", category: "Valle del Colca", },
+        {src: Img4, alt: "Arequipa", category: "Cotahuasi", },
+        {src: Img5, alt: "Arequipa", category: "Chivay", }, 
+        {src: Img6, alt: "Arequipa", category: "Volcán Misti", }, 
+        {src: Img7, alt: "Arequipa", category: "Monasterio de Santa Catalina", },
+        {src: Img8, alt: "Arequipa", category: "Canteras de sillar", }, 
+        {src: Img9, alt: "Arequipa", category: "Yarabamba", }, 
+    ]} />
+</Layout>
