@@ -1,0 +1,46 @@
+---
+import VideoBackground from "/video-hero.mp4"; // Ajusta la ruta a tu video
+
+const heroContent = {
+  title: "Descubre el Perú con nosotros",
+  subtitle: "Explora nuestros destinos",
+  description: "Viaja a los destinos más increíbles, vive experiencias únicas y memorables."
+};
+---
+
+<section class="relative h-[calc(100vh-80px)] overflow-hidden z-0 mb-8" id="hero-video">
+  <!-- Video de fondo -->
+  <div class="absolute inset-0 z-0">
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline 
+      class="w-full h-full object-cover"
+    >
+      <source src={VideoBackground} type="video/mp4" />
+      <!-- Texto alternativo si el video no carga -->
+      <p class="absolute inset-0 bg-gray-800 text-white flex items-center justify-center">
+        Tu navegador no soporta videos HTML5
+      </p>
+    </video>
+    <div class="absolute inset-0 bg-black/30 z-10"></div>
+  </div>
+
+  <!-- Contenido sobre el video -->
+  <div class="relative z-20 h-full flex items-center md:items-start md:pt-36 px-4 md:px-0 container mx-auto">
+    <div class="max-w-lg bg-[#468E8E]/50 p-6 text-white rounded-4xl">
+      <span class="text-amber-400 font-medium text-sm">{heroContent.subtitle}</span>
+      <p class="text-3xl md:text-5xl font-bold mb-4">{heroContent.title}</p>
+      <p class="text-sm md:text-base">{heroContent.description}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Opcional: Asegurar que el video se muestre correctamente en todos los dispositivos */
+  video {
+    min-width: 100%;
+    min-height: 100%;
+  }
+</style>
