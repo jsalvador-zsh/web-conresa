@@ -32,12 +32,12 @@ const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
         >
 
         <div class="tour-header">
-            <h1 class="title text-[#468E8E]" transition:name={`title-${tour.id}`}>
+            <h1 class="title text-[#48887F]" transition:name={`title-${tour.id}`}>
                 {tour.title}
             </h1>
             <div class="tour-subtitle">
                 <span
-                    class="flex items-center gap-x-2 text-[#468E8E]"
+                    class="flex items-center gap-x-2 text-[#48887F]"
                     transition:name={`duration-${tour.id}`}
                 >
                     <svg
@@ -87,7 +87,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
                 <div
                 class="tour-details"
             />
-            <h2 class="section-title text-[#468E8E] text-lg md:text-xl uppercase" transition:animate="fade">
+            <h2 class="section-title text-[#48887F] text-lg md:text-xl uppercase" transition:animate="fade">
                 Visitas Incluidas:
             </h2>
             <ul>
@@ -136,7 +136,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
                         loading="lazy"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                    <span class="absolute top-3 right-3 bg-[#468E8E] text-pink-100 text-xs italic font-medium px-2 py-1">
+                    <span class="absolute top-3 right-3 bg-[#48887F] text-pink-100 text-xs italic font-medium px-2 py-1">
                         {tourRel.modality}
                     </span>
                 </div>
@@ -144,7 +144,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
                     <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">
                         {tourRel.title}
                     </h3>
-                    <div class="flex items-center text-[#468E8E] font-medium text-sm">
+                    <div class="flex items-center text-[#48887F] font-medium text-sm">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="w-4 h-4 mr-1"
@@ -203,7 +203,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
         align-items: center;
     }
     .modality-badge {
-        background-color: #468E8E;
+        background-color: #48887F;
         color: white;
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
@@ -216,7 +216,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
         margin-top: 2rem;
         margin-bottom: 1.5rem;
         padding-bottom: 0.5rem;
-        color: #468E8E;
+        color: #48887F;
         font-size: 1.25rem;
     }
     .section-title::after {
@@ -226,7 +226,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
         bottom: 2px; /* Ajusta según el tamaño de tu imagen */
         width: 95%;
         height: 1px;
-        background-color: #468E8E;
+        background-color: #48887F;
     }
     .section-title::before {
         content: "";
@@ -253,13 +253,13 @@ const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
     .back-link {
         display: inline-block;
         margin-bottom: 2rem;
-        color: #468E8E;
+        color: #48887F;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.2s ease;
     }
     .back-link:hover {
-        color: #468E8E;
+        color: #48887F;
         text-decoration: underline;
     }
 

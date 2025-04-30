@@ -97,7 +97,7 @@ const toursRelacionados = obtenerToursRelacionados();
       )}
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
         <div class="container mx-auto px-6 pb-12 text-white">
-          <span class="inline-block bg-[#468E8E] text-white px-4 py-2 rounded-full text-sm mb-4">
+          <span class="inline-block bg-[#48887F] text-white px-4 py-2 rounded-full text-sm mb-4">
             {tour.modality}
           </span>
           <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -124,7 +124,7 @@ const toursRelacionados = obtenerToursRelacionados();
         <div class="lg:col-span-2">
           <!-- Resumen -->
           <div class="bg-gray-50 rounded-xl p-6 mb-8">
-            <h2 class="text-2xl font-bold text-[#468E8E] mb-4">Descripción del Tour</h2>
+            <h2 class="text-2xl font-bold text-[#48887F] mb-4">Descripción del Tour</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 class="font-semibold text-gray-800 mb-2">Salida y Retorno</h3>
@@ -140,11 +140,11 @@ const toursRelacionados = obtenerToursRelacionados();
 
           <!-- Visitas Incluidas -->
           <div class="mb-8">
-            <h2 class="text-2xl font-bold text-[#468E8E] mb-4">Lugares que visitarás</h2>
+            <h2 class="text-2xl font-bold text-[#48887F] mb-4">Lugares que visitarás</h2>
             <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
               {tour.included_visits.map((visit, index) => (
                 <li key={index} class="flex items-start">
-                  <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span class="text-gray-700">{visit}</span>
@@ -155,12 +155,12 @@ const toursRelacionados = obtenerToursRelacionados();
 
           <!-- Itinerario -->
           <div class="mb-8">
-            <h2 class="text-2xl font-bold text-[#468E8E] mb-6">Itinerario Detallado</h2>
+            <h2 class="text-2xl font-bold text-[#48887F] mb-6">Itinerario Detallado</h2>
             <div class="space-y-8">
               {tour.itinerary.map((dia) => (
-                <div key={dia.day} class="border-l-4 border-[#468E8E] pl-6">
+                <div key={dia.day} class="border-l-4 border-[#48887F] pl-6">
                   <h3 class="text-xl font-bold text-gray-800 mb-2">
-                    <span class="text-[#468E8E]">Día {dia.day}:</span> {dia.title}
+                    <span class="text-[#48887F]">Día {dia.day}:</span> {dia.title}
                   </h3>
                   <p class="text-gray-700">{dia.description}</p>
                 </div>
@@ -171,7 +171,7 @@ const toursRelacionados = obtenerToursRelacionados();
           <!-- Equipo e Incluye -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 class="text-xl font-bold text-[#468E8E] mb-4">Equipo Recomendado</h3>
+              <h3 class="text-xl font-bold text-[#48887F] mb-4">Equipo Recomendado</h3>
               <ul class="space-y-2">
                 {tour.equipment.map((item, index) => (
                   <li key={index} class="flex items-start">
@@ -184,11 +184,11 @@ const toursRelacionados = obtenerToursRelacionados();
               </ul>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-[#468E8E] mb-4">El Tour Incluye</h3>
+              <h3 class="text-xl font-bold text-[#48887F] mb-4">El Tour Incluye</h3>
               <ul class="space-y-2">
                 {(tour.includes ?? []).map((item, index) => (
                   <li key={index} class="flex items-start">
-                    <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                     <span class="text-gray-700">{item}</span>
@@ -203,7 +203,7 @@ const toursRelacionados = obtenerToursRelacionados();
         <div class="space-y-8">
           <!-- Galería -->
           <div class="bg-gray-50 rounded-xl p-6">
-            <h3 class="text-xl font-bold text-[#468E8E] mb-4">Galería del Tour</h3>
+            <h3 class="text-xl font-bold text-[#48887F] mb-4">Galería del Tour</h3>
             <div class="grid grid-cols-2 gap-4">
               {imagenes.slice(1, 5).map((img, index) => (
                   <Image
@@ -220,12 +220,12 @@ const toursRelacionados = obtenerToursRelacionados();
           </div>
 
           {/* <!-- Botón de Reserva --> */}
-          <div class="bg-[#468E8E] rounded-xl p-6 text-center text-white">
+          <div class="bg-[#48887F] rounded-xl p-6 text-center text-white">
             <h3 class="text-xl font-bold mb-2">¿Listo para la aventura?</h3>
             <p class="mb-4">Reserva ahora y asegura tu lugar</p>
             <a 
               href="/#contacto" 
-              class="inline-block bg-white text-[#468E8E] font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              class="inline-block bg-white text-[#48887F] font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               Reservar Tour
             </a>
@@ -233,22 +233,22 @@ const toursRelacionados = obtenerToursRelacionados();
 
           {/* <!-- Información Adicional --> */}
           <div class="bg-gray-50 rounded-xl p-6">
-            <h3 class="text-xl font-bold text-[#468E8E] mb-4">Información Importante</h3>
+            <h3 class="text-xl font-bold text-[#48887F] mb-4">Información Importante</h3>
             <ul class="space-y-3 text-sm text-gray-700">
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Recomendamos reservar con al menos 3 días de anticipación</span>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Precios varían según temporada y número de personas</span>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Se requiere condición física básica para los trekkings</span>
@@ -261,7 +261,7 @@ const toursRelacionados = obtenerToursRelacionados();
       <!-- Tours Relacionados -->
       {toursRelacionados.length > 0 && (
         <div class="mt-16">
-          <h2 class="text-3xl font-bold text-[#468E8E] mb-8">Otros Trekkings que te pueden interesar</h2>
+          <h2 class="text-3xl font-bold text-[#48887F] mb-8">Otros Trekkings que te pueden interesar</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {toursRelacionados.map((tourRel) => (
               <a 
@@ -279,10 +279,10 @@ const toursRelacionados = obtenerToursRelacionados();
                     />
                   </div>
                   <div class="md:w-2/3 p-6">
-                    <h3 class="text-xl font-bold text-gray-800 group-hover:text-[#468E8E] transition-colors mb-2">
+                    <h3 class="text-xl font-bold text-gray-800 group-hover:text-[#48887F] transition-colors mb-2">
                       {tourRel.title}
                     </h3>
-                    <div class="flex items-center text-[#468E8E] font-medium mb-3">
+                    <div class="flex items-center text-[#48887F] font-medium mb-3">
                       <Time class="w-4 h-4 mr-1" />
                       {tourRel.duration}
                     </div>
@@ -314,7 +314,7 @@ const toursRelacionados = obtenerToursRelacionados();
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #468E8E;
+    background: #48887F;
     transform: translateX(-50%);
   }
   

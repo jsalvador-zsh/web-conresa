@@ -89,7 +89,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
         </span>
       </div>
       
-      <span class="absolute top-4 right-4 rounded-md bg-[#468E8E] text-pink-100 text-xs italic font-medium px-4 py-2">
+      <span class="absolute top-4 right-4 rounded-md bg-[#48887F] text-pink-100 text-xs italic font-medium px-4 py-2">
         {tour.modality}
       </span>
     </div>
@@ -97,14 +97,14 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Información básica -->
       <div class="flex flex-wrap gap-4 mb-8 justify-end">
-        <div class="flex items-center text-[#468E8E] font-medium">
+        <div class="flex items-center text-[#48887F] font-medium">
           <Time class="w-5 h-5 mr-2" />
           <span>Duración: {tour.duration}</span>
         </div>
-        <div class="flex items-center text-white text-xs px-3 py-1 bg-[#468E8E] rounded-md">
+        <div class="flex items-center text-white text-xs px-3 py-1 bg-[#48887F] rounded-md">
           <span class="italic">Salida: {tour.departure}</span>
         </div>
-        <div class="flex items-center text-white text-xs px-3 py-1 bg-[#468E8E] rounded-md">
+        <div class="flex items-center text-white text-xs px-3 py-1 bg-[#48887F] rounded-md">
           <span class="italic">Retorno: {tour.return}</span>
         </div>
       </div>
@@ -125,7 +125,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
               <h2 class="section-title">Itinerario Detallado:</h2>
               {tour.itinerary.map((dia) => (
                 <div key={dia.day} class="mb-8">
-                  <h3 class="text-xl font-bold text-[#468E8E] mb-4">Día {dia.day}: {dia.title}</h3>
+                  <h3 class="text-xl font-bold text-[#48887F] mb-4">Día {dia.day}: {dia.title}</h3>
                   <p class="text-gray-700">{dia.description}</p>
                 </div>
               ))}
@@ -190,7 +190,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
 
       <!-- Tours relacionados -->
       <div class="mt-12">
-        <h2 class="text-2xl font-bold text-[#468E8E] mb-6">Otros tours que te pueden interesar</h2>
+        <h2 class="text-2xl font-bold text-[#48887F] mb-6">Otros tours que te pueden interesar</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {toursRelacionados.map((tourRel) => {
             const imagenPrincipal = imagenes[0]; // Usamos la primera imagen del mapeo
@@ -217,13 +217,13 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
                       Sin imagen disponible
                     </div>
                   )}
-                  <span class="absolute top-3 right-3 bg-[#468E8E] text-pink-100 text-xs italic font-medium px-2 py-1 rounded">
+                  <span class="absolute top-3 right-3 bg-[#48887F] text-pink-100 text-xs italic font-medium px-2 py-1 rounded">
                     {tourRel.modality}
                   </span>
                 </div>
                 <div class="p-4">
                   <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">{tourRel.title}</h3>
-                  <div class="flex items-center text-[#468E8E] font-medium text-sm">
+                  <div class="flex items-center text-[#48887F] font-medium text-sm">
                     <Time class="w-4 h-4 mr-1" />
                     {tourRel.duration}
                   </div>
@@ -242,7 +242,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
   .back-link {
     display: inline-block;
     margin-bottom: 2rem;
-    color: #468E8E;
+    color: #48887F;
     font-weight: 500;
     transition: color 0.2s;
     text-decoration: none;
@@ -258,9 +258,9 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
     margin-top: 2rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    color: #468E8E;
+    color: #48887F;
     font-size: 1.5rem;
-    border-bottom: 1px solid #468E8E;
+    border-bottom: 1px solid #48887F;
   }
   
   .list-item {
@@ -273,7 +273,7 @@ const toursRelacionados = obtenerToursRelacionados(tour.id);
     content: "•";
     position: absolute;
     left: 0;
-    color: #468E8E;
+    color: #48887F;
     font-weight: bold;
   }
   

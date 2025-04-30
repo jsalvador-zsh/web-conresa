@@ -43,7 +43,7 @@ const obtenerImagenTour = (id: string) => {
       <!-- Encabezado -->
       <div class="text-center mb-16 animate-fade-in">
         <h1 class="text-4xl font-bold text-gray-800 mb-4">
-          Expediciones de <span class="text-[#468E8E]">Climbing</span>
+          Expediciones de <span class="text-[#48887F]">Climbing</span>
         </h1>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
           Conquista los majestuosos volcanes de Arequipa con nuestros ascensos guiados
@@ -55,7 +55,7 @@ const obtenerImagenTour = (id: string) => {
         {tours.map((tour: ClimbingTour, index) => (
           <a
             href={`/climbing-colca/${tour.id}`}
-            class="group relative bg-white shadow-lg rounded-xl overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border-l-4 border-[#468E8E]"
+            class="group relative bg-white shadow-lg rounded-xl overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border-l-4 border-[#48887F]"
             style={`animation-delay: ${index * 100}ms`}
           >
             <!-- Imagen del tour -->
@@ -69,7 +69,7 @@ const obtenerImagenTour = (id: string) => {
                 format="webp"
                 loading="lazy"
               />
-              <span class="absolute top-4 right-4 bg-[#468E8E]/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+              <span class="absolute top-4 right-4 bg-[#48887F]/90 text-white text-xs font-medium px-3 py-1 rounded-full">
                 {tour.difficulty}
               </span>
             </div>
@@ -80,7 +80,7 @@ const obtenerImagenTour = (id: string) => {
                 {tour.title}
               </h3>
               
-              <div class="flex items-center text-[#468E8E] font-medium mb-3">
+              <div class="flex items-center text-[#48887F] font-medium mb-3">
                 <Time class="w-5 h-5 mr-2" />
                 {tour.duration}
               </div>
@@ -103,7 +103,7 @@ const obtenerImagenTour = (id: string) => {
               </div>
               
               <div class="flex justify-between items-center">
-                <span class="text-sm font-medium text-[#468E8E]">
+                <span class="text-sm font-medium text-[#48887F]">
                   Ver detalles →
                 </span>
               </div>
@@ -114,25 +114,25 @@ const obtenerImagenTour = (id: string) => {
 
       <!-- Información adicional -->
       <div class="mt-16 bg-white p-8 rounded-xl shadow-md">
-        <h2 class="text-2xl font-bold text-[#468E8E] mb-4">¿Por qué escalar con nosotros?</h2>
+        <h2 class="text-2xl font-bold text-[#48887F] mb-4">¿Por qué escalar con nosotros?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 class="text-lg font-semibold text-gray-800 mb-3">Seguridad ante todo</h3>
             <ul class="space-y-3">
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Guías UIAGM certificados</span>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Equipo técnico de primera calidad</span>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Protocolos de seguridad para altura</span>
@@ -143,19 +143,19 @@ const obtenerImagenTour = (id: string) => {
             <h3 class="text-lg font-semibold text-gray-800 mb-3">Experiencia completa</h3>
             <ul class="space-y-3">
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Rutas cuidadosamente seleccionadas</span>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Equipo de campamento de alta montaña</span>
               </li>
               <li class="flex items-start">
-                <svg class="h-5 w-5 text-[#468E8E] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-5 w-5 text-[#48887F] mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Asesoría previa para aclimatación</span>
