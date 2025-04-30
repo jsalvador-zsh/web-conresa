@@ -1,7 +1,6 @@
 ---
 import GallerySection from "../components/GallerySection.astro";
 import Layout from "../layouts/Layout.astro";
-import { ClientRouter } from "astro:transitions";
 import Img1 from '../images/paquetes-arequipa/plaza-de-armas-arequipa.jpg';
 import Img2 from '../images/paquetes-arequipa/andagua-volcanes.jpeg';
 import Img3 from '../images/paquetes-arequipa/canon-colca.jpg';
@@ -17,7 +16,6 @@ import Img9 from '../images/paquetes-arequipa/yarabamba.jpg';
     title="Galería - CONRESA TOURS"
     description="Agencia de Viajes Turismo & Tour Operador registrada en MINCETUR con más de 39 años de experiencia en el sector turístico"
 >
-    <ClientRouter />
     <GallerySection images={[
         {src: Img1, alt: "Arequipa", category: "Plaza de Armas", },
         {src: Img2, alt: "Arequipa", category: "Valle de los volcanes", }, 

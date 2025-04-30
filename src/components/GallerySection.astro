@@ -26,7 +26,7 @@ const getBentoSize = (index: number) => {
 }
 ---
 
-<div class="gallery-container relative w-full min-h-screen bg-gray-100 p-4 md:p-8">
+<div data-astro-transition-persist="gallery-container" class="gallery-container relative w-full min-h-screen bg-gray-100 p-4 md:p-8">
   <!-- Grid Bento -->
   <div class="bento-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
     {images.map((image, index) => (
@@ -122,9 +122,13 @@ const getBentoSize = (index: number) => {
   }
 </style>
 
-<script is:inline>
-  // Lightbox functionality
-  document.addEventListener('DOMContentLoaded', () => {
+<script>
+  let galleryInitialized = false;
+
+  function initGallery() {
+    if (galleryInitialized) return;
+    galleryInitialized = true;
+
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-image');
     const closeBtn = document.getElementById('close-lightbox');
@@ -132,7 +136,7 @@ const getBentoSize = (index: number) => {
     const nextBtn = document.getElementById('next-btn');
     const thumbnails = document.querySelectorAll('#thumbnails img');
     const galleryItems = document.querySelectorAll('.bento-item');
-    
+
     let currentIndex = 0;
     const images = Array.from(galleryItems).map(item => {
       const img = item.querySelector('img');
@@ -141,59 +145,25 @@ const getBentoSize = (index: number) => {
         alt: img.alt
       };
     });
-    
-    // Abrir lightbox al hacer click en una imagen
-    galleryItems.forEach((item, index) => {
-      item.addEventListener('click', () => {
-        currentIndex = index;
-        updateLightbox();
-        lightbox.classList.remove('hidden');
-        lightbox.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-    
-    // Navegación con thumbnails
-    thumbnails.forEach((thumb, index) => {
-      thumb.addEventListener('click', () => {
-        currentIndex = index;
-        updateLightbox();
-      });
-    });
-    
-    // Botones de navegación
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
+
+    // Handlers
+    const handleImageClick = (index) => {
+      currentIndex = index;
       updateLightbox();
-    });
-    
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % images.length;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const handleThumbnailClick = (index) => {
+      currentIndex = index;
       updateLightbox();
-    });
-    
-    // Cerrar lightbox
-    closeBtn.addEventListener('click', () => {
-      lightbox.classList.add('hidden');
-      lightbox.classList.remove('flex');
-      document.body.style.overflow = '';
-    });
-    
-    // Cerrar al hacer click fuera de la imagen
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.classList.add('hidden');
-        lightbox.classList.remove('flex');
-        document.body.style.overflow = '';
-      }
-    });
-    
-    // Navegación con teclado
-    document.addEventListener('keydown', (e) => {
+    };
+
+    const handleKeydown = (e) => {
       if (!lightbox.classList.contains('hidden')) {
         if (e.key === 'Escape') {
           lightbox.classList.add('hidden');
-          lightbox.classList.remove('flex');
           document.body.style.overflow = '';
         } else if (e.key === 'ArrowLeft') {
           currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -203,18 +173,60 @@ const getBentoSize = (index: number) => {
           updateLightbox();
         }
       }
+    };
+
+    // Asignar eventos
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => handleImageClick(index));
     });
-    
+
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener('click', () => handleThumbnailClick(index));
+    });
+
+    closeBtn?.addEventListener('click', () => {
+      lightbox.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+
+    prevBtn?.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateLightbox();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateLightbox();
+    });
+
+    document.addEventListener('keydown', handleKeydown);
+
     function updateLightbox() {
+      if (!lightboxImg) return;
+      
       lightboxImg.src = images[currentIndex].src;
       lightboxImg.alt = images[currentIndex].alt;
-      
-      // Actualizar thumbnails activos
+
       thumbnails.forEach((thumb, index) => {
         thumb.classList.toggle('opacity-100', index === currentIndex);
         thumb.classList.toggle('ring-2', index === currentIndex);
         thumb.classList.toggle('ring-white', index === currentIndex);
       });
     }
+  }
+
+  // Inicializar en carga inicial
+  if (document.readyState !== 'loading') {
+    initGallery();
+  } else {
+    document.addEventListener('DOMContentLoaded', initGallery);
+  }
+
+  // Reconectar después de transiciones
+  document.addEventListener('astro:after-swap', () => {
+    galleryInitialized = false;
+    initGallery();
   });
+
+  document.addEventListener('astro:page-load', initGallery);
 </script>
