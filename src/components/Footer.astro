@@ -14,11 +14,37 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } =
   Astro.props;
 ---
 <footer class="bg-[#468E8E]">
-    <!-- <div class="my-2 bg-[url('/tejido-bottom.webp')] bg-repeat h-8 md:h-14">
 
-
-    </div> -->
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div>
+                <h2>Información</h2>
+                <p class="font-medium text-lg">Contacto: <spa class="text-[#468E8E]">Conresa Tours</span></p>
+                <p class="font-medium text-lg">RUC: <span class="text-[#468E8E]">20120849787</span></p>
+                <p class="font-medium text-lg">Oficina propia: <span class="text-[#468E8E]">Av. Mariscal Benavides 183 <br> Urb.Parque Selva Alegre - Cercado / Arequipa - Perú</span></p>
+                <p class="font-medium text-lg">Central telefónica: <span class="text-[#468E8E]">054 - 285420</span></p>
+            </div>
+            <div class="text-left">
+                <h2>Boletín</h2>
+                <form class="w-full max-w-md">   
+                    <label for="default-email" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Email sign-up</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 rtl:inset-x-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                                <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                                <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                            </svg>
+                        </div>
+                        <input type="email" id="default-email" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-[#468E8E] focus:border-[#468E8E]" placeholder="Ingrese su correo aquí..." required />
+                        <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-[#468E8E] hover:bg-[#468E8E] focus:ring-4 focus:outline-none focus:ring-[#468E8E] font-medium rounded-lg text-sm px-4 py-2">Sign up</button>
+                    </div>
+                </form>
+                <p class="mt-4">*Enviaremos promociones e información</p>
+            </div>
+        </div>
+    </div>
     <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        
         <div class="md:flex md:justify-between">
             <div class="flex items-center space-x-6 rtl:space-x-reverse">
                 <a href="/" class="bg-[#468E8E] inline-flex">
