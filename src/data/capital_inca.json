@@ -1,0 +1,144 @@
+{
+    "tour": {
+      "code": "CT8425 V.2",
+      "title": "CAPITAL INCA LLENA DE MAGIA Y CULTURA",
+      "duration": "4 days",
+      "description": "Descubre lo mejor de Cusco y Machu Picchu en este tour completo de 4 días",
+      "days": [
+        {
+          "day": 1,
+          "title": "CUSCO – CITY TOUR (Koricancha y Catedral)",
+          "activities": [
+            "Recepción en el aeropuerto Velasco Astete de Cusco; y traslado a su hotel elegido.",
+            "2.00 pm  se visita la ciudad en ella la Catedral sobresalen por su belleza el coro y el púlpito, continuamos el recorrido por la Plaza de Armas, el Koricancha o Templo del Sol era una de las edificaciones más impactantes del Cusco incaico.",
+            "Luego nos dirigimos a 10 minutos en auto de la ciudad a La Fortaleza de Sacsayhuamán.",
+            "Nos alejamos más de la ciudad 15 minutos aprox. y visitamos las Ruinas Cercanas al Cusco: tales como el Complejo Arqueológico de Qenko o «laberinto» es considerado un lugar sagrado en el que se oficiaban ceremonias en honor al Sol, la Luna y las Estrellas.",
+            "Otra ruina es el Complejo Arqueológico de Pukapukara (30 minutos en auto) El complejo cuenta con numerosos recintos, plazas interiores, acueductos, atalayas y caminos. Y para terminar visitaremos el Complejo arqueológico de Tambomachay el cual habría cumplido una importante función religiosa vinculada al agua. Retorno a la ciudad."
+          ],
+          "overnight": "Hotel elegido en Cusco"
+        },
+        {
+          "day": 2,
+          "title": "CUSCO – VALLE SAGRADO – AGUAS CALIENTES",
+          "activities": [
+            "Recojo desde su hotel; luego iniciaremos nuestra excursión al Valle Sagrado de los Incas. Este hermoso valle está compuesto por numerosos ríos que descienden por quebradas llenas de verdor y pequeños valles. Primero nos dirigiremos a las ruinas de Pisaq.", 
+            "Aquí podremos observar la gran labor lograda por los Incas, a través de un sin fin de terrazas agrícolas que adornan virtualmente todas las montañas a su alrededor.", 
+            "En el centro del templo de Pisaq, podremos observar un intiwatana (reloj solar) y finas edificaciones habitadas por la nobleza Inca hace 500 años.",
+            "Luego de nuestra visita a esta antigua ciudadela Inca, visitaremos el pueblo moderno de Pisaq, , y está poblada casi en un totalidad por los descendientes de los Incas. Aquí visitaremos un pintoresco mercado artesanal, y podremos ver como hasta hoy la gente de este lugar mantiene la tradición de intercambiar sus cosas o alimentos, tal como lo hacían en el pasado.", 
+            "Luego almorzamos en unos de los típicos restaurantes de este poblado. Más tarde nos dirigiremos al pueblo de Ollantaytambo, en donde visitaremos la hermosa fortaleza que lleva el mismo nombre. Aquí recorremos los sectores más importantes, y nuestro guía nos dará una explicación sobre este lugar.",
+            "Traslado a la estación de Ollanta para tomar el tren que nos llevara a Aguas Calientes (un pequeño poblado cerca al Santuario de Machu Picchu).",
+            "El viaje en tren dura aproximadamente 2 horas, y ofrece sobre el trayecto espectaculares paisajes que combinan sierra y selva."
+          ],
+          "schedule": {
+            "pickup": "9:00 am",
+            "train_departure": "16:36",
+            "train_arrival": "18:00"
+          },
+          "includes": ["Almuerzo"],
+          "overnight": "Aguas Calientes"
+        },
+        {
+          "day": 3,
+          "title": "MACHU PICCHU – CUSCO",
+          "activities": [
+            "A hora prevista Salida del hotel para  subir en bus turistico que nos llevara cuesta arriba hasta las ruinas de Machu Picchu. Este breve viaje en bus dura solo 20 minutos y recorre una pista no asfaltada, muy empinada y zigzagueante a través de una montaña con características selváticas y vistas impresionantes.",
+            "Finalmente llegaremos al Santuario de Machu Picchu donde nuestro guía local nos hará un recorrido por los sectores más importantes de esta bella ciudadela Incaica.",
+            "En Machu Picchu haremos un recorrido de 2 horas con nuestro guía y visitaremos la zona agrícola, formada por conjuntos de terrazas de cultivo, la zona urbana donde vivieron sus ocupantes y donde se desarrollaron las principales actividades civiles y religiosas.",
+            "También visitaremos el Intiwatana de Machu Picchu ubicado en la parte más alta de la ciudadela, el templo del sol, del cóndor y otros sectores importantes.",
+            "Por la tarde, estaremos tomando el bus de regreso hacia Aguas Calientes (No incluye almuerzo).Retorno en tren a Cusco. Recepción y traslado al hotel elegido."
+          ],
+          "notes": "Almuerzo no incluido",
+          "overnight": "Cusco"
+        },
+        {
+          "day": 4,
+          "title": "CUSCO – SALIDA",
+          "activities": [
+            "Desayuno en el hotel.",
+            "A la hora oportuna traslado al aeropuerto para salir rumbo a su próximo recorrido."
+          ]
+        }
+      ],
+      "pricing": {
+        "categories": [
+          {
+            "name": "Estándar",
+            "price": 670,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["San Agustin Internacional", "Casona Real", "Illa Hotel"],
+              "Aguas Calientes": ["Hatun Samay"]
+            }
+          },
+          {
+            "name": "Estándar Confort",
+            "price": 715,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"],
+              "Aguas Calientes": ["Casa Andina", "Tierra Viva"]
+            }
+          },
+          {
+            "name": "Superior",
+            "price": 755,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior", "Costa del Sol Estándar"],
+              "Aguas Calientes": ["El Mapi"]
+            }
+          },
+          {
+            "name": "Superior Elegante",
+            "price": 850,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"],
+              "Aguas Calientes": ["Hatun Samay"]
+            }
+          },
+          {
+            "name": "Luxe",
+            "price": 1100,
+            "includes": ["Impuestos", "Cargo por transferencia"],
+            "hotels": {
+              "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury"],
+              "Aguas Calientes": ["Sumaq"]
+            }
+          }
+        ]
+      },
+      "flight_suggestions": {
+        "routes": [
+          {
+            "route": "Lima-Cusco",
+            "departure": "08:25",
+            "arrival": "09:57"
+          },
+          {
+            "route": "Cusco-Lima",
+            "departure": "11:40",
+            "arrival": "12:50"
+          }
+        ]
+      },
+      "inclusions": {
+        "included": [
+          "Todos los desayunos en cada ciudad",
+          "Traslados aeropuerto/hotel/aeropuerto",
+          "Traslados estación de bus/hotel/estación de bus",
+          "2 noches en Cusco con desayunos",
+          "City tour en Cusco",
+          "Excursión al Valle Sagrado con almuerzo",
+          "1 noche en Aguas Calientes con desayuno",
+          "Excursión a Machu Picchu en tren Turista con ingreso"
+        ],
+        "not_included": [
+          "Vuelos internacionales y domésticos",
+          "Seguro de viaje",
+          "Gastos personales no especificados"
+        ]
+      },
+      "farewell": "Gracias por visitar Perú y darnos la oportunidad de Atenderlos"
+    }
+  }

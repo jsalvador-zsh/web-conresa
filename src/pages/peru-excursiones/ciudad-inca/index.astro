@@ -1,18 +1,18 @@
 ---
-// src/pages/tours/peru-pais-diverso/index.astro
+// src/pages/peru-excursiones/ciudad-inca/index.astro
 import Layout from '../../../layouts/Layout.astro';
 import tourData from '../../../data/peru_turistico_del_sur.json';
 import { Image } from 'astro:assets';
 
 // Importar imágenes (asegúrate de tener estas imágenes en tu proyecto)
 import lima from '../../../images/cusco/lima.jpg';
-import arequipa from '../../../images/paquetes-arequipa/arequipa-panoramica.jpg';
-import colca from '../../../images/paquetes-arequipa/valle-colca-3.jpg';
-import puno from '../../../images/puno/puno.jpg';
-import cusco from '../../../images/cusco/cusco-6.jpg';
-import machupicchu from '../../../images/cusco/cusco.jpg';
+import cusco from '../../../images/cusco/cusco.jpg';
+import valleSagrado from '../../../images/cusco/cusco-3.jpg';
+import machupicchu from '../../../images/cusco/cusco-6.jpg';
 import humantay from '../../../images/cusco/laguna-humantay.jpg';
-import montanaColores from '../../../images/cusco/cusco-5.jpg';
+import montanaColores from '../../../images/cusco/cusco-2.jpg';
+import puno from '../../../images/puno/puno.jpg';
+import titicaca from '../../../images/puno/puno-3.jpg';
 
 // Tipos
 type Day = {
@@ -74,13 +74,13 @@ const { general: includes, exclusions: notIncludes } = inclusions;
 // Mapeo de imágenes
 const destinationImages = {
   "Lima": lima,
-  "Arequipa": arequipa,
-  "Colca": colca,
-  "Puno": puno,
   "Cusco": cusco,
+  "Valle Sagrado": valleSagrado,
   "Machu Picchu": machupicchu,
   "Laguna Humantay": humantay,
-  "Montaña de Colores": montanaColores
+  "Montaña de Colores": montanaColores,
+  "Puno": puno,
+  "Lago Titicaca": titicaca
 };
 
 // Función para formatear precios
@@ -94,11 +94,11 @@ const formatPrice = (price: number) => {
 
 // Duración del tour
 const duration = `${days.length} días / ${days.filter(day => day.overnight).length} noches`;
-const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
+const mainDestinations = ["Lima", "Cusco", "Valle Sagrado", "Machu Picchu", "Puno", "Lago Titicaca"];
 ---
 
-<Layout title={title} description={`Tour por el sur de Perú visitando ${mainDestinations.join(', ')}`}>
-  <main class="bg-gray-50">
+<Layout title={title} description={`Tour por los principales destinos del sur de Perú: ${mainDestinations.join(', ')}`}>
+    <div class="min-h-screen bg-gray-50">
     <!-- Hero Section -->
     <section class="relative h-[70vh] max-h-[800px] min-h-[500px] overflow-hidden">
       <Image
@@ -110,9 +110,11 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
         format="webp"
         quality={80}
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent flex items-center justify-center">
+      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
         <div class="text-center px-4">
-          <span class="text-4xl md:text-6xl cursive-font font-bold text-white mb-4">{title}</span>
+            <span class="cursive-font text-5xl md:text-6xl font-bold text-white mb-4">
+                {title}
+            </span>
           <p class="text-xl text-white max-w-3xl mx-auto mt-8">{duration}</p>
         </div>
       </div>
@@ -127,7 +129,7 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
           <section class="bg-white rounded-xl shadow-md p-6 md:p-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Lo más destacado del tour</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {Object.entries(destinationImages).filter(([destino]) => mainDestinations.includes(destino)).map(([destino, imagen]) => (
+              {Object.entries(destinationImages).filter(([destino]) => mainDestinations.some(d => destino.includes(d))).map(([destino, imagen]) => (
                 <div class="group relative overflow-hidden rounded-lg aspect-square">
                   <Image
                     src={imagen}
@@ -146,7 +148,7 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
 
           <!-- Tour Description -->
           <section class="bg-white rounded-xl shadow-md p-6 md:p-8">
-            <span class="font-subtitle text-3xl font-bold text-gray-900 mb-6">Sobre este tour</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Sobre este tour</h2>
             <div class="prose max-w-none text-gray-700">
               <p>Este completo circuito de {days.length} días te permitirá descubrir lo mejor del sur de Perú, combinando cultura, historia y aventura en los destinos más impresionantes de la región.</p>
               
@@ -262,7 +264,7 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
                         <div>
                           <h4 class="font-bold text-gray-900 mb-3">{ciudad}</h4>
                           <ul class="space-y-2">
-                            {hoteles.map(hotel => (
+                            {hoteles.filter(h => h.trim() !== '').map(hotel => (
                               <li class="flex items-start">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#2C5E5E] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -427,7 +429,7 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
                 </svg>
                 <div>
                   <h4 class="font-medium text-gray-900">Experiencia garantizada</h4>
-                  <p class="text-sm text-gray-600">Más de 40 años creando experiencias inolvidables</p>
+                  <p class="text-sm text-gray-600">Más de 15 años creando experiencias inolvidables</p>
                 </div>
               </div>
 
@@ -455,7 +457,7 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
         </div>
       </div>
     </div>
-  </main>
+</div>
 </Layout>
 
 <style>
@@ -480,7 +482,5 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
     margin-bottom: 1rem;
     color: #111827;
   }
-  .cursive-subtitle {
-    font-family: 'Dancing Script', cursive;
-  }
+
 </style>

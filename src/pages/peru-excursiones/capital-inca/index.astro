@@ -1,0 +1,285 @@
+---
+// src/pages/capital-inca/index.astro
+import Layout from "../../../layouts/Layout.astro";
+import tourData from "../../../data/capital_inca.json";
+// Importar imágenes
+import cuscoHero from "../../../images/cusco/cusco.jpg";
+import valleSagrado from "../../../images/cusco/cusco-3.jpg";
+import machupicchu from "../../../images/cusco/cusco-6.jpg";
+import ollantaytambo from "../../../images/cusco/ollantaytambo.jpg";
+import { Image } from "astro:assets";
+---
+
+<Layout
+  title={`${tourData.tour.title} | CONRESA TOURS`}
+  description="Tour de 4 días por la capital del Imperio Inca, incluyendo Cusco, Valle Sagrado y Machu Picchu"
+>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <div class="relative h-[500px] overflow-hidden">
+      <Image
+        src={cuscoHero}
+        alt="Vista panorámica de Cusco"
+        class="w-full h-full object-cover"
+        width={1200}
+        height={500}
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div class="text-center px-4">
+          <span class="cursive-font text-5xl md:text-6xl font-bold text-white mb-4">
+            {tourData.tour.title}
+          </span>
+          <p class="mt-4 text-xl text-white mb-6">{tourData.tour.description}</p>
+          <div class="bg-[#468E8E]/90 inline-block px-4 py-2 rounded-lg">
+            <p class="text-white font-medium">Código: {tourData.tour.code} | Duración: {tourData.tour.duration}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Itinerario -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-[#468E8E] mb-8 text-center">
+          Itinerario Detallado
+        </h2>
+        
+        <div class="space-y-8">
+          {tourData.tour.days.map((day, index) => (
+            <div 
+              class="bg-white rounded-xl shadow-lg overflow-hidden"
+              id={`day-${index + 1}`}
+            >
+              <div class="p-6 md:p-8">
+                <div class="flex items-start">
+                  <div class="bg-[#468E8E] text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold text-xl">
+                    {day.day}
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                      {day.title}
+                    </h3>
+                    <ul class="space-y-3">
+                      {day.activities.map(activity => (
+                        <li class="flex items-start">
+                          <svg class="w-5 h-5 text-[#468E8E] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                          </svg>
+                          <span class="text-gray-700">{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {day.schedule && (
+                      <div class="mt-4 bg-blue-50 p-3 rounded-lg">
+                        <h4 class="font-semibold text-[#468E8E] mb-1">Horarios:</h4>
+                        <p class="text-sm">
+                          Recojo: {day.schedule.pickup} | Tren: Salida {day.schedule.train_departure} - Llegada {day.schedule.train_arrival}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+              
+              {day.overnight && (
+                <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
+                  <p class="font-medium text-gray-700">
+                    <span class="text-[#468E8E]">Pernocte:</span> {day.overnight}
+                    {day.includes && (
+                      <span class="ml-4 text-sm text-green-600">
+                        {day.includes.join(' | ')}
+                      </span>
+                    )}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Highlights -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-[#468E8E] mb-8 text-center">
+          Experiencias Destacadas
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-lg transition-shadow">
+            <div class="h-48 overflow-hidden">
+              <Image
+                src={cuscoHero}
+                alt="City Tour en Cusco"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-3">City Tour Imperial</h3>
+              <p class="text-gray-700">
+                Descubre Koricancha, Sacsayhuamán y los sitios arqueológicos cercanos a Cusco.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-lg transition-shadow">
+            <div class="h-48 overflow-hidden">
+              <Image
+                src={valleSagrado}
+                alt="Valle Sagrado"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-3">Valle Sagrado</h3>
+              <p class="text-gray-700">
+                Explora Pisac, Ollantaytambo y los mercados artesanales del valle.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-lg transition-shadow">
+            <div class="h-48 overflow-hidden">
+              <Image
+                src={machupicchu}
+                alt="Machu Picchu"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-3">Machu Picchu</h3>
+              <p class="text-gray-700">
+                Visita la ciudad perdida de los Incas, maravilla del mundo moderno.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-lg transition-shadow">
+            <div class="h-48 overflow-hidden">
+              <Image
+                src={ollantaytambo}
+                alt="Ollantaytambo"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                width={400}
+                height={300}
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-3">Tren Panorámico</h3>
+              <p class="text-gray-700">
+                Viaje inolvidable por el valle hacia Aguas Calientes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hoteles -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-[#468E8E] mb-8 text-center">
+          Categorías de Hoteles
+        </h2>
+        
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-lg">
+            <thead class="bg-[#468E8E] text-white">
+              <tr>
+                <th class="py-4 px-6 text-left">Categoría</th>
+                <th class="py-4 px-6 text-left">Precio</th>
+                <th class="py-4 px-6 text-left">Hoteles en Cusco</th>
+                <th class="py-4 px-6 text-left">Hoteles en Aguas Calientes</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              {tourData.tour.pricing.categories.map((category, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="py-4 px-6 font-semibold">{category.name}</td>
+                  <td class="py-4 px-6">USD$ {category.price}</td>
+                  <td class="py-4 px-6">
+                    <ul class="list-disc pl-5">
+                      {category.hotels.Cusco.map(hotel => (
+                        <li class="text-gray-700">{hotel}</li>
+                      ))}
+                    </ul>
+                  </td>
+                  <td class="py-4 px-6">
+                    <ul class="list-disc pl-5">
+                      {category.hotels["Aguas Calientes"].map(hotel => (
+                        <li class="text-gray-700">{hotel}</li>
+                      ))}
+                    </ul>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="mt-4 text-sm text-gray-600">
+          <p class="font-semibold">Incluye: {tourData.tour.pricing.categories[0].includes.join(', ')}</p>
+        </div>
+      </section>
+
+      <!-- Inclusions -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold text-[#468E8E] mb-6">Incluye</h3>
+          <ul class="space-y-3">
+            {tourData.tour.inclusions.included.map(item => (
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-[#468E8E] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold text-[#468E8E] mb-6">No Incluye</h3>
+          <ul class="space-y-3">
+            {tourData.tour.inclusions.not_included.map(item => (
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <span class="text-gray-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Vuelos Sugeridos -->
+      <section class="bg-white p-8 rounded-xl shadow-lg mb-16">
+        <h2 class="text-2xl font-bold text-[#468E8E] mb-6">Vuelos Sugeridos</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {tourData.tour.flight_suggestions.routes.map(flight => (
+            <div class="border border-[#468E8E] rounded-lg p-4 bg-gray-50">
+              <h3 class="font-bold text-lg mb-2 text-[#468E8E]">{flight.route}</h3>
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-gray-600">Salida</p>
+                  <p class="font-medium">{flight.departure}</p>
+                </div>
+                <div>
+                  <p class="text-gray-600">Llegada</p>
+                  <p class="font-medium">{flight.arrival}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>

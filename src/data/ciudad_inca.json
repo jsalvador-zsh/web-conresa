@@ -1,0 +1,247 @@
+{
+    "itinerary": {
+      "title": "LEYENDA QUE VIVIRÁ CUANDO SE ENCUENTRE EN EL LAGO TITIKAKA. EL MÁS ALTO DEL MUNDO",
+      "days": [
+        {
+          "day": 1,
+          "city": "Lima",
+          "activities": [
+            "BIENVENIDOS A PERU Recepción y traslado de aeropuerto al hotel en Lima"
+          ],
+          "overnight": "Lima"
+        },
+        {
+          "day": 2,
+          "city": "Lima - Cusco",
+          "activities": [
+            "Desayuno en el hotel",
+            "Traslado al aeropuerto para salir hacia Cusco",
+            "Recepción y traslado al hotel",
+            "City tour visitando:",
+            "- Catedral (coro y púlpito)",
+            "- Plaza de Armas",
+            "- Koricancha o Templo del Sol",
+            "- Fortaleza de Sacsayhuamán",
+            "- Complejo Arqueológico de Qenko",
+            "- Complejo Arqueológico de Pukapukara",
+            "- Complejo arqueológico de Tambomachay"
+          ],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 3,
+          "city": "Valle Sagrado - Aguas Calientes",
+          "activities": [
+            "Desayuno en el hotel",
+            "Excursión al Valle Sagrado de los Incas",
+            "Visita a las ruinas de Pisaq",
+            "Visita al pueblo moderno de Pisaq y su mercado artesanal",
+            "Almuerzo en Pisaq",
+            "Visita a la fortaleza de Ollantaytambo",
+            "Traslado a la estación de Ollanta",
+            "Tren a Aguas Calientes (Voyager 16:36 - 18:09)"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Aguas Calientes"
+        },
+        {
+          "day": 4,
+          "city": "Machu Picchu - Cusco",
+          "activities": [
+            "Desayuno en el hotel",
+            "Transporte en bus a Machu Picchu (20 min)",
+            "Recorrido guiado por Machu Picchu (2 horas) visitando:",
+            "- Zona agrícola",
+            "- Zona urbana",
+            "- Intiwatana",
+            "- Templo del Sol",
+            "- Templo del Cóndor",
+            "Opcional: Ingreso a Wayna Picchu ($60, no incluye guía)",
+            "Retorno en bus a Aguas Calientes",
+            "Tren de retorno a Cusco"
+          ],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 5,
+          "city": "Cusco",
+          "options": [
+            {
+              "name": "Laguna Humantay",
+              "details": "Caminata de 2 horas (4200 m.s.n.m)"
+            },
+            {
+              "name": "Montaña de Colores",
+              "details": "Caminata de 2 horas 30 min (5000 m.s.n.m)"
+            }
+          ],
+          "activities": [
+            "Desayuno en el hotel",
+            "Tour opcional a Laguna Humantay o Montaña de Colores",
+            "Salida: 5 am, Retorno: 5 pm",
+            "Posibilidad de alquilar caballos con arrieros locales"
+          ],
+          "includes": ["Desayuno", "Almuerzo básico"],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 6,
+          "city": "Cusco - Puno",
+          "transport": {
+            "default": "Bus turístico visitando:",
+            "optional": {
+              "description": "Tren Peru Rail Titicaca de Lujo",
+              "days": ["Lunes", "Jueves", "Sábados"],
+              "departure": "07:30 am",
+              "arrival": "17:50 hrs",
+              "price": 200
+            }
+          },
+          "activities": [
+            "Desayuno en el hotel",
+            "Salida en bus turístico (07:00 hrs)",
+            "Visita a:",
+            "- Andahuaylillas (la Sixtina de América)",
+            "- Templo de Raqchi",
+            "- Punto más alto La Raya",
+            "- Complejo arqueológico de Pukara",
+            "Almuerzo en Sicuani",
+            "Llegada a Puno (16:30 hrs)"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Puno"
+        },
+        {
+          "day": 7,
+          "city": "Puno - Lago Titicaca",
+          "activities": [
+            "Desayuno en el hotel",
+            "Tour a las islas flotantes de los Uros",
+            "Explicación sobre la construcción de las islas",
+            "Traslado a la isla natural de Taquile",
+            "Caminata a la plaza principal",
+            "Almuerzo en casa local",
+            "Tiempo libre para explorar la isla",
+            "Retorno a Puno"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Puno"
+        },
+        {
+          "day": 8,
+          "city": "Puno - Lima",
+          "activities": [
+            "Desayuno en el hotel",
+            "Traslado al aeropuerto de Juliaca (1 hora)",
+            "Vuelo de retorno a Lima"
+          ]
+        }
+      ]
+    },
+    "pricing": {
+      "categories": [
+        {
+          "name": "Estándar",
+          "price": 999,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Tierra Viva", "Ibis Larco"],
+            "Cusco": ["San Agustin Internacional", "Casona Real", "Illa Hotel"],
+            "Aguas Calientes": ["Hatum samay"],
+            "Puno": ["Casona Plaza"]
+          }
+        },
+        {
+          "name": "Estándar Confort",
+          "price": 1100,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Hotel Libre", "Radisson Red"],
+            "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"],
+            "Aguas Calientes": [""],
+            "Puno": ["Casa Andina", "Tierra Viva", "Casona Plaza"]
+          }
+        },
+        {
+          "name": "Superior",
+          "price": 1155,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Casa Andina Select", "Holiday Inn"],
+            "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior", "Costa del Sol Estándar"],
+            "Aguas Calientes": ["El Mapi"],
+            "Puno": ["Sonesta", "Casa Andina Premium"]
+          }
+        },
+        {
+          "name": "Superior Elegante",
+          "price": 1290,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Sonesta Olivar", "Casa Andina Select"],
+            "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"],
+            "Aguas Calientes": [""],
+            "Puno": ["Hatun Samay", "Casa Andina Premium"]
+          }
+        },
+        {
+          "name": "Luxe",
+          "price": 1610,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Casa Andina Premium"],
+            "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury"],
+            "Aguas Calientes": ["Sumaq"],
+            "Puno": ["GHL Puno"]
+          }
+        }
+      ],
+      "flight_suggestions": {
+        "routes": [
+          {
+            "route": "Lima-Cusco",
+            "departure": "08:45",
+            "arrival": "10:05"
+          },
+          {
+            "route": "Juliaca-Lima",
+            "departure": "10:25",
+            "arrival": "12:00"
+          }
+        ],
+        "prices": [
+          {
+            "description": "Solo Carryon de 10 kilos",
+            "price": 175
+          },
+          {
+            "description": "Maleta de 23 kilos",
+            "price": 220
+          }
+        ]
+      }
+    },
+    "inclusions": {
+      "general": [
+        "Todos los desayunos en cada ciudad",
+        "Traslados aeropuerto/hotel/aeropuerto o estación de bus/hotel/estación de bus",
+        "01 noche en Lima",
+        "03 noches en Cusco con desayunos",
+        "City tour en Cusco",
+        "Excursión al Valle Sagrado con almuerzo",
+        "01 noche en Aguas Calientes",
+        "Excursión a Machu Picchu en tren Turista con ingreso",
+        "02 noches en Puno con desayuno",
+        "Tour a Uros y Taquile con almuerzo en lancha rápida (servicio compartido)",
+        "Tour a la montaña de los 7 colores con almuerzo"
+      ],
+      "exclusions": [
+        "Vuelos internacionales y domésticos",
+        "Seguro de viaje",
+        "Otros gastos personales no detallados",
+        "Ingreso a Wayna Picchu ($60)",
+        "Tren Peru Rail Titicaca de Lujo ($200)"
+      ]
+    },
+    "notes": "Gracias por visitar Perú y darnos la oportunidad de atenderlos"
+  }

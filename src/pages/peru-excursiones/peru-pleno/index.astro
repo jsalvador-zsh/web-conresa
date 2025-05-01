@@ -1,27 +1,31 @@
 ---
-// src/pages/tours/peru-pais-diverso/index.astro
+// src/pages/peru-excursiones/peru-pleno/index.astro
 import Layout from '../../../layouts/Layout.astro';
-import tourData from '../../../data/peru_turistico_del_sur.json';
+import tourData from '../../../data/peru_pleno.json';
 import { Image } from 'astro:assets';
 
-// Importar imágenes (asegúrate de tener estas imágenes en tu proyecto)
+// Import images (make sure these exist in your project)
 import lima from '../../../images/cusco/lima.jpg';
 import arequipa from '../../../images/paquetes-arequipa/arequipa-panoramica.jpg';
-import colca from '../../../images/paquetes-arequipa/valle-colca-3.jpg';
-import puno from '../../../images/puno/puno.jpg';
-import cusco from '../../../images/cusco/cusco-6.jpg';
-import machupicchu from '../../../images/cusco/cusco.jpg';
+import colca from '../../../images/paquetes-arequipa/valle-colca.jpg';
+import puno from '../../../images/puno/puno-3.jpg';
+import titicaca from '../../../images/puno/puno.jpg';
+import cusco from '../../../images/cusco/cusco-2.jpg';
+import valleSagrado from '../../../images/cusco/cusco-3.jpg';
+import machupicchu from '../../../images/cusco/cusco-6.jpg';
 import humantay from '../../../images/cusco/laguna-humantay.jpg';
-import montanaColores from '../../../images/cusco/cusco-5.jpg';
+import montanaColores from '../../../images/cusco/cusco-2.jpg';
+import ica from '../../../images/cusco/ica.jpg';
+import ballestas from '../../../images/cusco/ballestas.webp';
 
-// Tipos
+// Types
 type Day = {
   day: number;
   city: string;
   activities: string[];
   optional?: {
     description: string;
-    times: string[];
+    times?: string[];
     price: number;
   };
   transport?: {
@@ -65,25 +69,29 @@ type Inclusions = {
   exclusions: string[];
 };
 
-// Obtener datos
+// Get data
 const { itinerary, pricing, inclusions } = tourData;
-const { title, days } = itinerary;
+const { title, subtitle, duration, code, days } = itinerary;
 const { categories: hotelCategories, flight_suggestions } = pricing;
 const { general: includes, exclusions: notIncludes } = inclusions;
 
-// Mapeo de imágenes
+// Image mapping
 const destinationImages = {
   "Lima": lima,
   "Arequipa": arequipa,
   "Colca": colca,
   "Puno": puno,
+  "Lago Titicaca": titicaca,
   "Cusco": cusco,
+  "Valle Sagrado": valleSagrado,
   "Machu Picchu": machupicchu,
   "Laguna Humantay": humantay,
-  "Montaña de Colores": montanaColores
+  "Montaña de Colores": montanaColores,
+  "Ica": ica,
+  "Islas Ballestas": ballestas
 };
 
-// Función para formatear precios
+// Format price
 const formatPrice = (price: number) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -92,12 +100,15 @@ const formatPrice = (price: number) => {
   }).format(price);
 };
 
-// Duración del tour
-const duration = `${days.length} días / ${days.filter(day => day.overnight).length} noches`;
-const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
+// Main destinations for highlights
+const mainDestinations = [
+  "Lima", "Arequipa", "Colca", "Puno", 
+  "Lago Titicaca", "Cusco", "Valle Sagrado", 
+  "Machu Picchu", "Ica", "Islas Ballestas"
+];
 ---
 
-<Layout title={title} description={`Tour por el sur de Perú visitando ${mainDestinations.join(', ')}`}>
+<Layout title={title} description={`${subtitle} - ${duration} tour por los mejores destinos del Perú`}>
   <main class="bg-gray-50">
     <!-- Hero Section -->
     <section class="relative h-[70vh] max-h-[800px] min-h-[500px] overflow-hidden">
@@ -112,8 +123,8 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent flex items-center justify-center">
         <div class="text-center px-4">
-          <span class="text-4xl md:text-6xl cursive-font font-bold text-white mb-4">{title}</span>
-          <p class="text-xl text-white max-w-3xl mx-auto mt-8">{duration}</p>
+          <span class="text-5xl md:text-7xl cursive-font font-bold text-white mb-2">{title}</span>
+          <p class="mt-4 text-xl text-white max-w-3xl mx-auto">{subtitle}</p>
         </div>
       </div>
     </section>
@@ -125,12 +136,12 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
         <div class="lg:col-span-8 space-y-12">
           <!-- Destinations Gallery -->
           <section class="bg-white rounded-xl shadow-md p-6 md:p-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Lo más destacado del tour</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Destinos Impresionantes</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {Object.entries(destinationImages).filter(([destino]) => mainDestinations.includes(destino)).map(([destino, imagen]) => (
+              {mainDestinations.map(destino => (
                 <div class="group relative overflow-hidden rounded-lg aspect-square">
                   <Image
-                    src={imagen}
+                    src={destinationImages[destino as keyof typeof destinationImages]}
                     alt={destino}
                     width={400}
                     height={400}
@@ -146,15 +157,15 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
 
           <!-- Tour Description -->
           <section class="bg-white rounded-xl shadow-md p-6 md:p-8">
-            <span class="font-subtitle text-3xl font-bold text-gray-900 mb-6">Sobre este tour</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Sobre este tour exclusivo</h2>
             <div class="prose max-w-none text-gray-700">
-              <p>Este completo circuito de {days.length} días te permitirá descubrir lo mejor del sur de Perú, combinando cultura, historia y aventura en los destinos más impresionantes de la región.</p>
+              <p>Este completo circuito de {days.length} días te permitirá descubrir lo mejor del Perú, combinando cultura, historia y aventura en los destinos más impresionantes del país.</p>
               
               <h3 class="text-xl font-semibold text-gray-900 mt-8">Itinerario resumido</h3>
               <ul class="space-y-2">
                 {days.filter((_, index) => index % 2 === 0).map(day => (
                   <li class="pl-4 border-l-2 border-[#2C5E5E]">
-                    <strong class="text-gray-900">Día {day.day}:</strong> {day.city} - {day.activities?.[0] || 'Sin actividades'}
+                    <strong class="text-gray-900">Día {day.day}:</strong> {day.city} - {day.activities[0].split('\n')[0]}
                   </li>
                 ))}
               </ul>
@@ -185,8 +196,19 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
                   <div class="prose max-w-none text-gray-700 mt-4 pl-14">
                     <h4 class="font-medium text-gray-900">Actividades:</h4>
                     <ul class="list-disc list-inside space-y-1">
-                      {day.activities?.map(activity => (
-                        <li>{activity}</li>
+                      {day.activities.map((activity, idx) => (
+                        activity.includes('\n') ? (
+                          <>
+                            <li>{activity.split('\n')[0]}</li>
+                            <ul class="list-disc list-inside pl-5">
+                              {activity.split('\n').slice(1).map(subActivity => (
+                                <li>{subActivity.replace(/^- /, '')}</li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : (
+                          <li key={idx}>{activity}</li>
+                        )
                       ))}
                     </ul>
 
@@ -205,7 +227,9 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
                       <div class="mt-4">
                         <h4 class="font-medium text-gray-900">Opcional:</h4>
                         <p>{day.optional.description} - {formatPrice(day.optional.price)}</p>
-                        <p class="text-sm text-gray-500">Horarios: {day.optional.times.join(' o ')}</p>
+                        {day.optional.times && (
+                          <p class="text-sm text-gray-500">Horarios: {day.optional.times.join(' o ')}</p>
+                        )}
                       </div>
                     )}
 
@@ -262,7 +286,7 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
                         <div>
                           <h4 class="font-bold text-gray-900 mb-3">{ciudad}</h4>
                           <ul class="space-y-2">
-                            {hoteles.map(hotel => (
+                            {hoteles.filter(h => h.trim() !== '').map(hotel => (
                               <li class="flex items-start">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#2C5E5E] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -381,37 +405,33 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
               ))}
             </div>
 
-            <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
+            <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>{duration}</span>
             </div>
-
-            <button class="mt-6 w-full bg-[#2C5E5E] hover:bg-[#1E4A4A] text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300">
-              Reservar ahora
-            </button>
           </div>
 
           <!-- Highlights Card -->
           <div class="bg-white rounded-xl shadow-md p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Destinos principales</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Experiencias Destacadas</h3>
             <div class="space-y-4">
-              {mainDestinations.map(destino => (
-                <div class="flex items-start space-x-4">
-                  <div class="flex-shrink-0 w-16 h-16 rounded-md overflow-hidden">
-                    <Image
-                      src={destinationImages[destino as keyof typeof destinationImages]}
-                      alt={destino}
-                      width={64}
-                      height={64}
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-gray-900">{destino}</h4>
-                    <p class="text-sm text-gray-500">Experiencias únicas</p>
-                  </div>
+              {[
+                "City tour en Lima colonial",
+                "Convento de Santa Catalina en Arequipa",
+                "Mirador del Cóndor en Colca",
+                "Islas flotantes de los Uros",
+                "Machu Picchu con guía experto",
+                "Valle Sagrado de los Incas",
+                "Sandboarding en Huacachina",
+                "Tour a las Islas Ballestas"
+              ].map(experience => (
+                <div class="flex items-start space-x-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#2C5E5E] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-gray-700">{experience}</span>
                 </div>
               ))}
             </div>
@@ -419,35 +439,35 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
 
           <!-- Why Choose Us -->
           <div class="bg-white rounded-xl shadow-md p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">¿Por qué elegirnos?</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">¿Por qué elegir este tour?</h3>
             <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#2C5E5E] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <div>
+                  <h4 class="font-medium text-gray-900">Tour completo</h4>
+                  <p class="text-sm text-gray-600">Lo mejor de Perú en un solo viaje</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#2C5E5E] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <div>
+                  <h4 class="font-medium text-gray-900">Hoteles seleccionados</h4>
+                  <p class="text-sm text-gray-600">5 categorías para elegir según tu preferencia</p>
+                </div>
+              </div>
+
               <div class="flex items-start space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#2C5E5E] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 <div>
                   <h4 class="font-medium text-gray-900">Experiencia garantizada</h4>
-                  <p class="text-sm text-gray-600">Más de 40 años creando experiencias inolvidables</p>
-                </div>
-              </div>
-
-              <div class="flex items-start space-x-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#2C5E5E] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                </svg>
-                <div>
-                  <h4 class="font-medium text-gray-900">Precios competitivos</h4>
-                  <p class="text-sm text-gray-600">Las mejores tarifas sin sacrificar calidad</p>
-                </div>
-              </div>
-
-              <div class="flex items-start space-x-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#2C5E5E] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-                <div>
-                  <h4 class="font-medium text-gray-900">Soporte 24/7</h4>
-                  <p class="text-sm text-gray-600">Asistencia durante todo tu viaje</p>
+                  <p class="text-sm text-gray-600">Itinerario cuidadosamente diseñado</p>
                 </div>
               </div>
             </div>
@@ -479,8 +499,5 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     color: #111827;
-  }
-  .cursive-subtitle {
-    font-family: 'Dancing Script', cursive;
   }
 </style>

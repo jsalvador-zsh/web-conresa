@@ -1,0 +1,324 @@
+{
+    "itinerary": {
+      "title": "PERU PLENO E IMPORTANTE",
+      "subtitle": "PERU SOSEGADO RECORRIENDO SUS CALLES DE ANTAÑO LLENO DE CULTURA Y MISTICISMO",
+      "duration": "15 days",
+      "code": "8425 VI.1",
+      "days": [
+        {
+          "day": 1,
+          "city": "Lima",
+          "activities": [
+            "Recepción en el aeropuerto Internacional Jorge Chávez de Lima y traslado al hotel",
+            "City tour (9:00 AM o 2:00 PM) visitando:",
+            "- Plaza San Martín y Jirón de la Unión",
+            "- Plaza Mayor del centro histórico",
+            "- Iglesia y convento de San Francisco (claustros, biblioteca y catacumbas)",
+            "- Palacio de Torre Tagle (panorámico)",
+            "- Iglesia de San Pedro",
+            "- Vista panorámica a la Huaca Pucllana"
+          ],
+          "overnight": "Lima"
+        },
+        {
+          "day": 2,
+          "city": "Lima - Arequipa",
+          "activities": [
+            "Vuelo a Arequipa",
+            "City tour visitando:",
+            "- Plaza de Armas y Catedral",
+            "- Iglesia y Claustros de la Compañía de Jesús",
+            "- Convento y Museo de Santa Catalina",
+            "- Miradores de Yanahuara y Carmen Alto"
+          ],
+          "overnight": "Arequipa"
+        },
+        {
+          "day": 3,
+          "city": "Arequipa - Colca",
+          "activities": [
+            "Tour al Valle del Colca",
+            "Ruta de Yura, Pampa Cañahua, Reserva Nacional de Salinas y Aguada Blanca",
+            "Avistamiento de vicuñas",
+            "Parada en Patahuasi para mate inca",
+            "Visita a baños termales la Calera"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Colca"
+        },
+        {
+          "day": 4,
+          "city": "Cañón del Colca - Puno",
+          "activities": [
+            "Visita al mirador de la Cruz del Cóndor",
+            "Recorrido por pueblos de Yanque y Maca",
+            "Traslado a Puno"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Puno"
+        },
+        {
+          "day": 5,
+          "city": "Puno - Lago Titicaca",
+          "activities": [
+            "Tour a las Islas flotantes de los Uros",
+            "Visita a la isla natural de Taquile",
+            "Almuerzo con familia local (trucha a la plancha)"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Puno"
+        },
+        {
+          "day": 6,
+          "city": "Puno - Cusco",
+          "transport": {
+            "default": "Bus turístico con visitas a:",
+            "optional": {
+              "description": "Tren Peru Rail Titicaca de Lujo",
+              "days": ["Lunes", "Jueves", "Sábados"],
+              "departure": "07:30 am",
+              "arrival": "17:50 hrs",
+              "price": 200
+            }
+          },
+          "activities": [
+            "Visita a Andahuaylillas (la Sixtina de América)",
+            "Templo de Raqchi",
+            "Punto más alto La Raya",
+            "Complejo arqueológico de Pukara"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 7,
+          "city": "Cusco",
+          "activities": [
+            "City tour visitando:",
+            "- Sacsayhuamán",
+            "- Qenqo",
+            "- Tambomachay",
+            "- Qoricancha",
+            "- Catedral del Cusco"
+          ],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 8,
+          "city": "Valle Sagrado",
+          "activities": [
+            "Visita a las ruinas de Pisaq",
+            "Mercado artesanal de Pisaq",
+            "Almuerzo en Valle Sagrado",
+            "Visita a la fortaleza de Ollantaytambo"
+          ],
+          "includes": ["Almuerzo"],
+          "overnight": "Valle Sagrado"
+        },
+        {
+          "day": 9,
+          "city": "Salineras de Maras - Moray - Aguas Calientes",
+          "activities": [
+            "Visita a las Salineras de Maras",
+            "Sitio arqueológico de Moray",
+            "Tren a Aguas Calientes (16:36 - 18:00)"
+          ],
+          "overnight": "Aguas Calientes"
+        },
+        {
+          "day": 10,
+          "city": "Machu Picchu - Cusco",
+          "activities": [
+            "Visita al Santuario de Machu Picchu",
+            "Recorrido por zona agrícola y urbana",
+            "Visita a Intiwatana, Templo del Sol y del Cóndor",
+            "Opcional: Ingreso a Wayna Picchu ($60)"
+          ],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 11,
+          "city": "Cusco",
+          "options": [
+            {
+              "name": "Laguna Humantay",
+              "details": "Caminata de 2 horas (4200 m.s.n.m)"
+            },
+            {
+              "name": "Montaña de Colores",
+              "details": "Caminata de 2 horas 30 min (5000 m.s.n.m)"
+            }
+          ],
+          "activities": [
+            "Tour opcional a Laguna Humantay o Montaña de Colores",
+            "Posibilidad de alquilar caballos con arrieros locales"
+          ],
+          "includes": ["Desayuno", "Almuerzo básico"],
+          "overnight": "Cusco"
+        },
+        {
+          "day": 12,
+          "city": "Cusco - Lima",
+          "activities": [
+            "Vuelo a Lima",
+            "Tiempo libre en Lima"
+          ],
+          "overnight": "Lima"
+        },
+        {
+          "day": 13,
+          "city": "Lima - Ica - Paracas",
+          "activities": [
+            "Traslado a Ica (07:00 - 11:00)",
+            "Visita al Oasis de Huacachina",
+            "Paseo en tubulares areneros por el desierto",
+            "Práctica de sandboarding"
+          ],
+          "overnight": "Paracas"
+        },
+        {
+          "day": 14,
+          "city": "Islas Ballestas - Paracas - Lima",
+          "activities": [
+            "Tour marítimo a las Islas Ballestas",
+            "Opcional: Sobrevuelo a las Líneas de Nazca ($285)",
+            "Retorno en bus a Lima"
+          ],
+          "overnight": "Lima"
+        },
+        {
+          "day": 15,
+          "city": "Lima",
+          "activities": [
+            "Traslado al aeropuerto"
+          ]
+        }
+      ]
+    },
+    "pricing": {
+      "categories": [
+        {
+          "name": "Estándar",
+          "price": 1875,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["El Tambo", "Tierra Viva", "Ibis Larco"],
+            "Arequipa": ["Santa Rosa", "Majestad", "Xima", "Casona Plaza Colonial"],
+            "Colca": ["Pozo del Cielo", "Colca Llaqta"],
+            "Puno": ["La Hacienda Puno / Plaza", "Casa Andina Estándar", "Tierra Viva Puno", "Casona Plaza Centro"],
+            "Cusco": ["San Agustin Internacional", "Casona Real", "Illa Hotel"],
+            "Valle Sagrado": ["Tierra Viva"],
+            "Aguas Calientes": ["Casa de Luz", "Hatuminti"],
+            "Paracas": ["Paracas Sunset"]
+          }
+        },
+        {
+          "name": "Estándar Confort",
+          "price": 2050,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Casa Andina Select", "Tierra Viva Centro", "Libre hotel"],
+            "Arequipa": ["Casa Andina Estándar", "Tierra Viva", "San Agustin Posada Monasterio", "Casona Plaza Arequipa"],
+            "Colca": ["Casa Andina Estándar", "Pozo del Cielo Superior"],
+            "Puno": ["Sonesta (sin vista al lago)", "Taypikala", "José Antonio", "Casona Plaza Puno"],
+            "Cusco": ["Taypikala Cusco", "Anahuarque", "Los Apus", "Hacienda Regocijo", "José Antonio", "Xima Exclusive"],
+            "Valle Sagrado": ["Tierra Viva", "Sonesta Yucay"],
+            "Aguas Calientes": ["Casa Andina", "Taypikala", "Hatun Samay", "Casa de Luz"],
+            "Paracas": ["Casa Andina Select", "San Agustin"]
+          }
+        },
+        {
+          "name": "Superior",
+          "price": 2265,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Tierra Viva Superior", "Casa Andina Premium", "José Antonio"],
+            "Arequipa": ["Katari deluxe", "Ariquipay"],
+            "Colca": ["Colca Lodge", "Aranwa"],
+            "Puno": ["Sonesta Puno (con vista al lago)", "Casa Andina Premium (sin vista al lago)"],
+            "Cusco": ["Casa Andina Koricancha", "Xima Hab. Superior", "Tierra Viva hab. Superior"],
+            "Valle Sagrado": ["Costa del Sol Estándar", "Sonesta Yucay"],
+            "Aguas Calientes": ["El Mapi", "Casa Andina Superior", "Tierra Viva Machupicchu"],
+            "Paracas": ["La Hacienda Paracas", "Casa Andina Select Suite"]
+          }
+        },
+        {
+          "name": "Superior Elegante",
+          "price": 2455,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Sonesta Olivar", "Casa Andina Premium Superior", "José Antonio Deluxe"],
+            "Arequipa": ["Katari Suite (King)", "Hilton", "Costa del Sol"],
+            "Colca": ["Colca Lodge", "Aranwa"],
+            "Puno": ["Casa Andina Premium (con vista al lago)"],
+            "Cusco": ["Casa Andina Premium", "Novotel Estándar", "Costa del Sol", "Sonesta Cusco"],
+            "Valle Sagrado": ["Aranwa"],
+            "Aguas Calientes": ["El Mapi", "Hatun Samay"],
+            "Paracas": ["La Hacienda Paracas", "Casa Andina Select"]
+          }
+        },
+        {
+          "name": "Luxe",
+          "price": 2980,
+          "includes": ["Impuestos", "Cargo por transferencia"],
+          "hotels": {
+            "Lima": ["Casa Andina Premium", "Doubletree By Hilton", "Sonesta Olivar Ejecutiva"],
+            "Arequipa": ["Casa Andina Premium", "Costa del Sol"],
+            "Colca": ["Colca Lodge", "Aranwa"],
+            "Puno": ["GHL Lago Titicaca"],
+            "Cusco": ["Casa Andina Premium", "Costa del Sol", "Palacio del Inca Luxury", "Aranwa Junior Suite"],
+            "Valle Sagrado": ["Aranwa"],
+            "Aguas Calientes": ["Sumaq B&B Garden View"],
+            "Paracas": ["La Hacienda Paracas", "Casa Andina Select Suite"]
+          }
+        }
+      ],
+      "flight_suggestions": {
+        "routes": [
+          {
+            "route": "Lima-Arequipa",
+            "departure": "09:15",
+            "arrival": "10:45"
+          },
+          {
+            "route": "Cusco-Lima",
+            "departure": "11:40",
+            "arrival": "12:50"
+          }
+        ],
+        "prices": [
+          {
+            "description": "Solo Carryon de 10 kilos + Mochila",
+            "price": 170
+          },
+          {
+            "description": "01 pc de 23 kilos + Carryon de 10 kilos + Mochila",
+            "price": 290
+          }
+        ]
+      }
+    },
+    "inclusions": {
+      "general": [
+        "Traslados de ingreso y salida en cada ciudad",
+        "03 noches en Lima + City tour con entradas",
+        "01 noche en Arequipa + City tour Peatonal con Monasterio Santa Catalina",
+        "01 noche en Colca + 2 almuerzos + Visita al Valle hasta Cruz del Cóndor + traslado a Puno",
+        "02 noches en Puno + Excursión a Uros y Taquile + almuerzo + bus turístico Puno-Cusco con paradas",
+        "04 noches en Cusco + City tour + 4 ruinas aledañas + tour a Valle Sagrado + almuerzo",
+        "01 noche en Aguas Calientes + Excursión a Machu Picchu en tren Turista expeditions + Ticket de tren",
+        "Montaña de los 7 colores + 1 almuerzo",
+        "Boleto de bus Lima/Ica + Recorrido en buggy por el desierto + sandboard",
+        "01 noche en Paracas + Tour Islas Ballestas + Boleto de retorno a Lima"
+      ],
+      "exclusions": [
+        "Vuelos internacionales",
+        "Vuelos nacionales/internos",
+        "Sobrevuelo a las líneas de Nazca",
+        "Museos en Ica/Paracas",
+        "Seguro de viaje",
+        "Otros gastos no especificados"
+      ]
+    },
+    "notes": "Gracias por visitar Perú y darnos la oportunidad de atenderlos"
+  }
