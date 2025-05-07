@@ -50,12 +50,11 @@ const { Content } = await post.render();
       <footer class="mt-12 pt-6 border-t border-gray-200">
         <div class="flex flex-wrap gap-2">
           {post.data.tags.map(tag => (
-            <a 
-              href={`/blog/tags/${tag.toLowerCase()}`}
+            <span 
               class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm transition-colors"
             >
               #{tag}
-            </a>
+            </span>
           ))}
         </div>
       </footer>
