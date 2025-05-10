@@ -455,6 +455,113 @@ const destinosPrincipales = getMainDestinations(tour.days);
       </div>
     </div>
   </main>
+  <!-- Tours Relacionados - Sección al final de la página -->
+<section class="bg-gray-50 py-16">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-[#2C5E5E] mb-4">Circuitos que también te pueden interesar</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Descubre otros tours por el sur del Perú que combinan cultura, aventura y paisajes espectaculares.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {surPeruData.tours
+        .filter((t: PeruTour) => t.id !== tour.id) // Excluye el tour actual
+        .slice(0, 3) // Limita a 3 tours
+        .map((relatedTour: PeruTour) => {
+          // Determinar imagen destacada basada en destinos principales
+          const mainDestinations = getMainDestinations(relatedTour.days);
+          const featuredImage = mainDestinations.length > 0 
+            ? highlightImages[mainDestinations[0] as keyof typeof highlightImages] || arequipa
+            : arequipa;
+          
+          // Obtener precio mínimo
+          const minPrice = Math.min(...relatedTour.hotelCategories.map(c => c.price));
+          
+          return (
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+              {/* Imagen del tour */}
+              <div class="relative h-48 overflow-hidden">
+                <Image
+                  src={featuredImage}
+                  alt={`Tour ${relatedTour.title}`}
+                  class="w-full h-full object-cover"
+                  width={600}
+                  height={400}
+                  format="webp"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <div class="absolute bottom-4 left-4">
+                  <span class="inline-block bg-[#2C5E5E] text-white text-sm px-3 py-1 rounded-full">
+                    {relatedTour.duration}
+                  </span>
+                </div>
+              </div>
+              
+              {/* Contenido de la card */}
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                  <a href={`/peru-excursiones/peru-sur-magico/${relatedTour.id}`} class="hover:text-[#2C5E5E] transition-colors">
+                    {relatedTour.title}
+                  </a>
+                </h3>
+                
+                <p class="text-gray-600 mb-4 line-clamp-3">
+                  {relatedTour.shortDescription || "Descubre los paisajes y culturas más impresionantes del sur peruano"}
+                </p>
+                
+                {/* Destinos principales */}
+                {mainDestinations.length > 0 && (
+                  <div class="mt-auto">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      {mainDestinations.slice(0, 3).map(destino => (
+                        <span class="inline-flex items-center text-xs font-medium bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1 text-[#2C5E5E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          {destino}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <div class="flex justify-between items-center border-t border-gray-100 pt-4">
+                      <span class="text-lg font-bold text-[#2C5E5E]">
+                        Desde {formatPrice(minPrice)}
+                      </span>
+                      <a 
+                        href={`/peru-excursiones/peru-sur-magico/${relatedTour.id}`} 
+                        class="text-sm font-medium text-[#2C5E5E] hover:underline flex items-center"
+                      >
+                        Ver tour
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+    
+    {/* Botón para ver todos los tours */}
+    <div class="text-center mt-12">
+      <a 
+        href="/peru-excursiones/sur-magico" 
+        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#2C5E5E] hover:bg-[#1E4A4A] transition-colors"
+      >
+        Ver todos los circuitos
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
 </Layout>
 
 <style>
