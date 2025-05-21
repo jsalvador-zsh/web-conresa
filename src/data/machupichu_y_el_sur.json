@@ -1,10 +1,9 @@
 {
-  "programData": [
+  "itinerary": 
     {
-      "programTitle": "MACHUPICCHU Y EL SUR",
+      "title": "MACHUPICCHU Y EL SUR - LA VUELTA AL PERU EN 10 DIAS MAJESTUOSOS",
       "duration": "10 days",
       "code": "CT8425.IV.2",
-      "tourName": "LA VUELTA AL PERU EN 10 DIAS MAJESTUOSOS",
       "days": [
         {
           "day": "01",
@@ -67,7 +66,8 @@
           "overnight": null
         }
       ],
-      "included": [
+      "inclusions": {
+        "general": [
         "Traslados de ingreso y salida en cada ciudad",
         "01 noche en Arequipa con City Tour",
         "01 noche en Colca con 2 almuerzos y tour al Valle",
@@ -77,11 +77,13 @@
         "01 noche en Aguas Calientes",
         "Desayunos diarios, almuerzos indicados"
       ],
-      "notIncluded": [
+      "exclusions": [
         "Vuelos nacionales (recomendados con horarios)",
         "Opcionales como tren PeruRail Titicaca, ingreso a Wayna Picchu",
         "Almuerzos y cenas no mencionados"
-      ],
+      ]
+    }
+      ,
       "flightSuggestions": {
         "Lima-Arequipa": "Sale 09:15 - Llega 10:45",
         "Cusco-Lima": "Sale 11:25 - Llega 12:45",
@@ -90,10 +92,11 @@
           "withLuggage": 230
         }
       },
-      "hotelCategories": [
+      "pricing": {
+        "categories": [
         {
-          "category": "Estándar",
-          "pricePerPerson": 1285,
+          "name": "Estándar",
+          "price": 1285,
           "hotels": {
             "Arequipa": ["Santa Rosa", "Majestad", "Xima", "Casona Plaza Colonial"],
             "Colca": ["Pozo del Cielo", "Colca Llaqta"],
@@ -103,8 +106,8 @@
           }
         },
         {
-          "category": "Estándar Confort",
-          "pricePerPerson": 1400,
+          "name": "Estándar Confort",
+          "price": 1400,
           "hotels": {
             "Arequipa": ["Casa Andina Estándar", "Tierra Viva", "San Agustin Posada Monasterio", "Casona Plaza Arequipa"],
             "Colca": ["Casa Andina Estándar", "Pozo del Cielo Superior"],
@@ -114,8 +117,8 @@
           }
         },
         {
-          "category": "Superior",
-          "pricePerPerson": 1555,
+          "name": "Superior",
+          "price": 1555,
           "hotels": {
             "Arequipa": ["Katari deluxe", "Ariquipay"],
             "Colca": ["Colca Lodge", "Aranwa"],
@@ -125,8 +128,8 @@
           }
         },
         {
-          "category": "Superior Elegante",
-          "pricePerPerson": 1710,
+          "name": "Superior Elegante",
+          "price": 1710,
           "hotels": {
             "Arequipa": ["Katari Suite (King)", "Hilton", "Costa del Sol"],
             "Colca": ["Colca Lodge", "Aranwa"],
@@ -136,8 +139,8 @@
           }
         },
         {
-          "category": "Luxe",
-          "pricePerPerson": 2150,
+          "name": "Luxe",
+          "price": 2150,
           "hotels": {
             "Arequipa": ["Casa Andina Premium", "Costa del Sol"],
             "Colca": ["Colca Lodge", "Aranwa"],
@@ -146,11 +149,12 @@
             "Aguas Calientes": ["Sumaq B&B Garden View", "Casa del Sol"]
           }
         }
-      ],
+      ]
+      },
       "servicesType": "Compartidos en grupo",
       "languages": ["Español", "Inglés"],
       "thankYouNote": "Gracias por visitar Perú y darnos la oportunidad de atenderlos."
     }
-  ]
+
 }
   

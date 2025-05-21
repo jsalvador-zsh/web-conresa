@@ -197,7 +197,7 @@ const destinosPrincipales = getMainDestinations(tour.days);
           <!-- Detailed Itinerary -->
           <section class="bg-white rounded-xl shadow-sm overflow-hidden">
             <div class="bg-[#2C5E5E] p-6 md:p-8">
-              <h2 class="text-3xl font-bold text-white">Itinerario detallado</h2>
+              <span class="cursive-subtitle text-3xl font-bold text-white">Itinerario detallado</span>
             </div>
             <div class="p-6 md:p-8 space-y-8">
               {tour.days.map(day => (
@@ -236,7 +236,7 @@ const destinosPrincipales = getMainDestinations(tour.days);
           <!-- Accommodation Options -->
           <section class="bg-white rounded-xl shadow-sm overflow-hidden">
             <div class="bg-[#2C5E5E] p-6 md:p-8">
-              <h2 class="text-3xl font-bold text-white">Opciones de alojamiento</h2>
+              <span class="cursive-subtitle text-3xl font-bold text-white">Opciones de alojamiento</span>
             </div>
             <div class="p-6 md:p-8 space-y-8">
               {tour.hotelCategories.map(category => (
@@ -279,7 +279,7 @@ const destinosPrincipales = getMainDestinations(tour.days);
           {tour.flightSuggestions && (
             <section class="bg-white rounded-xl shadow-sm overflow-hidden">
               <div class="bg-[#2C5E5E] p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-white">Vuelos sugeridos</h2>
+                <span class="cursive-subtitle text-3xl font-bold text-white">Vuelos sugeridos</span>
               </div>
               <div class="p-6 md:p-8">
                 <h3 class="text-xl font-bold text-gray-900 mb-6">Rutas recomendadas</h3>
@@ -546,19 +546,6 @@ const destinosPrincipales = getMainDestinations(tour.days);
           );
         })
       }
-    </div>
-    
-    {/* Botón para ver todos los tours */}
-    <div class="text-center mt-12">
-      <a 
-        href="/peru-excursiones/sur-magico" 
-        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#2C5E5E] hover:bg-[#1E4A4A] transition-colors"
-      >
-        Ver todos los circuitos
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
     </div>
   </div>
 </section>

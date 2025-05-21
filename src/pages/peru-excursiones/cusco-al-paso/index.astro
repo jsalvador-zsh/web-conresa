@@ -2,270 +2,456 @@
 // src/pages/cusco-al-paso.astro
 import Layout from "../../../layouts/Layout.astro";
 import tourData from "../../../data/cusco_al_paso.json";
+import { Image } from "astro:assets";
 
+// Importar imágenes
 import cuscoHero from "../../../images/cusco/cusco.jpg";
 import machupicchu from "../../../images/cusco/cusco-3.jpg";
 import sacsayhuaman from "../../../images/cusco/sacsayhuaman.jpeg";
 import koricancha from "../../../images/cusco/koricancha.jpg";
-import { Image } from "astro:assets";
+import valleSagrado from "../../../images/cusco/cusco-6.jpg";
+
+// Función para formatear precios
+const formatPrice = (price: number) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0
+  }).format(price);
+};
 ---
 
-<Layout
-  title={`${tourData.tour.title} | CONRESA TOURS`}
-  description="Tour express de 3 días para descubrir lo esencial de Cusco y Machu Picchu"
->
-  <div class="min-h-screen bg-gray-50">
+<Layout title={`${tourData.tour.title} | CONRESA TOURS`} description={tourData.tour.description}>
+  <main>
     <!-- Hero Section -->
-    <div class="relative h-[500px] overflow-hidden">
+    <section class="relative h-[80vh] max-h-[900px] min-h-[500px] overflow-hidden">
       <Image
         src={cuscoHero}
-        alt="Vista panorámica de Cusco"
+        alt={tourData.tour.title}
         class="w-full h-full object-cover"
-        width={1200}
-        height={500}
-        loading="eager"
+        width={1920}
+        height={1080}
+        format="webp"
+        quality={80}
       />
-      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-        <div class="text-center px-4">
-          <span class="cursive-font text-4xl md:text-8xl font-bold text-white mb-4">
-            {tourData.tour.title}
-          </span>
-          <p class="text-xl text-white mb-6">{tourData.tour.description}</p>
-          <!-- <p class="text-white font-medium">Código: {tourData.tour.code}</p> -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-center">
+        <div class="container mx-auto px-6">
+          <div class="text-center mx-auto max-w-6xl">
+            <span class="cursive-font text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 font-serif">
+              {tourData.tour.title}
+            </span>
+            <p class="text-xl text-white">
+              {tourData.tour.description}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <!-- Itinerario -->
-      <section class="mb-16">
-        <h2 class="text-3xl font-bold text-[#48887F] mb-8 text-center">
-          Itinerario Detallado
-        </h2>
-        
-        <div class="space-y-8">
-          {tourData.tour.days.map((day, index) => (
-            <div 
-              class="bg-white rounded-xl shadow-lg overflow-hidden"
-              id={`day-${index + 1}`}
-            >
-              <div class="p-6 md:p-8">
-                <div class="flex items-start">
-                  <div class="bg-[#48887F] text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold text-xl">
-                    {day.day}
+    <div class="container mx-auto px-6 py-12">
+      <!-- Main Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left Column (Content) -->
+        <div class="lg:col-span-8 space-y-12">
+          <!-- Destinations Gallery - Bento Grid Style -->
+          <section class="bg-white rounded-xl shadow-md p-6 md:p-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 font-serif">Lo más destacado del tour</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 h-[500px]">
+              <div class="relative overflow-hidden rounded-xl group col-span-2 row-span-2">
+                <Image
+                  src={machupicchu}
+                  alt="Machu Picchu"
+                  width={800}
+                  height={600}
+                  class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                  <h3 class="text-2xl font-bold text-white font-serif">Machu Picchu</h3>
+                </div>
+              </div>
+              
+              <div class="relative overflow-hidden rounded-xl group">
+                <Image
+                  src={sacsayhuaman}
+                  alt="Sacsayhuamán"
+                  width={400}
+                  height={300}
+                  class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+                  <h3 class="text-lg font-bold text-white">Sacsayhuamán</h3>
+                </div>
+              </div>
+              
+              <div class="relative overflow-hidden rounded-xl group">
+                <Image
+                  src={koricancha}
+                  alt="Koricancha"
+                  width={400}
+                  height={300}
+                  class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+                  <h3 class="text-lg font-bold text-white">Koricancha</h3>
+                </div>
+              </div>
+              
+              <div class="relative overflow-hidden rounded-xl group col-span-1 md:col-span-2">
+                <Image
+                  src={valleSagrado}
+                  alt="Valle Sagrado"
+                  width={800}
+                  height={300}
+                  class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+                  <h3 class="text-lg font-bold text-white">Valle Sagrado</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tour Description -->
+          <section class="bg-white rounded-xl shadow-md p-6 md:p-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 font-serif">Experiencia Express en Cusco</h2>
+            <div class="prose max-w-none text-gray-700">
+              <p class="text-lg">Este tour express ha sido diseñado para quienes disponen de poco tiempo pero desean conocer lo esencial de Cusco y Machu Picchu en una experiencia intensiva de 3 días.</p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mt-8">Itinerario resumido</h3>
+              <ul class="space-y-3">
+                {tourData.tour.days.map(day => (
+                  <li class="pl-4 border-l-2 border-[#48887F]">
+                    <strong class="text-gray-900">Día {day.day}:</strong> {day.title} {day.overnight && <span class="text-[#48887F]">• Pernocte en {day.overnight}</span>}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <!-- Detailed Itinerary -->
+          <section class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="bg-[#48887F] p-6 md:p-8">
+              <span class="cursive-subtitle text-3xl font-bold text-white font-serif">Itinerario Detallado</span>
+            </div>
+            <div class="p-6 md:p-8 space-y-8">
+              {tourData.tour.days.map(day => (
+                <div class="border-l-4 border-[#48887F] pl-6">
+                  <div class="flex items-start gap-4">
+                    <div class="bg-[#48887F] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 shadow-md">
+                      {day.day}
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-bold text-gray-900">{day.title}</h3>
+                      {day.overnight && (
+                        <p class="text-sm text-gray-500 mt-1">
+                          <span class="font-medium">Pernocte:</span> {day.overnight}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">
-                      {day.title}
-                    </h3>
-                    <ul class="space-y-3">
+                  <div class="prose max-w-none text-gray-700 mt-4 pl-14">
+                    <ul class="space-y-2">
                       {day.activities.map(activity => (
                         <li class="flex items-start">
-                          <svg class="w-5 h-5 text-[#48887F] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                           </svg>
-                          <span class="text-gray-700">{activity}</span>
+                          <span>{activity}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
+              ))}
+            </div>
+          </section>
+
+          <!-- Luxury Hotels -->
+          <section class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="bg-[#48887F] p-6 md:p-8">
+              <span class="cursive-subtitle text-3xl font-bold text-white font-serif">Opciones de Alojamiento</span>
+            </div>
+            <div class="p-6 md:p-8">
+              <div class="space-y-6">
+                {tourData.tour.pricing.categories.map(category => (
+                  <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <div class="bg-gray-50 p-6 flex justify-between items-center">
+                      <div>
+                        <h3 class="text-xl font-bold text-gray-900">{category.name}</h3>
+                        <p class="text-sm text-gray-600 mt-1">{category.includes.join(', ')}</p>
+                      </div>
+                      <span class="text-2xl font-bold text-[#48887F]">{formatPrice(category.price)}</span>
+                    </div>
+                    <div class="p-6">
+                      <div class="grid grid-cols-1 gap-6">
+                        {Object.entries(category.hotels).map(([ciudad, hoteles]) => (
+                          <div>
+                            <h4 class="font-bold text-gray-900 mb-3 flex items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#48887F] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                              </svg>
+                              {ciudad}
+                            </h4>
+                            <ul class="space-y-2">
+                              {hoteles.map(hotel => (
+                                <li class="flex items-start">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                  </svg>
+                                  <span class="text-gray-600">{hotel}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <!-- Flight Suggestions -->
+          <section class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="bg-[#48887F] p-6 md:p-8">
+              <span class="cursive-subtitle text-3xl font-bold text-white font-serif">Vuelos Sugeridos</span>
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-6">Rutas recomendadas</h3>
+              <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ruta</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Salida</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Llegada</th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y divide-gray-200">
+                    {tourData.tour.flight_suggestions.routes.map((route, index) => (
+                      <tr class={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{route.route}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{route.departure}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{route.arrival}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- Includes/Excludes -->
+          <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+              <div class="bg-[#48887F] p-6">
+                <h3 class="text-xl font-bold text-white">Incluido en el tour</h3>
+              </div>
+              <div class="p-6">
+                <ul class="space-y-3">
+                  {tourData.tour.inclusions.included.map(item => (
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span class="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+              <div class="bg-gray-800 p-6">
+                <h3 class="text-xl font-bold text-white">No Incluye</h3>
+              </div>
+              <div class="p-6">
+                <ul class="space-y-3">
+                  {tourData.tour.inclusions.not_included.map(item => (
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      <span class="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Additional Info -->
+          <!-- <section class="bg-white rounded-xl shadow-md p-6 md:p-8">
+            <span class="text-2xl font-bold text-gray-900 mb-4 font-serif">Información Importante</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Tipo de servicio</h3>
+                <p class="text-gray-700">Compartido en grupo</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Idiomas disponibles</h3>
+                <p class="text-gray-700">Español, Inglés</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Duración</h3>
+                <p class="text-gray-700">{tourData.tour.days.length} días</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Código del tour</h3>
+                <p class="text-gray-700">{tourData.tour.code}</p>
+              </div>
+            </div>
+          </section> -->
+        </div>
+
+        <!-- Right Column (Sidebar) -->
+        <div class="lg:col-span-4 space-y-6">
+          <!-- Booking Card -->
+          <div class="bg-white rounded-xl shadow-md p-6 top-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 font-serif">Reserva tu Tour Express</h3>
+            
+            <div class="space-y-4 mb-6">
+              {tourData.tour.pricing.categories.map(category => (
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-[#48887F] transition-colors">
+                  <div class="flex justify-between items-center">
+                    <span class="font-medium text-gray-900">{category.name}</span>
+                    <span class="font-bold text-[#48887F]">{formatPrice(category.price)}</span>
+                  </div>
+                  <p class="text-sm text-gray-600 mt-1">{category.includes[0]}</p>
+                </div>
+              ))}
+            </div>
+            
+            <a 
+              href="/#contacto" 
+              class="block w-full bg-[#48887F] hover:bg-gray-800 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors duration-300 mb-4 shadow-md"
+            >
+              Consultar disponibilidad
+            </a>
+            
+            <div class="flex items-center justify-center space-x-2 text-sm text-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>{tourData.tour.days.length} días</span>
+            </div>
+          </div>
+
+          <!-- Why This Tour -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 font-serif">Por qué este tour</h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <div class="bg-gray-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">Tiempo Optimizado</h4>
+                  <p class="text-sm text-gray-600">Lo esencial de Cusco en solo 3 días</p>
+                </div>
               </div>
               
-              {day.overnight && (
-                <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
-                  <p class="font-medium text-gray-700">
-                    <span class="text-[#48887F]">Pernocte:</span> {day.overnight}
-                  </p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- Highlights -->
-      <section class="mb-16">
-        <h2 class="text-3xl font-bold text-[#48887F] mb-8 text-center">
-          Lo más destacado del tour
-        </h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-lg transition-shadow">
-            <div class="h-48 overflow-hidden">
-              <Image
-                src={sacsayhuaman}
-                alt="Sacsayhuamán"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                width={400}
-                height={300}
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-xl mb-3">City Tour en Cusco</h3>
-              <p class="text-gray-700">
-                Descubre los principales atractivos de la capital del Imperio Inca, incluyendo Sacsayhuamán y el Koricancha.
-              </p>
-            </div>
-          </div>
-          
-          <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-lg transition-shadow">
-            <div class="h-48 overflow-hidden">
-              <Image
-                src={machupicchu}
-                alt="Machu Picchu"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                width={400}
-                height={300}
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-xl mb-3">Machu Picchu</h3>
-              <p class="text-gray-700">
-                Visita una de las 7 Maravillas del Mundo Moderno con un tour guiado por sus principales sectores.
-              </p>
-            </div>
-          </div>
-          
-          <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-lg transition-shadow">
-            <div class="h-48 overflow-hidden">
-              <Image
-                src={koricancha}
-                alt="Koricancha"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                width={400}
-                height={300}
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-xl mb-3">Patrimonio Cultural</h3>
-              <p class="text-gray-700">
-                Explora la rica herencia incaica y colonial en los principales monumentos de Cusco.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Hoteles -->
-      <section class="mb-16">
-        <h2 class="text-3xl font-bold text-[#48887F] mb-8 text-center">
-          Categorías de Hoteles
-        </h2>
-        
-        <div class="overflow-x-auto">
-          <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-lg">
-            <thead class="bg-[#48887F] text-white">
-              <tr>
-                <th class="py-4 px-6 text-left">Categoría</th>
-                <th class="py-4 px-6 text-left">Precio por persona</th>
-                <th class="py-4 px-6 text-left">Hoteles en Cusco</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-              {tourData.tour.pricing.categories.map((category, index) => (
-                <tr class={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td class="py-4 px-6 font-semibold">{category.name}</td>
-                  <td class="py-4 px-6">USD$ {category.price}</td>
-                  <td class="py-4 px-6">
-                    <ul class="list-disc pl-5">
-                      {category.hotels.Cusco.map(hotel => (
-                        <li class="text-gray-700">{hotel}</li>
-                      ))}
-                    </ul>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        
-        <div class="mt-4 text-sm text-gray-600">
-          <p class="font-semibold">Incluye: {tourData.tour.pricing.categories[0].includes.join(', ')}</p>
-        </div>
-      </section>
-
-      <!-- Inclusions -->
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        <div class="bg-white p-8 rounded-xl shadow-lg">
-          <h3 class="text-2xl font-bold text-[#48887F] mb-6">Incluye</h3>
-          <ul class="space-y-3">
-            {tourData.tour.inclusions.included.map(item => (
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-[#48887F] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-gray-700">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        
-        <div class="bg-white p-8 rounded-xl shadow-lg">
-          <h3 class="text-2xl font-bold text-[#48887F] mb-6">No Incluye</h3>
-          <ul class="space-y-3">
-            {tourData.tour.inclusions.not_included.map(item => (
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-                <span class="text-gray-700">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <!-- Vuelos Sugeridos -->
-      <section class="bg-white p-8 rounded-xl shadow-lg mb-16">
-        <h2 class="text-2xl font-bold text-[#48887F] mb-6">Vuelos Sugeridos</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {tourData.tour.flight_suggestions.routes.map(flight => (
-            <div class="border border-gray-200 rounded-lg p-4">
-              <h3 class="font-bold text-lg mb-2">{flight.route}</h3>
-              <div class="flex justify-between">
-                <div>
-                  <p class="text-gray-600">Salida</p>
-                  <p class="font-medium">{flight.departure}</p>
+              <div class="flex items-start space-x-3">
+                <div class="bg-gray-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
                 </div>
                 <div>
-                  <p class="text-gray-600">Llegada</p>
-                  <p class="font-medium">{flight.arrival}</p>
+                  <h4 class="font-medium text-gray-900">Guías Expertos</h4>
+                  <p class="text-sm text-gray-600">Profesionales certificados en historia y cultura</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-3">
+                <div class="bg-gray-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">Logística Perfecta</h4>
+                  <p class="text-sm text-gray-600">Todo organizado para tu comodidad</p>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
 
-      <!-- CTA -->
-      <section class="bg-gradient-to-r from-[#48887F] to-[#2a5e5e] text-white p-12 rounded-2xl shadow-2xl text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para vivir esta experiencia?</h2>
-        <p class="text-xl mb-8 max-w-3xl mx-auto">
-          Contáctanos para reservar tu tour o recibir más información
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a 
-            href="tel:+51987654321" 
-            class="bg-white text-[#48887F] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center"
-          >
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            +51 987 654 321
-          </a>
-          <a 
-            href="mailto:reservas@conresatours.com" 
-            class="bg-transparent border-2 border-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center"
-          >
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-            </svg>
-            reservas@conresatours.com
-          </a>
+          <!-- Special Offers -->
+          <!-- <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 font-serif">Extras Opcionales</h3>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                <div class="bg-gray-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">Tren Vistadome</h4>
+                  <p class="text-sm text-gray-600">Upgrade a tren con ventanas panorámicas</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                <div class="bg-gray-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">Almuerzo Buffet</h4>
+                  <p class="text-sm text-gray-600">En restaurante de Aguas Calientes</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                <div class="bg-gray-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">Noche Extra</h4>
+                  <p class="text-sm text-gray-600">Extiende tu estadía en Cusco</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
         </div>
-      </section>
+      </div>
     </div>
-  </div>
+  </main>
 </Layout>
+
+<style>
+.prose {
+  line-height: 1.7;
+  color: #374151;
+}
+.prose p {
+  margin-bottom: 1.25em;
+}
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1.25em;
+}
+.prose li {
+  margin-bottom: 0.5em;
+}
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  color: #111827;
+}
+</style>
