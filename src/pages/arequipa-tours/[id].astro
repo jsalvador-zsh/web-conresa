@@ -2,6 +2,40 @@
 // src/pages/tours/[id].astro
 import toursData from "../../data/tours_arequipa.json";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import arequipaCityTour from "../../images/paquetes-arequipa/arequipa-panoramica.jpg";
+import colcaCanyon from "../../images/paquetes-arequipa/valle-colca.jpg";
+import monasterio from "../../images/paquetes-arequipa/monasterio-santa-catalina-4.jpg";
+import salinasLagoon from "../../images/paquetes-arequipa/salinas.jpg";
+import santaCatalina from "../../images/paquetes-arequipa/monasterio-santa-catalina.jpg";
+import campina from "../../images/paquetes-arequipa/volcan-1.jpg";
+import sabandia from "../../images/paquetes-arequipa/molino-sabandia.jpg";
+import museos from "../../images/paquetes-arequipa/monasterio-santa-catalina-5.jpg";
+import quequena from "../../images/paquetes-arequipa/quequena.jpg";
+import cantera from "../../images/paquetes-arequipa/cantera-sillar-3.jpg";
+import virgen from "../../images/paquetes-arequipa/virgen-chapi.jpg";
+import salinas from "../../images/paquetes-arequipa/laguna-salinas.jpg";
+
+import defaultImage from "../../images/paquetes-arequipa/imagen-default.svg";
+
+import { Image } from "astro:assets";
+
+// Mapeo de imágenes por tour ID
+const tourImages = {
+  "1": arequipaCityTour,
+  "2": monasterio,
+  "3": colcaCanyon,
+  "4": salinasLagoon,
+  "5": campina,
+  "6": museos,
+  "7": sabandia,
+  "8": quequena,
+  "9": cantera,
+  "10": virgen,
+  "11": salinas,
+  // Agrega más mapeos según tus tours
+};
 
 // Exporta getStaticPaths para generar las rutas estáticas
 export async function getStaticPaths() {
@@ -14,6 +48,9 @@ export async function getStaticPaths() {
 // Ahora recibimos el tour como prop en lugar de buscarlo
 const { tour } = Astro.props;
 
+// Obtener imagen para este tour
+const tourImage = tourImages[tour.id] || defaultImage;
+
 // Función para obtener 3 tours aleatorios excluyendo el actual
 const obtenerToursRelacionados = (idActual: string): typeof tour[] => {
   const toursFiltrados = toursData.filter(t => t.id.toString() !== idActual);
@@ -25,148 +62,157 @@ const obtenerToursRelacionados = (idActual: string): typeof tour[] => {
 const toursRelacionados = obtenerToursRelacionados(tour.id.toString());
 ---
 
-<Layout title={tour.title} description="">
-    <div class="container">
-        <a href="/arequipa-tours" class="back-link" transition:animate="slide"
-            >← Volver a todos los tours</a
-        >
-
-        <div class="tour-header">
-            <h1 class="title text-[#48887F]" transition:name={`title-${tour.id}`}>
-                {tour.title}
-            </h1>
-            <div class="tour-subtitle">
-                <span
-                    class="flex items-center gap-x-2 text-[#48887F]"
-                    transition:name={`duration-${tour.id}`}
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 inline mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                        ></path>
-                    </svg>
-                    <span>Duración: {tour.duration}</span>
-                </span>
-                <span
-                    class="modality-badge italic capitalize"
-                    transition:name={`modality-${tour.id}`}
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 inline mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                        ></path>
-                    </svg>
-                    Modalidad: {tour.modality}
-                </span>
-            </div>
-            <img
-                src="/images/paquetes/imagen-default.svg"
+<Layout title={tour.title} description={tour.shortDescription || `Descubre este tour en Arequipa: ${tour.title}`}>
+    <div class="py-12">
+        <div class="relative h-64 md:h-[500px] overflow-hidden">   
+            <Image
+                src={tourImage}
                 alt={tour.title}
-                class="tour-image"
-                width="800"
-                height="400"
+                class="w-full h-full object-cover"
+                width={1200}
+                height={600}
+                format="webp"
+                quality={80}
                 transition:name={`image-${tour.id}`}
-                <div
-                class="tour-details"
             />
-            <h2 class="section-title text-[#48887F] text-lg md:text-xl uppercase" transition:animate="fade">
-                Visitas Incluidas:
-            </h2>
-            <ul>
-                {
-                    tour.included_visits.map((visit, index) => (
-                        <li
-                            class="list-item"
-                            set:html={visit}
-                            transition:animate="fade"
-                        />
-                    ))
-                }
-            </ul>
-
-            {
-                tour.itinerario && (
-                    <>
-                        <h2 class="section-title" transition:animate="fade">
-                            Itinerario Detallado:
-                        </h2>
-                        {tour.itinerario.map((item, index) => (
-                            <div transition:animate="fade">
-                                <p class="itinerario-item" set:html={item} />
-                            </div>
-                        ))}
-                    </>
-                )
-            }
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-center justify-center p-8">
+                <div class="text-center">
+                <span class="cursive-font text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-2 font-serif">
+                    {tour.title}
+                </span>
+                </div>
+            </div>
+            </div>
+        <div class=" mb-12 container mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="p-8 md:p-10">
+    <div class="prose max-w-none">
+      {tour.description && (
+        <div class="mb-10 pb-8 border-b border-gray-100">
+          <div class="flex items-center mb-6">
+            <div class="bg-[#48887F] w-2 h-8 mr-3 rounded-full"></div>
+            <h2 class="text-lg md:text-3xl font-bold text-[#48887F] font-serif">Descripción del Tour</h2>
+          </div>
+          <p class="text-gray-700 text-base md:text-lg leading-relaxed">{tour.description}</p>
         </div>
-        <!-- Tours Relacionados -->    
-<div class="my-12">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6">Tours similares</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {toursRelacionados.map((tourRel) => (
-            <a
-                href={`/arequipa-tours/${tourRel.id}`}
-                class="group bg-white shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-            >
-                <div class="relative h-48 overflow-hidden">
-                    <img
-                        src="/images/paquetes/imagen-default.svg"
-                        alt={tourRel.title}
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        width="400"
-                        height="200"
-                        loading="lazy"
-                    />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                    <span class="absolute top-3 right-3 bg-[#48887F] text-pink-100 text-xs italic font-medium px-2 py-1">
-                        {tourRel.modality}
-                    </span>
+      )}
+
+      <div class="mb-10 pb-8 border-b border-gray-100">
+        <div class="flex items-center mb-6">
+          <div class="bg-[#48887F] w-2 h-8 mr-3 rounded-full"></div>
+          <h2 class="text-2xl md:text-3xl font-bold text-[#48887F] font-serif">Visitas Incluidas</h2>
+        </div>
+        <ul class="space-y-4">
+          {tour.included_visits.map((visit, index) => (
+            <li class="flex items-start bg-gray-50 p-4 rounded-lg hover:bg-[#48887F]/5 transition-colors duration-200">
+              <div class="bg-[#48887F] text-white p-1 rounded-full mr-3 mt-0.5 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="text-gray-700 text-base md:text-lg" set:html={visit} />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {tour.itinerario && tour.itinerario.length > 0 && (
+        <div class="mb-10 pb-8 border-b border-gray-100">
+          <div class="flex items-center mb-6">
+            <div class="bg-[#48887F] w-2 h-8 mr-3 rounded-full"></div>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#48887F] font-serif">Itinerario Detallado</h2>
+          </div>
+          <div class="space-y-6">
+            {tour.itinerario.map((item, index) => (
+              <div class="relative pl-6 before:absolute before:left-0 before:top-3 before:w-3 before:h-3 before:bg-[#48887F] before:rounded-full">
+                <div class="bg-gray-50 hover:bg-[#48887F]/5 p-4 rounded-lg transition-colors duration-200 border-l-4 border-[#48887F]">
+                  <p class="text-gray-700 text-lg leading-relaxed" set:html={item} />
                 </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">
-                        {tourRel.title}
-                    </h3>
-                    <div class="flex items-center text-[#48887F] font-medium text-sm">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="w-4 h-4 mr-1"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
-                        </svg>
-                        {tourRel.duration}
-                    </div>
-                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {tour.price && (
+        <div class="bg-gradient-to-r from-[#48887F]/10 to-[#48887F]/5 p-8 rounded-xl border border-[#48887F]/20 relative overflow-hidden">
+          <div class="absolute -right-4 -top-4 text-[#48887F]/10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#48887F] mb-1">Inversión desde</h3>
+          <p class="text-4xl font-bold text-[#48887F] mb-2">
+            {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tour.price)}
+          </p>
+          <p class="text-sm text-gray-600">*Precio por persona en base a habitación doble</p>
+          <div class="mt-4">
+            <a href="#contacto" class="inline-block bg-[#48887F] hover:bg-[#3a6d66] text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300 shadow-md">
+              Consultar disponibilidad
             </a>
-        ))}
+          </div>
+        </div>
+      )}
     </div>
+  </div>
 </div>
+
+        <!-- Tours Relacionados -->    
+        <div class="mb-12 container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 font-serif">Tours que también te pueden interesar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {toursRelacionados.map((tourRel) => {
+                    const relImage = tourImages[tourRel.id] || defaultImage;
+                    return (
+                        <a
+                            href={`/arequipa-tours/${tourRel.id}`}
+                            class="group bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                        >
+                            <div class="relative h-48 overflow-hidden">
+                                <Image
+                                    src={relImage}
+                                    alt={tourRel.title}
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    width={400}
+                                    height={300}
+                                    loading="lazy"
+                                    format="webp"
+                                    quality={70}
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                                <span class="absolute top-3 right-3 bg-[#48887F] text-white text-xs font-medium px-3 py-1 rounded-full">
+                                    {tourRel.modality}
+                                </span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2 font-serif">
+                                    {tourRel.title}
+                                </h3>
+                                <div class="flex items-center text-[#48887F] font-medium text-sm">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="w-4 h-4 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        />
+                                    </svg>
+                                    {tourRel.duration}
+                                </div>
+                            </div>
+                        </a>
+                    );
+                })}
+            </div>
+        </div>
     </div>
+</Layout>
+
 
 </Layout>
 

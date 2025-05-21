@@ -4,6 +4,38 @@ import Layout from "../../layouts/Layout.astro";
 import type { TourVisit } from "../../types/arequipa";
 
 const tours = toursData as TourVisit[];
+import arequipaCityTour from "../../images/paquetes-arequipa/arequipa-panoramica.jpg";
+import colcaCanyon from "../../images/paquetes-arequipa/valle-colca.jpg";
+import monasterio from "../../images/paquetes-arequipa/monasterio-santa-catalina-4.jpg";
+import salinasLagoon from "../../images/paquetes-arequipa/salinas.jpg";
+import santaCatalina from "../../images/paquetes-arequipa/monasterio-santa-catalina.jpg";
+import campina from "../../images/paquetes-arequipa/volcan-1.jpg";
+import sabandia from "../../images/paquetes-arequipa/molino-sabandia.jpg";
+import museos from "../../images/paquetes-arequipa/monasterio-santa-catalina-5.jpg";
+import quequena from "../../images/paquetes-arequipa/quequena.jpg";
+import cantera from "../../images/paquetes-arequipa/cantera-sillar-3.jpg";
+import virgen from "../../images/paquetes-arequipa/virgen-chapi.jpg";
+import salinas from "../../images/paquetes-arequipa/laguna-salinas.jpg";
+
+import defaultImage from "../../images/paquetes-arequipa/imagen-default.svg";
+
+import { Image } from "astro:assets";
+
+// Mapeo de imágenes por tour ID
+const tourImages = {
+  "1": arequipaCityTour,
+  "2": monasterio,
+  "3": colcaCanyon,
+  "4": salinasLagoon,
+  "5": campina,
+  "6": museos,
+  "7": sabandia,
+  "8": quequena,
+  "9": cantera,
+  "10": virgen,
+  "11": salinas,
+  // Agrega más mapeos según tus tours
+};
 ---
 
 <Layout title="Tours en Arequipa" description="Explora nuestra selección de tours en Arequipa y descubre la belleza de la Ciudad Blanca. Encuentra experiencias únicas, desde recorridos culturales hasta aventuras al aire libre.">
@@ -19,15 +51,17 @@ const tours = toursData as TourVisit[];
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {tours.map((tour, index) => (
-          <a
+        {tours.map((tour, index) => {
+          const tourImage = tourImages[tour.id] || defaultImage;
+          return (
+            <a
             href={`/arequipa-tours/${tour.id}`}
             class="group relative bg-white shadow-lg overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
             style={`animation-delay: ${index * 100}ms`}
           >
             <div class="relative h-56 overflow-hidden">
-              <img
-                src="/images/paquetes/imagen-default.svg"
+              <Image
+                src={tourImage}
                 alt={tour.title}
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 width="400"
@@ -62,7 +96,9 @@ const tours = toursData as TourVisit[];
               </div>
             </div>
           </a>
-        ))}
+          )
+          
+        })}
       </div>
     </div>
   </div>
