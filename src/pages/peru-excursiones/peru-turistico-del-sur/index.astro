@@ -374,9 +374,10 @@ const mainDestinations = ["Lima", "Arequipa", "Colca", "Puno", "Cusco", "Machu P
               {hotelCategories.map(category => (
                 <div class="border border-gray-200 rounded-lg p-4 hover:border-[#2C5E5E] transition-colors">
                   <div class="flex justify-between items-center">
-                    <span class="text-gray-600">{category.name}</span>
+                    <span class="text-gray-900 font-medium uppercase">{category.name}</span>
                     <span class="font-bold text-[#2C5E5E]">{formatPrice(category.price)}</span>
                   </div>
+                  <p class="text-sm text-gray-600 mt-1">Impuestos y cargo por transferencia</p>
                 </div>
               ))}
             </div>

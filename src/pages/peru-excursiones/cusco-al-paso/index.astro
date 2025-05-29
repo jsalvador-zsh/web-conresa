@@ -313,16 +313,16 @@ const formatPrice = (price: number) => {
         <div class="lg:col-span-4 space-y-6">
           <!-- Booking Card -->
           <div class="bg-white rounded-xl shadow-md p-6 top-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-4 font-serif">Reserva tu Tour Express</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 font-serif">Reserva tu viaje inolvidable</h3>
             
             <div class="space-y-4 mb-6">
               {tourData.tour.pricing.categories.map(category => (
                 <div class="border border-gray-200 rounded-lg p-4 hover:border-[#48887F] transition-colors">
                   <div class="flex justify-between items-center">
-                    <span class="font-medium text-gray-900">{category.name}</span>
+                    <span class="font-medium text-gray-900 uppercase">{category.name}</span>
                     <span class="font-bold text-[#48887F]">{formatPrice(category.price)}</span>
                   </div>
-                  <p class="text-sm text-gray-600 mt-1">{category.includes[0]}</p>
+                  <p class="text-sm text-gray-600 mt-1">Impuestos y cargo por transferencia</p>
                 </div>
               ))}
             </div>

@@ -370,7 +370,7 @@ const formatPrice = (price: number) => {
               {tour.pricing.categories.map(category => (
                 <div class="border border-gray-200 rounded-lg p-4 hover:border-[#48887F] transition-colors">
                   <div class="flex justify-between items-center">
-                    <span class="font-medium text-gray-900">{category.name}</span>
+                    <span class="font-medium text-gray-900 uppercase">{category.name}</span>
                     <span class="font-bold text-[#48887F]">{formatPrice(category.price)}</span>
                   </div>
                   <p class="text-sm text-gray-600 mt-1">{category.includes.join(', ')}</p>
