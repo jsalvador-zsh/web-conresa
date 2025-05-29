@@ -40,11 +40,11 @@ const { logoAlt = "Logo Conresa", phoneNumbers = ["+51 949 351 505"] } =
         <ul class="hidden md:flex items-center space-x-6">
           {
             phoneNumbers.map((number) => (
-              <li class="flex text-xl items-center gap-x-1 italic text-white">
+              <a href="tel:+51949351505" class="flex text-xl items-center gap-x-1 italic text-white">
                 <span>Perú</span><FlagPE class="ml-2 h-7 w-8 me-4" />
                 <Phone class="size-4 text-white" />
                 <span>{number}</span>
-              </li>
+              </a>
             ))
           }
         </ul>
