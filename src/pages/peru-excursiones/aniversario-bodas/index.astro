@@ -170,7 +170,7 @@ const mainDestinations = Array.from(new Set(
               
               <h3 class="text-xl font-semibold text-gray-900 mt-8">Itinerario resumido</h3>
               <ul class="space-y-3">
-                {tour.days.filter((_, index) => index % 2 === 0).map(day => (
+                {tour.days.map(day => (
                   <li class="pl-4 border-l-2 border-[#48887F]">
                     <strong class="text-gray-900">Día {day.day}:</strong> {day.title} {day.overnight && `• Pernocte en ${day.overnight}`}
                   </li>
