@@ -468,12 +468,11 @@ const destinosPrincipales = getMainDestinations(tour.days);
       {surPeruData.tours
         .filter((t: PeruTour) => t.id !== tour.id) // Excluye el tour actual
         .slice(0, 3) // Limita a 3 tours
-        .map((relatedTour: PeruTour) => {
+         .map((relatedTour: PeruTour, index: number) => {
           // Determinar imagen destacada basada en destinos principales
           const mainDestinations = getMainDestinations(relatedTour.days);
-          const featuredImage = mainDestinations.length > 0 
-            ? highlightImages[mainDestinations[0] as keyof typeof highlightImages] || arequipa
-            : arequipa;
+          const featuredImages = [cusco, puno, colca, titicaca, machupicchu, puerto];
+          const featuredImage = featuredImages[index % featuredImages.length];
           
           // Obtener precio mínimo
           const minPrice = Math.min(...relatedTour.hotelCategories.map(c => c.price));
