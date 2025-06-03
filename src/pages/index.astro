@@ -1,4 +1,5 @@
 ---
+import AwardSection from "../components/AwardSection.astro";
 import CalltoAction from "../components/CalltoAction.astro";
 import CarouselCert from "../components/CarouselCert.astro";
 import ContactForm from "../components/ContactForm.astro";
@@ -16,7 +17,12 @@ import Layout from "../layouts/Layout.astro";
     <CalltoAction />
     <Gallery />
     <CarouselCert />
+    <AwardSection 
+    videoUrl="https://www.youtube.com/embed/tu-video-id" 
+    imageSrc="/premio.jpg" 
+    imageAlt="Certificado de premio a Conresa Tours"
+    awardTitle="Empresa más respetuosa"
+    awardDescription="Galardonados por nuestra destacada actitud de respeto hacia el entorno natural, cultural y social en el desarrollo de nuestras actividades dentro del Circuito Turístico del Valle del Colca."
+    />
     <ContactForm />
-
-      
 </Layout>

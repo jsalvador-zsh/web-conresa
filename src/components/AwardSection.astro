@@ -1,0 +1,63 @@
+---
+import Image from 'astro/components/Image.astro';
+import Button from '../components/Button.astro';
+
+// Props: puedes pasar el video, imagen y texto como props
+export interface Props {
+  videoUrl: string;
+  imageSrc: string;
+  imageAlt: string;
+  awardTitle: string;
+  awardDescription: string;
+}
+
+const { videoUrl, imageSrc, imageAlt, awardTitle, awardDescription } = Astro.props;
+import ImgPremio from '../images/premio.jpeg';
+---
+
+<section class="py-12 bg-gray-50">
+  <div class="px-4 sm:px-6 lg:px-0 max-w-7xl mx-auto">
+    <h2 class="text-center text-3xl font-bold mb-12">Reconocimiento</h2>
+    
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+      <!-- Video del premio -->
+      <div class="lg:w-1/2">
+        <div class="relative aspect-video rounded-lg overflow-hidden shadow-lg mb-4">
+          <iframe 
+            class="w-full h-full" 
+            src="/video-premiacion.mp4"
+            title="Video de premiación"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+          <h3 class="text-2xl md:text-3xl font-bold text-[#48887F] mb-4 text-center lg:text-left">
+            {awardTitle}
+          </h3>
+          
+          <p class="text-gray-600 mb-6 text-base text-pretty text-center lg:text-left">
+            {awardDescription}
+          </p>
+          
+          <Button 
+            href="/about" 
+            text="Conoce nuestros logros" 
+            className="inline-flex"
+          />
+      </div>
+      
+      <!-- Imagen del reconocimiento + Texto -->
+      <div class="lg:w-1/2">
+        <div class="flex flex-col items-center">
+          <Image 
+            src={ImgPremio} 
+            alt={imageAlt}
+            class="w-full max-w-md h-auto mb-8 rounded-lg shadow-md"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
