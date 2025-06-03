@@ -60,6 +60,7 @@ import rainbowMountainHero from '../../../images/cusco/cusco-2.jpg';
 import campamento from '../../../images/cusco/cusco-5.jpg';
 import ruinas from '../../../images/cusco/cusco-6.jpg';
 import tren from '../../../images/cusco/cusco-4.jpg';
+import arequipa from '../../../images/paquetes-arequipa/arequipa-panoramica.jpg';
 
 // Mapeo de imágenes para galería
 const obtenerImagenesTour = (id: string) => {
@@ -486,6 +487,49 @@ const formatPrice = (price: number) => {
             );
           })
         }
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <a href={`/peru-excursiones/camino-inca/`}>
+                  <div class="relative h-48 overflow-hidden">
+                    <Image
+                      src={arequipa}
+                      alt={`Imagen de `}
+                      class="w-full h-full object-cover"
+                      width={400}
+                      height={300}
+                      format="webp"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                  </div>
+                </a>
+                
+                <div class="p-6">
+                  <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-xl font-bold text-gray-800">
+                      <a href={`/peru-excursiones/peru-sur-magico/ct8425.ii.1`} class="hover:text-[#48887F] transition-colors">
+                        Capital, Arequipa, Colca, Puno, Cusco, Machupicchu, Ica, Paracas
+                      </a>
+                    </h3>
+                    <span class="inline-block bg-[#48887F] text-white text-xs px-2 py-1 rounded uppercase">
+                      ct8425.ii.1
+                    </span>
+                  </div>
+                  
+                  <p class="text-gray-600 text-sm mb-4 line-clamp-2">Este completo circuito por el sur del Perú te llevará a descubrir los destinos más impresionantes de esta región, combinando cultura, historia, aventura y paisajes espectaculares.</p>
+                  
+                  <div class="flex justify-between items-center">
+                    <span class="text-[#48887F] font-bold">
+                      Desde $1890
+                    </span>
+                    <a 
+                      href={`/peru-excursiones/peru-sur-magico/ct8425.ii.1`} 
+                      class="text-sm font-medium text-[#48887F] hover:underline"
+                    >
+                      Ver detalles →
+                    </a>
+                  </div>
+                </div>
+              </div>
       </div>
     </div>
   </div>
