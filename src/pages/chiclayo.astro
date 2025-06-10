@@ -1,0 +1,532 @@
+---
+// src/pages/chiclayo.astro
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+// Importar imágenes (reemplaza con tus propias imágenes)
+import chiclayoHero from "../images/chiclayo/chiclayo-hero.jpeg";
+import pimentel from "../images/chiclayo/pimentel.jpg";
+import chaparri from "../images/chiclayo/chaparri.jpg";
+import sipan from "../images/chiclayo/sipan.jpg";
+import tucume from "../images/chiclayo/tucume.jpg";
+
+// Datos del tour (en lugar de JSON, directamente en el componente)
+const tourData = {
+    id: "CT-CHICLAYO",
+    title: "Tour Chiclayo - Cultura y Naturaleza",
+    duration: "4 días / 3 noches",
+    shortDescription:
+        "Descubre los tesoros arqueológicos y naturales de Chiclayo, desde las tumbas reales del Señor de Sipán hasta la reserva ecológica de Chaparri.",
+    categories: ["Cultural", "Naturaleza", "Descanso y Relax"],
+    itinerary: [
+        {
+            day: 1,
+            title: "City tour Chiclayo y playa Pimentel",
+            description: `
+        • 11:30 AM. Inicio del tour
+        • Parque principal, Paseo de las Musas, Paseo de Yortuque, Playa Pimentel (tiempo libre para disfrute de la playa), observación de Caballitos de Totora, vista al muelle
+        • Caleta de Pescadores Santa Rosa, feria artesanal de Monsefú (compra de productor artesanales)
+      `,
+            overnight: "Chiclayo",
+            image: pimentel,
+        },
+        {
+            day: 2,
+            title: "Reserva Ecológica de Chaparri",
+            description: `
+        • 7:30 a.m. Visita a la Reserva Ecológica de Chaparri: área de conservación privada observación de especias de flora y fauna como el Oso de Anteojos o Andino, Pava Aliblanca, Cóndor Andino, Zorro Costeño, Pitajo de Tumbes.
+      `,
+            overnight: "Chiclayo",
+            image: chaparri,
+        },
+        {
+            day: 3,
+            title: "Tour Señor de Sipán",
+            description: `
+        • 10:30 a.m. Tour Zona arqueológica Huaca Rajada (descubrimiento del señor de Sipán)
+        • Museo de Sitio Huaca Rajada (Exposición de joyas en Oro, Plata, Cobre)
+        • Museo Nacional Tumbas Reales del Señor de Sipán*Los personajes de élite moche, Joyas de Oro, Plata, Cobre, Cerámicas, Textiles.
+        • Fábrica de King Kones (compras).
+        • Museo Nacional Bruning (muestra el proceso del desarrollo de las culturas Lambayeque)
+      `,
+            overnight: "Chiclayo",
+            image: sipan,
+        },
+        {
+            day: 4,
+            title: "Museo Sicán y Pirámides de Túcume",
+            description: `
+        • 10:30 AM. Inicio del Tour Museo Sicán. Muestra las tumbas (este – oeste), donde se podrá apreciar joyas y ornamentos en Oro, Plata, Cobre, Cerámicas, etc.
+        • Pirámides de Túcume, 26 pirámides, destaca la Huaca Larga y Huaca las Balsa
+        • Museo de Sitio de Tucume
+      `,
+            overnight: null,
+            image: tucume,
+        },
+    ],
+    includes: [
+        "Transporte turístico privado",
+        "Guía profesional bilingüe (español/inglés)",
+        "Entradas a todos los museos y sitios arqueológicos",
+        "3 noches de alojamiento en Chiclayo",
+        "Desayunos en el hotel",
+    ],
+    notIncludes: [
+        "Vuelos a Chiclayo",
+        "Almuerzos y cenas no mencionadas",
+        "Propinas para guías y conductores",
+        "Gastos personales",
+    ],
+    importantNotes: [
+        "Llevar protector solar, gorra y lentes de sol",
+        "Usar zapatos cómodos para caminar",
+        "Llevar efectivo para compras artesanales",
+        "Cámara fotográfica recomendada",
+    ],
+    price: 450, // Precio base en USD
+};
+
+// Función para formatear precios
+const formatPrice = (price: number) => {
+    return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+        minimumFractionDigits: 0,
+    }).format(price);
+};
+---
+
+<Layout title={tourData.title} description={tourData.shortDescription}>
+    <main class="bg-gray-50">
+        <!-- Hero Section -->
+        <section
+            class="relative h-[70vh] max-h-[800px] min-h-[500px] overflow-hidden"
+        >
+            <Image
+                src={chiclayoHero}
+                alt={tourData.title}
+                class="w-full h-full object-cover"
+                width={1920}
+                height={1080}
+                format="webp"
+                quality={80}
+            />
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent flex items-center pb-16"
+            >
+                <div class="container mx-auto px-6">
+                    <div
+                        class="mx-auto max-w-6xl text-center flex flex-col items-center justify-center"
+                    >
+                        <span
+                            class="cursive-font text-center text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
+                        >
+                            {tourData.title}
+                        </span>
+                        <p class="text-xl text-gray-100">
+                            {tourData.shortDescription}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-6 py-12">
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Left Column (Content) -->
+                <div class="lg:col-span-8 space-y-12">
+                    <!-- Tour Description -->
+                    <section class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                            Sobre este tour
+                        </h2>
+                        <div class="prose max-w-none text-gray-700">
+                            <p>
+                                Este completo circuito por Chiclayo te permitirá
+                                descubrir los tesoros arqueológicos más
+                                importantes del norte del Perú, combinando
+                                cultura, historia y naturaleza en una
+                                experiencia inolvidable.
+                            </p>
+
+                            <!-- Categorías -->
+                            <div class="mt-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-900 mb-3"
+                                >
+                                    Categorías del tour:
+                                </h3>
+                                <div class="flex flex-wrap gap-2">
+                                    {
+                                        tourData.categories.map((category) => (
+                                            <span class="inline-flex items-center bg-[#2C5E5E]/10 text-[#2C5E5E] text-sm font-medium px-3 py-1 rounded-full">
+                                                {category}
+                                            </span>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mt-8"
+                            >
+                                Itinerario resumido
+                            </h3>
+                            <ul class="space-y-2">
+                                {
+                                    tourData.itinerary
+                                        .map((day) => (
+                                            <li class="pl-4 border-l-2 border-[#2C5E5E]">
+                                                <strong class="text-gray-900">
+                                                    Día {day.day}:
+                                                </strong>{" "}
+                                                {day.title}
+                                            </li>
+                                        ))
+                                }
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Galería de destinos -->
+                    <section class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                            Destinos destacados
+                        </h2>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            {
+                                tourData.itinerary.map((day) => (
+                                    <div class="relative h-48 overflow-hidden rounded-lg group">
+                                        <Image
+                                            src={day.image}
+                                            alt={day.title}
+                                            width={400}
+                                            height={300}
+                                            class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                                            loading="lazy"
+                                        />
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                                            <h3 class="text-lg font-bold text-white">
+                                                Día {day.day}: {day.title}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </section>
+
+                    <!-- Detailed Itinerary -->
+                    <section
+                        class="bg-white rounded-xl shadow-sm overflow-hidden"
+                    >
+                        <div class="bg-[#2C5E5E] p-6 md:p-8">
+                            <span class="cursive-subtitle text-3xl font-bold text-white">
+                                Itinerario detallado
+                            </span>
+                        </div>
+                        <div class="p-6 md:p-8 space-y-8">
+                            {
+                                tourData.itinerary.map((day) => (
+                                    <div class="border-l-4 border-[#2C5E5E] pl-6">
+                                        <div class="flex items-start gap-4">
+                                            <div class="bg-[#2C5E5E] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                                {day.day}
+                                            </div>
+                                            <div>
+                                                <h3 class="text-xl font-bold text-gray-900">
+                                                    {day.title}
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="prose max-w-none text-gray-700 mt-4 pl-14 whitespace-pre-line">
+                                            {day.description}
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </section>
+
+                    <!-- Includes/Excludes -->
+                    <!-- <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div
+                            class="bg-white rounded-xl shadow-sm overflow-hidden h-full"
+                        >
+                            <div class="bg-[#2C5E5E] p-6">
+                                <h3 class="text-xl font-bold text-white">
+                                    Incluido en el tour
+                                </h3>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-3">
+                                    {
+                                        tourData.includes.map((item) => (
+                                            <li class="flex items-start">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M5 13l4 4L19 7"
+                                                    />
+                                                </svg>
+                                                <span class="text-gray-600">
+                                                    {item}
+                                                </span>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl shadow-sm overflow-hidden h-full"
+                        >
+                            <div class="bg-gray-800 p-6">
+                                <h3 class="text-xl font-bold text-white">
+                                    No incluido
+                                </h3>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-3">
+                                    {
+                                        tourData.notIncludes.map((item) => (
+                                            <li class="flex items-start">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-5 w-5 text-red-500 mr-2 mt-0.5 flex-shrink-0"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M6 18L18 6M6 6l12 12"
+                                                    />
+                                                </svg>
+                                                <span class="text-gray-600">
+                                                    {item}
+                                                </span>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    {
+                        tourData.importantNotes &&
+                            tourData.importantNotes.length > 0 && (
+                                <section class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <svg
+                                                class="h-5 w-5 text-yellow-400"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                                                    clip-rule="evenodd"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <div class="ml-3">
+                                            <h3 class="text-lg font-medium text-yellow-800">
+                                                Notas importantes
+                                            </h3>
+                                            <div class="mt-2 text-yellow-700">
+                                                <ul class="list-disc pl-5 space-y-1">
+                                                    {tourData.importantNotes.map(
+                                                        (note, index) => (
+                                                            <li>{note}</li>
+                                                        ),
+                                                    )}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            )
+                    } -->
+                </div>
+
+                <!-- Right Column (Sidebar) -->
+                <div class="lg:col-span-4 space-y-6">
+                    <!-- Booking Card -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 top-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            Reserva este tour
+                        </h3>
+
+                        <!-- <div class="bg-[#2C5E5E]/5 p-4 rounded-lg mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-gray-900"
+                                    >Precio por persona:</span
+                                >
+                                <span class="text-2xl font-bold text-[#2C5E5E]"
+                                    >{formatPrice(tourData.price)}</span
+                                >
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">
+                                Impuestos incluidos
+                            </p>
+                        </div> -->
+
+                        <a
+                            href="/#contacto"
+                            class="block w-full bg-[#2C5E5E] hover:bg-[#1E4A4A] text-white font-bold py-3 px-4 rounded-lg text-center transition-colors duration-300 mb-4"
+                        >
+                            Consultar disponibilidad
+                        </a>
+
+                        <div
+                            class="flex items-center justify-center space-x-2 text-sm text-gray-500"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                ></path>
+                            </svg>
+                            <span>{tourData.duration}</span>
+                        </div>
+                    </div>
+
+                    <!-- Why Choose Us -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            ¿Por qué elegirnos?
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 text-[#2C5E5E] flex-shrink-0"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                    ></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">
+                                        Experiencia garantizada
+                                    </h4>
+                                    <p class="text-sm text-gray-600">
+                                        Más de 40 años creando experiencias
+                                        inolvidables
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 text-[#2C5E5E] flex-shrink-0"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                                    ></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">
+                                        Precios competitivos
+                                    </h4>
+                                    <p class="text-sm text-gray-600">
+                                        Las mejores tarifas sin sacrificar
+                                        calidad
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 text-[#2C5E5E] flex-shrink-0"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                                    ></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">
+                                        Soporte 24/7
+                                    </h4>
+                                    <p class="text-sm text-gray-600">
+                                        Asistencia durante todo tu viaje
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .prose {
+        line-height: 1.7;
+        color: #374151;
+    }
+    .prose p {
+        margin-bottom: 1.25em;
+    }
+    .prose ul {
+        list-style-type: disc;
+        padding-left: 1.5em;
+        margin-bottom: 1.25em;
+    }
+    .prose li {
+        margin-bottom: 0.5em;
+    }
+    .prose h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        color: #111827;
+    }
+</style>
