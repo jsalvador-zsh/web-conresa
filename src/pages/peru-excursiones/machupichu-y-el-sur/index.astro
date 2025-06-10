@@ -141,8 +141,8 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
               <h3 class="text-xl font-semibold text-gray-900 mt-8">Itinerario resumido</h3>
               <ul class="space-y-3">
                 {itinerary.days.map(day => (
-                  <li class="pl-4 border-l-2 border-[#48887F]">
-                    <strong class="text-gray-900">Día {day.day}:</strong> {day.title} {day.overnight && <span class="text-[#48887F]">• Pernocte en {day.overnight}</span>}
+                  <li class="pl-4 border-l-2 border-[#008080]">
+                    <strong class="text-gray-900">Día {day.day}:</strong> {day.title} {day.overnight && <span class="text-[#008080]">• Pernocte en {day.overnight}</span>}
                   </li>
                 ))}
               </ul>
@@ -151,14 +151,14 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
 
           <!-- Detailed Itinerary -->
           <section class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="bg-[#48887F] p-6 md:p-8">
+            <div class="bg-[#008080] p-6 md:p-8">
               <span class="cursive-subtitle text-3xl font-bold text-white font-serif">Itinerario Detallado</span>
             </div>
             <div class="p-6 md:p-8 space-y-8">
               {itinerary.days.map(day => (
-                <div class="border-l-4 border-[#48887F] pl-6">
+                <div class="border-l-4 border-[#008080] pl-6">
                   <div class="flex items-start gap-4">
-                    <div class="bg-[#48887F] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 shadow-md">
+                    <div class="bg-[#008080] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 shadow-md">
                       {day.day}
                     </div>
                     <div>
@@ -180,7 +180,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
 
           <!-- Luxury Hotels -->
           <section class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="bg-[#48887F] p-6 md:p-8">
+            <div class="bg-[#008080] p-6 md:p-8">
               <span class="cursive-subtitle text-3xl font-bold text-white font-serif">Opciones de Alojamiento</span>
             </div>
             <div class="p-6 md:p-8">
@@ -191,14 +191,14 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
                       <div>
                         <h3 class="text-xl font-bold text-gray-900">{category.name}</h3>
                       </div>
-                      <span class="text-2xl font-bold text-[#48887F]">{formatPrice(category.price)}</span>
+                      <span class="text-2xl font-bold text-[#008080]">{formatPrice(category.price)}</span>
                     </div>
                     <div class="p-6">
                       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {Object.entries(category.hotels).map(([ciudad, hoteles]) => (
                           <div>
                             <h4 class="font-bold text-gray-900 mb-3 flex items-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#48887F] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#008080] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                               </svg>
                               {ciudad}
@@ -206,7 +206,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
                             <ul class="space-y-2">
                               {hoteles.map(hotel => (
                                 <li class="flex items-start">
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#008080] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                   </svg>
                                   <span class="text-gray-600">{hotel}</span>
@@ -225,7 +225,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
 
           <!-- Flight Suggestions -->
           <section class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="bg-[#48887F] p-6 md:p-8">
+            <div class="bg-[#008080] p-6 md:p-8">
               <span class="cursive-subtitle text-3xl font-bold text-white font-serif">Vuelos Sugeridos</span>
             </div>
             <div class="p-6 md:p-8">
@@ -253,16 +253,16 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
               
               <h3 class="text-xl font-bold text-gray-900 mt-12 mb-6">Opciones de equipaje</h3>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="border border-gray-200 rounded-lg p-4 hover:border-[#48887F] transition-colors">
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-[#008080] transition-colors">
                   <div class="flex justify-between items-center">
                     <span class="font-medium text-gray-900">Solo equipaje de mano</span>
-                    <span class="text-lg font-bold text-[#48887F]">{formatPrice(itinerary.flightSuggestions.costApproximation.onlyCarryOn)}</span>
+                    <span class="text-lg font-bold text-[#008080]">{formatPrice(itinerary.flightSuggestions.costApproximation.onlyCarryOn)}</span>
                   </div>
                 </div>
-                <div class="border border-gray-200 rounded-lg p-4 hover:border-[#48887F] transition-colors">
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-[#008080] transition-colors">
                   <div class="flex justify-between items-center">
                     <span class="font-medium text-gray-900">Con equipaje documentado</span>
-                    <span class="text-lg font-bold text-[#48887F]">{formatPrice(itinerary.flightSuggestions.costApproximation.withLuggage)}</span>
+                    <span class="text-lg font-bold text-[#008080]">{formatPrice(itinerary.flightSuggestions.costApproximation.withLuggage)}</span>
                   </div>
                 </div>
               </div>
@@ -272,7 +272,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
           <!-- Includes/Excludes -->
           <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
-              <div class="bg-[#48887F] p-6">
+              <div class="bg-[#008080] p-6">
                 <h3 class="text-xl font-bold text-white">Incluido en el tour</h3>
               </div>
               <div class="p-6">
@@ -345,10 +345,10 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
             
             <div class="space-y-4 mb-6">
               {itinerary.pricing.categories.map(category => (
-                <div class="border border-gray-200 rounded-lg p-4 hover:border-[#48887F] transition-colors">
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-[#008080] transition-colors">
                   <div class="flex justify-between items-center">
                     <span class="uppercase font-medium text-gray-900">{category.name}</span>
-                    <span class="font-bold text-[#48887F]">{formatPrice(category.price)}</span>
+                    <span class="font-bold text-[#008080]">{formatPrice(category.price)}</span>
                   </div>
                   <p class="text-sm text-gray-600 mt-1">Impuestos y cargo por transferencia</p>
                 </div>
@@ -357,7 +357,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
             
             <a 
               href="/#contacto" 
-              class="block w-full bg-[#48887F] hover:bg-gray-800 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors duration-300 mb-4 shadow-md"
+              class="block w-full bg-[#008080] hover:bg-gray-800 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors duration-300 mb-4 shadow-md"
             >
               Consultar disponibilidad
             </a>
@@ -376,7 +376,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
             <div class="space-y-4">
               <div class="flex items-start space-x-3">
                 <div class="bg-gray-100 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
@@ -388,7 +388,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
               
               <div class="flex items-start space-x-3">
                 <div class="bg-gray-100 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
@@ -400,7 +400,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
               
               <div class="flex items-start space-x-3">
                 <div class="bg-gray-100 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 </div>
@@ -418,7 +418,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
             <div class="space-y-3">
               <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                 <div class="bg-gray-100 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
@@ -430,7 +430,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
               
               <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                 <div class="bg-gray-100 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                   </svg>
                 </div>
@@ -442,7 +442,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
               
               <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                 <div class="bg-gray-100 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                   </svg>
                 </div>
@@ -499,7 +499,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
                   <h3 class="text-xl font-bold text-gray-800">
                     <a
                       href="/peru-excursiones/peru-turistico-del-sur"
-                      class="hover:text-[#48887F] transition-colors"
+                      class="hover:text-[#008080] transition-colors"
                     >
                       Perú turístico del sur
                     </a>
@@ -511,12 +511,12 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
                 </p>
 
                 <div class="flex justify-between items-center">
-                    <span class="text-[#48887F] font-bold">
+                    <span class="text-[#008080] font-bold">
                       Desde $1400
                     </span>
                     <a 
                       href="/peru-excursiones/peru-turistico-del-sur"
-                      class="text-sm font-medium text-[#48887F] hover:underline"
+                      class="text-sm font-medium text-[#008080] hover:underline"
                     >
                       Ver detalles →
                     </a>
@@ -557,7 +557,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
                   <h3 class="text-xl font-bold text-gray-800">
                     <a
                       href="/peru-excursiones/peru-a-tu-alcance"
-                      class="hover:text-[#48887F] transition-colors"
+                      class="hover:text-[#008080] transition-colors"
                     >
                       Cusco al paso
                     </a>
@@ -569,12 +569,12 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
                 </p>
 
                 <div class="flex justify-between items-center">
-                    <span class="text-[#48887F] font-bold">
+                    <span class="text-[#008080] font-bold">
                       Desde $525
                     </span>
                     <a 
                       href="/peru-excursiones/peru-a-tu-alcance"
-                      class="text-sm font-medium text-[#48887F] hover:underline"
+                      class="text-sm font-medium text-[#008080] hover:underline"
                     >
                       Ver detalles →
                     </a>
@@ -615,7 +615,7 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
                   <h3 class="text-xl font-bold text-gray-800">
                     <a
                       href="/peru-excursiones/capital-inca"
-                      class="hover:text-[#48887F] transition-colors"
+                      class="hover:text-[#008080] transition-colors"
                     >
                       Capital Inca
                     </a>
@@ -627,12 +627,12 @@ const mainDestinations = ["Arequipa", "Colca", "Puno", "Cusco", "Machu Picchu"];
                 </p>
 
                 <div class="flex justify-between items-center">
-                    <span class="text-[#48887F] font-bold">
+                    <span class="text-[#008080] font-bold">
                       Desde $670
                     </span>
                     <a 
                       href="/peru-excursiones/capital-inca"
-                      class="text-sm font-medium text-[#48887F] hover:underline"
+                      class="text-sm font-medium text-[#008080] hover:underline"
                     >
                       Ver detalles →
                     </a>

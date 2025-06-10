@@ -178,8 +178,8 @@ const formatPrice = (price: number) => {
               <h3 class="text-xl font-semibold text-gray-900 mt-8">Itinerario resumido</h3>
               <ul class="space-y-3">
                 {tour.days.map(day => (
-                  <li class="pl-4 border-l-2 border-[#48887F]">
-                    <strong class="text-gray-900">Día {day.day}:</strong> {day.title} {day.overnight && <span class="text-[#48887F]">• Pernocte en {day.overnight}</span>}
+                  <li class="pl-4 border-l-2 border-[#008080]">
+                    <strong class="text-gray-900">Día {day.day}:</strong> {day.title} {day.overnight && <span class="text-[#008080]">• Pernocte en {day.overnight}</span>}
                   </li>
                 ))}
               </ul>
@@ -188,14 +188,14 @@ const formatPrice = (price: number) => {
 
           <!-- Detailed Itinerary -->
           <section class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="bg-[#48887F] p-6 md:p-8">
+            <div class="bg-[#008080] p-6 md:p-8">
               <span class="cursive-subtitle text-3xl font-bold text-white font-serif">Itinerario Detallado</span>
             </div>
             <div class="p-6 md:p-8 space-y-8">
               {tour.days.map(day => (
-                <div class="border-l-4 border-[#48887F] pl-6">
+                <div class="border-l-4 border-[#008080] pl-6">
                   <div class="flex items-start gap-4">
-                    <div class="bg-[#48887F] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 shadow-md">
+                    <div class="bg-[#008080] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 shadow-md">
                       {day.day}
                     </div>
                     <div>
@@ -211,7 +211,7 @@ const formatPrice = (price: number) => {
                     <ul class="space-y-2">
                       {day.activities.map(activity => (
                         <li class="flex items-start">
-                          <svg class="w-5 h-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg class="w-5 h-5 text-[#008080] mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                           </svg>
                           <span>{activity}</span>
@@ -221,7 +221,7 @@ const formatPrice = (price: number) => {
                   </div>
                   {day.schedule && (
                     <div class="mt-4 pt-4 border-t border-gray-200 pl-14 bg-blue-50 p-3 rounded-lg">
-                      <h4 class="font-medium text-[#48887F] mb-1">Horarios:</h4>
+                      <h4 class="font-medium text-[#008080] mb-1">Horarios:</h4>
                       <p class="text-sm">
                         Recojo: {day.schedule.pickup} | Tren: Salida {day.schedule.train_departure} - Llegada {day.schedule.train_arrival}
                       </p>
@@ -234,7 +234,7 @@ const formatPrice = (price: number) => {
 
           <!-- Luxury Hotels -->
           <section class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="bg-[#48887F] p-6 md:p-8">
+            <div class="bg-[#008080] p-6 md:p-8">
               <span class="cursive-subtitle text-3xl font-bold text-white font-serif">Opciones de Alojamiento</span>
             </div>
             <div class="p-6 md:p-8">
@@ -246,14 +246,14 @@ const formatPrice = (price: number) => {
                         <h3 class="text-xl font-bold text-gray-900">{category.name}</h3>
                         <p class="text-sm text-gray-600 mt-1">{category.includes.join(', ')}</p>
                       </div>
-                      <span class="text-2xl font-bold text-[#48887F]">{formatPrice(category.price)}</span>
+                      <span class="text-2xl font-bold text-[#008080]">{formatPrice(category.price)}</span>
                     </div>
                     <div class="p-6">
                       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {Object.entries(category.hotels).map(([ciudad, hoteles]) => (
                           <div>
                             <h4 class="font-bold text-gray-900 mb-3 flex items-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#48887F] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#008080] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                               </svg>
                               {ciudad}
@@ -261,7 +261,7 @@ const formatPrice = (price: number) => {
                             <ul class="space-y-2">
                               {hoteles.map(hotel => (
                                 <li class="flex items-start">
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#008080] mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                   </svg>
                                   <span class="text-gray-600">{hotel}</span>
@@ -280,7 +280,7 @@ const formatPrice = (price: number) => {
 
           <!-- Flight Suggestions -->
           <section class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="bg-[#48887F] p-6 md:p-8">
+            <div class="bg-[#008080] p-6 md:p-8">
               <span class="cursive-subtitle text-3xl font-bold text-white font-serif">Vuelos Sugeridos</span>
             </div>
             <div class="p-6 md:p-8">
@@ -311,7 +311,7 @@ const formatPrice = (price: number) => {
           <!-- Includes/Excludes -->
           <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
-              <div class="bg-[#48887F] p-6">
+              <div class="bg-[#008080] p-6">
                 <h3 class="text-xl font-bold text-white">Incluido en el tour</h3>
               </div>
               <div class="p-6">
@@ -371,10 +371,10 @@ const formatPrice = (price: number) => {
             
             <div class="space-y-4 mb-6">
               {tour.pricing.categories.map(category => (
-                <div class="border border-gray-200 rounded-lg p-4 hover:border-[#48887F] transition-colors">
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-[#008080] transition-colors">
                   <div class="flex justify-between items-center">
                     <span class="font-medium text-gray-900 uppercase">{category.name}</span>
-                    <span class="font-bold text-[#48887F]">{formatPrice(category.price)}</span>
+                    <span class="font-bold text-[#008080]">{formatPrice(category.price)}</span>
                   </div>
                   <p class="text-sm text-gray-600 mt-1">{category.includes.join(', ')}</p>
                 </div>
@@ -383,7 +383,7 @@ const formatPrice = (price: number) => {
             
             <a 
               href="/#contacto" 
-              class="block w-full bg-[#48887F] hover:bg-[#48887F] text-white font-bold py-3 px-4 rounded-lg text-center transition-colors duration-300 mb-4 shadow-md"
+              class="block w-full bg-[#008080] hover:bg-[#008080] text-white font-bold py-3 px-4 rounded-lg text-center transition-colors duration-300 mb-4 shadow-md"
             >
               Consultar disponibilidad
             </a>
@@ -402,7 +402,7 @@ const formatPrice = (price: number) => {
             <div class="space-y-4">
               <div class="flex items-start space-x-3">
                 <div class="bg-white p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
@@ -414,7 +414,7 @@ const formatPrice = (price: number) => {
               
               <div class="flex items-start space-x-3">
                 <div class="bg-white p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
@@ -426,7 +426,7 @@ const formatPrice = (price: number) => {
               
               <div class="flex items-start space-x-3">
                 <div class="bg-white p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
@@ -444,7 +444,7 @@ const formatPrice = (price: number) => {
             <div class="space-y-3">
               <div class="flex items-center space-x-3 p-3  rounded-lg">
                 <div class="bg-white p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
@@ -456,7 +456,7 @@ const formatPrice = (price: number) => {
               
               <div class="flex items-center space-x-3 p-3  rounded-lg">
                 <div class="bg-white p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                   </svg>
                 </div>
@@ -468,7 +468,7 @@ const formatPrice = (price: number) => {
               
               <div class="flex items-center space-x-3 p-3  rounded-lg">
                 <div class="bg-white p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#48887F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#008080]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>
                 </div>
@@ -525,7 +525,7 @@ const formatPrice = (price: number) => {
                   <h3 class="text-xl font-bold text-gray-800">
                     <a
                       href="/peru-excursiones/ciudad-inca"
-                      class="hover:text-[#48887F] transition-colors"
+                      class="hover:text-[#008080] transition-colors"
                     >
                       Ciudad Inca y origen en el Titicaca
                     </a>
@@ -537,12 +537,12 @@ const formatPrice = (price: number) => {
                 </p>
 
                 <div class="flex justify-between items-center">
-                    <span class="text-[#48887F] font-bold">
+                    <span class="text-[#008080] font-bold">
                       Desde $1400
                     </span>
                     <a 
                       href="/peru-excursiones/ciudad-inca"
-                      class="text-sm font-medium text-[#48887F] hover:underline"
+                      class="text-sm font-medium text-[#008080] hover:underline"
                     >
                       Ver detalles →
                     </a>
@@ -583,7 +583,7 @@ const formatPrice = (price: number) => {
                   <h3 class="text-xl font-bold text-gray-800">
                     <a
                       href="/peru-excursiones/peru-pleno"
-                      class="hover:text-[#48887F] transition-colors"
+                      class="hover:text-[#008080] transition-colors"
                     >
                       Perú pleno e importante
                     </a>
@@ -595,12 +595,12 @@ const formatPrice = (price: number) => {
                 </p>
 
                 <div class="flex justify-between items-center">
-                    <span class="text-[#48887F] font-bold">
+                    <span class="text-[#008080] font-bold">
                       Desde $1875
                     </span>
                     <a 
                       href="/peru-excursiones/peru-pleno"
-                      class="text-sm font-medium text-[#48887F] hover:underline"
+                      class="text-sm font-medium text-[#008080] hover:underline"
                     >
                       Ver detalles →
                     </a>
@@ -641,7 +641,7 @@ const formatPrice = (price: number) => {
                   <h3 class="text-xl font-bold text-gray-800">
                     <a
                       href="/peru-excursiones/camino-inca/CT8425.I.1"
-                      class="hover:text-[#48887F] transition-colors"
+                      class="hover:text-[#008080] transition-colors"
                     >
                       Cusco y camino Inca Rapid
                     </a>
@@ -653,12 +653,12 @@ const formatPrice = (price: number) => {
                 </p>
 
                 <div class="flex justify-between items-center">
-                    <span class="text-[#48887F] font-bold">
+                    <span class="text-[#008080] font-bold">
                       Desde $939
                     </span>
                     <a 
                       href="/peru-excursiones/camino-inca/CT8425.I.1"
-                      class="text-sm font-medium text-[#48887F] hover:underline"
+                      class="text-sm font-medium text-[#008080] hover:underline"
                     >
                       Ver detalles →
                     </a>

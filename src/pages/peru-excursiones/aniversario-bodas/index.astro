@@ -239,7 +239,7 @@ const mainDestinations = Array.from(
               <ul class="space-y-3">
                 {
                   tour.days.map((day) => (
-                    <li class="pl-4 border-l-2 border-[#48887F]">
+                    <li class="pl-4 border-l-2 border-[#008080]">
                       <strong class="text-gray-900">Día {day.day}:</strong>{" "}
                       {day.title}{" "}
                       {day.overnight && `• Pernocte en ${day.overnight}`}
@@ -252,7 +252,7 @@ const mainDestinations = Array.from(
 
           <!-- Detailed Itinerary -->
           <section class="bg-white rounded-xl shadow-sm overflow-hidden">
-            <div class="bg-[#48887F] p-6 md:p-8">
+            <div class="bg-[#008080] p-6 md:p-8">
               <p class="cursive-subtitle text-3xl font-bold text-white">
                 Itinerario Detallado
               </p>
@@ -260,9 +260,9 @@ const mainDestinations = Array.from(
             <div class="p-6 md:p-8 space-y-8">
               {
                 tour.days.map((day) => (
-                  <div class="border-l-4 border-[#48887F] pl-6">
+                  <div class="border-l-4 border-[#008080] pl-6">
                     <div class="flex items-start gap-4">
-                      <div class="bg-[#48887F] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                      <div class="bg-[#008080] text-white font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
                         {day.day}
                       </div>
                       <div>
@@ -312,7 +312,7 @@ const mainDestinations = Array.from(
 
           <!-- Luxury Hotels -->
           <section class="bg-white rounded-xl shadow-sm overflow-hidden">
-            <div class="bg-[#48887F] p-6 md:p-8">
+            <div class="bg-[#008080] p-6 md:p-8">
               <p class="cursive-subtitle text-3xl font-bold text-white">
                 Alojamientos de Lujo
               </p>
@@ -330,7 +330,7 @@ const mainDestinations = Array.from(
                           {category.includes}
                         </p>
                       </div>
-                      <span class="text-2xl font-bold text-[#48887F]">
+                      <span class="text-2xl font-bold text-[#008080]">
                         {formatPrice(category.price)}
                       </span>
                     </div>
@@ -342,7 +342,7 @@ const mainDestinations = Array.from(
                               <h4 class="font-bold text-gray-900 mb-3 flex items-center">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
-                                  class="h-5 w-5 text-[#48887F] mr-2"
+                                  class="h-5 w-5 text-[#008080] mr-2"
                                   fill="none"
                                   viewBox="0 0 24 24"
                                   stroke="currentColor"
@@ -361,7 +361,7 @@ const mainDestinations = Array.from(
                                   <li class="flex items-start">
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
-                                      class="h-5 w-5 text-[#48887F] mr-2 mt-0.5 flex-shrink-0"
+                                      class="h-5 w-5 text-[#008080] mr-2 mt-0.5 flex-shrink-0"
                                       fill="none"
                                       viewBox="0 0 24 24"
                                       stroke="currentColor"
@@ -392,7 +392,7 @@ const mainDestinations = Array.from(
           {
             tour.flightSuggestions && (
               <section class="bg-white rounded-xl shadow-sm overflow-hidden">
-                <div class="bg-[#48887F] p-6 md:p-8">
+                <div class="bg-[#008080] p-6 md:p-8">
                   <p class="cursive-subtitle text-3xl font-bold text-white">
                     Vuelos Sugeridos
                   </p>
@@ -447,12 +447,12 @@ const mainDestinations = Array.from(
                   </h3>
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {tour.flightSuggestions.prices.map((option) => (
-                      <div class="border border-gray-200 rounded-lg p-4 hover:border-[#48887F] transition-colors">
+                      <div class="border border-gray-200 rounded-lg p-4 hover:border-[#008080] transition-colors">
                         <div class="flex justify-between items-center">
                           <span class="font-medium text-gray-900">
                             {option.description}
                           </span>
-                          <span class="text-lg font-bold text-[#48887F]">
+                          <span class="text-lg font-bold text-[#008080]">
                             {formatPrice(option.price)}
                           </span>
                         </div>
@@ -467,7 +467,7 @@ const mainDestinations = Array.from(
           <!-- Includes/Excludes -->
           <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl shadow-sm overflow-hidden h-full">
-              <div class="bg-[#48887F] p-6">
+              <div class="bg-[#008080] p-6">
                 <h3 class="text-xl font-bold text-white">
                   Incluido en el tour
                 </h3>
@@ -567,12 +567,12 @@ const mainDestinations = Array.from(
             <div class="space-y-4 mb-6">
               {
                 tour.hotelCategories.map((category) => (
-                  <div class="border border-gray-200 rounded-lg p-4 hover:border-[#48887F] transition-colors">
+                  <div class="border border-gray-200 rounded-lg p-4 hover:border-[#008080] transition-colors">
                     <div class="flex justify-between items-center">
                       <span class="font-medium text-gray-900">
                         {category.category}
                       </span>
-                      <span class="font-bold text-[#48887F]">
+                      <span class="font-bold text-[#008080]">
                         {formatPrice(category.price)}
                       </span>
                     </div>
@@ -586,7 +586,7 @@ const mainDestinations = Array.from(
 
             <a
               href="/#contacto"
-              class="block w-full bg-[#48887F] hover:bg-rose-800 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors duration-300 mb-4"
+              class="block w-full bg-[#008080] hover:bg-rose-800 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors duration-300 mb-4"
             >
               Consultar disponibilidad
             </a>
@@ -620,7 +620,7 @@ const mainDestinations = Array.from(
               <div class="flex items-start space-x-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-[#48887F] flex-shrink-0"
+                  class="h-6 w-6 text-[#008080] flex-shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -643,7 +643,7 @@ const mainDestinations = Array.from(
               <div class="flex items-start space-x-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-[#48887F] flex-shrink-0"
+                  class="h-6 w-6 text-[#008080] flex-shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -666,7 +666,7 @@ const mainDestinations = Array.from(
               <div class="flex items-start space-x-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-[#48887F] flex-shrink-0"
+                  class="h-6 w-6 text-[#008080] flex-shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -699,7 +699,7 @@ const mainDestinations = Array.from(
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8 text-[#48887F]"
+                  class="h-8 w-8 text-[#008080]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -724,7 +724,7 @@ const mainDestinations = Array.from(
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8 text-[#48887F]"
+                  class="h-8 w-8 text-[#008080]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -749,7 +749,7 @@ const mainDestinations = Array.from(
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8 text-[#48887F]"
+                  class="h-8 w-8 text-[#008080]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -817,7 +817,7 @@ const mainDestinations = Array.from(
                   <h3 class="text-xl font-bold text-gray-800">
                     <a
                       href="/peru-excursiones/inolvidable-aniversario"
-                      class="hover:text-[#48887F] transition-colors"
+                      class="hover:text-[#008080] transition-colors"
                     >
                       Inolvidable Aniversario
                     </a>
@@ -829,12 +829,12 @@ const mainDestinations = Array.from(
                 </p>
 
                 <div class="flex justify-between items-center">
-                    <span class="text-[#48887F] font-bold">
+                    <span class="text-[#008080] font-bold">
                       Desde $615
                     </span>
                     <a 
                       href="/peru-excursiones/inolvidable-aniversario"
-                      class="text-sm font-medium text-[#48887F] hover:underline"
+                      class="text-sm font-medium text-[#008080] hover:underline"
                     >
                       Ver detalles →
                     </a>
@@ -875,7 +875,7 @@ const mainDestinations = Array.from(
                   <h3 class="text-xl font-bold text-gray-800">
                     <a
                       href="/peru-excursiones/aniversario-en-peru"
-                      class="hover:text-[#48887F] transition-colors"
+                      class="hover:text-[#008080] transition-colors"
                     >
                       Aniversario en Perú
                     </a>
@@ -887,12 +887,12 @@ const mainDestinations = Array.from(
                 </p>
 
                 <div class="flex justify-between items-center">
-                    <span class="text-[#48887F] font-bold">
+                    <span class="text-[#008080] font-bold">
                       Desde $1100
                     </span>
                     <a 
                       href="/peru-excursiones/aniversario-en-peru"
-                      class="text-sm font-medium text-[#48887F] hover:underline"
+                      class="text-sm font-medium text-[#008080] hover:underline"
                     >
                       Ver detalles →
                     </a>
@@ -933,7 +933,7 @@ const mainDestinations = Array.from(
                   <h3 class="text-xl font-bold text-gray-800">
                     <a
                       href="/peru-excursiones/peru-a-tu-alcance"
-                      class="hover:text-[#48887F] transition-colors"
+                      class="hover:text-[#008080] transition-colors"
                     >
                       Perú a tu alcance
                     </a>
@@ -945,12 +945,12 @@ const mainDestinations = Array.from(
                 </p>
 
                 <div class="flex justify-between items-center">
-                    <span class="text-[#48887F] font-bold">
+                    <span class="text-[#008080] font-bold">
                       Desde $880
                     </span>
                     <a 
                       href="/peru-excursiones/peru-a-tu-alcance"
-                      class="text-sm font-medium text-[#48887F] hover:underline"
+                      class="text-sm font-medium text-[#008080] hover:underline"
                     >
                       Ver detalles →
                     </a>
